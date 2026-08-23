@@ -1,3 +1,9 @@
+"""
+Orchestrator
+------------
+Runs the full pipeline once, in order:
+  script_agent -> video_agent -> upload_agent -> discord_agent
+"""
 import os
 import sys
 import traceback
@@ -13,6 +19,7 @@ from agents.video_agent import build_video
 from agents.upload_agent import upload_video
 from agents.discord_agent import notify_upload
 from status_store import reset, set_status
+from daily_queue import claim_next_slot, mark_uploaded, mark_error
 
 PUBLISH_DELAY_HOURS = float(os.getenv("PUBLISH_DELAY_HOURS", "5"))
 IS_CI = os.getenv("GITHUB_ACTIONS") == "true"
@@ -20,6 +27,7 @@ IS_CI = os.getenv("GITHUB_ACTIONS") == "true"
 
 def run_pipeline():
     reset()
+    slot_index = claim_next_slot()
     try:
         script = generate_script(ollama_model=os.getenv("OLLAMA_MODEL", "llama3.2"))
 
@@ -54,6 +62,8 @@ def run_pipeline():
             else:
                 notify_upload(webhook, title=script["title"], url=url)
 
+        mark_uploaded(slot_index, script["title"][:100], url, publish_at or "")
+
         if publish_at:
             print(f"Pipeline complete: {url} (scheduled for {publish_at})")
         elif privacy_status == "private":
@@ -65,6 +75,7 @@ def run_pipeline():
     except Exception:
         traceback.print_exc()
         set_status("orchestrator", "error", traceback.format_exc()[-500:])
+        mark_error(slot_index)
         raise
 
 
