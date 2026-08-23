@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-08-23T13:59:28Z"
+    "status": "done",
+    "message": "generated: Roommate's Secret Ex Revealed",
+    "updated_at": "2026-08-23T14:00:21Z"
   },
   "video_agent": {
     "status": "idle",
