@@ -15,8 +15,8 @@
     "updated_at": "2026-08-23T11:01:43Z"
   },
   "discord_agent": {
-    "status": "running",
-    "message": "posting upload notification",
-    "updated_at": "2026-08-23T11:01:44Z"
+    "status": "done",
+    "message": "notified: Barista Gone Rogue (scheduled 2026-08-23T16:01:39Z UTC)",
+    "updated_at": "2026-08-23T11:01:45Z"
   }
 }
