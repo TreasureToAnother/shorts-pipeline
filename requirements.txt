@@ -1,0 +1,26 @@
+# --- Script generation ---
+requests==2.32.3
+ollama==0.3.3          # optional local LLM, free, no key needed
+
+# --- TTS (free, Microsoft voices, no key) ---
+edge-tts==6.1.19
+
+# --- Captions ---
+faster-whisper  # CPU-friendly free Whisper implementation
+
+# --- Video assembly ---
+moviepy==1.0.3
+Pillow==10.4.0
+numpy==1.26.4
+
+# --- YouTube upload ---
+google-api-python-client==2.143.0
+google-auth-httplib2==0.2.0
+google-auth-oauthlib==1.2.1
+
+# --- Discord bot ---
+discord.py==2.4.0
+
+# --- Orchestrator / dashboard server ---
+flask==3.0.3
+python-dotenv==1.0.1

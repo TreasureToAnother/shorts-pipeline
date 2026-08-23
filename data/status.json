@@ -1,0 +1,22 @@
+{
+  "script_agent": {
+    "status": "done",
+    "message": "generated: The Real Origin of Toothbrush",
+    "updated_at": "2026-08-23T00:14:43Z"
+  },
+  "video_agent": {
+    "status": "done",
+    "message": "/Users/andrew/Desktop/faceless-yt-pipeline/agents/../data/output/2a111ad6.mp4",
+    "updated_at": "2026-08-23T00:22:10Z"
+  },
+  "upload_agent": {
+    "status": "done",
+    "message": "https://youtube.com/shorts/DiO7aRJd1ew",
+    "updated_at": "2026-08-23T00:22:12Z"
+  },
+  "discord_agent": {
+    "status": "done",
+    "message": "notified: The Real Origin of Toothbrush",
+    "updated_at": "2026-08-23T00:22:12Z"
+  }
+}

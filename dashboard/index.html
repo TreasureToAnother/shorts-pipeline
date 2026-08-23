@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Wire Room — Pipeline Status</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #10141d;
+    --ink-2: #171d29;
+    --parchment: #e9dfc6;
+    --parchment-dim: #a89d84;
+    --brass: #c99a3c;
+    --idle: #4b7a7a;
+    --error: #b5432d;
+    --wire: #3a4354;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--ink);
+    background-image:
+      radial-gradient(ellipse at top left, rgba(201,154,60,0.06), transparent 55%),
+      radial-gradient(ellipse at bottom right, rgba(75,122,122,0.07), transparent 55%);
+    color: var(--parchment);
+    font-family: 'IBM Plex Mono', monospace;
+    min-height: 100vh;
+    padding: 48px 24px 24px;
+  }
+  header {
+    max-width: 1000px;
+    margin: 0 auto 56px;
+    border-bottom: 1px solid var(--wire);
+    padding-bottom: 20px;
+  }
+  .eyebrow {
+    font-size: 12px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--brass);
+    margin: 0 0 6px;
+  }
+  h1 {
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    font-size: 34px;
+    margin: 0;
+    letter-spacing: 0.01em;
+  }
+  .sub { color: var(--parchment-dim); font-size: 13px; margin-top: 8px; }
+
+  .rail {
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+  }
+  svg.wires { position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; }
+  .wires line {
+    stroke: var(--wire);
+    stroke-width: 2;
+    transition: stroke 0.4s ease;
+  }
+  .wires line.active {
+    stroke: var(--brass);
+    stroke-dasharray: 6 6;
+    animation: dash 1.1s linear infinite;
+  }
+  @keyframes dash { to { stroke-dashoffset: -24; } }
+
+  .nodes {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    position: relative;
+    z-index: 1;
+  }
+  @media (max-width: 800px) {
+    .nodes { grid-template-columns: 1fr; }
+  }
+
+  .node {
+    background: var(--ink-2);
+    border: 1px solid var(--wire);
+    border-radius: 3px;
+    padding: 20px 18px;
+    position: relative;
+    transition: border-color 0.4s ease, box-shadow 0.4s ease;
+  }
+  .node::before {
+    content: "";
+    position: absolute;
+    top: 14px; right: 14px;
+    width: 9px; height: 9px;
+    border-radius: 50%;
+    background: var(--idle);
+    box-shadow: 0 0 0 3px rgba(75,122,122,0.15);
+  }
+  .node.running::before {
+    background: var(--brass);
+    box-shadow: 0 0 0 4px rgba(201,154,60,0.25);
+    animation: pulse 1.1s ease-in-out infinite;
+  }
+  .node.done::before { background: #5f9e6e; box-shadow: 0 0 0 3px rgba(95,158,110,0.18); }
+  .node.error::before { background: var(--error); box-shadow: 0 0 0 3px rgba(181,67,45,0.2); }
+  .node.running { border-color: var(--brass); box-shadow: 0 0 24px rgba(201,154,60,0.08); }
+
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.35); }
+  }
+
+  .node .num { font-size: 11px; color: var(--parchment-dim); letter-spacing: 0.1em; }
+  .node h3 {
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    font-size: 19px;
+    margin: 6px 0 10px;
+  }
+  .node .status-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--brass);
+    margin-bottom: 8px;
+  }
+  .node.idle .status-label { color: var(--idle); }
+  .node.done .status-label { color: #5f9e6e; }
+  .node.error .status-label { color: var(--error); }
+
+  .node .msg {
+    font-size: 12px;
+    color: var(--parchment-dim);
+    line-height: 1.5;
+    word-break: break-word;
+    max-height: 60px;
+    overflow: hidden;
+  }
+  .node .ts { font-size: 10px; color: #5c6474; margin-top: 10px; }
+
+  .ticker {
+    max-width: 1000px;
+    margin: 56px auto 0;
+    border-top: 1px solid var(--wire);
+    padding-top: 16px;
+    font-size: 12px;
+    color: var(--parchment-dim);
+  }
+  .ticker .row { display: flex; gap: 12px; padding: 5px 0; }
+  .ticker .row .t { color: #5c6474; width: 74px; flex-shrink: 0; }
+</style>
+</head>
+<body>
+
+<header>
+  <p class="eyebrow">History Channel — Automation Wire Room</p>
+  <h1>Pipeline Status</h1>
+  <p class="sub">Four relays, one line. Each script writes to the wire the moment it starts and stops.</p>
+</header>
+
+<div class="rail">
+  <svg class="wires" id="wires"></svg>
+  <div class="nodes" id="nodes"></div>
+</div>
+
+<div class="ticker" id="ticker"></div>
+
+<script>
+const AGENTS = [
+  { id: "script_agent",  label: "Script Relay",   copy: "Pulls a history fact, drafts the beats." },
+  { id: "video_agent",   label: "Edit Relay",     copy: "Footage, voice, captions, sfx, assembly." },
+  { id: "upload_agent",  label: "Upload Relay",   copy: "Pushes the finished short to YouTube." },
+  { id: "discord_agent", label: "Signal Relay",   copy: "Wires the update back to Discord." },
+];
+
+const nodesEl = document.getElementById("nodes");
+const wiresEl = document.getElementById("wires");
+const tickerEl = document.getElementById("ticker");
+
+AGENTS.forEach((a, i) => {
+  const div = document.createElement("div");
+  div.className = "node idle";
+  div.id = "node-" + a.id;
+  div.innerHTML = `
+    <div class="num">0${i + 1}</div>
+    <h3>${a.label}</h3>
+    <div class="status-label" data-role="status">Idle</div>
+    <div class="msg" data-role="msg">${a.copy}</div>
+    <div class="ts" data-role="ts"></div>
+  `;
+  nodesEl.appendChild(div);
+});
+
+function layoutWires() {
+  wiresEl.innerHTML = "";
+  const nodes = [...nodesEl.querySelectorAll(".node")];
+  const railRect = document.querySelector(".rail").getBoundingClientRect();
+  for (let i = 0; i < nodes.length - 1; i++) {
+    const a = nodes[i].getBoundingClientRect();
+    const b = nodes[i + 1].getBoundingClientRect();
+    const x1 = a.right - railRect.left, y1 = a.top + a.height / 2 - railRect.top;
+    const x2 = b.left - railRect.left, y2 = b.top + b.height / 2 - railRect.top;
+    const line = document.createElementNS("http://www.w3.org/2000/svg", "line");
+    line.setAttribute("x1", x1); line.setAttribute("y1", y1);
+    line.setAttribute("x2", x2); line.setAttribute("y2", y2);
+    line.dataset.from = AGENTS[i].id;
+    wiresEl.appendChild(line);
+  }
+}
+
+const log = [];
+
+async function poll() {
+  try {
+    const res = await fetch("/status.json?_=" + Date.now());
+    const data = await res.json();
+    AGENTS.forEach((a, i) => {
+      const state = data[a.id] || { status: "idle", message: "", updated_at: null };
+      const el = document.getElementById("node-" + a.id);
+      el.className = "node " + state.status;
+      el.querySelector('[data-role="status"]').textContent =
+        state.status.charAt(0).toUpperCase() + state.status.slice(1);
+      el.querySelector('[data-role="msg"]').textContent = state.message || a.copy;
+      el.querySelector('[data-role="ts"]').textContent = state.updated_at ? state.updated_at.replace("T", " ").replace("Z", " UTC") : "";
+
+      const wire = wiresEl.querySelector(`line[data-from="${a.id}"]`);
+      if (wire) wire.classList.toggle("active", state.status === "running" || state.status === "done");
+
+      if (state.message && (!log.length || log[0].msg !== state.message)) {
+        log.unshift({ t: state.updated_at ? state.updated_at.slice(11, 19) : "", agent: a.label, msg: state.message, status: state.status });
+      }
+    });
+    tickerEl.innerHTML = log.slice(0, 8).map(r =>
+      `<div class="row"><span class="t">${r.t}</span><span>${r.agent} — ${r.msg}</span></div>`
+    ).join("");
+  } catch (e) {
+    // status.json not reachable yet — leave nodes at last known state
+  }
+}
+
+window.addEventListener("resize", layoutWires);
+layoutWires();
+poll();
+setInterval(poll, 2000);
+setInterval(layoutWires, 2000);
+</script>
+
+</body>
+</html>
