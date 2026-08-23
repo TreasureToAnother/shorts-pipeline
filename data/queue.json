@@ -28,10 +28,10 @@
     {
       "slot": 3,
       "hour_et": 7,
-      "stage": "generating",
-      "title": null,
-      "video_url": null,
-      "publish_at": null
+      "stage": "uploaded",
+      "title": "Flight Attendant's Family Reality Check",
+      "video_url": "https://youtube.com/shorts/FDD8uiL_czI",
+      "publish_at": "2026-08-23T16:50:56Z"
     },
     {
       "slot": 4,
