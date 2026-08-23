@@ -68,13 +68,29 @@ def _fetch_item_origin():
     return {"item": item, "extract": extract}
 
 
+def _first_sentences(text: str, max_chars: int) -> str:
+    """
+    Grabs whole sentences up to a length budget instead of chopping text
+    off mid-sentence at a fixed character count (which is what produced
+    the broken-grammar "..." truncations before). Always returns at
+    least one complete sentence, even if it runs a bit over budget.
+    """
+    sentences = re.split(r"(?<=[.!?])\s+", text.strip())
+    result = ""
+    for sentence in sentences:
+        if result and len(result) + len(sentence) > max_chars:
+            break
+        result = (result + " " + sentence).strip()
+    return result or text
+
+
 def _template_script(fact: dict) -> dict:
     """No-LLM fallback: turns a raw Wikipedia summary into a punchy beat structure."""
     item = fact["item"]
     extract = fact["extract"]
 
     hook = f"You use {item.lower()} all the time. You have no idea where it actually came from."
-    beat1 = textwrap.shorten(extract, width=150, placeholder="...")
+    beat1 = _first_sentences(extract, 160)
     beat2 = f"Almost nobody knows the real story behind {item.lower()} — until now."
     cliff = "And the twist at the end is the part nobody expects."
     cta = "Follow for the hidden origin story of something you use every day."

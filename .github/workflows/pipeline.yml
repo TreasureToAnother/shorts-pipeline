@@ -13,7 +13,7 @@ on:
 jobs:
   run-pipeline:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 45
     steps:
       - uses: actions/checkout@v4
 
@@ -28,8 +28,17 @@ jobs:
       - name: Allow ImageMagick to render text (moviepy TextClip needs this)
         run: sudo sed -i 's/rights="none" pattern="@\*"/rights="read|write" pattern="@*"/' /etc/ImageMagick-6/policy.xml || true
 
-      - name: Install Python dependencies
+            - name: Install Python dependencies
         run: pip install -r requirements.txt
+
+      - name: Install Ollama
+        run: curl -fsSL https://ollama.com/install.sh | sh
+
+      - name: Start Ollama and pull the model
+        run: |
+          ollama serve &
+          sleep 5
+          ollama pull llama3.2
 
       - name: Restore YouTube OAuth token
         run: |
