@@ -12,10 +12,10 @@
     {
       "slot": 1,
       "hour_et": 5,
-      "stage": "generating",
-      "title": null,
-      "video_url": null,
-      "publish_at": null
+      "stage": "uploaded",
+      "title": "Confessing to a Stranger with a Shocking Connection",
+      "video_url": "https://youtube.com/shorts/ODvVZ3ioHOU",
+      "publish_at": "2026-08-23T15:00:16Z"
     },
     {
       "slot": 2,
