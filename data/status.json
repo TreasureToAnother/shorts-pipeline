@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-08-23T11:46:21Z"
+    "status": "done",
+    "message": "generated: Flight Attendant's Family Reality Check",
+    "updated_at": "2026-08-23T11:47:14Z"
   },
   "video_agent": {
     "status": "idle",
