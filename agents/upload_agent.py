@@ -43,7 +43,8 @@ def _get_credentials():
     return creds
 
 
-def upload_video(video_path: str, title: str, description: str, tags=None, publish_at: str = None) -> str:
+def upload_video(video_path: str, title: str, description: str, tags=None,
+                  publish_at: str = None, privacy_status: str = None) -> str:
     set_status("upload_agent", "running", f"uploading {os.path.basename(video_path)}")
     try:
         creds = _get_credentials()
@@ -53,6 +54,8 @@ def upload_video(video_path: str, title: str, description: str, tags=None, publi
         if publish_at:
             status["privacyStatus"] = "private"
             status["publishAt"] = publish_at
+        elif privacy_status:
+            status["privacyStatus"] = privacy_status
         else:
             status["privacyStatus"] = "public"
 
@@ -73,7 +76,12 @@ def upload_video(video_path: str, title: str, description: str, tags=None, publi
             status_resp, response = request.next_chunk()
         video_id = response["id"]
         url = f"https://youtube.com/shorts/{video_id}"
-        msg = f"scheduled for {publish_at}: {url}" if publish_at else url
+        if publish_at:
+            msg = f"scheduled for {publish_at}: {url}"
+        elif privacy_status == "private":
+            msg = f"uploaded PRIVATE (manual publish needed): {url}"
+        else:
+            msg = url
         set_status("upload_agent", "done", msg)
         return url
     except Exception as e:
@@ -87,5 +95,10 @@ if __name__ == "__main__":
     if not videos:
         print("No videos found in data/output/. Run video_agent.py first.")
     else:
-        url = upload_video(videos[-1], "History Fact You Never Learned", "Follow for daily hidden history.")
-        print("Uploaded:", url)
+        url = upload_video(
+            videos[-1],
+            "Test upload",
+            "Local test upload — private, publish manually if you want it live.",
+            privacy_status="private",
+        )
+        print("Uploaded PRIVATE (manual publish needed):", url)
