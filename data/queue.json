@@ -36,10 +36,10 @@
     {
       "slot": 4,
       "hour_et": 8,
-      "stage": "generating",
-      "title": null,
-      "video_url": null,
-      "publish_at": null
+      "stage": "uploaded",
+      "title": "Tenant's Sudden Sneeze Fiasco",
+      "video_url": "https://youtube.com/shorts/OZrub1Xer64",
+      "publish_at": "2026-08-23T18:50:48Z"
     },
     {
       "slot": 5,
