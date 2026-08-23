@@ -1,22 +1,22 @@
 {
   "script_agent": {
-    "status": "done",
-    "message": "generated: Confessing to a Stranger with a Shocking Connection",
-    "updated_at": "2026-08-23T09:57:52Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "video_agent": {
-    "status": "done",
-    "message": "/home/runner/work/shorts-pipeline/shorts-pipeline/agents/../data/output/941354f9.mp4",
-    "updated_at": "2026-08-23T10:00:15Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "upload_agent": {
-    "status": "done",
-    "message": "scheduled for 2026-08-23T15:00:16Z: https://youtube.com/shorts/ODvVZ3ioHOU",
-    "updated_at": "2026-08-23T10:00:19Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "discord_agent": {
-    "status": "done",
-    "message": "notified: Confessing to a Stranger with a Shocking Connection (scheduled 2026-08-23T15:00:16Z UTC)",
-    "updated_at": "2026-08-23T10:00:21Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   }
 }
