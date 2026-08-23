@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-08-23T10:57:58Z"
+    "status": "done",
+    "message": "generated: Barista Gone Rogue",
+    "updated_at": "2026-08-23T10:58:34Z"
   },
   "video_agent": {
     "status": "idle",
