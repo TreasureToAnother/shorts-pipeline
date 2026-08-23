@@ -10,9 +10,9 @@
     "updated_at": "2026-08-23T13:50:47Z"
   },
   "upload_agent": {
-    "status": "running",
-    "message": "uploading c839dc53.mp4",
-    "updated_at": "2026-08-23T13:50:48Z"
+    "status": "done",
+    "message": "scheduled for 2026-08-23T18:50:48Z: https://youtube.com/shorts/OZrub1Xer64",
+    "updated_at": "2026-08-23T13:50:53Z"
   },
   "discord_agent": {
     "status": "idle",
