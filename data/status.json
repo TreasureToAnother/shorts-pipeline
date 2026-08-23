@@ -1,27 +1,22 @@
 {
   "script_agent": {
     "status": "done",
-    "message": "generated: Roommate's In-Laws Crash Wedding, I Stand My Ground",
-    "updated_at": "2026-08-23T05:36:29Z"
+    "message": "generated: Uncovering Secrets Behind Every Package",
+    "updated_at": "2026-08-23T08:07:26Z"
   },
   "video_agent": {
     "status": "done",
-    "message": "/home/runner/work/shorts-pipeline/shorts-pipeline/agents/../data/output/e485687b.mp4",
-    "updated_at": "2026-08-23T02:48:38Z"
+    "message": "/Users/andrew/Desktop/faceless-yt-pipeline/agents/../data/output/a6794f17.mp4",
+    "updated_at": "2026-08-23T08:11:19Z"
   },
   "upload_agent": {
     "status": "done",
-    "message": "https://youtube.com/shorts/-r-4MfPZ-uk",
-    "updated_at": "2026-08-23T02:48:41Z"
+    "message": "uploaded PRIVATE (manual publish needed): https://youtube.com/shorts/LK_0BGLAWWI",
+    "updated_at": "2026-08-23T06:13:41Z"
   },
   "discord_agent": {
-    "status": "error",
-    "message": "401 Client Error: Unauthorized for url: https://discord.com/api/webhooks/1540862006565937194/dS_5dyaNJEH1M2jTJjVsdm_cpvIJjdlYqZ6SR6M-gx05__Vox4QVO5yiPk0G8HoLTnMP%0A",
-    "updated_at": "2026-08-23T02:48:41Z"
-  },
-  "orchestrator": {
-    "status": "error",
-    "message": "me/runner/work/shorts-pipeline/shorts-pipeline/agents/discord_agent.py\", line 40, in notify_upload\n    r.raise_for_status()\n  File \"/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/requests/models.py\", line 1024, in raise_for_status\n    raise HTTPError(http_error_msg, response=self)\nrequests.exceptions.HTTPError: 401 Client Error: Unauthorized for url: https://discord.com/api/webhooks/1540862006565937194/dS_5dyaNJEH1M2jTJjVsdm_cpvIJjdlYqZ6SR6M-gx05__Vox4QVO5yiPk0G8HoLTnMP%0A\n",
-    "updated_at": "2026-08-23T02:48:41Z"
+    "status": "done",
+    "message": "notified: Family Secret Exposed (LOCAL TEST \u2014 private, publish manually)",
+    "updated_at": "2026-08-23T06:13:41Z"
   }
 }

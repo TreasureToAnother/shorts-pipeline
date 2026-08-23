@@ -7,5 +7,10 @@
   "{\"genre\": \"a workplace drama story\", \"occupation\": \"a teacher\", \"setting\": \"a small town diner\", \"twist\": \"a plan that backfires spectacularly\"}",
   "{\"genre\": \"a malicious compliance story, following instructions exactly to backfire on someone\", \"occupation\": \"a retail manager\", \"setting\": \"a cross-country flight\", \"twist\": \"a hilarious misunderstanding\"}",
   "{\"genre\": \"a malicious compliance story, following instructions exactly to backfire on someone\", \"occupation\": \"a delivery driver\", \"setting\": \"a neighborhood block party\", \"twist\": \"an unexpected betrayal\"}",
-  "{\"genre\": \"a roommate or neighbor conflict story\", \"occupation\": \"a flight attendant\", \"setting\": \"a wedding reception\", \"twist\": \"instant karma\"}"
+  "{\"genre\": \"a roommate or neighbor conflict story\", \"occupation\": \"a flight attendant\", \"setting\": \"a wedding reception\", \"twist\": \"instant karma\"}",
+  "{\"genre\": \"a family secret confession story\", \"occupation\": \"a delivery driver\", \"setting\": \"a summer road trip\", \"twist\": \"a secret that had been hidden for years\"}",
+  "{\"genre\": \"a workplace drama story\", \"occupation\": \"a software engineer\", \"setting\": \"a wedding reception\", \"twist\": \"a secret that had been hidden for years\"}",
+  "{\"genre\": \"a moral dilemma story where the narrator isn't sure if they were wrong\", \"occupation\": \"a software engineer\", \"setting\": \"a summer road trip\", \"twist\": \"a hilarious misunderstanding\"}",
+  "{\"genre\": \"a moral dilemma story where the narrator isn't sure if they were wrong\", \"occupation\": \"a barista\", \"setting\": \"a cramped apartment building\", \"twist\": \"a secret that had been hidden for years\"}",
+  "{\"genre\": \"a story about an entitled person getting an unexpected reality check\", \"occupation\": \"a delivery driver\", \"setting\": \"a college dorm\", \"twist\": \"a secret that had been hidden for years\"}"
 ]
