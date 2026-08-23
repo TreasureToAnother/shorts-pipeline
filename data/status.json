@@ -1,22 +1,22 @@
 {
   "script_agent": {
-    "status": "done",
-    "message": "generated: Uncovering Secrets Behind Every Package",
-    "updated_at": "2026-08-23T08:07:26Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "video_agent": {
-    "status": "done",
-    "message": "/Users/andrew/Desktop/faceless-yt-pipeline/agents/../data/output/a6794f17.mp4",
-    "updated_at": "2026-08-23T08:11:19Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "upload_agent": {
-    "status": "done",
-    "message": "uploaded PRIVATE (manual publish needed): https://youtube.com/shorts/LK_0BGLAWWI",
-    "updated_at": "2026-08-23T06:13:41Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "discord_agent": {
-    "status": "done",
-    "message": "notified: Family Secret Exposed (LOCAL TEST \u2014 private, publish manually)",
-    "updated_at": "2026-08-23T06:13:41Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   }
 }
