@@ -5,9 +5,9 @@
     "updated_at": "2026-08-23T10:58:34Z"
   },
   "video_agent": {
-    "status": "idle",
-    "message": "",
-    "updated_at": null
+    "status": "running",
+    "message": "assembling scenes",
+    "updated_at": "2026-08-23T10:58:36Z"
   },
   "upload_agent": {
     "status": "idle",
