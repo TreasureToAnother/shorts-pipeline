@@ -3,7 +3,7 @@ requests==2.32.3
 ollama==0.3.3          # optional local LLM, free, no key needed
 
 # --- TTS (free, Microsoft voices, no key) ---
-edge-tts==6.1.19
+edge-tts
 
 # --- Captions ---
 faster-whisper  # CPU-friendly free Whisper implementation
