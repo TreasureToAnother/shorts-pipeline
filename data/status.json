@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-08-23T13:46:41Z"
+    "status": "done",
+    "message": "generated: Tenant's Sudden Sneeze Fiasco",
+    "updated_at": "2026-08-23T13:47:28Z"
   },
   "video_agent": {
     "status": "idle",
