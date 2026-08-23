@@ -15,8 +15,8 @@
     "updated_at": "2026-08-23T09:08:10Z"
   },
   "discord_agent": {
-    "status": "running",
-    "message": "posting upload notification",
-    "updated_at": "2026-08-23T09:08:11Z"
+    "status": "done",
+    "message": "notified: Coworker's cruel flight from hell (scheduled 2026-08-23T14:08:07Z UTC)",
+    "updated_at": "2026-08-23T09:08:12Z"
   }
 }
