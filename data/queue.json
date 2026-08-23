@@ -1,0 +1,53 @@
+{
+  "date": "2026-08-23",
+  "slots": [
+    {
+      "slot": 0,
+      "hour_et": 4,
+      "stage": "generating",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
+    },
+    {
+      "slot": 1,
+      "hour_et": 5,
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
+    },
+    {
+      "slot": 2,
+      "hour_et": 6,
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
+    },
+    {
+      "slot": 3,
+      "hour_et": 7,
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
+    },
+    {
+      "slot": 4,
+      "hour_et": 8,
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
+    },
+    {
+      "slot": 5,
+      "hour_et": 9,
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
+    }
+  ]
+}
