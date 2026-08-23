@@ -1,22 +1,22 @@
 {
   "script_agent": {
-    "status": "done",
-    "message": "generated: Flight Attendant's Family Reality Check",
-    "updated_at": "2026-08-23T11:47:14Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "video_agent": {
-    "status": "done",
-    "message": "/home/runner/work/shorts-pipeline/shorts-pipeline/agents/../data/output/14565739.mp4",
-    "updated_at": "2026-08-23T11:50:55Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "upload_agent": {
-    "status": "done",
-    "message": "scheduled for 2026-08-23T16:50:56Z: https://youtube.com/shorts/FDD8uiL_czI",
-    "updated_at": "2026-08-23T11:51:00Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "discord_agent": {
-    "status": "done",
-    "message": "notified: Flight Attendant's Family Reality Check (scheduled 2026-08-23T16:50:56Z UTC)",
-    "updated_at": "2026-08-23T11:51:03Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   }
 }
