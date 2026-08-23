@@ -20,6 +20,12 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Configure git identity (needed early, since status_store.py
+          pushes live status updates DURING the run, not just at the end)
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
@@ -60,8 +66,6 @@ jobs:
       - name: Persist the used-topics list so future runs don't repeat a topic
         if: always()
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
           git add data/used_topics.json
           git diff --cached --quiet || git commit -m "Update used topics list"
           git push
