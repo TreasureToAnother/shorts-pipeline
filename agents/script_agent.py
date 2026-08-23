@@ -192,7 +192,7 @@ def _generate_title_with_ollama(story_text: str, model: str) -> str:
 
 def _build_script(story_text: str, model: str) -> dict:
     beats = _chunk_into_beats(story_text, target_beats=7)
-    scenes = []
+    scenes = [{ "text": "You won't believe what just happened.", "duration": 3.0, "sfx": "dramatic_sting", }]
     for beat in beats:
         scenes.append({
             "text": beat,

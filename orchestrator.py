@@ -45,9 +45,13 @@ def run_pipeline():
         elif not IS_CI:
             privacy_status = "private"
 
+        hashtags = "#story #storytime #storytelling"
+        max_title_len = 100 - len(hashtags) - 1
+        youtube_title = f"{script['title'][:max_title_len]} {hashtags}"[:100]
+
         url = upload_video(
             video_path,
-            title=script["title"][:100],
+            title=youtube_title,
             description="A story time short. Follow for more.",
             publish_at=publish_at,
             privacy_status=privacy_status,
