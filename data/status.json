@@ -15,8 +15,8 @@
     "updated_at": "2026-08-23T13:50:53Z"
   },
   "discord_agent": {
-    "status": "running",
-    "message": "posting upload notification",
-    "updated_at": "2026-08-23T13:50:54Z"
+    "status": "done",
+    "message": "notified: Tenant's Sudden Sneeze Fiasco (scheduled 2026-08-23T18:50:48Z UTC)",
+    "updated_at": "2026-08-23T13:50:55Z"
   }
 }
