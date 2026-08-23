@@ -32,6 +32,7 @@
     overflow-x: hidden;
   }
 
+  /* layered nebula backdrop */
   .nebula {
     position: fixed; inset: -10%; z-index: 0; pointer-events: none;
     background:
@@ -63,6 +64,36 @@
       radial-gradient(1px 1px at 44% 45%, #fff, transparent),
       radial-gradient(1px 1px at 15% 92%, #fff, transparent);
     background-size: 100% 100%;
+  }
+
+
+  .meteor {
+    position: fixed;
+    top: -5%;
+    width: 2px; height: 2px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 6px 1px rgba(255,255,255,0.9), 0 0 14px 3px rgba(169,201,255,0.4);
+    z-index: 0;
+    pointer-events: none;
+    opacity: 0;
+  }
+  .meteor::before {
+    content: "";
+    position: absolute;
+    top: 50%; left: 50%;
+    width: 110px; height: 1.5px;
+    background: linear-gradient(90deg, rgba(255,255,255,0.85), transparent);
+    transform-origin: left center;
+    transform: translateY(-50%) rotate(215deg);
+  }
+  .meteor.fall {
+    animation: meteor-fall 1.3s linear forwards;
+  }
+  @keyframes meteor-fall {
+    0% { transform: translate(0,0); opacity: 1; }
+    15% { opacity: 1; }
+    100% { transform: translate(-480px, 480px); opacity: 0; }
   }
 
   header {
@@ -169,6 +200,7 @@
 
   .empty-note { font-size: 11px; color: var(--ice-dim); padding: 10px 0; line-height: 1.6; }
 
+  /* --- orbital field --- */
   .solar-field {
     position: relative;
     min-height: 560px;
@@ -470,9 +502,25 @@ async function pollQueue() {
   }
 }
 
+
+function spawnMeteor() {
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  const m = document.createElement("div");
+  m.className = "meteor fall";
+  m.style.left = (Math.random() * 90 + 5) + "%";
+  m.style.animationDuration = (1 + Math.random() * 0.8) + "s";
+  document.body.appendChild(m);
+  m.addEventListener("animationend", () => m.remove());
+}
+function scheduleMeteors() {
+  spawnMeteor();
+  setTimeout(scheduleMeteors, 2500 + Math.random() * 5000);
+}
+
 tickClock();
 pollStatus();
 pollQueue();
+scheduleMeteors();
 setInterval(tickClock, 15000);
 setInterval(pollStatus, 3000);
 setInterval(pollQueue, 5000);
