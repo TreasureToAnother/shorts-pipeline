@@ -20,10 +20,10 @@
     {
       "slot": 2,
       "hour_et": 6,
-      "stage": "generating",
-      "title": null,
-      "video_url": null,
-      "publish_at": null
+      "stage": "uploaded",
+      "title": "Barista Gone Rogue",
+      "video_url": "https://youtube.com/shorts/CPHTJpKlPWU",
+      "publish_at": "2026-08-23T16:01:39Z"
     },
     {
       "slot": 3,
