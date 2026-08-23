@@ -1,22 +1,22 @@
 {
   "script_agent": {
-    "status": "done",
-    "message": "generated: Tenant's Sudden Sneeze Fiasco",
-    "updated_at": "2026-08-23T13:47:28Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "video_agent": {
-    "status": "done",
-    "message": "/home/runner/work/shorts-pipeline/shorts-pipeline/agents/../data/output/c839dc53.mp4",
-    "updated_at": "2026-08-23T13:50:47Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "upload_agent": {
-    "status": "done",
-    "message": "scheduled for 2026-08-23T18:50:48Z: https://youtube.com/shorts/OZrub1Xer64",
-    "updated_at": "2026-08-23T13:50:53Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "discord_agent": {
-    "status": "done",
-    "message": "notified: Tenant's Sudden Sneeze Fiasco (scheduled 2026-08-23T18:50:48Z UTC)",
-    "updated_at": "2026-08-23T13:50:55Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   }
 }
