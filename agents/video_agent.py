@@ -45,9 +45,12 @@ WORKDIR = os.path.join(os.path.dirname(__file__), "..", "data", "work")
 
 # Inset window where the actual topic footage plays, positioned near
 # the top so the satisfying background stays visible around it.
-INSET_W = int(W * 0.86)
-INSET_H = int(H * 0.34)
-INSET_Y = int(H * 0.05)
+_INSET_SCALE = 0.75  # 25% smaller than the original size, same center point
+_orig_w, _orig_h, _orig_y = W * 0.86, H * 0.34, H * 0.05
+_center_y = _orig_y + _orig_h / 2
+INSET_W = int(_orig_w * _INSET_SCALE)
+INSET_H = int(_orig_h * _INSET_SCALE)
+INSET_Y = int(_center_y - INSET_H / 2)
 INSET_BORDER = 10
 
 CAPTION_Y = H * 0.62  # below the inset, so captions never overlap it
@@ -173,12 +176,23 @@ def _whisper_captions(audio_path: str):
 
 def _get_satisfying_background(pexels_key: str):
     """
-    Downloads one satisfying-texture loop (soap/wax cutting style, or
-    whatever SATISFYING_QUERY is set to) to use as the continuous
-    full-screen background behind the whole video. Falls back to a
-    plain animated color card if no key/results are available, so the
-    pipeline never breaks.
+    Background source priority:
+    1. A local video file in data/backgrounds/ (your own footage — e.g.
+       your own recorded gameplay, or properly licensed clips). Drop
+       any .mp4 files in there and one is picked at random each run.
+    2. Free Pexels search (SATISFYING_QUERY), for generic satisfying
+       textures Pexels actually has in its stock library.
+    3. A plain animated color card fallback, so the pipeline never
+       breaks even with nothing configured.
     """
+    local_dir = os.path.join(os.path.dirname(__file__), "..", "data", "backgrounds")
+    if os.path.isdir(local_dir):
+        local_clips = [f for f in os.listdir(local_dir) if f.lower().endswith((".mp4", ".mov", ".m4v"))]
+        if local_clips:
+            path = os.path.join(local_dir, random.choice(local_clips))
+            clip = VideoFileClip(path).without_audio()
+            return _cover_fit(clip, W, H)
+
     query = os.getenv("SATISFYING_QUERY", "soap cutting satisfying asmr")
     video_url = _pexels_search_video(query, pexels_key) if pexels_key else None
     if video_url:
@@ -186,6 +200,7 @@ def _get_satisfying_background(pexels_key: str):
         _download(video_url, path)
         clip = VideoFileClip(path).without_audio()
         return _cover_fit(clip, W, H)
+
     from PIL import Image
     import numpy as np
     color = tuple(random.randint(30, 70) for _ in range(3))
@@ -276,7 +291,12 @@ def build_video(script: dict, pexels_key: str = "", freesound_key: str = "") -> 
         satisfying_src = _get_satisfying_background(pexels_key)
 
         clips = []
-        cursor = 0.0
+        # Start at a random point in the background clip each video,
+        # instead of always the beginning — otherwise a long source
+        # clip (e.g. a 10-minute gameplay recording) would only ever
+        # show its first couple of minutes, no matter how long it is.
+        src_dur = satisfying_src.duration
+        cursor = random.uniform(0, max(src_dur - 1, 0)) if src_dur and src_dur > 1 else 0.0
         for i, scene in enumerate(script["scenes"]):
             clip, duration = _build_scene_clip(scene, pexels_key, freesound_key, i, satisfying_src, cursor)
             clips.append(clip)

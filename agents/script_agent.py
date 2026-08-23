@@ -15,10 +15,12 @@ tech/brands, everyday objects with a good story) as structured JSON:
 
 Fully free: pulls the full Wikipedia intro section for the topic (no
 key needed) and builds several fact-based beats from real sentences in
-it. Only the connective hook/transition/cta lines are optionally
-polished by a local Ollama model for variety — factual beats are never
-rewritten by the LLM, and a guardrail rejects any rewrite that appears
-to introduce a new, unsourced claim.
+it. Both the fact beats and the connective hook/transition/cta lines
+are optionally rewritten by a local Ollama model — fact beats get
+simplified into plain language while keeping every fact/name/number
+unchanged, connective lines get punched up for retention. Guardrails
+reject any rewrite that appears to introduce a new, unsourced name or
+number.
 
 Topics are tracked in data/used_topics.json so the same subject never
 repeats until the full list has been used once.
@@ -41,30 +43,19 @@ USED_TOPICS_PATH = os.path.join(os.path.dirname(__file__), "..", "data", "used_t
 
 MIN_TARGET_WORDS = 170
 MAX_TARGET_WORDS = 280
-FIXED_LINE_WORD_COUNT = 45  # rough budget used by hook/transition/cliff/cta
+FIXED_LINE_WORD_COUNT = 45
 
-# Curated list of genuinely popular, high-interest topics — the kind
-# people actually stop scrolling for — spanning dinosaurs, viral foods,
-# iconic tech/brands, and the best (most interesting) everyday objects.
-# Titles match real Wikipedia article names.
 ITEMS = [
-    # Dinosaurs / prehistoric (huge built-in interest)
     "Tyrannosaurus", "Velociraptor", "Triceratops", "Stegosaurus",
     "Brachiosaurus", "Spinosaurus", "Ankylosaurus", "Pterosaur",
     "Woolly mammoth", "Megalodon", "Sabertooth", "Archaeopteryx",
-
-    # Viral / iconic foods
     "Pizza", "Sushi", "Hamburger", "Ramen", "Taco", "French fries",
     "Ice cream", "Chocolate", "Coffee", "Bubble tea", "Oreo",
     "Coca-Cola", "Ketchup", "Sliced bread", "Popsicle", "Chewing gum",
     "Potato chip", "Champagne",
-
-    # Tech & iconic brands
     "IPhone", "Nintendo Entertainment System", "Bitcoin", "Internet",
     "Wi-Fi", "Video game", "YouTube", "Television", "LEGO", "Barbie",
     "Pokémon", "McDonald's", "Rubik's Cube",
-
-    # Best of everyday objects (kept only the genuinely interesting ones)
     "Zipper", "Velcro", "Blue jeans", "Bubble wrap", "Post-it note",
     "Superglue", "WD-40", "Slinky", "Frisbee",
 ]
@@ -87,9 +78,6 @@ def _save_used(used):
 
 
 def _pick_unused_item():
-    """Never repeats a topic until every topic in the list has been
-    used once, at which point the tracking list resets and the cycle
-    starts over."""
     used = _load_used()
     available = [i for i in ITEMS if i not in used]
     if not available:
@@ -128,12 +116,6 @@ def _sentences(text: str):
 
 
 def _build_fact_beats(extract: str, word_budget: int):
-    """
-    Groups real Wikipedia sentences into a handful of fact beats (1-2
-    sentences each) until the running word count hits the budget. Stops
-    BEFORE adding a sentence that would blow way past the budget
-    (unless no fact beat exists yet).
-    """
     sentences = _sentences(extract)
     beats = []
     current = []
@@ -197,9 +179,6 @@ def _template_script(fact: dict) -> dict:
 
 
 def _introduces_new_claim(original: str, rewritten: str, item: str) -> bool:
-    """Rough guardrail against LLM hallucination: flags a rewrite if it
-    contains a capitalized word/phrase (a likely proper noun) that
-    wasn't in the original line."""
     def proper_nouns(text):
         words = text.split()
         found = set()
@@ -213,9 +192,39 @@ def _introduces_new_claim(original: str, rewritten: str, item: str) -> bool:
     return len(new_nouns) > 0
 
 
+def _introduces_new_numbers(original: str, rewritten: str) -> bool:
+    orig_nums = set(re.findall(r"\d[\d,.]*", original))
+    new_nums = set(re.findall(r"\d[\d,.]*", rewritten))
+    return len(new_nums - orig_nums) > 0
+
+
+def _simplify_text(text: str, item: str, model: str) -> str:
+    try:
+        import ollama
+    except ImportError:
+        return text
+    prompt = (
+        "Rewrite the following in simple, plain, everyday language a "
+        "non-technical person can easily follow. Keep every fact, name, "
+        "date, and number exactly the same — do not add or remove any "
+        "specific information, just make the wording clearer and cut "
+        "jargon. Return ONLY the rewritten text, no preamble:\n\n" + text
+    )
+    try:
+        result = ollama.generate(model=model, prompt=prompt)
+        rewritten = result.get("response", "").strip().strip('"')
+        if not rewritten:
+            return text
+        if _introduces_new_claim(text, rewritten, item):
+            return text
+        if _introduces_new_numbers(text, rewritten):
+            return text
+        return rewritten
+    except Exception:
+        return text
+
+
 def _polish_connective_lines(script: dict, model: str) -> dict:
-    """Rewrites ONLY the non-factual connective lines (hook, transition,
-    cliffhanger, cta) for variety/punch. Fact beats are never touched."""
     try:
         import ollama
     except ImportError:
@@ -244,11 +253,22 @@ def _polish_connective_lines(script: dict, model: str) -> dict:
     return script
 
 
+def _simplify_fact_beats(script: dict, model: str) -> dict:
+    item = script["title"].replace("The Real Origin of ", "")
+    connective_indices = {0, 1, len(script["scenes"]) - 2, len(script["scenes"]) - 1}
+    for idx, scene in enumerate(script["scenes"]):
+        if idx in connective_indices:
+            continue
+        scene["text"] = _simplify_text(scene["text"], item, model)
+    return script
+
+
 def generate_script(ollama_model: str = "llama3.2") -> dict:
     set_status("script_agent", "running", "fetching topic origin story")
     try:
         fact = _fetch_item_origin()
         script = _template_script(fact)
+        script = _simplify_fact_beats(script, ollama_model)
         script = _polish_connective_lines(script, ollama_model)
         for s in script["scenes"]:
             s.setdefault("sfx", random.choice(SFX_POOL))
