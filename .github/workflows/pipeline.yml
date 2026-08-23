@@ -2,13 +2,22 @@ name: Run History Shorts Pipeline
 
 on:
   schedule:
-    # Runs 4x/day, well under the 6-upload YouTube quota.
-    # Cron is UTC — adjust to your preferred posting times.
-    - cron: "0 13 * * *"
-    - cron: "0 17 * * *"
-    - cron: "0 21 * * *"
-    - cron: "0 1 * * *"
+    # Times below are in UTC for Eastern Daylight Time (EDT, UTC-4),
+    # which is in effect roughly March-November. Targets 9am, 10am,
+    # 12pm, 1pm, 2pm, 3pm Eastern.
+    # NOTE: when clocks fall back to EST (UTC-5) in November, these
+    # will run 1 hour later than intended until updated to add 1 hour
+    # to each UTC time below (e.g. 13:00 -> 14:00).
+    - cron: "0 13 * * *"  # 9:00 AM ET
+    - cron: "0 14 * * *"  # 10:00 AM ET
+    - cron: "0 16 * * *"  # 12:00 PM ET
+    - cron: "0 17 * * *"  # 1:00 PM ET
+    - cron: "0 18 * * *"  # 2:00 PM ET
+    - cron: "0 19 * * *"  # 3:00 PM ET
   workflow_dispatch: {}   # lets you trigger a run manually from the Actions tab
+
+permissions:
+  contents: write   # needed so the workflow can commit the updated used-topics list back to the repo
 
 jobs:
   run-pipeline:
@@ -28,7 +37,7 @@ jobs:
       - name: Allow ImageMagick to render text (moviepy TextClip needs this)
         run: sudo sed -i 's/rights="none" pattern="@\*"/rights="read|write" pattern="@*"/' /etc/ImageMagick-6/policy.xml || true
 
-            - name: Install Python dependencies
+      - name: Install Python dependencies
         run: pip install -r requirements.txt
 
       - name: Install Ollama
@@ -53,6 +62,15 @@ jobs:
           YOUTUBE_CHANNEL_ID: ${{ secrets.YOUTUBE_CHANNEL_ID }}
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
         run: python orchestrator.py
+
+      - name: Persist the used-topics list so future runs don't repeat a topic
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/used_topics.json
+          git diff --cached --quiet || git commit -m "Update used topics list"
+          git push
 
       - name: Upload status.json as build artifact (optional, for debugging)
         if: always()
