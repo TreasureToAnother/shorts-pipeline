@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-08-23T09:05:02Z"
+    "status": "done",
+    "message": "generated: Coworker's cruel flight from hell",
+    "updated_at": "2026-08-23T09:05:38Z"
   },
   "video_agent": {
     "status": "idle",
