@@ -15,8 +15,8 @@
     "updated_at": "2026-08-23T11:51:00Z"
   },
   "discord_agent": {
-    "status": "running",
-    "message": "posting upload notification",
-    "updated_at": "2026-08-23T11:51:01Z"
+    "status": "done",
+    "message": "notified: Flight Attendant's Family Reality Check (scheduled 2026-08-23T16:50:56Z UTC)",
+    "updated_at": "2026-08-23T11:51:03Z"
   }
 }
