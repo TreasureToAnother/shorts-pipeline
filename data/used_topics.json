@@ -12,5 +12,11 @@
   "{\"genre\": \"a workplace drama story\", \"occupation\": \"a software engineer\", \"setting\": \"a wedding reception\", \"twist\": \"a secret that had been hidden for years\"}",
   "{\"genre\": \"a moral dilemma story where the narrator isn't sure if they were wrong\", \"occupation\": \"a software engineer\", \"setting\": \"a summer road trip\", \"twist\": \"a hilarious misunderstanding\"}",
   "{\"genre\": \"a moral dilemma story where the narrator isn't sure if they were wrong\", \"occupation\": \"a barista\", \"setting\": \"a cramped apartment building\", \"twist\": \"a secret that had been hidden for years\"}",
-  "{\"genre\": \"a story about an entitled person getting an unexpected reality check\", \"occupation\": \"a delivery driver\", \"setting\": \"a college dorm\", \"twist\": \"a secret that had been hidden for years\"}"
+  "{\"genre\": \"a story about an entitled person getting an unexpected reality check\", \"occupation\": \"a delivery driver\", \"setting\": \"a college dorm\", \"twist\": \"a secret that had been hidden for years\"}",
+  "{\"genre\": \"a petty revenge story\", \"occupation\": \"a nurse\", \"setting\": \"a cross-country flight\", \"twist\": \"a shocking coincidence\"}",
+  "{\"genre\": \"a family secret confession story\", \"occupation\": \"a barista\", \"setting\": \"a summer road trip\", \"twist\": \"instant karma\"}",
+  "{\"genre\": \"a malicious compliance story, following instructions exactly to backfire on someone\", \"occupation\": \"a barista\", \"setting\": \"a neighborhood block party\", \"twist\": \"a hilarious misunderstanding\"}",
+  "{\"genre\": \"a story about an entitled person getting an unexpected reality check\", \"occupation\": \"a flight attendant\", \"setting\": \"a family reunion\", \"twist\": \"a plan that backfires spectacularly\"}",
+  "{\"genre\": \"a story about an entitled person getting an unexpected reality check\", \"occupation\": \"a landlord\", \"setting\": \"an Airbnb rental\", \"twist\": \"a hilarious misunderstanding\"}",
+  "{\"genre\": \"a roommate or neighbor conflict story\", \"occupation\": \"a teacher\", \"setting\": \"a neighborhood block party\", \"twist\": \"an unexpected betrayal\"}"
 ]

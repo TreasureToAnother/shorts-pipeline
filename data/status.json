@@ -1,22 +1,22 @@
 {
   "script_agent": {
     "status": "done",
-    "message": "generated: Uncovering Secrets Behind Every Package",
-    "updated_at": "2026-08-23T08:07:26Z"
+    "message": "generated: Roommate's Secret Ex Revealed",
+    "updated_at": "2026-08-23T14:00:21Z"
   },
   "video_agent": {
     "status": "done",
-    "message": "/Users/andrew/Desktop/faceless-yt-pipeline/agents/../data/output/a6794f17.mp4",
-    "updated_at": "2026-08-23T08:11:19Z"
+    "message": "/home/runner/work/shorts-pipeline/shorts-pipeline/agents/../data/output/0f0bc10b.mp4",
+    "updated_at": "2026-08-23T14:03:47Z"
   },
   "upload_agent": {
     "status": "done",
-    "message": "uploaded PRIVATE (manual publish needed): https://youtube.com/shorts/LK_0BGLAWWI",
-    "updated_at": "2026-08-23T06:13:41Z"
+    "message": "scheduled for 2026-08-23T19:03:48Z: https://youtube.com/shorts/S3UX-m9ZPPE",
+    "updated_at": "2026-08-23T14:03:51Z"
   },
   "discord_agent": {
     "status": "done",
-    "message": "notified: Family Secret Exposed (LOCAL TEST \u2014 private, publish manually)",
-    "updated_at": "2026-08-23T06:13:41Z"
+    "message": "notified: Roommate's Secret Ex Revealed (scheduled 2026-08-23T19:03:48Z UTC)",
+    "updated_at": "2026-08-23T14:03:54Z"
   }
 }
