@@ -8,233 +8,326 @@
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root {
-    --void: #05070d;
-    --void-2: #0a0f1c;
-    --panel: rgba(14, 20, 36, 0.72);
-    --border: rgba(140, 170, 220, 0.14);
-    --ice: #8ecae6;
-    --ice-dim: #4f6a85;
-    --gold: #ffd76a;
-    --gold-soft: rgba(255, 215, 106, 0.55);
-    --white: #eef3fa;
+    --void: #07060d;
+    --nebula-a: #201a3d;
+    --nebula-b: #2e1c38;
+    --nebula-c: #14213d;
+    --panel: rgba(18, 16, 34, 0.62);
+    --panel-border: rgba(160, 150, 220, 0.14);
+    --ice: #a9c9ff;
+    --ice-dim: #5b5d82;
+    --amber: #ffb454;
+    --amber-soft: rgba(255, 180, 84, 0.55);
+    --text: #f1eefb;
     --error: #ff6b6b;
+    --ok: #7fe0c4;
   }
   * { box-sizing: border-box; }
   html, body {
     margin: 0;
     min-height: 100vh;
-    background: radial-gradient(ellipse at 50% 30%, #0d1424 0%, var(--void) 60%, #020306 100%);
-    color: var(--white);
+    background: var(--void);
+    color: var(--text);
     font-family: 'IBM Plex Mono', monospace;
     overflow-x: hidden;
   }
 
-  /* starfield */
-  .stars, .stars2, .stars3 {
-    position: fixed; inset: 0; pointer-events: none; z-index: 0;
+  .nebula {
+    position: fixed; inset: -10%; z-index: 0; pointer-events: none;
+    background:
+      radial-gradient(ellipse 900px 700px at 15% 20%, rgba(46, 28, 56, 0.55), transparent 60%),
+      radial-gradient(ellipse 800px 900px at 85% 80%, rgba(20, 33, 61, 0.6), transparent 60%),
+      radial-gradient(ellipse 700px 600px at 50% 50%, rgba(32, 26, 61, 0.4), transparent 65%),
+      var(--void);
+    animation: drift 60s ease-in-out infinite alternate;
   }
-  .stars { background-image: radial-gradient(1px 1px at 20px 30px, white, transparent),
-    radial-gradient(1px 1px at 120px 80px, white, transparent),
-    radial-gradient(1px 1px at 220px 40px, white, transparent),
-    radial-gradient(1px 1px at 300px 150px, white, transparent),
-    radial-gradient(1px 1px at 400px 60px, white, transparent),
-    radial-gradient(1px 1px at 500px 200px, white, transparent),
-    radial-gradient(1px 1px at 620px 90px, white, transparent),
-    radial-gradient(1px 1px at 720px 260px, white, transparent),
-    radial-gradient(1px 1px at 90px 260px, white, transparent),
-    radial-gradient(1px 1px at 850px 40px, white, transparent);
-    background-repeat: repeat; background-size: 900px 500px; opacity: 0.5;
+  @keyframes drift {
+    0% { transform: scale(1) translate(0,0); }
+    100% { transform: scale(1.06) translate(-1%, 1%); }
   }
-  .stars2 { background-image: radial-gradient(1.5px 1.5px at 60px 120px, var(--ice), transparent),
-    radial-gradient(1.5px 1.5px at 380px 300px, var(--ice), transparent),
-    radial-gradient(1.5px 1.5px at 650px 180px, var(--ice), transparent),
-    radial-gradient(1.5px 1.5px at 800px 380px, var(--ice), transparent);
-    background-repeat: repeat; background-size: 900px 500px; opacity: 0.3; }
+  @media (prefers-reduced-motion: reduce) { .nebula { animation: none; } }
+
+  .stars {
+    position: fixed; inset: 0; z-index: 0; pointer-events: none; opacity: 0.55;
+    background-image:
+      radial-gradient(1px 1px at 10% 15%, #fff, transparent),
+      radial-gradient(1px 1px at 22% 65%, #fff, transparent),
+      radial-gradient(1px 1px at 35% 30%, #fff, transparent),
+      radial-gradient(1.5px 1.5px at 48% 80%, var(--ice), transparent),
+      radial-gradient(1px 1px at 58% 12%, #fff, transparent),
+      radial-gradient(1px 1px at 68% 55%, #fff, transparent),
+      radial-gradient(1.5px 1.5px at 78% 25%, var(--amber-soft), transparent),
+      radial-gradient(1px 1px at 88% 70%, #fff, transparent),
+      radial-gradient(1px 1px at 92% 40%, #fff, transparent),
+      radial-gradient(1px 1px at 6% 85%, #fff, transparent),
+      radial-gradient(1px 1px at 44% 45%, #fff, transparent),
+      radial-gradient(1px 1px at 15% 92%, #fff, transparent);
+    background-size: 100% 100%;
+  }
 
   header {
     position: relative; z-index: 2;
     text-align: center;
-    padding: 36px 20px 10px;
+    padding: 40px 20px 6px;
   }
   .eyebrow {
-    font-size: 11px; letter-spacing: 0.25em; text-transform: uppercase;
-    color: var(--gold); margin: 0 0 8px;
+    font-size: 10px; letter-spacing: 0.32em; text-transform: uppercase;
+    color: var(--amber); margin: 0 0 10px; font-weight: 500;
   }
   h1 {
     font-family: 'Space Grotesk', sans-serif; font-weight: 700;
-    font-size: 30px; margin: 0; letter-spacing: 0.02em; color: var(--white);
+    font-size: 32px; margin: 0; letter-spacing: 0.01em; color: var(--text);
   }
-  .subhead { font-size: 12px; color: var(--ice-dim); margin-top: 8px; }
+  .telemetry-row {
+    display: flex; justify-content: center; gap: 28px;
+    margin-top: 16px; font-size: 11px; color: var(--ice-dim);
+  }
+  .telemetry-row .stat { text-align: center; }
+  .telemetry-row .stat .val {
+    display: block; font-family: 'Space Grotesk', sans-serif;
+    font-size: 15px; color: var(--ice); font-variant-numeric: tabular-nums;
+    letter-spacing: 0.02em; margin-bottom: 2px;
+  }
+  .telemetry-row .stat .lbl { text-transform: uppercase; letter-spacing: 0.12em; font-size: 9px; }
 
   .layout {
     position: relative; z-index: 2;
     display: grid;
-    grid-template-columns: 280px 1fr 280px;
-    gap: 24px;
-    max-width: 1400px;
-    margin: 30px auto;
+    grid-template-columns: 290px 1fr 290px;
+    gap: 22px;
+    max-width: 1440px;
+    margin: 34px auto;
     padding: 0 24px 60px;
-    min-height: 640px;
+    min-height: 620px;
   }
-  @media (max-width: 980px) {
+  @media (max-width: 1000px) {
     .layout { grid-template-columns: 1fr; }
   }
 
   .panel {
     background: var(--panel);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    padding: 18px;
-    backdrop-filter: blur(6px);
+    border: 1px solid var(--panel-border);
+    border-radius: 14px;
+    padding: 20px;
+    backdrop-filter: blur(10px);
     align-self: start;
+    position: relative;
+    overflow: hidden;
   }
+  .panel::before {
+    content: "";
+    position: absolute; top: 0; left: 0; right: 0; height: 1px;
+    background: linear-gradient(90deg, transparent, var(--panel-accent, var(--ice)), transparent);
+    opacity: 0.5;
+  }
+  .panel.queue { --panel-accent: var(--amber); }
+  .panel.release { --panel-accent: var(--ok); }
+
   .panel h2 {
     font-family: 'Space Grotesk', sans-serif;
-    font-size: 14px; font-weight: 600; letter-spacing: 0.04em;
-    text-transform: uppercase; color: var(--ice);
-    margin: 0 0 4px;
+    font-size: 13px; font-weight: 600; letter-spacing: 0.06em;
+    text-transform: uppercase; color: var(--text);
+    margin: 0 0 3px;
   }
-  .panel .panel-sub { font-size: 11px; color: var(--ice-dim); margin-bottom: 16px; }
+  .panel .panel-sub {
+    font-size: 10.5px; color: var(--ice-dim); margin-bottom: 18px;
+    letter-spacing: 0.02em;
+  }
 
   .queue-item {
-    display: flex; align-items: flex-start; gap: 10px;
-    padding: 10px 0; border-top: 1px solid var(--border);
+    display: flex; align-items: flex-start; gap: 12px;
+    padding: 11px 0; border-top: 1px solid var(--panel-border);
   }
-  .queue-item:first-of-type { border-top: none; }
-  .check {
-    width: 18px; height: 18px; border-radius: 50%;
-    border: 1.5px solid var(--ice-dim); flex-shrink: 0; margin-top: 1px;
+  .queue-item:first-of-type { border-top: none; padding-top: 2px; }
+
+  .ring {
+    width: 20px; height: 20px; border-radius: 50%; flex-shrink: 0; margin-top: 1px;
     display: flex; align-items: center; justify-content: center;
-    font-size: 11px; transition: all 0.3s ease;
+    font-size: 11px; font-weight: 600;
+    border: 1.5px solid var(--ice-dim);
+    background: radial-gradient(circle, rgba(255,255,255,0.02), transparent);
+    transition: all 0.35s ease;
   }
-  .queue-item.done .check { background: var(--gold-soft); border-color: var(--gold); color: #1a1200; }
-  .queue-item.active .check { border-color: var(--ice); box-shadow: 0 0 8px var(--ice); animation: pulse-ring 1.2s ease-in-out infinite; }
-  .queue-item.error .check { border-color: var(--error); background: rgba(255,107,107,0.2); }
-  @keyframes pulse-ring { 0%,100% { transform: scale(1); } 50% { transform: scale(1.15); } }
+  .queue-item.done .ring { border-color: var(--amber); background: radial-gradient(circle, var(--amber-soft), rgba(255,180,84,0.08)); color: #2a1600; box-shadow: 0 0 10px rgba(255,180,84,0.35); }
+  .queue-item.active .ring { border-color: var(--ice); box-shadow: 0 0 0 3px rgba(169,201,255,0.15); animation: ring-pulse 1.3s ease-in-out infinite; }
+  .queue-item.error .ring { border-color: var(--error); background: rgba(255,107,107,0.15); color: var(--error); }
+  @keyframes ring-pulse { 0%,100% { box-shadow: 0 0 0 2px rgba(169,201,255,0.12); } 50% { box-shadow: 0 0 0 6px rgba(169,201,255,0.06); } }
 
-  .queue-text .time { font-size: 11px; color: var(--ice-dim); }
-  .queue-text .title { font-size: 12px; color: var(--white); margin-top: 2px; line-height: 1.4; }
+  .queue-text { min-width: 0; }
+  .queue-text .time { font-size: 10.5px; color: var(--ice-dim); letter-spacing: 0.03em; font-variant-numeric: tabular-nums; }
+  .queue-text .title { font-size: 12.5px; color: var(--text); margin-top: 3px; line-height: 1.45; word-break: break-word; }
   .queue-text .title.muted { color: var(--ice-dim); font-style: italic; }
-  .queue-text a { color: var(--ice); text-decoration: none; }
-  .queue-text a:hover { text-decoration: underline; }
+  .queue-text a { color: var(--ice); text-decoration: none; border-bottom: 1px dotted var(--ice-dim); }
+  .queue-text a:hover { border-color: var(--ice); }
   .badge {
-    font-size: 9px; text-transform: uppercase; letter-spacing: 0.08em;
-    padding: 2px 6px; border-radius: 4px; margin-top: 4px; display: inline-block;
+    font-size: 9px; text-transform: uppercase; letter-spacing: 0.1em;
+    padding: 3px 7px; border-radius: 20px; margin-top: 6px; display: inline-block;
+    border: 1px solid transparent;
   }
-  .badge.live { background: rgba(255,215,106,0.18); color: var(--gold); }
-  .badge.waiting { background: rgba(142,202,230,0.12); color: var(--ice); }
+  .badge.live { background: rgba(255,180,84,0.14); color: var(--amber); border-color: rgba(255,180,84,0.3); }
+  .badge.waiting { background: rgba(169,201,255,0.08); color: var(--ice); border-color: rgba(169,201,255,0.2); }
 
-  .empty-note { font-size: 11px; color: var(--ice-dim); padding: 8px 0; }
+  .empty-note { font-size: 11px; color: var(--ice-dim); padding: 10px 0; line-height: 1.6; }
 
   .solar-field {
     position: relative;
     min-height: 560px;
   }
+  .orbit-svg { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 0; }
+  .orbit-path {
+    fill: none;
+    stroke: var(--panel-border);
+    stroke-width: 1.5;
+    stroke-dasharray: 4 7;
+  }
+  .orbit-path.active {
+    stroke: var(--amber);
+    stroke-dasharray: none;
+    opacity: 0.75;
+    filter: drop-shadow(0 0 4px var(--amber-soft));
+  }
+  .pulse-dot {
+    fill: var(--amber);
+    filter: drop-shadow(0 0 6px var(--amber));
+    opacity: 0;
+  }
+  .pulse-dot.active {
+    opacity: 1;
+    animation: travel 2.6s linear infinite;
+  }
+  @keyframes travel {
+    0% { offset-distance: 0%; opacity: 0; }
+    8% { opacity: 1; }
+    92% { opacity: 1; }
+    100% { offset-distance: 100%; opacity: 0; }
+  }
+
   .planet-slot {
     position: absolute;
-    display: flex; flex-direction: column; align-items: center; gap: 10px;
-    cursor: default;
+    display: flex; flex-direction: column; align-items: center; gap: 11px;
+    cursor: default; z-index: 1;
   }
-  .planet-slot.tl { top: 20px; left: 20px; }
-  .planet-slot.tr { top: 20px; right: 20px; }
-  .planet-slot.bl { bottom: 20px; left: 20px; }
-  .planet-slot.br { bottom: 20px; right: 20px; }
+  .planet-slot.tl { top: 14px; left: 14px; }
+  .planet-slot.tr { top: 14px; right: 14px; }
+  .planet-slot.bl { bottom: 14px; left: 14px; }
+  .planet-slot.br { bottom: 14px; right: 14px; }
 
+  .planet-wrap { position: relative; width: 92px; height: 92px; }
   .planet {
-    width: 84px; height: 84px; border-radius: 50%;
+    width: 92px; height: 92px; border-radius: 50%;
     background:
-      radial-gradient(circle at 32% 28%, rgba(255,255,255,0.5), transparent 35%),
-      radial-gradient(circle at 65% 70%, #1a5f3f 0%, transparent 40%),
-      radial-gradient(circle at 30% 75%, #2d7a4f 0%, transparent 35%),
-      radial-gradient(circle at 60% 40%, #1e5fa8 0%, #123a6b 60%, #0a2040 100%);
-    box-shadow: inset -10px -10px 24px rgba(0,0,0,0.55), inset 6px 6px 14px rgba(255,255,255,0.06);
-    transition: transform 0.25s ease, box-shadow 0.4s ease;
+      radial-gradient(circle at 30% 25%, rgba(255,255,255,0.55), transparent 32%),
+      radial-gradient(circle at 68% 72%, #143f2c 0%, transparent 42%),
+      radial-gradient(circle at 25% 78%, #235c3e 0%, transparent 38%),
+      radial-gradient(circle at 62% 38%, #1e5fa8 0%, #12315f 58%, #061225 100%);
+    box-shadow: inset -12px -12px 26px rgba(0,0,0,0.6), inset 6px 6px 16px rgba(255,255,255,0.07);
+    transition: transform 0.3s cubic-bezier(.34,1.4,.64,1), box-shadow 0.45s ease;
+    position: relative; z-index: 1;
   }
-  .planet-slot:hover .planet { transform: scale(1.14); }
+  .ring-halo {
+    position: absolute; inset: -14px; border-radius: 50%;
+    border: 1px solid var(--panel-border);
+    opacity: 0.6; z-index: 0;
+    transition: opacity 0.4s ease, border-color 0.4s ease;
+  }
+  .planet-slot.running .ring-halo { border-color: var(--amber-soft); opacity: 1; animation: halo-spin 8s linear infinite; }
+  @keyframes halo-spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+
+  .planet-slot:hover .planet { transform: scale(1.16); }
 
   .planet-slot.running .planet {
-    box-shadow: inset -10px -10px 24px rgba(0,0,0,0.5), inset 6px 6px 14px rgba(255,255,255,0.08),
-      0 0 22px 6px var(--gold-soft), 0 0 46px 14px rgba(255,215,106,0.25);
-    animation: glow-pulse 1.6s ease-in-out infinite;
+    box-shadow: inset -12px -12px 26px rgba(0,0,0,0.55), inset 6px 6px 16px rgba(255,255,255,0.08),
+      0 0 24px 6px var(--amber-soft), 0 0 52px 16px rgba(255,180,84,0.22);
+    animation: glow-pulse 1.7s ease-in-out infinite;
   }
-  @keyframes glow-pulse {
-    0%,100% { filter: brightness(1); }
-    50% { filter: brightness(1.18); }
-  }
-  .planet-slot.done .planet { box-shadow: inset -10px -10px 24px rgba(0,0,0,0.5), 0 0 14px 3px rgba(120,220,160,0.35); }
-  .planet-slot.error .planet { box-shadow: inset -10px -10px 24px rgba(0,0,0,0.5), 0 0 16px 4px rgba(255,107,107,0.5); }
+  @keyframes glow-pulse { 0%,100% { filter: brightness(1); } 50% { filter: brightness(1.2); } }
+  .planet-slot.done .planet { box-shadow: inset -12px -12px 26px rgba(0,0,0,0.55), 0 0 16px 4px rgba(127,224,196,0.4); }
+  .planet-slot.error .planet { box-shadow: inset -12px -12px 26px rgba(0,0,0,0.55), 0 0 18px 5px rgba(255,107,107,0.5); }
 
-  .planet-label { font-family: 'Space Grotesk', sans-serif; font-size: 12px; font-weight: 600; color: var(--white); text-align: center; }
-  .planet-status { font-size: 10px; text-transform: uppercase; letter-spacing: 0.08em; text-align: center; }
+  .planet-label { font-family: 'Space Grotesk', sans-serif; font-size: 12.5px; font-weight: 600; color: var(--text); text-align: center; }
+  .planet-status { font-size: 9.5px; text-transform: uppercase; letter-spacing: 0.1em; text-align: center; font-weight: 500; }
   .planet-slot.idle .planet-status { color: var(--ice-dim); }
-  .planet-slot.running .planet-status { color: var(--gold); }
-  .planet-slot.done .planet-status { color: #7fd9a0; }
+  .planet-slot.running .planet-status { color: var(--amber); }
+  .planet-slot.done .planet-status { color: var(--ok); }
   .planet-slot.error .planet-status { color: var(--error); }
 
   .center-note {
     position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
-    text-align: center; max-width: 260px;
+    text-align: center; max-width: 240px; z-index: 1;
   }
-  .center-note .orbit-ring {
-    width: 220px; height: 220px; border-radius: 50%;
-    border: 1px dashed var(--border);
+  .center-note .core-ring {
+    width: 180px; height: 180px; border-radius: 50%;
+    border: 1px dashed var(--panel-border);
     position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
     z-index: -1;
   }
-  .center-note .msg { font-size: 11px; color: var(--ice-dim); line-height: 1.6; }
-  .center-note .msg b { color: var(--ice); }
+  .center-note .msg { font-size: 11px; color: var(--ice-dim); line-height: 1.7; }
+  .center-note .msg b { color: var(--ice); font-weight: 500; }
 
-  footer { text-align: center; font-size: 10px; color: var(--ice-dim); padding-bottom: 30px; position: relative; z-index: 2; }
+  footer { text-align: center; font-size: 10px; color: var(--ice-dim); padding-bottom: 34px; position: relative; z-index: 2; letter-spacing: 0.03em; }
 </style>
 </head>
 <body>
 
+<div class="nebula"></div>
 <div class="stars"></div>
-<div class="stars2"></div>
 
 <header>
   <p class="eyebrow">Story Time Pipeline</p>
   <h1>Mission Control</h1>
-  <p class="subhead">Four relays. Six flights a day. Reset at midnight ET.</p>
+  <div class="telemetry-row">
+    <div class="stat"><span class="val" id="clock-et">--:--</span><span class="lbl">Eastern Time</span></div>
+    <div class="stat"><span class="val" id="next-flight">--:--</span><span class="lbl">Next Flight</span></div>
+    <div class="stat"><span class="val" id="flights-done">0 / 6</span><span class="lbl">Flights Today</span></div>
+  </div>
 </header>
 
 <div class="layout">
 
-  <div class="panel">
+  <div class="panel queue">
     <h2>Today's Queue</h2>
-    <p class="panel-sub">Created & uploaded</p>
+    <p class="panel-sub">Created &amp; uploaded</p>
     <div id="queue-list"></div>
   </div>
 
   <div class="solar-field">
+    <svg class="orbit-svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+      <path id="seg-script-video" class="orbit-path" d="M 12,10 L 88,10" vector-effect="non-scaling-stroke"/>
+      <path id="seg-video-upload" class="orbit-path" d="M 88,10 L 12,90" vector-effect="non-scaling-stroke"/>
+      <path id="seg-upload-signal" class="orbit-path" d="M 12,90 L 88,90" vector-effect="non-scaling-stroke"/>
+      <circle id="dot-script-video" class="pulse-dot" r="1.4" style="offset-path: path('M 12,10 L 88,10');"/>
+      <circle id="dot-video-upload" class="pulse-dot" r="1.4" style="offset-path: path('M 88,10 L 12,90');"/>
+      <circle id="dot-upload-signal" class="pulse-dot" r="1.4" style="offset-path: path('M 12,90 L 88,90');"/>
+    </svg>
+
     <div class="center-note">
-      <div class="orbit-ring"></div>
+      <div class="core-ring"></div>
       <div class="msg" id="center-msg">Reading the wire<br/><b>...</b></div>
     </div>
 
     <div class="planet-slot idle tl" id="planet-script_agent">
-      <div class="planet"></div>
+      <div class="planet-wrap"><div class="ring-halo"></div><div class="planet"></div></div>
       <div class="planet-label">Script</div>
       <div class="planet-status">Idle</div>
     </div>
     <div class="planet-slot idle tr" id="planet-video_agent">
-      <div class="planet"></div>
+      <div class="planet-wrap"><div class="ring-halo"></div><div class="planet"></div></div>
       <div class="planet-label">Edit</div>
       <div class="planet-status">Idle</div>
     </div>
     <div class="planet-slot idle bl" id="planet-upload_agent">
-      <div class="planet"></div>
+      <div class="planet-wrap"><div class="ring-halo"></div><div class="planet"></div></div>
       <div class="planet-label">Upload</div>
       <div class="planet-status">Idle</div>
     </div>
     <div class="planet-slot idle br" id="planet-discord_agent">
-      <div class="planet"></div>
+      <div class="planet-wrap"><div class="ring-halo"></div><div class="planet"></div></div>
       <div class="planet-label">Signal</div>
       <div class="planet-status">Idle</div>
     </div>
   </div>
 
-  <div class="panel">
+  <div class="panel release">
     <h2>Awaiting Release</h2>
     <p class="panel-sub">Scheduled, not yet public</p>
     <div id="release-list"></div>
@@ -242,7 +335,7 @@
 
 </div>
 
-<footer>Auto-refreshes every few seconds</footer>
+<footer>Auto-refreshes every few seconds &middot; resets at midnight ET</footer>
 
 <script>
 const AGENTS = ["script_agent", "video_agent", "upload_agent", "discord_agent"];
@@ -250,13 +343,13 @@ const IS_LOCAL = ["localhost", "127.0.0.1"].includes(window.location.hostname);
 const GITHUB_RAW_BASE = "https://raw.githubusercontent.com/TreasureToAnother/shorts-pipeline/main/data";
 const STATUS_URL = IS_LOCAL ? "/status.json" : `${GITHUB_RAW_BASE}/status.json`;
 const QUEUE_URL = IS_LOCAL ? "/queue.json" : `${GITHUB_RAW_BASE}/queue.json`;
+const SLOT_HOURS = [4,5,6,7,8,9];
 
 function fmtHour(h) {
   const period = h >= 12 ? "PM" : "AM";
   const hour12 = h % 12 === 0 ? 12 : h % 12;
   return `${hour12}:00 ${period} ET`;
 }
-
 function fmtPublish(iso) {
   if (!iso) return "";
   try {
@@ -264,6 +357,32 @@ function fmtPublish(iso) {
     return d.toLocaleString("en-US", { timeZone: "America/New_York", hour: "numeric", minute: "2-digit", hour12: true }) + " ET";
   } catch (e) { return iso; }
 }
+function nowET() {
+  return new Date(new Date().toLocaleString("en-US", { timeZone: "America/New_York" }));
+}
+
+function tickClock() {
+  const et = nowET();
+  const h = et.getHours(), m = et.getMinutes();
+  const period = h >= 12 ? "PM" : "AM";
+  const h12 = h % 12 === 0 ? 12 : h % 12;
+  document.getElementById("clock-et").textContent = `${h12}:${String(m).padStart(2,"0")} ${period}`;
+
+  const nextHour = SLOT_HOURS.find(sh => sh > h) ?? (SLOT_HOURS[0]);
+  const nextEt = new Date(et);
+  if (nextHour <= h) nextEt.setDate(nextEt.getDate() + 1);
+  nextEt.setHours(nextHour, 0, 0, 0);
+  const diffMs = nextEt - et;
+  const diffH = Math.floor(diffMs / 3600000);
+  const diffM = Math.floor((diffMs % 3600000) / 60000);
+  document.getElementById("next-flight").textContent = `${diffH}h ${diffM}m`;
+}
+
+const ORBIT_SEGMENTS = [
+  { id: "script-video", fromAgent: "script_agent", toAgent: "video_agent" },
+  { id: "video-upload", fromAgent: "video_agent", toAgent: "upload_agent" },
+  { id: "upload-signal", fromAgent: "upload_agent", toAgent: "discord_agent" },
+];
 
 async function pollStatus() {
   try {
@@ -276,10 +395,20 @@ async function pollStatus() {
       const state = data[a] || { status: "idle" };
       const corner = ["tl","tr","bl","br"].find(c => el.classList.contains(c)) || "";
       el.className = `planet-slot ${state.status} ${corner}`;
-      const statusEl = el.querySelector(".planet-status");
-      statusEl.textContent = state.status.charAt(0).toUpperCase() + state.status.slice(1);
+      el.querySelector(".planet-status").textContent = state.status.charAt(0).toUpperCase() + state.status.slice(1);
       if (state.status === "running") anyRunning = true;
     });
+
+    ORBIT_SEGMENTS.forEach(seg => {
+      const fromState = (data[seg.fromAgent] || {}).status;
+      const toState = (data[seg.toAgent] || {}).status;
+      const active = fromState === "done" && toState === "running";
+      const path = document.getElementById("seg-" + seg.id);
+      const dot = document.getElementById("dot-" + seg.id);
+      if (path) path.classList.toggle("active", active);
+      if (dot) dot.classList.toggle("active", active);
+    });
+
     document.getElementById("center-msg").innerHTML = anyRunning
       ? "A flight is <b>in progress</b>."
       : "All relays <b>idle</b>.<br/>Waiting on the next slot.";
@@ -294,6 +423,9 @@ async function pollQueue() {
     const data = await res.json();
     const slots = data.slots || [];
 
+    const doneCount = slots.filter(s => s.stage === "uploaded").length;
+    document.getElementById("flights-done").textContent = `${doneCount} / ${slots.length || 6}`;
+
     const queueList = document.getElementById("queue-list");
     queueList.innerHTML = "";
     slots.forEach(slot => {
@@ -301,11 +433,11 @@ async function pollQueue() {
       const active = slot.stage === "generating";
       const error = slot.stage === "error";
       const cls = done ? "done" : active ? "active" : error ? "error" : "";
-      const mark = done ? "✓" : error ? "!" : "";
+      const mark = done ? "&#10003;" : error ? "!" : "";
       const div = document.createElement("div");
       div.className = "queue-item " + cls;
       div.innerHTML = `
-        <div class="check">${mark}</div>
+        <div class="ring">${mark}</div>
         <div class="queue-text">
           <div class="time">${fmtHour(slot.hour_et)}</div>
           <div class="title ${slot.title ? "" : "muted"}">${slot.title || (active ? "Generating…" : error ? "Failed" : "Not started")}</div>
@@ -326,7 +458,7 @@ async function pollQueue() {
       const div = document.createElement("div");
       div.className = "queue-item " + (isLive ? "done" : "");
       div.innerHTML = `
-        <div class="check">${isLive ? "✓" : ""}</div>
+        <div class="ring">${isLive ? "&#10003;" : ""}</div>
         <div class="queue-text">
           <div class="title"><a href="${slot.video_url}" target="_blank">${slot.title}</a></div>
           <span class="badge ${isLive ? "live" : "waiting"}">${isLive ? "Live now" : "Releases " + fmtPublish(slot.publish_at)}</span>
@@ -338,8 +470,10 @@ async function pollQueue() {
   }
 }
 
+tickClock();
 pollStatus();
 pollQueue();
+setInterval(tickClock, 15000);
 setInterval(pollStatus, 3000);
 setInterval(pollQueue, 5000);
 </script>
