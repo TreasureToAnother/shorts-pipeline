@@ -1,17 +1,7 @@
-"""
-Orchestrator
-------------
-Runs the full pipeline once, in order:
-  script_agent -> video_agent -> upload_agent -> discord_agent
-
-Each step updates data/status.json (via status_store) so the
-dashboard's node graph reflects live progress. Designed to be
-triggered by cron / GitHub Actions for scheduled uploads, or run
-manually for testing.
-"""
 import os
 import sys
 import traceback
+from datetime import datetime, timedelta, timezone
 
 from dotenv import load_dotenv
 
@@ -23,6 +13,8 @@ from agents.video_agent import build_video
 from agents.upload_agent import upload_video
 from agents.discord_agent import notify_upload
 from status_store import reset, set_status
+
+PUBLISH_DELAY_HOURS = float(os.getenv("PUBLISH_DELAY_HOURS", "5"))
 
 
 def run_pipeline():
@@ -36,17 +28,26 @@ def run_pipeline():
             freesound_key=os.getenv("FREESOUND_API_KEY", ""),
         )
 
+        publish_at = None
+        if PUBLISH_DELAY_HOURS > 0:
+            publish_dt = datetime.now(timezone.utc) + timedelta(hours=PUBLISH_DELAY_HOURS)
+            publish_at = publish_dt.strftime("%Y-%m-%dT%H:%M:%SZ")
+
         url = upload_video(
             video_path,
             title=script["title"][:100],
-            description="Daily hidden history fact. Follow for more.",
+            description="A story time short. Follow for more.",
+            publish_at=publish_at,
         )
 
         webhook = os.getenv("DISCORD_WEBHOOK_URL", "")
         if webhook:
-            notify_upload(webhook, title=script["title"], url=url)
+            if publish_at:
+                notify_upload(webhook, title=f"{script['title']} (scheduled {publish_at} UTC)", url=url)
+            else:
+                notify_upload(webhook, title=script["title"], url=url)
 
-        print(f"Pipeline complete: {url}")
+        print(f"Pipeline complete: {url}" + (f" (scheduled for {publish_at})" if publish_at else ""))
         return url
 
     except Exception:

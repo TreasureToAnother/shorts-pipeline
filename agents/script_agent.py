@@ -1,29 +1,24 @@
 """
 Script Agent
 ------------
-Produces a 60-120s script about the surprising origin story of a
-genuinely popular, eye-catching topic (dinosaurs, viral foods, iconic
-tech/brands, everyday objects with a good story) as structured JSON:
+Generates an original 60-120s "story time" script written entirely by
+a local Ollama model, in the general style of popular Reddit
+storytelling genres (AITA-style dilemmas, TIFU-style mistakes, petty
+revenge, malicious compliance, etc.) — with NO dependency on Reddit's
+API at all. Variety comes from randomly combining a genre, occupation,
+setting, and twist type on every generation, which is what keeps
+stories fresh without needing any external live data source.
 
-{
-  "title": "...",
-  "scenes": [
-    {"text": "...", "duration": 4.5, "visual_query": "vintage zipper factory", "sfx": "whoosh"},
-    ...
-  ]
-}
+Requires Ollama running locally with a model available — there's no
+meaningful non-LLM fallback for original fiction, so if Ollama is
+unavailable, a very basic templated story is used as a last resort
+just to keep the pipeline from hard-failing (quality will be much
+lower in that case).
 
-Fully free: pulls the full Wikipedia intro section for the topic (no
-key needed) and builds several fact-based beats from real sentences in
-it. Both the fact beats and the connective hook/transition/cta lines
-are optionally rewritten by a local Ollama model — fact beats get
-simplified into plain language while keeping every fact/name/number
-unchanged, connective lines get punched up for retention. Guardrails
-reject any rewrite that appears to introduce a new, unsourced name or
-number.
-
-Topics are tracked in data/used_topics.json so the same subject never
-repeats until the full list has been used once.
+The randomized element combination used for each video is tracked in
+data/used_topics.json so the same exact combo doesn't repeat until
+the space is exhausted (which, given the combinatorics here, is a
+very large number of unique combinations).
 """
 import json
 import os
@@ -31,33 +26,43 @@ import random
 import re
 import sys
 
-import requests
-
 sys.path.append("..")
 from status_store import set_status
 
-WIKI_EXTRACT_API = "https://en.wikipedia.org/w/api.php"
-SFX_POOL = ["whoosh", "impact", "ding", "dramatic_sting", "swipe"]
-
 USED_TOPICS_PATH = os.path.join(os.path.dirname(__file__), "..", "data", "used_topics.json")
+SFX_POOL = ["whoosh", "impact", "ding", "dramatic_sting", "swipe"]
 
 MIN_TARGET_WORDS = 170
 MAX_TARGET_WORDS = 280
-FIXED_LINE_WORD_COUNT = 45
 
-ITEMS = [
-    "Tyrannosaurus", "Velociraptor", "Triceratops", "Stegosaurus",
-    "Brachiosaurus", "Spinosaurus", "Ankylosaurus", "Pterosaur",
-    "Woolly mammoth", "Megalodon", "Sabertooth", "Archaeopteryx",
-    "Pizza", "Sushi", "Hamburger", "Ramen", "Taco", "French fries",
-    "Ice cream", "Chocolate", "Coffee", "Bubble tea", "Oreo",
-    "Coca-Cola", "Ketchup", "Sliced bread", "Popsicle", "Chewing gum",
-    "Potato chip", "Champagne",
-    "IPhone", "Nintendo Entertainment System", "Bitcoin", "Internet",
-    "Wi-Fi", "Video game", "YouTube", "Television", "LEGO", "Barbie",
-    "Pokémon", "McDonald's", "Rubik's Cube",
-    "Zipper", "Velcro", "Blue jeans", "Bubble wrap", "Post-it note",
-    "Superglue", "WD-40", "Slinky", "Frisbee",
+GENRES = [
+    "a moral dilemma story where the narrator isn't sure if they were wrong",
+    "a hilarious mistake that spiraled completely out of control",
+    "a petty revenge story",
+    "a malicious compliance story, following instructions exactly to backfire on someone",
+    "a story about an entitled person getting an unexpected reality check",
+    "a family secret confession story",
+    "a roommate or neighbor conflict story",
+    "a workplace drama story",
+]
+
+OCCUPATIONS = [
+    "a barista", "a flight attendant", "a teacher", "a software engineer",
+    "a nurse", "a delivery driver", "a retail manager", "a college student",
+    "a wedding photographer", "a landlord", "a waiter", "a mechanic",
+]
+
+SETTINGS = [
+    "a small town diner", "a cross-country flight", "a family Thanksgiving dinner",
+    "a cramped apartment building", "a corporate office", "a summer road trip",
+    "a wedding reception", "a college dorm", "an Airbnb rental",
+    "a neighborhood block party", "a grocery store", "a family reunion",
+]
+
+TWISTS = [
+    "an unexpected betrayal", "a secret that had been hidden for years",
+    "a hilarious misunderstanding", "instant karma", "a surprising act of kindness",
+    "a shocking coincidence", "a plan that backfires spectacularly",
 ]
 
 
@@ -77,199 +82,146 @@ def _save_used(used):
         json.dump(used, f, indent=2)
 
 
-def _pick_unused_item():
+def _pick_unused_combo(max_attempts: int = 30):
+    """Randomly combines genre/occupation/setting/twist. Given the size
+    of the combinatorial space (thousands of combos), a random retry
+    loop is simpler and just as effective as pre-enumerating every
+    possibility."""
     used = _load_used()
-    available = [i for i in ITEMS if i not in used]
-    if not available:
-        used = []
-        available = ITEMS[:]
-    item = random.choice(available)
-    used.append(item)
-    _save_used(used)
-    return item
-
-
-def _fetch_item_origin():
-    item = _pick_unused_item()
-    params = {
-        "action": "query",
-        "prop": "extracts",
-        "exintro": True,
-        "explaintext": True,
-        "format": "json",
-        "titles": item,
+    for _ in range(max_attempts):
+        combo = {
+            "genre": random.choice(GENRES),
+            "occupation": random.choice(OCCUPATIONS),
+            "setting": random.choice(SETTINGS),
+            "twist": random.choice(TWISTS),
+        }
+        key = json.dumps(combo, sort_keys=True)
+        if key not in used:
+            used.append(key)
+            _save_used(used)
+            return combo
+    # extremely unlikely fallback: space nearly exhausted, reset and retry once
+    _save_used([])
+    combo = {
+        "genre": random.choice(GENRES),
+        "occupation": random.choice(OCCUPATIONS),
+        "setting": random.choice(SETTINGS),
+        "twist": random.choice(TWISTS),
     }
-    resp = requests.get(WIKI_EXTRACT_API, params=params, timeout=15,
-                         headers={"User-Agent": "faceless-origins-bot/1.0"})
-    resp.raise_for_status()
-    pages = resp.json().get("query", {}).get("pages", {})
-    page = next(iter(pages.values()), {})
-    extract = page.get("extract", "")
-    if not extract:
-        raise RuntimeError(f"No extract found for {item}")
-    return {"item": item, "extract": extract}
+    _save_used([json.dumps(combo, sort_keys=True)])
+    return combo
+
+
+_ABBREVIATIONS = ["Mr", "Mrs", "Ms", "Dr", "St", "Jr", "Sr", "Prof"]
+_SENTENCE_SPLIT_PATTERN = re.compile(
+    r"(?<!\b" + r")(?<!\b".join(_ABBREVIATIONS) + r")(?<=[.!?])\s+"
+)
 
 
 def _sentences(text: str):
+    """Splits into sentences, being careful not to break on abbreviations
+    like 'Mrs.' or 'Dr.' — a naive split on every '. ' incorrectly cut
+    sentences in half mid-name (e.g. 'Mrs. Johnson' became two separate
+    sentences)."""
     text = re.sub(r"\s+", " ", text).strip()
-    return [s.strip() for s in re.split(r"(?<=[.!?])\s+", text) if s.strip()]
+    return [s.strip() for s in _SENTENCE_SPLIT_PATTERN.split(text) if s.strip()]
 
 
-def _build_fact_beats(extract: str, word_budget: int):
-    sentences = _sentences(extract)
+def _chunk_into_beats(text: str, target_beats: int = 7):
+    sentences = _sentences(text)
+    if not sentences:
+        return [text]
+    per_beat = max(1, len(sentences) // target_beats)
     beats = []
-    current = []
-    current_words = 0
-    total_words = 0
-
-    for sentence in sentences:
-        sentence_words = len(sentence.split())
-        would_exceed = total_words + sentence_words > word_budget
-        have_content = beats or current
-        if would_exceed and have_content:
-            break
-        current.append(sentence)
-        current_words += sentence_words
-        total_words += sentence_words
-        if current_words >= 20 or len(current) >= 2:
-            beats.append(" ".join(current))
-            current, current_words = [], 0
-        if total_words >= word_budget:
-            break
-
-    if current:
-        beats.append(" ".join(current))
-
-    if not beats:
-        beats = [extract[:200]]
+    for i in range(0, len(sentences), per_beat):
+        beats.append(" ".join(sentences[i:i + per_beat]))
     return beats
 
 
-def _template_script(fact: dict) -> dict:
-    item = fact["item"]
-    extract = fact["extract"]
+def _generate_story_with_ollama(combo: dict, target_words: int, model: str) -> str:
+    import ollama
+    prompt = (
+        f"Write {combo['genre']}. The main character is {combo['occupation']}. "
+        f"The story is set in/at {combo['setting']}. The story should build to "
+        f"{combo['twist']}. This is for a YouTube Shorts 'story time' video, "
+        f"read aloud by narration. Requirements:\n"
+        f"- First person, dramatic, engaging from the very first line\n"
+        f"- Clear beginning, escalation, and a satisfying resolution\n"
+        f"- Roughly {target_words} words\n"
+        f"- Plain, easy-to-follow spoken language, no jargon\n"
+        f"- Return ONLY the story text, no title, no preamble, no quotes"
+    )
+    result = ollama.generate(model=model, prompt=prompt)
+    story = result.get("response", "").strip().strip('"')
+    if not story:
+        raise RuntimeError("Ollama returned an empty story")
+    return story
 
-    target_words = random.randint(MIN_TARGET_WORDS, MAX_TARGET_WORDS)
-    fact_word_budget = target_words - FIXED_LINE_WORD_COUNT
 
-    hook = f"You know {item.lower()}. You have no idea where it actually came from."
-    fact_beats = _build_fact_beats(extract, fact_word_budget)
-    transition = f"Here's what almost nobody knows about {item.lower()}."
-    cliff = "And the part right before this is where it gets really strange."
-    cta = "Follow for the hidden origin story of something you already know."
+def _fallback_template_story(combo: dict) -> str:
+    """Used only if Ollama itself is unavailable — much lower quality,
+    but keeps the pipeline from hard-failing."""
+    return (
+        f"I work as {combo['occupation']}, and something happened at "
+        f"{combo['setting']} that I still can't believe. It started as a normal "
+        f"day, but things escalated fast. By the end, it all came down to "
+        f"{combo['twist']}, and nobody saw it coming. This is one of those "
+        f"stories you have to hear to believe."
+    )
 
-    visual_pool = [
-        f"{item} closeup", f"{item} vintage history", f"{item} old photo",
-        f"{item} historical", f"{item} origin", f"{item} early history",
-    ]
 
-    scenes = [{"text": hook, "duration": 4.0, "visual_query": visual_pool[0], "sfx": "dramatic_sting"}]
-    for i, beat in enumerate(fact_beats):
+def _generate_title_with_ollama(story_text: str, model: str) -> str:
+    try:
+        import ollama
+        prompt = (
+            "Write a short, punchy YouTube Shorts title (under 60 characters) "
+            "for this exact story below. The title must accurately reflect "
+            "what actually happens in the story — do not invent or reference "
+            "any detail that isn't in the text. No quotes, no 'Story Time:' "
+            "prefix, just the title itself:\n\n" + story_text
+        )
+        result = ollama.generate(model=model, prompt=prompt)
+        title = result.get("response", "").strip().strip('"').strip("'")
+        if title and len(title) <= 100:
+            return title
+    except Exception:
+        pass
+    first_sentence = _sentences(story_text)[0] if _sentences(story_text) else story_text[:60]
+    return first_sentence[:80]
+
+
+def _build_script(story_text: str, model: str) -> dict:
+    beats = _chunk_into_beats(story_text, target_beats=7)
+    scenes = []
+    for beat in beats:
         scenes.append({
             "text": beat,
             "duration": max(3.0, len(beat.split()) / 2.5),
-            "visual_query": visual_pool[(i + 1) % len(visual_pool)],
             "sfx": random.choice(SFX_POOL),
         })
-    scenes.insert(1, {"text": transition, "duration": 3.0, "visual_query": f"{item} mystery", "sfx": "whoosh"})
-    scenes.append({"text": cliff, "duration": 3.0, "visual_query": "mystery vintage invention", "sfx": "swipe"})
-    scenes.append({"text": cta, "duration": 3.0, "visual_query": f"{item} today", "sfx": "ding"})
-
-    return {"title": f"The Real Origin of {item}", "scenes": scenes}
-
-
-def _introduces_new_claim(original: str, rewritten: str, item: str) -> bool:
-    def proper_nouns(text):
-        words = text.split()
-        found = set()
-        for i, w in enumerate(words):
-            clean = w.strip(".,!?\"'").strip()
-            if i > 0 and clean and clean[0].isupper() and clean.lower() != item.lower():
-                found.add(clean.lower())
-        return found
-
-    new_nouns = proper_nouns(rewritten) - proper_nouns(original)
-    return len(new_nouns) > 0
-
-
-def _introduces_new_numbers(original: str, rewritten: str) -> bool:
-    orig_nums = set(re.findall(r"\d[\d,.]*", original))
-    new_nums = set(re.findall(r"\d[\d,.]*", rewritten))
-    return len(new_nums - orig_nums) > 0
-
-
-def _simplify_text(text: str, item: str, model: str) -> str:
-    try:
-        import ollama
-    except ImportError:
-        return text
-    prompt = (
-        "Rewrite the following in simple, plain, everyday language a "
-        "non-technical person can easily follow. Keep every fact, name, "
-        "date, and number exactly the same — do not add or remove any "
-        "specific information, just make the wording clearer and cut "
-        "jargon. Return ONLY the rewritten text, no preamble:\n\n" + text
-    )
-    try:
-        result = ollama.generate(model=model, prompt=prompt)
-        rewritten = result.get("response", "").strip().strip('"')
-        if not rewritten:
-            return text
-        if _introduces_new_claim(text, rewritten, item):
-            return text
-        if _introduces_new_numbers(text, rewritten):
-            return text
-        return rewritten
-    except Exception:
-        return text
-
-
-def _polish_connective_lines(script: dict, model: str) -> dict:
-    try:
-        import ollama
-    except ImportError:
-        return script
-
-    item = script["title"].replace("The Real Origin of ", "")
-    connective_indices = [0, 1, len(script["scenes"]) - 2, len(script["scenes"]) - 1]
-    try:
-        for idx in connective_indices:
-            original = script["scenes"][idx]["text"]
-            prompt = (
-                "Rewrite this single line to be punchier and more retention-optimized "
-                "for a YouTube Short. Do not add any names, places, dates, or facts "
-                "not already in the line. Same meaning, similar length, no quotes. "
-                "Return ONLY the rewritten line:\n\n" + original
-            )
-            result = ollama.generate(model=model, prompt=prompt)
-            rewritten = result.get("response", "").strip().strip('"')
-            if not rewritten or len(rewritten) >= len(original) * 2:
-                continue
-            if _introduces_new_claim(original, rewritten, item):
-                continue
-            script["scenes"][idx]["text"] = rewritten
-    except Exception:
-        pass
-    return script
-
-
-def _simplify_fact_beats(script: dict, model: str) -> dict:
-    item = script["title"].replace("The Real Origin of ", "")
-    connective_indices = {0, 1, len(script["scenes"]) - 2, len(script["scenes"]) - 1}
-    for idx, scene in enumerate(script["scenes"]):
-        if idx in connective_indices:
-            continue
-        scene["text"] = _simplify_text(scene["text"], item, model)
-    return script
+    scenes.append({
+        "text": "Follow for more stories like this one.",
+        "duration": 3.0,
+        "sfx": "ding",
+    })
+    title = _generate_title_with_ollama(story_text, model)
+    return {"title": title, "scenes": scenes}
 
 
 def generate_script(ollama_model: str = "llama3.2") -> dict:
-    set_status("script_agent", "running", "fetching topic origin story")
+    set_status("script_agent", "running", "generating story time script")
     try:
-        fact = _fetch_item_origin()
-        script = _template_script(fact)
-        script = _simplify_fact_beats(script, ollama_model)
-        script = _polish_connective_lines(script, ollama_model)
+        target_words = random.randint(MIN_TARGET_WORDS, MAX_TARGET_WORDS)
+        combo = _pick_unused_combo()
+
+        try:
+            story_text = _generate_story_with_ollama(combo, target_words, ollama_model)
+        except ImportError:
+            story_text = _fallback_template_story(combo)
+        except Exception:
+            story_text = _fallback_template_story(combo)
+
+        script = _build_script(story_text, ollama_model)
         for s in script["scenes"]:
             s.setdefault("sfx", random.choice(SFX_POOL))
         set_status("script_agent", "done", f"generated: {script['title']}")

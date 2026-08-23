@@ -3,5 +3,9 @@
   "Pterosaur",
   "Sliced bread",
   "YouTube",
-  "Woolly mammoth"
+  "Woolly mammoth",
+  "{\"genre\": \"a workplace drama story\", \"occupation\": \"a teacher\", \"setting\": \"a small town diner\", \"twist\": \"a plan that backfires spectacularly\"}",
+  "{\"genre\": \"a malicious compliance story, following instructions exactly to backfire on someone\", \"occupation\": \"a retail manager\", \"setting\": \"a cross-country flight\", \"twist\": \"a hilarious misunderstanding\"}",
+  "{\"genre\": \"a malicious compliance story, following instructions exactly to backfire on someone\", \"occupation\": \"a delivery driver\", \"setting\": \"a neighborhood block party\", \"twist\": \"an unexpected betrayal\"}",
+  "{\"genre\": \"a roommate or neighbor conflict story\", \"occupation\": \"a flight attendant\", \"setting\": \"a wedding reception\", \"twist\": \"instant karma\"}"
 ]

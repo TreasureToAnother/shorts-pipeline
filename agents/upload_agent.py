@@ -43,30 +43,38 @@ def _get_credentials():
     return creds
 
 
-def upload_video(video_path: str, title: str, description: str, tags=None) -> str:
+def upload_video(video_path: str, title: str, description: str, tags=None, publish_at: str = None) -> str:
     set_status("upload_agent", "running", f"uploading {os.path.basename(video_path)}")
     try:
         creds = _get_credentials()
         youtube = build("youtube", "v3", credentials=creds)
 
+        status = {"selfDeclaredMadeForKids": False}
+        if publish_at:
+            status["privacyStatus"] = "private"
+            status["publishAt"] = publish_at
+        else:
+            status["privacyStatus"] = "public"
+
         body = {
             "snippet": {
                 "title": title[:100],
                 "description": description,
-                "tags": tags or ["history", "shorts", "didyouknow"],
-                "categoryId": "27",  # Education
+                "tags": tags or ["storytime", "shorts", "reddit"],
+                "categoryId": "24",
             },
-            "status": {"privacyStatus": "public", "selfDeclaredMadeForKids": False},
+            "status": status,
         }
         media = MediaFileUpload(video_path, chunksize=-1, resumable=True, mimetype="video/mp4")
         request = youtube.videos().insert(part="snippet,status", body=body, media_body=media)
 
         response = None
         while response is None:
-            status, response = request.next_chunk()
+            status_resp, response = request.next_chunk()
         video_id = response["id"]
         url = f"https://youtube.com/shorts/{video_id}"
-        set_status("upload_agent", "done", url)
+        msg = f"scheduled for {publish_at}: {url}" if publish_at else url
+        set_status("upload_agent", "done", msg)
         return url
     except Exception as e:
         set_status("upload_agent", "error", str(e))
