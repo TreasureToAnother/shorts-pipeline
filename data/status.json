@@ -1,22 +1,27 @@
 {
   "script_agent": {
     "status": "done",
-    "message": "generated: The Real Origin of Sliced bread",
-    "updated_at": "2026-08-23T01:56:00Z"
+    "message": "generated: The Real Origin of Woolly mammoth",
+    "updated_at": "2026-08-23T02:36:58Z"
   },
   "video_agent": {
-    "status": "running",
-    "message": "assembling scenes",
-    "updated_at": "2026-08-23T01:56:00Z"
+    "status": "done",
+    "message": "/home/runner/work/shorts-pipeline/shorts-pipeline/agents/../data/output/e485687b.mp4",
+    "updated_at": "2026-08-23T02:48:38Z"
   },
   "upload_agent": {
-    "status": "idle",
-    "message": "",
-    "updated_at": null
+    "status": "done",
+    "message": "https://youtube.com/shorts/-r-4MfPZ-uk",
+    "updated_at": "2026-08-23T02:48:41Z"
   },
   "discord_agent": {
-    "status": "idle",
-    "message": "",
-    "updated_at": null
+    "status": "error",
+    "message": "401 Client Error: Unauthorized for url: https://discord.com/api/webhooks/1540862006565937194/dS_5dyaNJEH1M2jTJjVsdm_cpvIJjdlYqZ6SR6M-gx05__Vox4QVO5yiPk0G8HoLTnMP%0A",
+    "updated_at": "2026-08-23T02:48:41Z"
+  },
+  "orchestrator": {
+    "status": "error",
+    "message": "me/runner/work/shorts-pipeline/shorts-pipeline/agents/discord_agent.py\", line 40, in notify_upload\n    r.raise_for_status()\n  File \"/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/requests/models.py\", line 1024, in raise_for_status\n    raise HTTPError(http_error_msg, response=self)\nrequests.exceptions.HTTPError: 401 Client Error: Unauthorized for url: https://discord.com/api/webhooks/1540862006565937194/dS_5dyaNJEH1M2jTJjVsdm_cpvIJjdlYqZ6SR6M-gx05__Vox4QVO5yiPk0G8HoLTnMP%0A\n",
+    "updated_at": "2026-08-23T02:48:41Z"
   }
 }
