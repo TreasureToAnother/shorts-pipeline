@@ -1,13 +1,12 @@
 """
 Script Agent
 ------------
-Generates an original 60-120s "story time" script written entirely by
-a local Ollama model, in the general style of popular Reddit
-storytelling genres (AITA-style dilemmas, TIFU-style mistakes, petty
-revenge, malicious compliance, etc.) — with NO dependency on Reddit's
-API at all. Variety comes from randomly combining a genre, occupation,
-setting, and twist type on every generation, which is what keeps
-stories fresh without needing any external live data source.
+Generates an original 30-60s "story time" script written entirely by
+a local Ollama model — girl's-POV romance/suspense stories (crushes,
+betrayal, love triangles, red flags) built for comments/engagement,
+each ending with a comment-bait question. No external API dependency
+at all; variety comes from randomly combining a genre, occupation,
+setting, and twist type on every generation.
 
 Requires Ollama running locally with a model available — there's no
 meaningful non-LLM fallback for original fiction, so if Ollama is
@@ -17,8 +16,7 @@ lower in that case).
 
 The randomized element combination used for each video is tracked in
 data/used_topics.json so the same exact combo doesn't repeat until
-the space is exhausted (which, given the combinatorics here, is a
-very large number of unique combinations).
+the space is exhausted.
 """
 import json
 import os
@@ -32,37 +30,51 @@ from status_store import set_status
 USED_TOPICS_PATH = os.path.join(os.path.dirname(__file__), "..", "data", "used_topics.json")
 SFX_POOL = ["whoosh", "impact", "ding", "dramatic_sting", "swipe"]
 
-MIN_TARGET_WORDS = 170
-MAX_TARGET_WORDS = 280
+MIN_TARGET_WORDS = 90   # ~30s of narration
+MAX_TARGET_WORDS = 170  # ~60s of narration
+FIXED_LINE_WORD_COUNT = 22  # rough budget used by the hook line + comment-bait cta
 
 GENRES = [
-    "a moral dilemma story where the narrator isn't sure if they were wrong",
-    "a hilarious mistake that spiraled completely out of control",
-    "a petty revenge story",
-    "a malicious compliance story, following instructions exactly to backfire on someone",
-    "a story about an entitled person getting an unexpected reality check",
-    "a family secret confession story",
-    "a roommate or neighbor conflict story",
-    "a workplace drama story",
+    "a secret crush confession story, from a girl's first-person point of view",
+    "a story about being betrayed by a best friend, from a girl's first-person point of view",
+    "a suspenseful red-flag first date story, from a girl's first-person point of view",
+    "a love-triangle dilemma story, from a girl's first-person point of view",
+    "a story about finding out a partner was cheating, from a girl's first-person point of view",
+    "a story about falling for the wrong person, from a girl's first-person point of view",
+    "a story about a text message that changed everything, from a girl's first-person point of view",
+    "a story about a crush turning out to be someone unexpected, from a girl's first-person point of view",
+    "a story about an ex showing up unannounced, from a girl's first-person point of view",
+    "a suspenseful story about a secret she wasn't supposed to find out, from a girl's first-person point of view",
 ]
 
 OCCUPATIONS = [
-    "a barista", "a flight attendant", "a teacher", "a software engineer",
-    "a nurse", "a delivery driver", "a retail manager", "a college student",
-    "a wedding photographer", "a landlord", "a waiter", "a mechanic",
+    "a college student", "a barista", "a waitress", "an intern",
+    "a nursing student", "a hostess", "a retail worker", "a photography student",
 ]
 
 SETTINGS = [
-    "a small town diner", "a cross-country flight", "a family Thanksgiving dinner",
-    "a cramped apartment building", "a corporate office", "a summer road trip",
-    "a wedding reception", "a college dorm", "an Airbnb rental",
-    "a neighborhood block party", "a grocery store", "a family reunion",
+    "a first date", "a college dorm", "a group chat", "a wedding",
+    "a road trip with friends", "a shared apartment", "a party",
+    "a coffee shop", "summer camp", "a long-distance relationship",
+    "a group project", "a mutual friend's birthday",
 ]
 
 TWISTS = [
-    "an unexpected betrayal", "a secret that had been hidden for years",
-    "a hilarious misunderstanding", "instant karma", "a surprising act of kindness",
-    "a shocking coincidence", "a plan that backfires spectacularly",
+    "a shocking text message discovery", "a best friend's betrayal being revealed",
+    "an unexpected confession", "a public breakup", "a surprise reunion",
+    "finding out the truth at the worst possible moment",
+    "an ex showing up unannounced", "a secret admirer being revealed",
+    "catching someone in a lie",
+]
+
+ENGAGEMENT_CTAS = [
+    "Would you have forgiven him? Let me know in the comments.",
+    "Was I wrong here? Tell me in the comments.",
+    "What would you have done in my situation? Comment below.",
+    "Drop a comment if this has ever happened to you.",
+    "Team loyalty or team moving on? Let me know below.",
+    "Should I post part two? Comment below if you want it.",
+    "Be honest — was that a red flag? Tell me in the comments.",
 ]
 
 
@@ -83,10 +95,6 @@ def _save_used(used):
 
 
 def _pick_unused_combo(max_attempts: int = 30):
-    """Randomly combines genre/occupation/setting/twist. Given the size
-    of the combinatorial space (thousands of combos), a random retry
-    loop is simpler and just as effective as pre-enumerating every
-    possibility."""
     used = _load_used()
     for _ in range(max_attempts):
         combo = {
@@ -100,7 +108,6 @@ def _pick_unused_combo(max_attempts: int = 30):
             used.append(key)
             _save_used(used)
             return combo
-    # extremely unlikely fallback: space nearly exhausted, reset and retry once
     _save_used([])
     combo = {
         "genre": random.choice(GENRES),
@@ -119,15 +126,11 @@ _SENTENCE_SPLIT_PATTERN = re.compile(
 
 
 def _sentences(text: str):
-    """Splits into sentences, being careful not to break on abbreviations
-    like 'Mrs.' or 'Dr.' — a naive split on every '. ' incorrectly cut
-    sentences in half mid-name (e.g. 'Mrs. Johnson' became two separate
-    sentences)."""
     text = re.sub(r"\s+", " ", text).strip()
     return [s.strip() for s in _SENTENCE_SPLIT_PATTERN.split(text) if s.strip()]
 
 
-def _chunk_into_beats(text: str, target_beats: int = 7):
+def _chunk_into_beats(text: str, target_beats: int = 5):
     sentences = _sentences(text)
     if not sentences:
         return [text]
@@ -144,11 +147,17 @@ def _generate_story_with_ollama(combo: dict, target_words: int, model: str) -> s
         f"Write {combo['genre']}. The main character is {combo['occupation']}. "
         f"The story is set in/at {combo['setting']}. The story should build to "
         f"{combo['twist']}. This is for a YouTube Shorts 'story time' video, "
-        f"read aloud by narration. Requirements:\n"
-        f"- First person, dramatic, engaging from the very first line\n"
-        f"- Clear beginning, escalation, and a satisfying resolution\n"
-        f"- Roughly {target_words} words\n"
+        f"read aloud by narration, meant to spark comments and reactions. "
+        f"Requirements:\n"
+        f"- First person, from a girl's point of view, emotionally engaging "
+        f"from the very first line\n"
+        f"- A COMPLETE story arc (setup, escalation, twist/resolution) even "
+        f"though it's short — don't leave it feeling unfinished\n"
+        f"- Roughly {target_words} words — keep it tight and punchy, every "
+        f"sentence earning its place\n"
         f"- Plain, easy-to-follow spoken language, no jargon\n"
+        f"- Leave something relatable or debatable that would make someone "
+        f"want to comment\n"
         f"- Return ONLY the story text, no title, no preamble, no quotes"
     )
     result = ollama.generate(model=model, prompt=prompt)
@@ -159,14 +168,10 @@ def _generate_story_with_ollama(combo: dict, target_words: int, model: str) -> s
 
 
 def _fallback_template_story(combo: dict) -> str:
-    """Used only if Ollama itself is unavailable — much lower quality,
-    but keeps the pipeline from hard-failing."""
     return (
-        f"I work as {combo['occupation']}, and something happened at "
-        f"{combo['setting']} that I still can't believe. It started as a normal "
-        f"day, but things escalated fast. By the end, it all came down to "
-        f"{combo['twist']}, and nobody saw it coming. This is one of those "
-        f"stories you have to hear to believe."
+        f"I was {combo['occupation']} when it happened, at {combo['setting']}. "
+        f"I never saw it coming. Everything changed in an instant because of "
+        f"{combo['twist']}. I still don't know how I feel about it."
     )
 
 
@@ -174,11 +179,32 @@ def _generate_title_with_ollama(story_text: str, model: str) -> str:
     try:
         import ollama
         prompt = (
-            "Write a short, punchy YouTube Shorts title (under 60 characters) "
-            "for this exact story below. The title must accurately reflect "
-            "what actually happens in the story — do not invent or reference "
-            "any detail that isn't in the text. No quotes, no 'Story Time:' "
-            "prefix, just the title itself:\n\n" + story_text
+            "You're writing a YouTube Shorts title for a girl's-POV romance/"
+            "suspense 'story time' video. This niche gets clicks from curiosity "
+            "gaps, relatable emotional keywords, and POV framing — not from "
+            "flat, descriptive summaries.\n\n"
+            "Study these proven high-performing title PATTERNS (don't copy "
+            "them, just match the style):\n"
+            "- \"POV: your best friend betrays you 💔\"\n"
+            "- \"He said one thing and I knew it was over\"\n"
+            "- \"The text I wasn't supposed to see 😳\"\n"
+            "- \"I caught him red-handed and he didn't even lie\"\n"
+            "- \"She confessed everything at the worst possible time\"\n"
+            "- \"The note that changed everything\"\n\n"
+            "Now write ONE title for the story below, in that style:\n"
+            "- Under 55 characters (a hashtag block gets appended after, so "
+            "leave room)\n"
+            "- Use a real emotional/searchable keyword from the story itself "
+            "(e.g. betrayed, red flag, cheated, crush, confession, secret) "
+            "where it fits naturally — don't force one that isn't true to "
+            "the story\n"
+            "- A curiosity gap or POV framing works better than a flat summary\n"
+            "- At most one well-placed emoji, only if it genuinely fits\n"
+            "- The title MUST accurately reflect what actually happens in the "
+            "story — never invent a detail, event, or setting that isn't in "
+            "the text\n"
+            "- No quotes, no 'Story Time:' prefix, just the title itself\n\n"
+            "Story:\n" + story_text
         )
         result = ollama.generate(model=model, prompt=prompt)
         title = result.get("response", "").strip().strip('"').strip("'")
@@ -191,8 +217,12 @@ def _generate_title_with_ollama(story_text: str, model: str) -> str:
 
 
 def _build_script(story_text: str, model: str) -> dict:
-    beats = _chunk_into_beats(story_text, target_beats=7)
-    scenes = [{ "text": "You won't believe what just happened.", "duration": 3.0, "sfx": "dramatic_sting", }]
+    beats = _chunk_into_beats(story_text, target_beats=5)
+    scenes = [{
+        "text": "You won't believe what just happened.",
+        "duration": 3.0,
+        "sfx": "dramatic_sting",
+    }]
     for beat in beats:
         scenes.append({
             "text": beat,
@@ -200,8 +230,8 @@ def _build_script(story_text: str, model: str) -> dict:
             "sfx": random.choice(SFX_POOL),
         })
     scenes.append({
-        "text": "Follow for more stories like this one.",
-        "duration": 3.0,
+        "text": random.choice(ENGAGEMENT_CTAS),
+        "duration": 3.5,
         "sfx": "ding",
     })
     title = _generate_title_with_ollama(story_text, model)
@@ -212,10 +242,11 @@ def generate_script(ollama_model: str = "llama3.2") -> dict:
     set_status("script_agent", "running", "generating story time script")
     try:
         target_words = random.randint(MIN_TARGET_WORDS, MAX_TARGET_WORDS)
+        story_word_budget = max(50, target_words - FIXED_LINE_WORD_COUNT)
         combo = _pick_unused_combo()
 
         try:
-            story_text = _generate_story_with_ollama(combo, target_words, ollama_model)
+            story_text = _generate_story_with_ollama(combo, story_word_budget, ollama_model)
         except ImportError:
             story_text = _fallback_template_story(combo)
         except Exception:
