@@ -10,9 +10,9 @@
     "updated_at": "2026-08-26T16:43:31Z"
   },
   "upload_agent": {
-    "status": "running",
-    "message": "uploading 64dc86ae.mp4",
-    "updated_at": "2026-08-26T16:43:33Z"
+    "status": "done",
+    "message": "scheduled for 2026-08-26T21:43:33Z: https://youtube.com/shorts/AD-pXYQPR_o",
+    "updated_at": "2026-08-26T16:43:36Z"
   },
   "discord_agent": {
     "status": "idle",
