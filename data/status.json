@@ -10,9 +10,9 @@
     "updated_at": "2026-08-26T11:21:46Z"
   },
   "upload_agent": {
-    "status": "idle",
-    "message": "",
-    "updated_at": null
+    "status": "running",
+    "message": "uploading fed47e07.mp4",
+    "updated_at": "2026-08-26T11:21:47Z"
   },
   "discord_agent": {
     "status": "idle",
