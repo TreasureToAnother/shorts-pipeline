@@ -37,5 +37,18 @@ jobs:
       - name: Commit analytics data
         run: |
           git add data/analytics_latest.json data/analytics_history.json
-          git diff --cached --quiet || git commit -m "Update channel analytics [skip ci]"
-          git push
+          if git diff --cached --quiet; then
+            echo "No analytics changes to commit"
+            exit 0
+          fi
+          git commit -m "Update channel analytics [skip ci]"
+          for i in 1 2 3 4 5; do
+            if git push; then
+              exit 0
+            fi
+            echo "Push rejected (likely raced another workflow run) — pulling and retrying ($i)..."
+            git pull --rebase origin main
+            sleep 3
+          done
+          echo "Failed to push analytics data after retries"
+          exit 1
