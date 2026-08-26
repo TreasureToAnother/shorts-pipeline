@@ -44,10 +44,10 @@
     {
       "slot": 5,
       "hour_et": 9,
-      "stage": "generating",
-      "title": null,
-      "video_url": null,
-      "publish_at": null
+      "stage": "uploaded",
+      "title": "I've had a crush for what feels like forever - on my coworker, Mike, who's alway",
+      "video_url": "https://youtube.com/shorts/AD-pXYQPR_o",
+      "publish_at": "2026-08-26T21:43:33Z"
     }
   ]
 }
