@@ -1,22 +1,22 @@
 {
   "script_agent": {
-    "status": "done",
-    "message": "generated: I've been working at the mall for three years, but I still can't believe my boyf",
-    "updated_at": "2026-08-26T14:29:18Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "video_agent": {
-    "status": "done",
-    "message": "/home/runner/work/shorts-pipeline/shorts-pipeline/agents/../data/output/09fcb2c5.mp4",
-    "updated_at": "2026-08-26T14:31:18Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "upload_agent": {
-    "status": "done",
-    "message": "scheduled for 2026-08-26T19:31:19Z: https://youtube.com/shorts/HrBQEUtBRmQ",
-    "updated_at": "2026-08-26T14:31:24Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "discord_agent": {
-    "status": "done",
-    "message": "notified: I've been working at the mall for three years, but I still can't believe my boyf (scheduled 2026-08-26T19:31:19Z UTC)",
-    "updated_at": "2026-08-26T14:31:27Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   }
 }
