@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-08-26T10:08:10Z"
+    "status": "done",
+    "message": "generated: I wiped sweat from my forehead as I steamed milk for the umpteenth latte of the ",
+    "updated_at": "2026-08-26T10:09:00Z"
   },
   "video_agent": {
     "status": "idle",
