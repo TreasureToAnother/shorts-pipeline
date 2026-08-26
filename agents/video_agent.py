@@ -57,7 +57,7 @@ CLIP_SPEED = 1.2
 INTRO_MAX_SECONDS = 0.8
 OVERLAY_MAX_WIDTH_FRAC = 0.46   # overlay image is capped to this fraction of canvas width
 OVERLAY_MAX_HEIGHT_FRAC = 0.22  # and this fraction of canvas height, whichever is smaller
-OVERLAY_Y_FRAC = 0.06           # distance from the top of the frame
+OVERLAY_GAP_ABOVE_CAPTION_FRAC = 0.045  # gap between the overlay's bottom edge and the caption line
 
 
 def _detect_caption_font():
@@ -306,7 +306,7 @@ def _get_overlay_image_path():
     return os.path.join(OVERLAY_IMAGE_DIR, random.choice(files))
 
 
-def _build_overlay_clip(total_duration: float, canvas_w, canvas_h):
+def _build_overlay_clip(total_duration: float, canvas_w, canvas_h, caption_y):
     path = _get_overlay_image_path()
     if not path:
         return None
@@ -317,7 +317,12 @@ def _build_overlay_clip(total_duration: float, canvas_w, canvas_h):
     new_w, new_h = max(2, int(clip.w * scale)), max(2, int(clip.h * scale))
     clip = clip.fx(vfx.resize, newsize=(new_w, new_h))
     clip = clip.set_duration(total_duration)
-    return clip.set_position(("center", canvas_h * OVERLAY_Y_FRAC))
+    # Anchored to the caption line's actual position (not a fixed offset
+    # from the top) so it sits just above the text regardless of the
+    # overlay image's own height.
+    gap = canvas_h * OVERLAY_GAP_ABOVE_CAPTION_FRAC
+    y = max(0, caption_y - gap - new_h)
+    return clip.set_position(("center", y))
 
 
 def _build_scene_content(scene: dict, idx: int):
@@ -383,7 +388,7 @@ def build_video(script: dict, pexels_key: str = "") -> str:
         total_duration = cursor
 
         background = _build_background(total_duration, pexels_key, canvas_w, canvas_h)
-        overlay_clip = _build_overlay_clip(total_duration, canvas_w, canvas_h)
+        overlay_clip = _build_overlay_clip(total_duration, canvas_w, canvas_h, caption_y)
 
         caption_clips = []
         audio_tracks = []
