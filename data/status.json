@@ -10,9 +10,9 @@
     "updated_at": "2026-08-26T11:21:46Z"
   },
   "upload_agent": {
-    "status": "running",
-    "message": "uploading fed47e07.mp4",
-    "updated_at": "2026-08-26T11:21:47Z"
+    "status": "done",
+    "message": "scheduled for 2026-08-26T16:21:47Z: https://youtube.com/shorts/klGQxKI9ynI",
+    "updated_at": "2026-08-26T11:21:51Z"
   },
   "discord_agent": {
     "status": "idle",
