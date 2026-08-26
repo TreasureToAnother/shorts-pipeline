@@ -61,6 +61,10 @@ ffmpeg imagemagick`).
 7. Run `python agents/upload_agent.py` once locally — it'll open a
    browser for one-time consent and save `config/token.json`. After
    this, uploads are fully automatic (the token auto-refreshes).
+8. Same Cloud Console project: **APIs & Services > Credentials >
+   Create Credentials > API key**. Put it in `config/.env` as
+   `YOUTUBE_API_KEY` — this powers the analytics dashboard (subscriber/
+   view counts). No OAuth consent needed, it's read-only public data.
 
 ### 1.5 Discord
 
@@ -111,6 +115,7 @@ runs/day, well under YouTube's 6-upload quota, at zero dollar cost.
    - `PEXELS_API_KEY`
    - `FREESOUND_API_KEY`
    - `YOUTUBE_CHANNEL_ID`
+   - `YOUTUBE_API_KEY`
    - `DISCORD_WEBHOOK_URL`
    - `YOUTUBE_CLIENT_SECRET_JSON` — paste the full contents of your
      local `config/client_secret.json`
@@ -121,6 +126,9 @@ runs/day, well under YouTube's 6-upload quota, at zero dollar cost.
    (they're in UTC).
 4. You can also trigger a run manually anytime from the repo's
    **Actions** tab -> "Run History Shorts Pipeline" -> **Run workflow**.
+5. `.github/workflows/analytics.yml` runs separately every 4 hours to
+   snapshot channel/video stats for the dashboard — same
+   `YOUTUBE_API_KEY` and `YOUTUBE_CHANNEL_ID` secrets, no extra setup.
 
 Note: the interactive Discord bot (`!stats`, `!latest`) needs a
 long-lived connection, so it can't run on GitHub Actions' scheduled

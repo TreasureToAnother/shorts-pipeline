@@ -2,379 +2,388 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
-<title>Mission Control — Story Pipeline</title>
+<title>Neko Analytics Den</title>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root {
-    --void: #07060d;
-    --nebula-a: #201a3d;
-    --nebula-b: #2e1c38;
-    --nebula-c: #14213d;
-    --panel: rgba(18, 16, 34, 0.62);
-    --panel-border: rgba(160, 150, 220, 0.14);
-    --ice: #a9c9ff;
-    --ice-dim: #5b5d82;
-    --amber: #ffb454;
-    --amber-soft: rgba(255, 180, 84, 0.55);
-    --text: #f1eefb;
-    --error: #ff6b6b;
-    --ok: #7fe0c4;
+    --bg: #1b1425;
+    --bg2: #241a33;
+    --panel: rgba(255, 244, 251, 0.045);
+    --panel-border: rgba(255, 174, 214, 0.16);
+    --pink: #ff9ecb;
+    --pink-soft: rgba(255, 158, 203, 0.5);
+    --lavender: #c9a7ff;
+    --lavender-soft: rgba(201, 167, 255, 0.5);
+    --mint: #8fe3c3;
+    --mint-soft: rgba(143, 227, 195, 0.45);
+    --coral: #ff8f8f;
+    --coral-soft: rgba(255, 143, 143, 0.4);
+    --text: #fff5fa;
+    --text-dim: #c3b3d9;
+    --muted: #8f7fa8;
+    --gridline: rgba(255, 244, 251, 0.08);
   }
   * { box-sizing: border-box; }
   html, body {
     margin: 0;
     min-height: 100vh;
-    background: var(--void);
+    background: var(--bg);
     color: var(--text);
-    font-family: 'IBM Plex Mono', monospace;
+    font-family: 'Quicksand', sans-serif;
     overflow-x: hidden;
   }
 
-  /* layered nebula backdrop */
-  .nebula {
+  .ambient {
     position: fixed; inset: -10%; z-index: 0; pointer-events: none;
     background:
-      radial-gradient(ellipse 900px 700px at 15% 20%, rgba(46, 28, 56, 0.55), transparent 60%),
-      radial-gradient(ellipse 800px 900px at 85% 80%, rgba(20, 33, 61, 0.6), transparent 60%),
-      radial-gradient(ellipse 700px 600px at 50% 50%, rgba(32, 26, 61, 0.4), transparent 65%),
-      var(--void);
-    animation: drift 60s ease-in-out infinite alternate;
+      radial-gradient(ellipse 800px 650px at 12% 10%, rgba(255, 158, 203, 0.16), transparent 60%),
+      radial-gradient(ellipse 750px 800px at 90% 85%, rgba(201, 167, 255, 0.15), transparent 60%),
+      radial-gradient(ellipse 650px 550px at 55% 45%, rgba(143, 227, 195, 0.08), transparent 65%),
+      var(--bg);
+    animation: drift 50s ease-in-out infinite alternate;
   }
   @keyframes drift {
     0% { transform: scale(1) translate(0,0); }
-    100% { transform: scale(1.06) translate(-1%, 1%); }
+    100% { transform: scale(1.05) translate(-1.5%, 1.5%); }
   }
-  @media (prefers-reduced-motion: reduce) { .nebula { animation: none; } }
+  @media (prefers-reduced-motion: reduce) { .ambient { animation: none; } }
 
-  .stars {
-    position: fixed; inset: 0; z-index: 0; pointer-events: none; opacity: 0.55;
-    background-image:
-      radial-gradient(1px 1px at 10% 15%, #fff, transparent),
-      radial-gradient(1px 1px at 22% 65%, #fff, transparent),
-      radial-gradient(1px 1px at 35% 30%, #fff, transparent),
-      radial-gradient(1.5px 1.5px at 48% 80%, var(--ice), transparent),
-      radial-gradient(1px 1px at 58% 12%, #fff, transparent),
-      radial-gradient(1px 1px at 68% 55%, #fff, transparent),
-      radial-gradient(1.5px 1.5px at 78% 25%, var(--amber-soft), transparent),
-      radial-gradient(1px 1px at 88% 70%, #fff, transparent),
-      radial-gradient(1px 1px at 92% 40%, #fff, transparent),
-      radial-gradient(1px 1px at 6% 85%, #fff, transparent),
-      radial-gradient(1px 1px at 44% 45%, #fff, transparent),
-      radial-gradient(1px 1px at 15% 92%, #fff, transparent);
-    background-size: 100% 100%;
+  .sparkle {
+    position: fixed; bottom: -5%; z-index: 0; pointer-events: none;
+    opacity: 0; font-size: 14px;
   }
-
-
-  .meteor {
-    position: fixed;
-    top: -5%;
-    width: 2px; height: 2px;
-    background: #fff;
-    border-radius: 50%;
-    box-shadow: 0 0 6px 1px rgba(255,255,255,0.9), 0 0 14px 3px rgba(169,201,255,0.4);
-    z-index: 0;
-    pointer-events: none;
-    opacity: 0;
-  }
-  .meteor::before {
-    content: "";
-    position: absolute;
-    top: 50%; left: 50%;
-    width: 110px; height: 1.5px;
-    background: linear-gradient(90deg, rgba(255,255,255,0.85), transparent);
-    transform-origin: left center;
-    transform: translateY(-50%) rotate(215deg);
-  }
-  .meteor.fall {
-    animation: meteor-fall 1.3s linear forwards;
-  }
-  @keyframes meteor-fall {
-    0% { transform: translate(0,0); opacity: 1; }
-    15% { opacity: 1; }
-    100% { transform: translate(-480px, 480px); opacity: 0; }
+  .sparkle.rise { animation: sparkle-rise linear forwards; }
+  @keyframes sparkle-rise {
+    0% { transform: translateY(0) rotate(0deg); opacity: 0; }
+    10% { opacity: 0.85; }
+    90% { opacity: 0.6; }
+    100% { transform: translateY(-108vh) rotate(60deg); opacity: 0; }
   }
 
   header {
     position: relative; z-index: 2;
     text-align: center;
-    padding: 40px 20px 6px;
+    padding: 44px 20px 8px;
   }
   .eyebrow {
-    font-size: 10px; letter-spacing: 0.32em; text-transform: uppercase;
-    color: var(--amber); margin: 0 0 10px; font-weight: 500;
+    font-size: 11px; letter-spacing: 0.28em; text-transform: uppercase;
+    color: var(--pink); margin: 0 0 8px; font-weight: 600;
   }
   h1 {
-    font-family: 'Space Grotesk', sans-serif; font-weight: 700;
-    font-size: 32px; margin: 0; letter-spacing: 0.01em; color: var(--text);
+    font-family: 'Baloo 2', sans-serif; font-weight: 800;
+    font-size: 34px; margin: 0; letter-spacing: 0.01em; color: var(--text);
   }
+  .channel-line {
+    display: flex; align-items: center; justify-content: center; gap: 10px;
+    margin-top: 14px; font-size: 13px; color: var(--text-dim);
+  }
+  .channel-avatar {
+    width: 30px; height: 30px; border-radius: 50%; object-fit: cover;
+    border: 2px solid var(--pink-soft); background: var(--bg2);
+  }
+  .channel-avatar.placeholder {
+    display: flex; align-items: center; justify-content: center; font-size: 15px;
+  }
+
   .telemetry-row {
-    display: flex; justify-content: center; gap: 28px;
-    margin-top: 16px; font-size: 11px; color: var(--ice-dim);
+    display: flex; justify-content: center; gap: 30px; flex-wrap: wrap;
+    margin-top: 20px; font-size: 11px; color: var(--muted);
   }
   .telemetry-row .stat { text-align: center; }
   .telemetry-row .stat .val {
-    display: block; font-family: 'Space Grotesk', sans-serif;
-    font-size: 15px; color: var(--ice); font-variant-numeric: tabular-nums;
-    letter-spacing: 0.02em; margin-bottom: 2px;
+    display: block; font-family: 'Baloo 2', sans-serif;
+    font-size: 16px; color: var(--text); font-variant-numeric: tabular-nums;
+    letter-spacing: 0.01em; margin-bottom: 2px;
   }
-  .telemetry-row .stat .lbl { text-transform: uppercase; letter-spacing: 0.12em; font-size: 9px; }
+  .telemetry-row .stat .lbl { text-transform: uppercase; letter-spacing: 0.1em; font-size: 9.5px; }
 
-  .layout {
+  main {
     position: relative; z-index: 2;
-    display: grid;
-    grid-template-columns: 290px 1fr 290px;
-    gap: 22px;
-    max-width: 1440px;
-    margin: 34px auto;
-    padding: 0 24px 60px;
-    min-height: 620px;
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 30px 24px 70px;
   }
-  @media (max-width: 1000px) {
-    .layout { grid-template-columns: 1fr; }
+
+  .section-title {
+    font-family: 'Baloo 2', sans-serif; font-weight: 700;
+    font-size: 15px; color: var(--text); margin: 0 0 14px;
+    display: flex; align-items: center; gap: 8px;
   }
+
+  /* stat cards */
+  .stat-grid {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px;
+    margin-bottom: 34px;
+  }
+  @media (max-width: 900px) { .stat-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 520px) { .stat-grid { grid-template-columns: 1fr; } }
+
+  .stat-card {
+    background: var(--panel);
+    border: 1px solid var(--panel-border);
+    border-radius: 18px;
+    padding: 18px 20px;
+    backdrop-filter: blur(10px);
+    position: relative;
+    overflow: hidden;
+  }
+  .stat-card::before {
+    content: ""; position: absolute; top: -30px; right: -30px;
+    width: 90px; height: 90px; border-radius: 50%;
+    background: radial-gradient(circle, var(--card-glow, var(--pink-soft)), transparent 70%);
+    opacity: 0.5;
+  }
+  .stat-card .icon { font-size: 18px; margin-bottom: 8px; display: block; }
+  .stat-card .label {
+    font-size: 10.5px; text-transform: uppercase; letter-spacing: 0.09em;
+    color: var(--muted); font-weight: 600; margin-bottom: 6px;
+  }
+  .stat-card .value {
+    font-family: 'Baloo 2', sans-serif; font-size: 27px; font-weight: 700;
+    color: var(--text); font-variant-numeric: tabular-nums; line-height: 1.1;
+  }
+  .stat-card .delta {
+    display: inline-flex; align-items: center; gap: 4px;
+    margin-top: 8px; font-size: 11.5px; font-weight: 600;
+    padding: 3px 9px; border-radius: 20px;
+  }
+  .stat-card .delta.up { color: var(--mint); background: rgba(143,227,195,0.12); }
+  .stat-card .delta.down { color: var(--coral); background: rgba(255,143,143,0.12); }
+  .stat-card .delta.flat { color: var(--muted); background: rgba(255,255,255,0.05); }
+
+  /* charts */
+  .chart-row {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
+    margin-bottom: 34px;
+  }
+  @media (max-width: 900px) { .chart-row { grid-template-columns: 1fr; } }
+
+  .chart-panel {
+    background: var(--panel);
+    border: 1px solid var(--panel-border);
+    border-radius: 18px;
+    padding: 20px 20px 12px;
+    backdrop-filter: blur(10px);
+    position: relative;
+  }
+  .chart-head { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 6px; }
+  .chart-head h3 { font-family: 'Baloo 2', sans-serif; font-size: 14px; margin: 0; color: var(--text); }
+  .chart-head .chart-current { font-size: 12px; color: var(--muted); font-variant-numeric: tabular-nums; }
+  .chart-body { position: relative; }
+  .chart-svg { width: 100%; height: auto; display: block; overflow: visible; }
+  .grid-line { stroke: var(--gridline); stroke-width: 1; stroke-dasharray: 3 5; }
+  .grid-label { font-size: 8.5px; fill: var(--muted); font-family: 'Quicksand', sans-serif; }
+  .crosshair { stroke: var(--panel-border); stroke-width: 1; }
+  .chart-hit { cursor: crosshair; }
+  .chart-tooltip {
+    position: absolute; top: 6px; transform: translateX(-50%);
+    background: var(--bg2); border: 1px solid var(--panel-border); border-radius: 10px;
+    padding: 5px 10px; font-size: 11px; text-align: center; white-space: nowrap;
+    pointer-events: none; box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+  }
+  .chart-tooltip b { display: block; font-family: 'Baloo 2', sans-serif; font-size: 12.5px; color: var(--text); }
+  .chart-tooltip span { color: var(--muted); font-size: 9.5px; }
+  .chart-empty {
+    font-size: 12px; color: var(--muted); text-align: center;
+    padding: 46px 10px; line-height: 1.6;
+  }
+
+  /* videos + queue row */
+  .lower-row { display: grid; grid-template-columns: 1.35fr 1fr; gap: 16px; align-items: start; }
+  @media (max-width: 1000px) { .lower-row { grid-template-columns: 1fr; } }
 
   .panel {
     background: var(--panel);
     border: 1px solid var(--panel-border);
-    border-radius: 14px;
+    border-radius: 18px;
     padding: 20px;
     backdrop-filter: blur(10px);
-    align-self: start;
-    position: relative;
+  }
+
+  .video-list { display: flex; flex-direction: column; gap: 4px; }
+  .video-card {
+    display: flex; align-items: center; gap: 12px;
+    padding: 9px 8px; border-radius: 12px;
+    text-decoration: none; color: inherit;
+    transition: background 0.2s ease;
+  }
+  .video-card:hover { background: rgba(255,255,255,0.04); }
+  .video-thumb {
+    width: 54px; height: 54px; border-radius: 10px; object-fit: cover;
+    flex-shrink: 0; background: var(--bg2);
+  }
+  .video-info { min-width: 0; flex: 1; }
+  .video-title {
+    font-size: 12.5px; color: var(--text); line-height: 1.35;
+    display: -webkit-box; -webkit-line-clamp: 2; line-clamp: 2; -webkit-box-orient: vertical;
     overflow: hidden;
   }
-  .panel::before {
-    content: "";
-    position: absolute; top: 0; left: 0; right: 0; height: 1px;
-    background: linear-gradient(90deg, transparent, var(--panel-accent, var(--ice)), transparent);
-    opacity: 0.5;
-  }
-  .panel.queue { --panel-accent: var(--amber); }
-  .panel.release { --panel-accent: var(--ok); }
+  .video-meta { display: flex; align-items: center; gap: 8px; margin-top: 4px; font-size: 10.5px; color: var(--muted); }
+  .crown { font-size: 12px; }
+  .video-views { color: var(--pink); font-weight: 600; }
 
-  .panel h2 {
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: 13px; font-weight: 600; letter-spacing: 0.06em;
-    text-transform: uppercase; color: var(--text);
-    margin: 0 0 3px;
-  }
-  .panel .panel-sub {
-    font-size: 10.5px; color: var(--ice-dim); margin-bottom: 18px;
-    letter-spacing: 0.02em;
-  }
-
+  .queue-block + .queue-block { margin-top: 22px; }
   .queue-item {
-    display: flex; align-items: flex-start; gap: 12px;
-    padding: 11px 0; border-top: 1px solid var(--panel-border);
+    display: flex; align-items: flex-start; gap: 11px;
+    padding: 10px 0; border-top: 1px solid var(--panel-border);
   }
   .queue-item:first-of-type { border-top: none; padding-top: 2px; }
-
-  .ring {
-    width: 20px; height: 20px; border-radius: 50%; flex-shrink: 0; margin-top: 1px;
+  .paw {
+    width: 22px; height: 22px; border-radius: 50%; flex-shrink: 0; margin-top: 1px;
     display: flex; align-items: center; justify-content: center;
-    font-size: 11px; font-weight: 600;
-    border: 1.5px solid var(--ice-dim);
-    background: radial-gradient(circle, rgba(255,255,255,0.02), transparent);
-    transition: all 0.35s ease;
+    font-size: 11px; font-weight: 700;
+    border: 1.5px solid var(--muted);
+    background: rgba(255,255,255,0.02);
+    transition: all 0.3s ease;
   }
-  .queue-item.done .ring { border-color: var(--amber); background: radial-gradient(circle, var(--amber-soft), rgba(255,180,84,0.08)); color: #2a1600; box-shadow: 0 0 10px rgba(255,180,84,0.35); }
-  .queue-item.active .ring { border-color: var(--ice); box-shadow: 0 0 0 3px rgba(169,201,255,0.15); animation: ring-pulse 1.3s ease-in-out infinite; }
-  .queue-item.error .ring { border-color: var(--error); background: rgba(255,107,107,0.15); color: var(--error); }
-  @keyframes ring-pulse { 0%,100% { box-shadow: 0 0 0 2px rgba(169,201,255,0.12); } 50% { box-shadow: 0 0 0 6px rgba(169,201,255,0.06); } }
+  .queue-item.done .paw { border-color: var(--mint); background: rgba(143,227,195,0.14); color: var(--mint); box-shadow: 0 0 10px rgba(143,227,195,0.25); }
+  .queue-item.active .paw { border-color: var(--pink); box-shadow: 0 0 0 3px rgba(255,158,203,0.15); animation: paw-pulse 1.3s ease-in-out infinite; }
+  .queue-item.error .paw { border-color: var(--coral); background: rgba(255,143,143,0.15); color: var(--coral); }
+  @keyframes paw-pulse { 0%,100% { box-shadow: 0 0 0 2px rgba(255,158,203,0.12); } 50% { box-shadow: 0 0 0 6px rgba(255,158,203,0.06); } }
 
   .queue-text { min-width: 0; }
-  .queue-text .time { font-size: 10.5px; color: var(--ice-dim); letter-spacing: 0.03em; font-variant-numeric: tabular-nums; }
+  .queue-text .time { font-size: 10.5px; color: var(--muted); letter-spacing: 0.03em; font-variant-numeric: tabular-nums; }
   .queue-text .title { font-size: 12.5px; color: var(--text); margin-top: 3px; line-height: 1.45; word-break: break-word; }
-  .queue-text .title.muted { color: var(--ice-dim); font-style: italic; }
-  .queue-text a { color: var(--ice); text-decoration: none; border-bottom: 1px dotted var(--ice-dim); }
-  .queue-text a:hover { border-color: var(--ice); }
+  .queue-text .title.muted { color: var(--muted); font-style: italic; }
+  .queue-text a { color: var(--pink); text-decoration: none; border-bottom: 1px dotted var(--pink-soft); }
+  .queue-text a:hover { border-color: var(--pink); }
   .badge {
     font-size: 9px; text-transform: uppercase; letter-spacing: 0.1em;
-    padding: 3px 7px; border-radius: 20px; margin-top: 6px; display: inline-block;
+    padding: 3px 8px; border-radius: 20px; margin-top: 6px; display: inline-block;
     border: 1px solid transparent;
   }
-  .badge.live { background: rgba(255,180,84,0.14); color: var(--amber); border-color: rgba(255,180,84,0.3); }
-  .badge.waiting { background: rgba(169,201,255,0.08); color: var(--ice); border-color: rgba(169,201,255,0.2); }
+  .badge.live { background: rgba(255,158,203,0.14); color: var(--pink); border-color: rgba(255,158,203,0.3); }
+  .badge.waiting { background: rgba(201,167,255,0.1); color: var(--lavender); border-color: rgba(201,167,255,0.22); }
+  .empty-note { font-size: 11px; color: var(--muted); padding: 10px 0; line-height: 1.6; }
 
-  .empty-note { font-size: 11px; color: var(--ice-dim); padding: 10px 0; line-height: 1.6; }
+  /* milestone */
+  .milestone { margin-bottom: 34px; }
+  .milestone-bar-track {
+    height: 12px; border-radius: 20px; background: rgba(255,255,255,0.06);
+    overflow: hidden; margin-top: 10px; border: 1px solid var(--panel-border);
+  }
+  .milestone-bar-fill {
+    height: 100%; border-radius: 20px;
+    background: linear-gradient(90deg, var(--pink), var(--lavender));
+    transition: width 0.6s ease;
+  }
+  .milestone-labels { display: flex; justify-content: space-between; margin-top: 7px; font-size: 10.5px; color: var(--muted); }
 
-  /* --- orbital field --- */
-  .solar-field {
-    position: relative;
-    min-height: 560px;
+  footer {
+    text-align: center; font-size: 10px; color: var(--muted);
+    padding-bottom: 34px; position: relative; z-index: 2; letter-spacing: 0.02em;
   }
-  .orbit-svg { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 0; }
-  .orbit-path {
-    fill: none;
-    stroke: var(--panel-border);
-    stroke-width: 1.5;
-    stroke-dasharray: 4 7;
-  }
-  .orbit-path.active {
-    stroke: var(--amber);
-    stroke-dasharray: none;
-    opacity: 0.75;
-    filter: drop-shadow(0 0 4px var(--amber-soft));
-  }
-  .pulse-dot {
-    fill: var(--amber);
-    filter: drop-shadow(0 0 6px var(--amber));
-    opacity: 0;
-  }
-  .pulse-dot.active {
-    opacity: 1;
-    animation: travel 2.6s linear infinite;
-  }
-  @keyframes travel {
-    0% { offset-distance: 0%; opacity: 0; }
-    8% { opacity: 1; }
-    92% { opacity: 1; }
-    100% { offset-distance: 100%; opacity: 0; }
-  }
-
-  .planet-slot {
-    position: absolute;
-    display: flex; flex-direction: column; align-items: center; gap: 11px;
-    cursor: default; z-index: 1;
-  }
-  .planet-slot.tl { top: 14px; left: 14px; }
-  .planet-slot.tr { top: 14px; right: 14px; }
-  .planet-slot.bl { bottom: 14px; left: 14px; }
-  .planet-slot.br { bottom: 14px; right: 14px; }
-
-  .planet-wrap { position: relative; width: 92px; height: 92px; }
-  .planet {
-    width: 92px; height: 92px; border-radius: 50%;
-    background:
-      radial-gradient(circle at 30% 25%, rgba(255,255,255,0.55), transparent 32%),
-      radial-gradient(circle at 68% 72%, #143f2c 0%, transparent 42%),
-      radial-gradient(circle at 25% 78%, #235c3e 0%, transparent 38%),
-      radial-gradient(circle at 62% 38%, #1e5fa8 0%, #12315f 58%, #061225 100%);
-    box-shadow: inset -12px -12px 26px rgba(0,0,0,0.6), inset 6px 6px 16px rgba(255,255,255,0.07);
-    transition: transform 0.3s cubic-bezier(.34,1.4,.64,1), box-shadow 0.45s ease;
-    position: relative; z-index: 1;
-  }
-  .ring-halo {
-    position: absolute; inset: -14px; border-radius: 50%;
-    border: 1px solid var(--panel-border);
-    opacity: 0.6; z-index: 0;
-    transition: opacity 0.4s ease, border-color 0.4s ease;
-  }
-  .planet-slot.running .ring-halo { border-color: var(--amber-soft); opacity: 1; animation: halo-spin 8s linear infinite; }
-  @keyframes halo-spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
-
-  .planet-slot:hover .planet { transform: scale(1.16); }
-
-  .planet-slot.running .planet {
-    box-shadow: inset -12px -12px 26px rgba(0,0,0,0.55), inset 6px 6px 16px rgba(255,255,255,0.08),
-      0 0 24px 6px var(--amber-soft), 0 0 52px 16px rgba(255,180,84,0.22);
-    animation: glow-pulse 1.7s ease-in-out infinite;
-  }
-  @keyframes glow-pulse { 0%,100% { filter: brightness(1); } 50% { filter: brightness(1.2); } }
-  .planet-slot.done .planet { box-shadow: inset -12px -12px 26px rgba(0,0,0,0.55), 0 0 16px 4px rgba(127,224,196,0.4); }
-  .planet-slot.error .planet { box-shadow: inset -12px -12px 26px rgba(0,0,0,0.55), 0 0 18px 5px rgba(255,107,107,0.5); }
-
-  .planet-label { font-family: 'Space Grotesk', sans-serif; font-size: 12.5px; font-weight: 600; color: var(--text); text-align: center; }
-  .planet-status { font-size: 9.5px; text-transform: uppercase; letter-spacing: 0.1em; text-align: center; font-weight: 500; }
-  .planet-slot.idle .planet-status { color: var(--ice-dim); }
-  .planet-slot.running .planet-status { color: var(--amber); }
-  .planet-slot.done .planet-status { color: var(--ok); }
-  .planet-slot.error .planet-status { color: var(--error); }
-
-  .center-note {
-    position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
-    text-align: center; max-width: 240px; z-index: 1;
-  }
-  .center-note .core-ring {
-    width: 180px; height: 180px; border-radius: 50%;
-    border: 1px dashed var(--panel-border);
-    position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
-    z-index: -1;
-  }
-  .center-note .msg { font-size: 11px; color: var(--ice-dim); line-height: 1.7; }
-  .center-note .msg b { color: var(--ice); font-weight: 500; }
-
-  footer { text-align: center; font-size: 10px; color: var(--ice-dim); padding-bottom: 34px; position: relative; z-index: 2; letter-spacing: 0.03em; }
 </style>
 </head>
 <body>
 
-<div class="nebula"></div>
-<div class="stars"></div>
+<div class="ambient"></div>
 
 <header>
-  <p class="eyebrow">Story Time Pipeline</p>
-  <h1>Mission Control</h1>
+  <p class="eyebrow">Story Time Channel</p>
+  <h1>🐾 Neko Analytics Den</h1>
+  <div class="channel-line" id="channel-line">
+    <div class="channel-avatar placeholder">🐱</div>
+    <span id="channel-name">Loading channel…</span>
+  </div>
   <div class="telemetry-row">
-    <div class="stat"><span class="val" id="clock-et">--:--</span><span class="lbl">Eastern Time</span></div>
-    <div class="stat"><span class="val" id="next-flight">--:--</span><span class="lbl">Next Flight</span></div>
-    <div class="stat"><span class="val" id="flights-done">0 / 6</span><span class="lbl">Flights Today</span></div>
+    <div class="stat"><span class="val" id="clock-et">--:--</span><span class="lbl">Local Time (ET)</span></div>
+    <div class="stat"><span class="val" id="next-flight">--:--</span><span class="lbl">Next Upload In</span></div>
+    <div class="stat"><span class="val" id="flights-done">0 / 6</span><span class="lbl">Today's Uploads</span></div>
+    <div class="stat"><span class="val" id="last-synced">--</span><span class="lbl">Analytics Synced</span></div>
   </div>
 </header>
 
-<div class="layout">
+<main>
 
-  <div class="panel queue">
-    <h2>Today's Queue</h2>
-    <p class="panel-sub">Created &amp; uploaded</p>
-    <div id="queue-list"></div>
-  </div>
-
-  <div class="solar-field">
-    <svg class="orbit-svg" viewBox="0 0 100 100" preserveAspectRatio="none">
-      <path id="seg-script-video" class="orbit-path" d="M 12,10 L 88,10" vector-effect="non-scaling-stroke"/>
-      <path id="seg-video-upload" class="orbit-path" d="M 88,10 L 12,90" vector-effect="non-scaling-stroke"/>
-      <path id="seg-upload-signal" class="orbit-path" d="M 12,90 L 88,90" vector-effect="non-scaling-stroke"/>
-      <circle id="dot-script-video" class="pulse-dot" r="1.4" style="offset-path: path('M 12,10 L 88,10');"/>
-      <circle id="dot-video-upload" class="pulse-dot" r="1.4" style="offset-path: path('M 88,10 L 12,90');"/>
-      <circle id="dot-upload-signal" class="pulse-dot" r="1.4" style="offset-path: path('M 12,90 L 88,90');"/>
-    </svg>
-
-    <div class="center-note">
-      <div class="core-ring"></div>
-      <div class="msg" id="center-msg">Reading the wire<br/><b>...</b></div>
+  <div class="stat-grid">
+    <div class="stat-card" style="--card-glow: var(--pink-soft);">
+      <span class="icon">🐾</span>
+      <div class="label">Total Subscribers</div>
+      <div class="value" id="stat-subs-total">—</div>
     </div>
-
-    <div class="planet-slot idle tl" id="planet-script_agent">
-      <div class="planet-wrap"><div class="ring-halo"></div><div class="planet"></div></div>
-      <div class="planet-label">Script</div>
-      <div class="planet-status">Idle</div>
+    <div class="stat-card" style="--card-glow: var(--mint-soft);">
+      <span class="icon">📈</span>
+      <div class="label">Subscribers This Month</div>
+      <div class="value" id="stat-subs-month">—</div>
+      <div id="stat-subs-month-delta"></div>
     </div>
-    <div class="planet-slot idle tr" id="planet-video_agent">
-      <div class="planet-wrap"><div class="ring-halo"></div><div class="planet"></div></div>
-      <div class="planet-label">Edit</div>
-      <div class="planet-status">Idle</div>
+    <div class="stat-card" style="--card-glow: var(--lavender-soft);">
+      <span class="icon">👁️</span>
+      <div class="label">Total Views</div>
+      <div class="value" id="stat-views-total">—</div>
     </div>
-    <div class="planet-slot idle bl" id="planet-upload_agent">
-      <div class="planet-wrap"><div class="ring-halo"></div><div class="planet"></div></div>
-      <div class="planet-label">Upload</div>
-      <div class="planet-status">Idle</div>
-    </div>
-    <div class="planet-slot idle br" id="planet-discord_agent">
-      <div class="planet-wrap"><div class="ring-halo"></div><div class="planet"></div></div>
-      <div class="planet-label">Signal</div>
-      <div class="planet-status">Idle</div>
+    <div class="stat-card" style="--card-glow: var(--pink-soft);">
+      <span class="icon">✨</span>
+      <div class="label">Views This Month</div>
+      <div class="value" id="stat-views-month">—</div>
+      <div id="stat-views-month-delta"></div>
     </div>
   </div>
 
-  <div class="panel release">
-    <h2>Awaiting Release</h2>
-    <p class="panel-sub">Scheduled, not yet public</p>
-    <div id="release-list"></div>
+  <div class="milestone panel">
+    <div class="section-title" style="margin-bottom:0;">🎀 Next Milestone</div>
+    <div class="milestone-labels">
+      <span id="milestone-current">— subs</span>
+      <span id="milestone-target">Next goal: —</span>
+    </div>
+    <div class="milestone-bar-track"><div class="milestone-bar-fill" id="milestone-fill" style="width:0%"></div></div>
   </div>
 
-</div>
+  <div class="chart-row">
+    <div class="chart-panel">
+      <div class="chart-head">
+        <h3>🐱 Subscriber Growth</h3>
+        <span class="chart-current" id="chart-subs-current"></span>
+      </div>
+      <div class="chart-body" id="chart-subs"></div>
+    </div>
+    <div class="chart-panel">
+      <div class="chart-head">
+        <h3>🌸 View Growth</h3>
+        <span class="chart-current" id="chart-views-current"></span>
+      </div>
+      <div class="chart-body" id="chart-views"></div>
+    </div>
+  </div>
 
-<footer>Auto-refreshes every few seconds &middot; resets at midnight ET</footer>
+  <div class="lower-row">
+    <div class="panel">
+      <div class="section-title">😻 Latest Videos</div>
+      <div class="video-list" id="video-list">
+        <div class="empty-note">Fetching your latest uploads…</div>
+      </div>
+      <div class="section-title" style="margin-top:18px;">📊 Bonus Stats</div>
+      <div class="queue-item" style="border-top:none; padding-top:2px;">
+        <div class="queue-text">
+          <div class="title" id="bonus-avg-views">Average views per video: —</div>
+          <div class="title" id="bonus-video-count" style="margin-top:6px;">Total videos posted: —</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel">
+      <div class="queue-block">
+        <div class="section-title">🎀 Today's Queue</div>
+        <div id="queue-list"></div>
+      </div>
+      <div class="queue-block">
+        <div class="section-title">🌙 Awaiting Release</div>
+        <div id="release-list"></div>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<footer>Analytics sync every ~4 hours &middot; queue refreshes live &middot; resets at midnight ET</footer>
 
 <script>
-const AGENTS = ["script_agent", "video_agent", "upload_agent", "discord_agent"];
 const IS_LOCAL = ["localhost", "127.0.0.1"].includes(window.location.hostname);
 const GITHUB_RAW_BASE = "https://raw.githubusercontent.com/TreasureToAnother/shorts-pipeline/main/data";
-const STATUS_URL = IS_LOCAL ? "/status.json" : `${GITHUB_RAW_BASE}/status.json`;
-const QUEUE_URL = IS_LOCAL ? "/queue.json" : `${GITHUB_RAW_BASE}/queue.json`;
+const url = (name) => IS_LOCAL ? `/${name}.json` : `${GITHUB_RAW_BASE}/${name}.json`;
 const SLOT_HOURS = [4,5,6,7,8,9];
 
 function fmtHour(h) {
@@ -391,6 +400,34 @@ function fmtPublish(iso) {
 }
 function nowET() {
   return new Date(new Date().toLocaleString("en-US", { timeZone: "America/New_York" }));
+}
+function fmtFull(n) {
+  if (n === null || n === undefined) return "—";
+  return n.toLocaleString("en-US");
+}
+function fmtCompact(n) {
+  if (n === null || n === undefined) return "—";
+  const sign = n < 0 ? "-" : "";
+  const abs = Math.abs(n);
+  if (abs >= 1e6) return sign + (abs/1e6).toFixed(abs>=1e7?0:1) + "M";
+  if (abs >= 1e3) return sign + (abs/1e3).toFixed(abs>=1e4?0:1) + "K";
+  return sign + abs.toLocaleString("en-US");
+}
+function fmtDateShort(dateStr) {
+  try {
+    const [y,m,d] = dateStr.split("-").map(Number);
+    return new Date(y, m-1, d).toLocaleDateString("en-US", { month: "short", day: "numeric" });
+  } catch (e) { return dateStr; }
+}
+function timeAgo(iso) {
+  if (!iso) return "";
+  const diffMs = Date.now() - new Date(iso).getTime();
+  const mins = Math.floor(diffMs / 60000);
+  if (mins < 1) return "just now";
+  if (mins < 60) return `${mins}m ago`;
+  const hrs = Math.floor(mins / 60);
+  if (hrs < 24) return `${hrs}h ago`;
+  return `${Math.floor(hrs / 24)}d ago`;
 }
 
 function tickClock() {
@@ -410,48 +447,186 @@ function tickClock() {
   document.getElementById("next-flight").textContent = `${diffH}h ${diffM}m`;
 }
 
-const ORBIT_SEGMENTS = [
-  { id: "script-video", fromAgent: "script_agent", toAgent: "video_agent" },
-  { id: "video-upload", fromAgent: "video_agent", toAgent: "upload_agent" },
-  { id: "upload-signal", fromAgent: "upload_agent", toAgent: "discord_agent" },
-];
+function deltaBadge(value) {
+  if (value === null || value === undefined) return "";
+  if (value > 0) return `<div class="delta up">▲ ${fmtFull(value)}</div>`;
+  if (value < 0) return `<div class="delta down">▼ ${fmtFull(Math.abs(value))}</div>`;
+  return `<div class="delta flat">— no change</div>`;
+}
 
-async function pollStatus() {
+function nextMilestone(n) {
+  let step;
+  if (n < 1000) step = 100;
+  else if (n < 10000) step = 1000;
+  else if (n < 100000) step = 5000;
+  else step = 10000;
+  return Math.ceil((n + 1) / step) * step;
+}
+
+function renderChart(containerId, history, field, color) {
+  const container = document.getElementById(containerId);
+  const data = (history || []).filter(h => typeof h[field] === "number");
+  if (data.length < 2) {
+    container.innerHTML = `<div class="chart-empty">🐾 Not enough history yet —<br/>check back after the next sync!</div>`;
+    return;
+  }
+  const W = 560, H = 200, padL = 46, padR = 10, padT = 14, padB = 24;
+  const values = data.map(d => d[field]);
+  const min = Math.min(...values), max = Math.max(...values);
+  const rangeMin = min === max ? min - 1 : min;
+  const rangeMax = min === max ? max + 1 : max;
+  const xw = (W - padL - padR) / (data.length - 1);
+  const yScale = v => H - padB - ((v - rangeMin) / (rangeMax - rangeMin)) * (H - padT - padB);
+  const points = data.map((d,i) => [padL + i*xw, yScale(d[field])]);
+
+  const linePath = points.map((p,i) => (i===0?"M":"L") + p[0].toFixed(1) + "," + p[1].toFixed(1)).join(" ");
+  const areaPath = linePath + ` L${points[points.length-1][0].toFixed(1)},${H-padB} L${points[0][0].toFixed(1)},${H-padB} Z`;
+
+  const gridVals = [rangeMax, (rangeMin+rangeMax)/2, rangeMin];
+  const gridLines = gridVals.map(v => {
+    const y = yScale(v);
+    return `<line x1="${padL}" y1="${y.toFixed(1)}" x2="${W-padR}" y2="${y.toFixed(1)}" class="grid-line"/>
+            <text x="${padL-8}" y="${(y+3).toFixed(1)}" class="grid-label" text-anchor="end">${fmtCompact(v)}</text>`;
+  }).join("");
+
+  const gradId = "grad-" + containerId;
+  const last = points[points.length - 1];
+
+  container.innerHTML = `
+    <svg viewBox="0 0 ${W} ${H}" class="chart-svg">
+      <defs>
+        <linearGradient id="${gradId}" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="${color}" stop-opacity="0.35"/>
+          <stop offset="100%" stop-color="${color}" stop-opacity="0"/>
+        </linearGradient>
+      </defs>
+      ${gridLines}
+      <path d="${areaPath}" fill="url(#${gradId})" stroke="none"/>
+      <path d="${linePath}" fill="none" stroke="${color}" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="${last[0].toFixed(1)}" cy="${last[1].toFixed(1)}" r="4" fill="${color}" style="filter:drop-shadow(0 0 5px ${color})"/>
+      <g class="chart-hover" style="display:none">
+        <line x1="0" y1="${padT}" x2="0" y2="${H-padB}" class="crosshair"/>
+        <circle r="4" fill="${color}"/>
+      </g>
+      <rect x="${padL}" y="0" width="${W-padL-padR}" height="${H}" fill="transparent" class="chart-hit"/>
+    </svg>
+    <div class="chart-tooltip" style="display:none"></div>
+  `;
+
+  const svg = container.querySelector(".chart-svg");
+  const hit = container.querySelector(".chart-hit");
+  const hoverG = container.querySelector(".chart-hover");
+  const crosshair = hoverG.querySelector(".crosshair");
+  const hoverDot = hoverG.querySelector("circle");
+  const tooltip = container.querySelector(".chart-tooltip");
+
+  function moveTo(clientX) {
+    const rect = svg.getBoundingClientRect();
+    const xFrac = Math.max(0, Math.min(1, (clientX - rect.left) / rect.width));
+    const svgX = xFrac * W;
+    let idx = Math.round((svgX - padL) / xw);
+    idx = Math.max(0, Math.min(data.length - 1, idx));
+    const [px, py] = points[idx];
+    crosshair.setAttribute("x1", px); crosshair.setAttribute("x2", px);
+    hoverDot.setAttribute("cx", px); hoverDot.setAttribute("cy", py);
+    hoverG.style.display = "block";
+    tooltip.style.display = "block";
+    tooltip.style.left = `${(px / W) * 100}%`;
+    tooltip.innerHTML = `<b>${fmtFull(data[idx][field])}</b><span>${fmtDateShort(data[idx].date)}</span>`;
+  }
+  hit.addEventListener("mousemove", (e) => moveTo(e.clientX));
+  hit.addEventListener("mouseleave", () => { hoverG.style.display = "none"; tooltip.style.display = "none"; });
+  hit.addEventListener("touchmove", (e) => { if (e.touches[0]) moveTo(e.touches[0].clientX); }, { passive: true });
+  hit.addEventListener("touchend", () => { hoverG.style.display = "none"; tooltip.style.display = "none"; });
+}
+
+async function pollAnalytics() {
   try {
-    const res = await fetch(STATUS_URL + "?_=" + Date.now());
+    const res = await fetch(url("analytics_latest") + "?_=" + Date.now());
+    if (!res.ok) throw new Error("no analytics yet");
     const data = await res.json();
-    let anyRunning = false;
-    AGENTS.forEach(a => {
-      const el = document.getElementById("planet-" + a);
-      if (!el) return;
-      const state = data[a] || { status: "idle" };
-      const corner = ["tl","tr","bl","br"].find(c => el.classList.contains(c)) || "";
-      el.className = `planet-slot ${state.status} ${corner}`;
-      el.querySelector(".planet-status").textContent = state.status.charAt(0).toUpperCase() + state.status.slice(1);
-      if (state.status === "running") anyRunning = true;
-    });
+    const ch = data.channel || {};
 
-    ORBIT_SEGMENTS.forEach(seg => {
-      const fromState = (data[seg.fromAgent] || {}).status;
-      const toState = (data[seg.toAgent] || {}).status;
-      const active = fromState === "done" && toState === "running";
-      const path = document.getElementById("seg-" + seg.id);
-      const dot = document.getElementById("dot-" + seg.id);
-      if (path) path.classList.toggle("active", active);
-      if (dot) dot.classList.toggle("active", active);
-    });
+    if (ch.title) {
+      document.getElementById("channel-name").textContent = ch.title;
+      const avatarWrap = document.getElementById("channel-line");
+      if (ch.thumbnail) {
+        avatarWrap.querySelector(".channel-avatar").outerHTML =
+          `<img class="channel-avatar" src="${ch.thumbnail}" alt="">`;
+      }
+    }
+    document.getElementById("last-synced").textContent = data.updated_at ? timeAgo(data.updated_at) : "—";
 
-    document.getElementById("center-msg").innerHTML = anyRunning
-      ? "A flight is <b>in progress</b>."
-      : "All relays <b>idle</b>.<br/>Waiting on the next slot.";
+    document.getElementById("stat-subs-total").textContent = fmtFull(ch.subscriberCount);
+    document.getElementById("stat-views-total").textContent = fmtFull(ch.viewCount);
+    document.getElementById("stat-subs-month").textContent = ch.subsThisMonth === null ? "—" : fmtFull(ch.subsThisMonth);
+    document.getElementById("stat-views-month").textContent = ch.viewsThisMonth === null ? "—" : fmtFull(ch.viewsThisMonth);
+    document.getElementById("stat-subs-month-delta").innerHTML = ch.subsThisMonth == null ? "" : deltaBadge(ch.subsThisMonth);
+    document.getElementById("stat-views-month-delta").innerHTML = ch.viewsThisMonth == null ? "" : deltaBadge(ch.viewsThisMonth);
+
+    document.getElementById("chart-subs-current").textContent = fmtFull(ch.subscriberCount) + " subs";
+    document.getElementById("chart-views-current").textContent = fmtFull(ch.viewCount) + " views";
+
+    if (ch.videoCount) {
+      document.getElementById("bonus-video-count").textContent = `Total videos posted: ${fmtFull(ch.videoCount)}`;
+      const avg = Math.round(ch.viewCount / ch.videoCount);
+      document.getElementById("bonus-avg-views").textContent = `Average views per video: ${fmtFull(avg)}`;
+    }
+
+    if (typeof ch.subscriberCount === "number") {
+      const target = nextMilestone(ch.subscriberCount);
+      let floorVal;
+      if (ch.subscriberCount < 1000) floorVal = Math.floor(ch.subscriberCount / 100) * 100;
+      else if (ch.subscriberCount < 10000) floorVal = Math.floor(ch.subscriberCount / 1000) * 1000;
+      else if (ch.subscriberCount < 100000) floorVal = Math.floor(ch.subscriberCount / 5000) * 5000;
+      else floorVal = Math.floor(ch.subscriberCount / 10000) * 10000;
+      const pct = Math.max(2, Math.min(100, ((ch.subscriberCount - floorVal) / (target - floorVal)) * 100));
+      document.getElementById("milestone-fill").style.width = pct + "%";
+      document.getElementById("milestone-current").textContent = `${fmtFull(ch.subscriberCount)} subs`;
+      document.getElementById("milestone-target").textContent = `Next goal: ${fmtFull(target)}`;
+    }
+
+    const videos = data.latestVideos || [];
+    const videoList = document.getElementById("video-list");
+    if (videos.length === 0) {
+      videoList.innerHTML = '<div class="empty-note">No videos synced yet.</div>';
+    } else {
+      const maxViews = Math.max(...videos.map(v => v.views || 0));
+      videoList.innerHTML = videos.map(v => `
+        <a class="video-card" href="${v.url}" target="_blank" rel="noopener">
+          <img class="video-thumb" src="${v.thumbnail}" alt="" loading="lazy">
+          <div class="video-info">
+            <div class="video-title">${v.views === maxViews ? '<span class="crown">👑</span> ' : ''}${v.title}</div>
+            <div class="video-meta">
+              <span class="video-views">${fmtCompact(v.views)} views</span>
+              <span>&middot;</span>
+              <span>${timeAgo(v.publishedAt)}</span>
+            </div>
+          </div>
+        </a>
+      `).join("");
+    }
   } catch (e) {
-    document.getElementById("center-msg").innerHTML = "Signal lost.<br/><b>Retrying...</b>";
+    document.getElementById("video-list").innerHTML = '<div class="empty-note">🐾 Waiting for the first analytics sync…</div>';
+  }
+}
+
+async function pollHistory() {
+  try {
+    const res = await fetch(url("analytics_history") + "?_=" + Date.now());
+    if (!res.ok) throw new Error("no history yet");
+    const history = await res.json();
+    renderChart("chart-subs", history, "subscriberCount", "#ff9ecb");
+    renderChart("chart-views", history, "viewCount", "#c9a7ff");
+  } catch (e) {
+    renderChart("chart-subs", [], "subscriberCount", "#ff9ecb");
+    renderChart("chart-views", [], "viewCount", "#c9a7ff");
   }
 }
 
 async function pollQueue() {
   try {
-    const res = await fetch(QUEUE_URL + "?_=" + Date.now());
+    const res = await fetch(url("queue") + "?_=" + Date.now());
     const data = await res.json();
     const slots = data.slots || [];
 
@@ -469,7 +644,7 @@ async function pollQueue() {
       const div = document.createElement("div");
       div.className = "queue-item " + cls;
       div.innerHTML = `
-        <div class="ring">${mark}</div>
+        <div class="paw">${mark}</div>
         <div class="queue-text">
           <div class="time">${fmtHour(slot.hour_et)}</div>
           <div class="title ${slot.title ? "" : "muted"}">${slot.title || (active ? "Generating…" : error ? "Failed" : "Not started")}</div>
@@ -490,7 +665,7 @@ async function pollQueue() {
       const div = document.createElement("div");
       div.className = "queue-item " + (isLive ? "done" : "");
       div.innerHTML = `
-        <div class="ring">${isLive ? "&#10003;" : ""}</div>
+        <div class="paw">${isLive ? "&#10003;" : ""}</div>
         <div class="queue-text">
           <div class="title"><a href="${slot.video_url}" target="_blank">${slot.title}</a></div>
           <span class="badge ${isLive ? "live" : "waiting"}">${isLive ? "Live now" : "Releases " + fmtPublish(slot.publish_at)}</span>
@@ -502,28 +677,32 @@ async function pollQueue() {
   }
 }
 
-
-function spawnMeteor() {
+function spawnSparkle() {
   if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-  const m = document.createElement("div");
-  m.className = "meteor fall";
-  m.style.left = (Math.random() * 90 + 5) + "%";
-  m.style.animationDuration = (1 + Math.random() * 0.8) + "s";
-  document.body.appendChild(m);
-  m.addEventListener("animationend", () => m.remove());
+  const glyphs = ["✨", "🐾", "⭐"];
+  const s = document.createElement("div");
+  s.className = "sparkle rise";
+  s.textContent = glyphs[Math.floor(Math.random() * glyphs.length)];
+  s.style.left = (Math.random() * 92 + 3) + "%";
+  s.style.animationDuration = (7 + Math.random() * 5) + "s";
+  s.style.fontSize = (10 + Math.random() * 10) + "px";
+  document.body.appendChild(s);
+  s.addEventListener("animationend", () => s.remove());
 }
-function scheduleMeteors() {
-  spawnMeteor();
-  setTimeout(scheduleMeteors, 2500 + Math.random() * 5000);
+function scheduleSparkles() {
+  spawnSparkle();
+  setTimeout(scheduleSparkles, 1400 + Math.random() * 1800);
 }
 
 tickClock();
-pollStatus();
+pollAnalytics();
+pollHistory();
 pollQueue();
-scheduleMeteors();
+scheduleSparkles();
 setInterval(tickClock, 15000);
-setInterval(pollStatus, 3000);
-setInterval(pollQueue, 5000);
+setInterval(pollAnalytics, 120000);
+setInterval(pollHistory, 120000);
+setInterval(pollQueue, 8000);
 </script>
 
 </body>

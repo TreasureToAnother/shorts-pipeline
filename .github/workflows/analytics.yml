@@ -1,0 +1,41 @@
+name: Update Channel Analytics
+
+on:
+  schedule:
+    - cron: "15 */4 * * *"  # every 4 hours
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  update-analytics:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Configure git identity
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install google-api-python-client==2.143.0
+
+      - name: Snapshot analytics
+        env:
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+          YOUTUBE_CHANNEL_ID: ${{ secrets.YOUTUBE_CHANNEL_ID }}
+        run: python agents/analytics_agent.py
+
+      - name: Commit analytics data
+        run: |
+          git add data/analytics_latest.json data/analytics_history.json
+          git diff --cached --quiet || git commit -m "Update channel analytics [skip ci]"
+          git push

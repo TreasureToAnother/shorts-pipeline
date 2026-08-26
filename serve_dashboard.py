@@ -17,9 +17,9 @@ def index():
     return send_from_directory(os.path.join(ROOT, "dashboard"), "index.html")
 
 
-@app.route("/status.json")
-def status():
-    return send_from_directory(os.path.join(ROOT, "data"), "status.json")
+@app.route("/<string:filename>.json")
+def data_file(filename):
+    return send_from_directory(os.path.join(ROOT, "data"), f"{filename}.json")
 
 
 if __name__ == "__main__":
