@@ -13,6 +13,13 @@ on:
 permissions:
   contents: write
 
+# Shares a concurrency group with analytics.yml so the two workflows
+# queue instead of racing to push to main at the same time — this job
+# pushes data/status.json (and data/queue.json) repeatedly throughout
+# the run, which previously could collide with analytics.yml's push.
+concurrency:
+  group: repo-git-writer
+
 jobs:
   run-pipeline:
     runs-on: ubuntu-latest

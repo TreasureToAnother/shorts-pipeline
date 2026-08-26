@@ -2,11 +2,17 @@ name: Update Channel Analytics
 
 on:
   schedule:
-    - cron: "15 */4 * * *"  # every 4 hours
+    - cron: "7 * * * *"  # every hour
   workflow_dispatch: {}
 
 permissions:
   contents: write
+
+# Shares a concurrency group with the main pipeline (see pipeline.yml)
+# so the two workflows queue instead of racing to push to main at the
+# same time — GitHub runs at most one job per group, queuing the rest.
+concurrency:
+  group: repo-git-writer
 
 jobs:
   update-analytics:
