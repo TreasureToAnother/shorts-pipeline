@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-08-26T12:03:47Z"
+    "status": "done",
+    "message": "generated: He caught me cheating on my breakup selfie \ud83d\udc94",
+    "updated_at": "2026-08-26T12:04:23Z"
   },
   "video_agent": {
     "status": "idle",
