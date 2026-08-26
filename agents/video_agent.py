@@ -55,8 +55,8 @@ OVERLAY_IMAGE_DIR = os.path.join(os.path.dirname(__file__), "..", "data", "overl
 CLIP_SEGMENT_SECONDS = 15.0
 CLIP_SPEED = 1.2
 INTRO_MAX_SECONDS = 0.8
-OVERLAY_MAX_WIDTH_FRAC = 0.42   # overlay image is capped to this fraction of canvas width
-OVERLAY_MAX_HEIGHT_FRAC = 0.20  # and this fraction of canvas height, whichever is smaller
+OVERLAY_MAX_WIDTH_FRAC = 0.46   # overlay image is capped to this fraction of canvas width
+OVERLAY_MAX_HEIGHT_FRAC = 0.22  # and this fraction of canvas height, whichever is smaller
 OVERLAY_Y_FRAC = 0.06           # distance from the top of the frame
 
 
