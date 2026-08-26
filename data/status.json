@@ -5,9 +5,9 @@
     "updated_at": "2026-08-26T11:20:25Z"
   },
   "video_agent": {
-    "status": "running",
-    "message": "assembling scenes",
-    "updated_at": "2026-08-26T11:20:26Z"
+    "status": "done",
+    "message": "/home/runner/work/shorts-pipeline/shorts-pipeline/agents/../data/output/fed47e07.mp4",
+    "updated_at": "2026-08-26T11:21:46Z"
   },
   "upload_agent": {
     "status": "idle",
