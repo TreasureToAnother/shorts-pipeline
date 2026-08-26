@@ -23,6 +23,7 @@ from daily_queue import claim_next_slot, mark_uploaded, mark_error
 
 PUBLISH_DELAY_HOURS = float(os.getenv("PUBLISH_DELAY_HOURS", "5"))
 IS_CI = os.getenv("GITHUB_ACTIONS") == "true"
+YOUTUBE_TITLE = "subscribe for more fun stories #storytime #story"
 
 
 def run_pipeline():
@@ -47,13 +48,9 @@ def run_pipeline():
             publish_dt = datetime.now(timezone.utc) + timedelta(hours=PUBLISH_DELAY_HOURS)
             publish_at = publish_dt.strftime("%Y-%m-%dT%H:%M:%SZ")
 
-        hashtags = "#story #storytime #storytelling"
-        max_title_len = 100 - len(hashtags) - 1
-        youtube_title = f"{script['title'][:max_title_len]} {hashtags}"[:100]
-
         url = upload_video(
             video_path,
-            title=youtube_title,
+            title=YOUTUBE_TITLE,
             description="A story time short. Follow for more.",
             publish_at=publish_at,
         )
