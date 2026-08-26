@@ -1,13 +1,13 @@
 {
   "script_agent": {
-    "status": "done",
-    "message": "generated: I wiped sweat from my forehead as I steamed milk for the umpteenth latte of the ",
-    "updated_at": "2026-08-26T10:09:00Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "video_agent": {
-    "status": "running",
-    "message": "assembling scenes",
-    "updated_at": "2026-08-26T10:09:02Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "upload_agent": {
     "status": "idle",
