@@ -36,13 +36,16 @@ def run_pipeline():
             pexels_key=os.getenv("PEXELS_API_KEY", ""),
         )
 
+        if not IS_CI:
+            # Local runs stop here — no YouTube upload, no Discord ping.
+            # Just the rendered file in data/output/ for review.
+            print(f"Pipeline complete (LOCAL TEST — not uploaded): {video_path}")
+            return video_path
+
         publish_at = None
-        privacy_status = None
-        if IS_CI and PUBLISH_DELAY_HOURS > 0:
+        if PUBLISH_DELAY_HOURS > 0:
             publish_dt = datetime.now(timezone.utc) + timedelta(hours=PUBLISH_DELAY_HOURS)
             publish_at = publish_dt.strftime("%Y-%m-%dT%H:%M:%SZ")
-        elif not IS_CI:
-            privacy_status = "private"
 
         hashtags = "#story #storytime #storytelling"
         max_title_len = 100 - len(hashtags) - 1
@@ -53,15 +56,12 @@ def run_pipeline():
             title=youtube_title,
             description="A story time short. Follow for more.",
             publish_at=publish_at,
-            privacy_status=privacy_status,
         )
 
         webhook = os.getenv("DISCORD_WEBHOOK_URL", "")
         if webhook:
             if publish_at:
                 notify_upload(webhook, title=f"{script['title']} (scheduled {publish_at} UTC)", url=url)
-            elif privacy_status == "private":
-                notify_upload(webhook, title=f"{script['title']} (LOCAL TEST — private, publish manually)", url=url)
             else:
                 notify_upload(webhook, title=script["title"], url=url)
 
@@ -69,8 +69,6 @@ def run_pipeline():
 
         if publish_at:
             print(f"Pipeline complete: {url} (scheduled for {publish_at})")
-        elif privacy_status == "private":
-            print(f"Pipeline complete: {url} (PRIVATE — local test run, publish manually when ready)")
         else:
             print(f"Pipeline complete: {url}")
         return url
