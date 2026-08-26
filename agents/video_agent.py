@@ -11,14 +11,18 @@ Takes the script JSON from script_agent and produces a finished
     played once at the very start
   - an optional static image, randomly picked from data/overlay_images/,
     pinned near the top-middle of the frame for the entire video
+  - an optional background music track, randomly picked from
+    data/background_music/, looped/trimmed to the video length and
+    played at a low fixed volume so it never competes with narration
   - free Microsoft TTS narration (edge-tts), sped up, normalized louder,
     with leading/trailing silence trimmed for no dead gaps between
     sentences
   - large, bold, centered word-by-word captions
 
 Everything here is free-tier: Pexels API key is free, edge-tts and
-faster-whisper are open-source/local. The only sound effect is your
-own intro stinger from data/intro_sound/ — no other SFX are added.
+faster-whisper are open-source/local. The only sound effects are your
+own intro stinger and background music, both optional local files —
+no SFX are downloaded from anywhere.
 """
 import asyncio
 import os
@@ -51,13 +55,15 @@ WORKDIR = os.path.join(os.path.dirname(__file__), "..", "data", "work")
 BACKGROUNDS_DIR = os.path.join(os.path.dirname(__file__), "..", "data", "backgrounds")
 INTRO_SOUND_DIR = os.path.join(os.path.dirname(__file__), "..", "data", "intro_sound")
 OVERLAY_IMAGE_DIR = os.path.join(os.path.dirname(__file__), "..", "data", "overlay_images")
+BACKGROUND_MUSIC_DIR = os.path.join(os.path.dirname(__file__), "..", "data", "background_music")
 
 CLIP_SEGMENT_SECONDS = 15.0
 CLIP_SPEED = 1.2
 INTRO_MAX_SECONDS = 0.8
 OVERLAY_MAX_WIDTH_FRAC = 0.51   # overlay image is capped to this fraction of canvas width
 OVERLAY_MAX_HEIGHT_FRAC = 0.24  # and this fraction of canvas height, whichever is smaller
-OVERLAY_GAP_ABOVE_CAPTION_FRAC = 0.07  # gap between the overlay's bottom edge and the caption line
+OVERLAY_GAP_ABOVE_CAPTION_FRAC = 0.11  # gap between the overlay's bottom edge and the caption line
+BACKGROUND_MUSIC_VOLUME = 0.12  # kept quiet so it never competes with narration
 
 
 def _detect_caption_font():
@@ -294,6 +300,21 @@ def _get_intro_audio():
     return clip
 
 
+def _get_background_music(total_duration: float):
+    if not os.path.isdir(BACKGROUND_MUSIC_DIR):
+        return None
+    files = [f for f in os.listdir(BACKGROUND_MUSIC_DIR) if f.lower().endswith((".mp3", ".wav", ".m4a", ".aac"))]
+    if not files:
+        return None
+    path = os.path.join(BACKGROUND_MUSIC_DIR, random.choice(files))
+    clip = AudioFileClip(path)
+    if clip.duration < total_duration:
+        clip = clip.fx(afx.audio_loop, duration=total_duration)
+    else:
+        clip = clip.subclip(0, total_duration)
+    return clip.volumex(BACKGROUND_MUSIC_VOLUME)
+
+
 def _get_overlay_image_path():
     if not os.path.isdir(OVERLAY_IMAGE_DIR):
         return None
@@ -389,9 +410,12 @@ def build_video(script: dict, pexels_key: str = "") -> str:
 
         background = _build_background(total_duration, pexels_key, canvas_w, canvas_h)
         overlay_clip = _build_overlay_clip(total_duration, canvas_w, canvas_h, caption_y)
+        music = _get_background_music(total_duration)
 
         caption_clips = []
         audio_tracks = []
+        if music:
+            audio_tracks.append(music.set_start(0))
         if intro_audio:
             audio_tracks.append(intro_audio.volumex(0.9).set_start(0))
 
