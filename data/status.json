@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-08-26T16:41:35Z"
+    "status": "done",
+    "message": "generated: I've had a crush for what feels like forever - on my coworker, Mike, who's alway",
+    "updated_at": "2026-08-26T16:42:18Z"
   },
   "video_agent": {
     "status": "idle",
