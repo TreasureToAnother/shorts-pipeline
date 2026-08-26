@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-08-26T11:19:45Z"
+    "status": "done",
+    "message": "generated: His question was a red flag, but I brushed it off... until I got this text\" \ud83d\udc94 #GirlStory",
+    "updated_at": "2026-08-26T11:20:25Z"
   },
   "video_agent": {
     "status": "idle",
