@@ -34,7 +34,6 @@ def run_pipeline():
         video_path = build_video(
             script,
             pexels_key=os.getenv("PEXELS_API_KEY", ""),
-            freesound_key=os.getenv("FREESOUND_API_KEY", ""),
         )
 
         publish_at = None

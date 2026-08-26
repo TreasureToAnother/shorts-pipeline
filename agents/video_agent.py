@@ -9,13 +9,14 @@ Takes the script JSON from script_agent and produces a finished
     boundaries, for constant visual novelty
   - an optional short intro stinger sound from data/intro_sound/,
     played once at the very start
-  - free Microsoft TTS narration (edge-tts), normalized louder, with
-    leading/trailing silence trimmed for no dead gaps between sentences
+  - free Microsoft TTS narration (edge-tts), sped up, normalized louder,
+    with leading/trailing silence trimmed for no dead gaps between
+    sentences
   - large, bold, centered word-by-word captions
-  - free transition/impact SFX (Freesound)
 
-Everything here is free-tier: Pexels API key is free, Freesound API key
-is free, edge-tts and faster-whisper are open-source/local.
+Everything here is free-tier: Pexels API key is free, edge-tts and
+faster-whisper are open-source/local. The only sound effect is your
+own intro stinger from data/intro_sound/ — no other SFX are added.
 """
 import asyncio
 import os
@@ -151,30 +152,12 @@ def _download(url: str, dest: str):
     return dest
 
 
-def _freesound_download(query: str, api_key: str, dest: str):
-    if not api_key:
-        return None
-    try:
-        r = requests.get(
-            "https://freesound.org/apiv2/search/text/",
-            params={"query": query, "token": api_key, "fields": "id,previews", "filter": "duration:[0 TO 3]"},
-            timeout=20,
-        )
-        r.raise_for_status()
-        results = r.json().get("results", [])
-        if not results:
-            return None
-        preview_url = random.choice(results)["previews"]["preview-hq-mp3"]
-        return _download(preview_url, dest)
-    except Exception:
-        return None
-
-
-async def _tts(text: str, out_path: str, voice: str = None, pitch: str = None):
+async def _tts(text: str, out_path: str, voice: str = None, pitch: str = None, rate: str = None):
     import edge_tts
     voice = voice or os.getenv("VOICE_NAME", "en-US-AriaNeural")
     pitch = pitch or os.getenv("VOICE_PITCH", "+25Hz")
-    communicate = edge_tts.Communicate(text, voice, pitch=pitch)
+    rate = rate or os.getenv("VOICE_RATE", "+30%")  # 1.3x speaking speed
+    communicate = edge_tts.Communicate(text, voice, rate=rate, pitch=pitch)
     await communicate.save(out_path)
 
 
@@ -305,7 +288,7 @@ def _get_intro_audio():
     return clip
 
 
-def _build_scene_content(scene: dict, freesound_key: str, idx: int):
+def _build_scene_content(scene: dict, idx: int):
     os.makedirs(WORKDIR, exist_ok=True)
     scene_id = f"scene_{idx}_{uuid.uuid4().hex[:6]}"
 
@@ -324,12 +307,7 @@ def _build_scene_content(scene: dict, freesound_key: str, idx: int):
     except Exception:
         word_captions = None
 
-    sfx_path = os.path.join(WORKDIR, f"{scene_id}_sfx.mp3")
-    sfx_downloaded = _freesound_download(scene.get("sfx", "whoosh"), freesound_key, sfx_path)
-    audio_tracks = [voice_clip]
-    if sfx_downloaded:
-        audio_tracks.append(AudioFileClip(sfx_downloaded).volumex(0.35).set_start(0))
-    combined_audio = CompositeAudioClip(audio_tracks).set_duration(duration)
+    combined_audio = CompositeAudioClip([voice_clip]).set_duration(duration)
 
     return {
         "text": scene["text"],
@@ -339,7 +317,7 @@ def _build_scene_content(scene: dict, freesound_key: str, idx: int):
     }
 
 
-def build_video(script: dict, pexels_key: str = "", freesound_key: str = "") -> str:
+def build_video(script: dict, pexels_key: str = "") -> str:
     set_status("video_agent", "running", "assembling scenes")
     try:
         os.makedirs(WORKDIR, exist_ok=True)
@@ -359,12 +337,17 @@ def build_video(script: dict, pexels_key: str = "", freesound_key: str = "") -> 
         intro_duration = intro_audio.duration if intro_audio else 0.0
 
         scene_contents = []
-        cursor = intro_duration
+        cursor = 0.0
         for i, scene in enumerate(script["scenes"]):
-            content = _build_scene_content(scene, freesound_key, i)
+            content = _build_scene_content(scene, i)
             content["offset"] = cursor
             scene_contents.append(content)
-            cursor += content["duration"]
+            if i == 0:
+                # Hook line plays simultaneously with the intro stinger,
+                # so the next scene starts after whichever finishes last.
+                cursor += max(content["duration"], intro_duration)
+            else:
+                cursor += content["duration"]
         total_duration = cursor
 
         background = _build_background(total_duration, pexels_key, canvas_w, canvas_h)
@@ -374,11 +357,22 @@ def build_video(script: dict, pexels_key: str = "", freesound_key: str = "") -> 
         if intro_audio:
             audio_tracks.append(intro_audio.volumex(0.9).set_start(0))
 
-        for content in scene_contents:
+        for i, content in enumerate(scene_contents):
             offset = content["offset"]
             audio_tracks.append(content["audio"].set_start(offset))
 
-            if content["word_captions"]:
+            if i == 0 or not content["word_captions"]:
+                # Hook line always shows as one full-line caption instead
+                # of word-by-word, regardless of whether whisper captions
+                # are available for it.
+                txt = TextClip(content["text"], **_text_clip_kwargs(
+                    fontsize=fallback_fontsize, color="white", stroke_color="black",
+                    stroke_width=stroke_w_fallback, method="caption", size=(canvas_w * 0.85, None),
+                ))
+                txt = txt.set_start(offset).set_end(offset + content["duration"])
+                txt = txt.set_position(("center", caption_y))
+                caption_clips.append(txt)
+            else:
                 for word, local_start, local_end in content["word_captions"]:
                     txt = TextClip(word, **_text_clip_kwargs(
                         fontsize=word_fontsize, color="white", stroke_color="black",
@@ -387,14 +381,6 @@ def build_video(script: dict, pexels_key: str = "", freesound_key: str = "") -> 
                     txt = txt.set_start(offset + local_start).set_end(offset + local_end)
                     txt = txt.set_position(("center", caption_y))
                     caption_clips.append(txt)
-            else:
-                txt = TextClip(content["text"], **_text_clip_kwargs(
-                    fontsize=fallback_fontsize, color="white", stroke_color="black",
-                    stroke_width=stroke_w_fallback, method="caption", size=(canvas_w * 0.85, None),
-                ))
-                txt = txt.set_start(offset).set_end(offset + content["duration"])
-                txt = txt.set_position(("center", caption_y))
-                caption_clips.append(txt)
 
         final_audio = CompositeAudioClip(audio_tracks).set_duration(total_duration)
         final_video = CompositeVideoClip([background, *caption_clips], size=(canvas_w, canvas_h)).set_duration(total_duration)
@@ -403,7 +389,10 @@ def build_video(script: dict, pexels_key: str = "", freesound_key: str = "") -> 
         out_dir = os.path.join(os.path.dirname(__file__), "..", "data", "output")
         os.makedirs(out_dir, exist_ok=True)
         out_path = os.path.join(out_dir, f"{uuid.uuid4().hex[:8]}.mp4")
-        final.write_videofile(out_path, fps=30, codec="libx264", audio_codec="aac", threads=4, logger=None)
+        final.write_videofile(
+            out_path, fps=30, codec="libx264", audio_codec="aac", threads=4, logger=None,
+            ffmpeg_params=["-movflags", "+faststart"],
+        )
         set_status("video_agent", "done", out_path)
         return out_path
     except Exception as e:
@@ -414,5 +403,5 @@ def build_video(script: dict, pexels_key: str = "", freesound_key: str = "") -> 
 if __name__ == "__main__":
     from script_agent import generate_script
     s = generate_script()
-    path = build_video(s, pexels_key=os.getenv("PEXELS_API_KEY", ""), freesound_key=os.getenv("FREESOUND_API_KEY", ""))
+    path = build_video(s, pexels_key=os.getenv("PEXELS_API_KEY", ""))
     print("Video written to:", path)

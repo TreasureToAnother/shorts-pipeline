@@ -28,7 +28,6 @@ sys.path.append("..")
 from status_store import set_status
 
 USED_TOPICS_PATH = os.path.join(os.path.dirname(__file__), "..", "data", "used_topics.json")
-SFX_POOL = ["whoosh", "impact", "ding", "dramatic_sting", "swipe"]
 
 MIN_TARGET_WORDS = 90   # ~30s of narration
 MAX_TARGET_WORDS = 170  # ~60s of narration
@@ -221,18 +220,15 @@ def _build_script(story_text: str, model: str) -> dict:
     scenes = [{
         "text": "You won't believe what just happened.",
         "duration": 3.0,
-        "sfx": "dramatic_sting",
     }]
     for beat in beats:
         scenes.append({
             "text": beat,
             "duration": max(3.0, len(beat.split()) / 2.5),
-            "sfx": random.choice(SFX_POOL),
         })
     scenes.append({
         "text": random.choice(ENGAGEMENT_CTAS),
         "duration": 3.5,
-        "sfx": "ding",
     })
     title = _generate_title_with_ollama(story_text, model)
     return {"title": title, "scenes": scenes}
@@ -253,8 +249,6 @@ def generate_script(ollama_model: str = "llama3.2") -> dict:
             story_text = _fallback_template_story(combo)
 
         script = _build_script(story_text, ollama_model)
-        for s in script["scenes"]:
-            s.setdefault("sfx", random.choice(SFX_POOL))
         set_status("script_agent", "done", f"generated: {script['title']}")
         return script
     except Exception as e:

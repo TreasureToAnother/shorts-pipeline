@@ -131,8 +131,8 @@ Railway's or Fly.io's free tier.
 
 ## 4. Tuning retention
 
-- Edit `SFX_POOL` and the beat structure in `agents/script_agent.py`
-  to change pacing/hook style.
+- Edit the beat structure in `agents/script_agent.py` to change
+  pacing/hook style.
 - Caption styling (font, size, highlight color, position) lives in
   `_build_scene_clip()` in `agents/video_agent.py`.
 - Swap `voice = "en-US-GuyNeural"` in `video_agent.py` for any other
