@@ -55,9 +55,9 @@ OVERLAY_IMAGE_DIR = os.path.join(os.path.dirname(__file__), "..", "data", "overl
 CLIP_SEGMENT_SECONDS = 15.0
 CLIP_SPEED = 1.2
 INTRO_MAX_SECONDS = 0.8
-OVERLAY_MAX_WIDTH_FRAC = 0.46   # overlay image is capped to this fraction of canvas width
-OVERLAY_MAX_HEIGHT_FRAC = 0.22  # and this fraction of canvas height, whichever is smaller
-OVERLAY_GAP_ABOVE_CAPTION_FRAC = 0.045  # gap between the overlay's bottom edge and the caption line
+OVERLAY_MAX_WIDTH_FRAC = 0.51   # overlay image is capped to this fraction of canvas width
+OVERLAY_MAX_HEIGHT_FRAC = 0.24  # and this fraction of canvas height, whichever is smaller
+OVERLAY_GAP_ABOVE_CAPTION_FRAC = 0.07  # gap between the overlay's bottom edge and the caption line
 
 
 def _detect_caption_font():
