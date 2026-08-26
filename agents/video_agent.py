@@ -50,7 +50,7 @@ INTRO_SOUND_DIR = os.path.join(os.path.dirname(__file__), "..", "data", "intro_s
 
 CLIP_SEGMENT_SECONDS = 15.0
 CLIP_SPEED = 1.2
-INTRO_MAX_SECONDS = 5.0
+INTRO_MAX_SECONDS = 1.0
 
 
 def _detect_caption_font():
