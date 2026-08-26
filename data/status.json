@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-08-26T14:28:22Z"
+    "status": "done",
+    "message": "generated: I've been working at the mall for three years, but I still can't believe my boyf",
+    "updated_at": "2026-08-26T14:29:18Z"
   },
   "video_agent": {
     "status": "idle",
