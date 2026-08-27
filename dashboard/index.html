@@ -413,6 +413,13 @@ function fmtPublish(iso) {
 function nowET() {
   return new Date(new Date().toLocaleString("en-US", { timeZone: "America/New_York" }));
 }
+function todayET() {
+  const et = nowET();
+  const y = et.getFullYear();
+  const m = String(et.getMonth() + 1).padStart(2, "0");
+  const d = String(et.getDate()).padStart(2, "0");
+  return `${y}-${m}-${d}`;
+}
 function fmtFull(n) {
   if (n === null || n === undefined) return "—";
   return n.toLocaleString("en-US");
@@ -640,7 +647,13 @@ async function pollQueue() {
   try {
     const res = await fetch(url("queue") + "?_=" + Date.now());
     const data = await res.json();
-    const slots = data.slots || [];
+    // queue.json only gets reset for a new day once a real pipeline run
+    // actually executes — if none has fired yet today, the committed
+    // file is still showing yesterday's final state. Treat that as an
+    // untouched queue rather than displaying stale numbers.
+    const slots = data.date === todayET()
+      ? (data.slots || [])
+      : SLOT_HOURS.map((h, i) => ({ slot: i, hour_et: h, stage: "pending", title: null, video_url: null, publish_at: null }));
 
     const doneCount = slots.filter(s => s.stage === "uploaded").length;
     document.getElementById("flights-done").textContent = `${doneCount} / ${slots.length || 6}`;
