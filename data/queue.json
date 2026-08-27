@@ -20,10 +20,10 @@
     {
       "slot": 2,
       "hour_et": 6,
-      "stage": "generating",
-      "title": null,
-      "video_url": null,
-      "publish_at": null
+      "stage": "uploaded",
+      "title": "I nervously waited for him at the coffee shop, fidgeting with my phone.",
+      "video_url": "https://youtube.com/shorts/AwfQC5G-jVE",
+      "publish_at": "2026-08-27T15:03:58Z"
     },
     {
       "slot": 3,
