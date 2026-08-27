@@ -1,21 +1,21 @@
 {
-  "date": "2026-08-26",
+  "date": "2026-08-27",
   "slots": [
     {
       "slot": 0,
       "hour_et": 4,
-      "stage": "uploaded",
-      "title": "Received a message from a stranger that made my world spin\" #SuspenseStory",
-      "video_url": "https://youtube.com/shorts/dvNi1wxCGcM",
-      "publish_at": "2026-08-26T15:58:34Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 1,
       "hour_et": 5,
-      "stage": "uploaded",
-      "title": "I've been working at the mall for three years, but I still can't believe my boyf",
-      "video_url": "https://youtube.com/shorts/HrBQEUtBRmQ",
-      "publish_at": "2026-08-26T19:31:19Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 2,
@@ -28,26 +28,26 @@
     {
       "slot": 3,
       "hour_et": 7,
-      "stage": "uploaded",
-      "title": "His question was a red flag, but I brushed it off... until I got this text\" \ud83d\udc94 #GirlStory",
-      "video_url": "https://youtube.com/shorts/klGQxKI9ynI",
-      "publish_at": "2026-08-26T16:21:47Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 4,
       "hour_et": 8,
-      "stage": "uploaded",
-      "title": "He caught me cheating on my breakup selfie \ud83d\udc94",
-      "video_url": "https://youtube.com/shorts/YUs6bZlIdfY",
-      "publish_at": "2026-08-26T17:05:42Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 5,
       "hour_et": 9,
-      "stage": "uploaded",
-      "title": "I've had a crush for what feels like forever - on my coworker, Mike, who's alway",
-      "video_url": "https://youtube.com/shorts/AD-pXYQPR_o",
-      "publish_at": "2026-08-26T21:43:33Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     }
   ]
 }
