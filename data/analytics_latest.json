@@ -1,21 +1,31 @@
 {
-  "updated_at": "2026-08-26T21:43:06Z",
+  "updated_at": "2026-08-27T02:34:23Z",
   "channel": {
     "title": "Treasure To Another",
     "thumbnail": "https://yt3.ggpht.com/4iJRPFXBUDoj_XhTxdvPBJUbrheeqCvqcnlTcGzDHMocWRgdOwhDvE-26GhG7FemNVIeIG_hYQ=s88-c-k-c0x00ffffff-no-rj",
-    "subscriberCount": 1,
+    "subscriberCount": 2,
     "viewCount": 677,
-    "videoCount": 5,
-    "subsThisMonth": 0,
+    "videoCount": 6,
+    "subsThisMonth": 1,
     "viewsThisMonth": 0
   },
   "latestVideos": [
+    {
+      "id": "AD-pXYQPR_o",
+      "title": "subscribe for more fun stories #storytime #story",
+      "publishedAt": "2026-08-26T21:43:34Z",
+      "thumbnail": "https://i.ytimg.com/vi/AD-pXYQPR_o/mqdefault.jpg",
+      "views": 779,
+      "likes": 8,
+      "comments": 0,
+      "url": "https://youtube.com/shorts/AD-pXYQPR_o"
+    },
     {
       "id": "HrBQEUtBRmQ",
       "title": "subscribe for more fun stories #storytime #story",
       "publishedAt": "2026-08-26T19:31:42Z",
       "thumbnail": "https://i.ytimg.com/vi/HrBQEUtBRmQ/mqdefault.jpg",
-      "views": 124,
+      "views": 282,
       "likes": 3,
       "comments": 0,
       "url": "https://youtube.com/shorts/HrBQEUtBRmQ"
@@ -25,7 +35,7 @@
       "title": "subscribe for more fun stories #storytime #story",
       "publishedAt": "2026-08-26T17:05:52Z",
       "thumbnail": "https://i.ytimg.com/vi/YUs6bZlIdfY/mqdefault.jpg",
-      "views": 379,
+      "views": 407,
       "likes": 5,
       "comments": 0,
       "url": "https://youtube.com/shorts/YUs6bZlIdfY"
@@ -35,7 +45,7 @@
       "title": "subscribe for more fun stories #storytime #story",
       "publishedAt": "2026-08-26T16:22:03Z",
       "thumbnail": "https://i.ytimg.com/vi/klGQxKI9ynI/mqdefault.jpg",
-      "views": 30,
+      "views": 35,
       "likes": 0,
       "comments": 0,
       "url": "https://youtube.com/shorts/klGQxKI9ynI"
@@ -49,16 +59,6 @@
       "likes": 2,
       "comments": 0,
       "url": "https://youtube.com/shorts/CPHTJpKlPWU"
-    },
-    {
-      "id": "z_zcu7awAvk",
-      "title": "Coworker's cruel flight from hell",
-      "publishedAt": "2026-08-23T14:08:32Z",
-      "thumbnail": "https://i.ytimg.com/vi/z_zcu7awAvk/mqdefault.jpg",
-      "views": 622,
-      "likes": 6,
-      "comments": 0,
-      "url": "https://youtube.com/shorts/z_zcu7awAvk"
     }
   ]
 }
