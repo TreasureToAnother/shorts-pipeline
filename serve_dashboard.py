@@ -2,8 +2,8 @@
 Local dashboard server.
 Run: python serve_dashboard.py
 Then open http://localhost:5050 while the orchestrator runs elsewhere
-(separate terminal / separate GitHub Actions run) to watch the nodes
-light up live.
+(separate terminal / separate GitHub Actions run) to watch the
+analytics and queue update live.
 """
 import os
 from flask import Flask, send_from_directory
@@ -20,6 +20,12 @@ def index():
 @app.route("/<string:filename>.json")
 def data_file(filename):
     return send_from_directory(os.path.join(ROOT, "data"), f"{filename}.json")
+
+
+@app.route("/<path:filename>")
+def dashboard_asset(filename):
+    """Static files that live alongside index.html — e.g. the favicon."""
+    return send_from_directory(os.path.join(ROOT, "dashboard"), filename)
 
 
 if __name__ == "__main__":
