@@ -1,21 +1,31 @@
 {
-  "updated_at": "2026-08-27T09:47:28Z",
+  "updated_at": "2026-08-28T06:10:16Z",
   "channel": {
     "title": "Treasure To Another",
     "thumbnail": "https://yt3.ggpht.com/4iJRPFXBUDoj_XhTxdvPBJUbrheeqCvqcnlTcGzDHMocWRgdOwhDvE-26GhG7FemNVIeIG_hYQ=s88-c-k-c0x00ffffff-no-rj",
     "subscriberCount": 2,
-    "viewCount": 678,
-    "videoCount": 6,
+    "viewCount": 2550,
+    "videoCount": 4,
     "subsThisMonth": 1,
-    "viewsThisMonth": 1
+    "viewsThisMonth": 1873
   },
   "latestVideos": [
+    {
+      "id": "AwfQC5G-jVE",
+      "title": "subscribe for more fun stories #storytime #story",
+      "publishedAt": "2026-08-27T15:04:24Z",
+      "thumbnail": "https://i.ytimg.com/vi/AwfQC5G-jVE/mqdefault.jpg",
+      "views": 291,
+      "likes": 3,
+      "comments": 0,
+      "url": "https://youtube.com/shorts/AwfQC5G-jVE"
+    },
     {
       "id": "AD-pXYQPR_o",
       "title": "subscribe for more fun stories #storytime #story",
       "publishedAt": "2026-08-26T21:43:34Z",
       "thumbnail": "https://i.ytimg.com/vi/AD-pXYQPR_o/mqdefault.jpg",
-      "views": 973,
+      "views": 971,
       "likes": 7,
       "comments": 0,
       "url": "https://youtube.com/shorts/AD-pXYQPR_o"
@@ -25,8 +35,8 @@
       "title": "subscribe for more fun stories #storytime #story",
       "publishedAt": "2026-08-26T19:31:42Z",
       "thumbnail": "https://i.ytimg.com/vi/HrBQEUtBRmQ/mqdefault.jpg",
-      "views": 335,
-      "likes": 6,
+      "views": 568,
+      "likes": 9,
       "comments": 0,
       "url": "https://youtube.com/shorts/HrBQEUtBRmQ"
     },
@@ -35,8 +45,8 @@
       "title": "subscribe for more fun stories #storytime #story",
       "publishedAt": "2026-08-26T17:05:52Z",
       "thumbnail": "https://i.ytimg.com/vi/YUs6bZlIdfY/mqdefault.jpg",
-      "views": 412,
-      "likes": 5,
+      "views": 418,
+      "likes": 6,
       "comments": 0,
       "url": "https://youtube.com/shorts/YUs6bZlIdfY"
     },
@@ -45,20 +55,10 @@
       "title": "subscribe for more fun stories #storytime #story",
       "publishedAt": "2026-08-26T16:22:03Z",
       "thumbnail": "https://i.ytimg.com/vi/klGQxKI9ynI/mqdefault.jpg",
-      "views": 38,
+      "views": 47,
       "likes": 0,
       "comments": 0,
       "url": "https://youtube.com/shorts/klGQxKI9ynI"
-    },
-    {
-      "id": "CPHTJpKlPWU",
-      "title": "Barista Gone Rogue",
-      "publishedAt": "2026-08-23T16:02:13Z",
-      "thumbnail": "https://i.ytimg.com/vi/CPHTJpKlPWU/mqdefault.jpg",
-      "views": 51,
-      "likes": 2,
-      "comments": 0,
-      "url": "https://youtube.com/shorts/CPHTJpKlPWU"
     }
   ]
 }
