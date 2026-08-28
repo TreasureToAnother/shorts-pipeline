@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-08-28T20:54:28Z"
+    "status": "done",
+    "message": "generated: Caught off guard by the one I thought was my crush\" \ud83d\udc94 #betrayal",
+    "updated_at": "2026-08-28T20:54:55Z"
   },
   "video_agent": {
     "status": "idle",
