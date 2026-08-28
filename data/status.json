@@ -1,22 +1,22 @@
 {
   "script_agent": {
-    "status": "done",
-    "message": "generated: Caught off guard by the one I thought was my crush\" \ud83d\udc94 #betrayal",
-    "updated_at": "2026-08-28T20:54:55Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "video_agent": {
-    "status": "done",
-    "message": "/home/runner/work/shorts-pipeline/shorts-pipeline/agents/../data/output/3cbb7528.mp4",
-    "updated_at": "2026-08-28T20:55:59Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "upload_agent": {
-    "status": "done",
-    "message": "scheduled for 2026-08-29T01:56:00Z: https://youtube.com/shorts/JkTyHlCeIRg",
-    "updated_at": "2026-08-28T20:56:04Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "discord_agent": {
-    "status": "done",
-    "message": "notified: Caught off guard by the one I thought was my crush\" \ud83d\udc94 #betrayal (scheduled 2026-08-29T01:56:00Z UTC)",
-    "updated_at": "2026-08-28T20:56:07Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   }
 }
