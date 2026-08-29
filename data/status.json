@@ -10,9 +10,9 @@
     "updated_at": "2026-08-29T13:07:16Z"
   },
   "upload_agent": {
-    "status": "running",
-    "message": "uploading ed8257ca.mp4",
-    "updated_at": "2026-08-29T13:07:17Z"
+    "status": "done",
+    "message": "scheduled for 2026-08-29T18:07:17Z: https://youtube.com/shorts/ASa_gO58sFE",
+    "updated_at": "2026-08-29T13:07:20Z"
   },
   "discord_agent": {
     "status": "idle",
