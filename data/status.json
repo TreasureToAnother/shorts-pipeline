@@ -1,22 +1,22 @@
 {
   "script_agent": {
-    "status": "done",
-    "message": "generated: I poured steaming hot coffee for the morning rush, my mind a million miles away.",
-    "updated_at": "2026-08-29T09:09:54Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "video_agent": {
-    "status": "done",
-    "message": "/home/runner/work/shorts-pipeline/shorts-pipeline/agents/../data/output/4c1a04ce.mp4",
-    "updated_at": "2026-08-29T09:11:35Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "upload_agent": {
-    "status": "done",
-    "message": "scheduled for 2026-08-29T14:11:35Z: https://youtube.com/shorts/0xbZB2MS8ZY",
-    "updated_at": "2026-08-29T09:11:38Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "discord_agent": {
-    "status": "done",
-    "message": "notified: I poured steaming hot coffee for the morning rush, my mind a million miles away. (scheduled 2026-08-29T14:11:35Z UTC)",
-    "updated_at": "2026-08-29T09:11:40Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   }
 }
