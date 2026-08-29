@@ -44,10 +44,10 @@
     {
       "slot": 5,
       "hour_et": 9,
-      "stage": "generating",
-      "title": null,
-      "video_url": null,
-      "publish_at": null
+      "stage": "uploaded",
+      "title": "I'm still trying to process what I found in our group project folder.",
+      "video_url": "https://youtube.com/shorts/ASa_gO58sFE",
+      "publish_at": "2026-08-29T18:07:17Z"
     }
   ]
 }
