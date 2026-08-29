@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-08-29T10:08:48Z"
+    "status": "done",
+    "message": "generated: I poured a shot of espresso, but what I really poured was my heart \ud83d\udc94 #betrayedbythefirstimpression",
+    "updated_at": "2026-08-29T10:09:24Z"
   },
   "video_agent": {
     "status": "idle",
