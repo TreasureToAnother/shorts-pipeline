@@ -15,8 +15,8 @@
     "updated_at": "2026-08-29T13:07:20Z"
   },
   "discord_agent": {
-    "status": "running",
-    "message": "posting upload notification",
-    "updated_at": "2026-08-29T13:07:21Z"
+    "status": "done",
+    "message": "notified: I'm still trying to process what I found in our group project folder. (scheduled 2026-08-29T18:07:17Z UTC)",
+    "updated_at": "2026-08-29T13:07:23Z"
   }
 }
