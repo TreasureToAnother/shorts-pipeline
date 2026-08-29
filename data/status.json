@@ -1,22 +1,22 @@
 {
   "script_agent": {
-    "status": "done",
-    "message": "generated: I poured a shot of espresso, but what I really poured was my heart \ud83d\udc94 #betrayedbythefirstimpression",
-    "updated_at": "2026-08-29T10:09:24Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "video_agent": {
-    "status": "done",
-    "message": "/home/runner/work/shorts-pipeline/shorts-pipeline/agents/../data/output/33e6f96a.mp4",
-    "updated_at": "2026-08-29T10:10:28Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "upload_agent": {
-    "status": "done",
-    "message": "scheduled for 2026-08-29T15:10:29Z: https://youtube.com/shorts/tUkkquVYF0U",
-    "updated_at": "2026-08-29T10:10:32Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "discord_agent": {
-    "status": "done",
-    "message": "notified: I poured a shot of espresso, but what I really poured was my heart \ud83d\udc94 #betrayedbythefirstimpression (scheduled 2026-08-29T15:10:29Z UTC)",
-    "updated_at": "2026-08-29T10:10:34Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   }
 }
