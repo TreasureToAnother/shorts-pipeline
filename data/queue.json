@@ -1,21 +1,21 @@
 {
-  "date": "2026-08-28",
+  "date": "2026-08-29",
   "slots": [
     {
       "slot": 0,
       "hour_et": 4,
-      "stage": "uploaded",
-      "title": "Caught off guard by the one I thought was my crush\" \ud83d\udc94 #betrayal",
-      "video_url": "https://youtube.com/shorts/JkTyHlCeIRg",
-      "publish_at": "2026-08-29T01:56:00Z"
+      "stage": "generating",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 1,
       "hour_et": 5,
-      "stage": "uploaded",
-      "title": "I stared blankly at my phone, scrolling through our last conversation's text mes",
-      "video_url": "https://youtube.com/shorts/qlCjIz11wgE",
-      "publish_at": "2026-08-29T02:51:55Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 2,
