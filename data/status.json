@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-08-29T09:09:10Z"
+    "status": "done",
+    "message": "generated: I poured steaming hot coffee for the morning rush, my mind a million miles away.",
+    "updated_at": "2026-08-29T09:09:54Z"
   },
   "video_agent": {
     "status": "idle",
