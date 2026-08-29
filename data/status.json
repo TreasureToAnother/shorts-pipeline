@@ -10,9 +10,9 @@
     "updated_at": "2026-08-29T13:07:16Z"
   },
   "upload_agent": {
-    "status": "idle",
-    "message": "",
-    "updated_at": null
+    "status": "running",
+    "message": "uploading ed8257ca.mp4",
+    "updated_at": "2026-08-29T13:07:17Z"
   },
   "discord_agent": {
     "status": "idle",
