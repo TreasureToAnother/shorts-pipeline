@@ -1,22 +1,22 @@
 {
   "script_agent": {
-    "status": "done",
-    "message": "generated: Love from an impossible distance \ud83d\udc94\" #POV",
-    "updated_at": "2026-08-29T11:07:40Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "video_agent": {
-    "status": "done",
-    "message": "/home/runner/work/shorts-pipeline/shorts-pipeline/agents/../data/output/7e02dff0.mp4",
-    "updated_at": "2026-08-29T11:08:40Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "upload_agent": {
-    "status": "done",
-    "message": "scheduled for 2026-08-29T16:08:41Z: https://youtube.com/shorts/lh5guBS2deU",
-    "updated_at": "2026-08-29T11:08:44Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "discord_agent": {
-    "status": "done",
-    "message": "notified: Love from an impossible distance \ud83d\udc94\" #POV (scheduled 2026-08-29T16:08:41Z UTC)",
-    "updated_at": "2026-08-29T11:08:46Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   }
 }
