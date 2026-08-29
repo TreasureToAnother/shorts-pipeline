@@ -5,9 +5,9 @@
     "updated_at": "2026-08-29T13:06:02Z"
   },
   "video_agent": {
-    "status": "running",
-    "message": "assembling scenes",
-    "updated_at": "2026-08-29T13:06:03Z"
+    "status": "done",
+    "message": "/home/runner/work/shorts-pipeline/shorts-pipeline/agents/../data/output/ed8257ca.mp4",
+    "updated_at": "2026-08-29T13:07:16Z"
   },
   "upload_agent": {
     "status": "idle",
