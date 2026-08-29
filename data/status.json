@@ -1,22 +1,22 @@
 {
   "script_agent": {
-    "status": "done",
-    "message": "generated: He saw the photo of my mom, and I felt like I'd been punched in the gut \ud83d\udc94",
-    "updated_at": "2026-08-29T08:11:02Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "video_agent": {
-    "status": "done",
-    "message": "/home/runner/work/shorts-pipeline/shorts-pipeline/agents/../data/output/a28fbae9.mp4",
-    "updated_at": "2026-08-29T08:12:35Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "upload_agent": {
-    "status": "done",
-    "message": "scheduled for 2026-08-29T13:12:36Z: https://youtube.com/shorts/MZeragRQebA",
-    "updated_at": "2026-08-29T08:12:38Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "discord_agent": {
-    "status": "done",
-    "message": "notified: He saw the photo of my mom, and I felt like I'd been punched in the gut \ud83d\udc94 (scheduled 2026-08-29T13:12:36Z UTC)",
-    "updated_at": "2026-08-29T08:12:39Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   }
 }
