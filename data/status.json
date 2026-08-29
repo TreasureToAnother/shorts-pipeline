@@ -10,9 +10,9 @@
     "updated_at": "2026-08-29T12:04:55Z"
   },
   "upload_agent": {
-    "status": "running",
-    "message": "uploading b90ab786.mp4",
-    "updated_at": "2026-08-29T12:04:56Z"
+    "status": "done",
+    "message": "scheduled for 2026-08-29T17:04:56Z: https://youtube.com/shorts/T7KYmXOG_G0",
+    "updated_at": "2026-08-29T12:04:59Z"
   },
   "discord_agent": {
     "status": "idle",
