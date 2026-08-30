@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-08-30T10:09:45Z"
+    "status": "done",
+    "message": "generated: \ud83c\udf43 The guy who gave me a mysterious gift that changed everything",
+    "updated_at": "2026-08-30T10:10:26Z"
   },
   "video_agent": {
     "status": "idle",
