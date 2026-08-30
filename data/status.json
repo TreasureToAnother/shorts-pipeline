@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-08-30T09:08:26Z"
+    "status": "done",
+    "message": "generated: I poured myself a glass of wine, trying to appear nonchalant as he ordered the s",
+    "updated_at": "2026-08-30T09:09:08Z"
   },
   "video_agent": {
     "status": "idle",
