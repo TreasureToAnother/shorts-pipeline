@@ -1,53 +1,53 @@
 {
-  "date": "2026-08-29",
+  "date": "2026-08-30",
   "slots": [
     {
       "slot": 0,
       "hour_et": 4,
-      "stage": "uploaded",
-      "title": "He saw the photo of my mom, and I felt like I'd been punched in the gut \ud83d\udc94",
-      "video_url": "https://youtube.com/shorts/MZeragRQebA",
-      "publish_at": "2026-08-29T13:12:36Z"
+      "stage": "generating",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 1,
       "hour_et": 5,
-      "stage": "uploaded",
-      "title": "I poured steaming hot coffee for the morning rush, my mind a million miles away.",
-      "video_url": "https://youtube.com/shorts/0xbZB2MS8ZY",
-      "publish_at": "2026-08-29T14:11:35Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 2,
       "hour_et": 6,
-      "stage": "uploaded",
-      "title": "I poured a shot of espresso, but what I really poured was my heart \ud83d\udc94 #betrayedbythefirstimpression",
-      "video_url": "https://youtube.com/shorts/tUkkquVYF0U",
-      "publish_at": "2026-08-29T15:10:29Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 3,
       "hour_et": 7,
-      "stage": "uploaded",
-      "title": "Love from an impossible distance \ud83d\udc94\" #POV",
-      "video_url": "https://youtube.com/shorts/lh5guBS2deU",
-      "publish_at": "2026-08-29T16:08:41Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 4,
       "hour_et": 8,
-      "stage": "uploaded",
-      "title": "He paid for dinner and that's when I realized... \"\n\n#Betrayed",
-      "video_url": "https://youtube.com/shorts/T7KYmXOG_G0",
-      "publish_at": "2026-08-29T17:04:56Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 5,
       "hour_et": 9,
-      "stage": "uploaded",
-      "title": "I'm still trying to process what I found in our group project folder.",
-      "video_url": "https://youtube.com/shorts/ASa_gO58sFE",
-      "publish_at": "2026-08-29T18:07:17Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     }
   ]
 }
