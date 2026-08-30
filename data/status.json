@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-08-30T13:04:54Z"
+    "status": "done",
+    "message": "generated: The one who made me believe I was just a summer fling\"\n\n#BetrayalAtCamp",
+    "updated_at": "2026-08-30T13:05:35Z"
   },
   "video_agent": {
     "status": "idle",
