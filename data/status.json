@@ -18,5 +18,10 @@
     "status": "idle",
     "message": "",
     "updated_at": null
+  },
+  "orchestrator": {
+    "status": "error",
+    "message": "ib/python3.11/site-packages/google/oauth2/reauth.py\", line 370, in refresh_grant\n    _client._handle_error_response(response_data, retryable_error)\n  File \"/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/google/oauth2/_client.py\", line 73, in _handle_error_response\n    raise exceptions.RefreshError(\ngoogle.auth.exceptions.RefreshError: ('invalid_grant: Token has been expired or revoked.', {'error': 'invalid_grant', 'error_description': 'Token has been expired or revoked.'})\n",
+    "updated_at": "2026-08-30T10:11:53Z"
   }
 }
