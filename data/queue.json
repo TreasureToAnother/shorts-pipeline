@@ -20,7 +20,7 @@
     {
       "slot": 2,
       "hour_et": 6,
-      "stage": "generating",
+      "stage": "error",
       "title": null,
       "video_url": null,
       "publish_at": null
