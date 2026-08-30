@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-08-30T11:07:37Z"
+    "status": "done",
+    "message": "generated: I was so caught up in the excitement of finals week, I barely noticed him sittin",
+    "updated_at": "2026-08-30T11:08:29Z"
   },
   "video_agent": {
     "status": "idle",
