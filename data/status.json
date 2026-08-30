@@ -10,9 +10,9 @@
     "updated_at": "2026-08-30T12:04:52Z"
   },
   "upload_agent": {
-    "status": "idle",
-    "message": "",
-    "updated_at": null
+    "status": "running",
+    "message": "uploading 3df57190.mp4",
+    "updated_at": "2026-08-30T12:04:53Z"
   },
   "discord_agent": {
     "status": "idle",
