@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-08-31T12:03:14Z"
+    "status": "done",
+    "message": "generated: I stepped into the crowded party, my eyes scanning for familiar faces.",
+    "updated_at": "2026-08-31T12:03:56Z"
   },
   "video_agent": {
     "status": "idle",
