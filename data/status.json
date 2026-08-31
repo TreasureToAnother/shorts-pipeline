@@ -10,9 +10,9 @@
     "updated_at": "2026-08-31T11:10:40Z"
   },
   "upload_agent": {
-    "status": "running",
-    "message": "uploading 822ab4fe.mp4",
-    "updated_at": "2026-08-31T11:10:41Z"
+    "status": "error",
+    "message": "('invalid_grant: Token has been expired or revoked.', {'error': 'invalid_grant', 'error_description': 'Token has been expired or revoked.'})",
+    "updated_at": "2026-08-31T11:10:42Z"
   },
   "discord_agent": {
     "status": "idle",
