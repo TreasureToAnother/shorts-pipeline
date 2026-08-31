@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-08-31T10:12:18Z"
+    "status": "done",
+    "message": "generated: His number, my heart, and a 3-minute wait",
+    "updated_at": "2026-08-31T10:12:44Z"
   },
   "video_agent": {
     "status": "idle",
