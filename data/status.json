@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-09-01T09:14:56Z"
+    "status": "done",
+    "message": "generated: I pour the steaming coffee, my hands shaking as I hand it to the regular who's b",
+    "updated_at": "2026-09-01T09:15:46Z"
   },
   "video_agent": {
     "status": "idle",
