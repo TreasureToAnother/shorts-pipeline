@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-09-01T13:09:51Z"
+    "status": "done",
+    "message": "generated: I stared at my phone, my heart racing as I read the text from Alex, my roommate ",
+    "updated_at": "2026-09-01T13:10:16Z"
   },
   "video_agent": {
     "status": "idle",
