@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-09-01T10:18:36Z"
+    "status": "done",
+    "message": "generated: Behind the Lens: When the Person You Love is Lying to You",
+    "updated_at": "2026-09-01T10:19:04Z"
   },
   "video_agent": {
     "status": "idle",
