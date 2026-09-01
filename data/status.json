@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-09-01T12:02:57Z"
+    "status": "done",
+    "message": "generated: I've been waiting for him to text me for what feels like an eternity, my heart s",
+    "updated_at": "2026-09-01T12:03:43Z"
   },
   "video_agent": {
     "status": "idle",
