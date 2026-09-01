@@ -1,27 +1,22 @@
 {
   "script_agent": {
-    "status": "done",
-    "message": "generated: I pour the steaming coffee, my hands shaking as I hand it to the regular who's b",
-    "updated_at": "2026-09-01T09:15:46Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "video_agent": {
-    "status": "done",
-    "message": "/home/runner/work/shorts-pipeline/shorts-pipeline/agents/../data/output/d3ba1c55.mp4",
-    "updated_at": "2026-09-01T09:17:18Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "upload_agent": {
-    "status": "error",
-    "message": "('invalid_grant: Token has been expired or revoked.', {'error': 'invalid_grant', 'error_description': 'Token has been expired or revoked.'})",
-    "updated_at": "2026-09-01T09:17:21Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "discord_agent": {
     "status": "idle",
     "message": "",
     "updated_at": null
-  },
-  "orchestrator": {
-    "status": "error",
-    "message": "ib/python3.11/site-packages/google/oauth2/reauth.py\", line 370, in refresh_grant\n    _client._handle_error_response(response_data, retryable_error)\n  File \"/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/google/oauth2/_client.py\", line 73, in _handle_error_response\n    raise exceptions.RefreshError(\ngoogle.auth.exceptions.RefreshError: ('invalid_grant: Token has been expired or revoked.', {'error': 'invalid_grant', 'error_description': 'Token has been expired or revoked.'})\n",
-    "updated_at": "2026-09-01T09:17:22Z"
   }
 }
