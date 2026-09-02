@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-09-02T08:20:21Z"
+    "status": "done",
+    "message": "generated: Caught in the act, my heart shattered\"\n\n#Betrayed",
+    "updated_at": "2026-09-02T08:20:54Z"
   },
   "video_agent": {
     "status": "idle",
