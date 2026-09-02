@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-09-02T11:10:29Z"
+    "status": "done",
+    "message": "generated: I'll never forget the night I met him, the night the text changed everything.",
+    "updated_at": "2026-09-02T11:11:05Z"
   },
   "video_agent": {
     "status": "idle",
