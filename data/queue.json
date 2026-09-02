@@ -1,10 +1,10 @@
 {
-  "date": "2026-09-01",
+  "date": "2026-09-02",
   "slots": [
     {
       "slot": 0,
       "hour_et": 4,
-      "stage": "error",
+      "stage": "generating",
       "title": null,
       "video_url": null,
       "publish_at": null
@@ -12,7 +12,7 @@
     {
       "slot": 1,
       "hour_et": 5,
-      "stage": "error",
+      "stage": "pending",
       "title": null,
       "video_url": null,
       "publish_at": null
@@ -20,7 +20,7 @@
     {
       "slot": 2,
       "hour_et": 6,
-      "stage": "error",
+      "stage": "pending",
       "title": null,
       "video_url": null,
       "publish_at": null
@@ -28,7 +28,7 @@
     {
       "slot": 3,
       "hour_et": 7,
-      "stage": "error",
+      "stage": "pending",
       "title": null,
       "video_url": null,
       "publish_at": null
@@ -36,7 +36,7 @@
     {
       "slot": 4,
       "hour_et": 8,
-      "stage": "error",
+      "stage": "pending",
       "title": null,
       "video_url": null,
       "publish_at": null
@@ -44,7 +44,7 @@
     {
       "slot": 5,
       "hour_et": 9,
-      "stage": "error",
+      "stage": "pending",
       "title": null,
       "video_url": null,
       "publish_at": null
