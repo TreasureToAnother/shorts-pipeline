@@ -10,9 +10,9 @@
     "updated_at": "2026-09-02T08:21:55Z"
   },
   "upload_agent": {
-    "status": "running",
-    "message": "uploading cbce30eb.mp4",
-    "updated_at": "2026-09-02T08:21:56Z"
+    "status": "error",
+    "message": "('invalid_grant: Token has been expired or revoked.', {'error': 'invalid_grant', 'error_description': 'Token has been expired or revoked.'})",
+    "updated_at": "2026-09-02T08:21:57Z"
   },
   "discord_agent": {
     "status": "idle",
