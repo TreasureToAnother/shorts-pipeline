@@ -10,9 +10,9 @@
     "updated_at": "2026-09-02T08:21:55Z"
   },
   "upload_agent": {
-    "status": "idle",
-    "message": "",
-    "updated_at": null
+    "status": "running",
+    "message": "uploading cbce30eb.mp4",
+    "updated_at": "2026-09-02T08:21:56Z"
   },
   "discord_agent": {
     "status": "idle",
