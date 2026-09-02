@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-09-02T12:03:22Z"
+    "status": "done",
+    "message": "generated: I lay in bed, my textbooks scattered around me, but my mind is a thousand miles ",
+    "updated_at": "2026-09-02T12:03:56Z"
   },
   "video_agent": {
     "status": "idle",
