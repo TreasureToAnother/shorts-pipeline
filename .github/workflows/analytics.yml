@@ -26,7 +26,7 @@ jobs:
           python-version: "3.11"
 
       - name: Install dependencies
-        run: pip install google-api-python-client==2.143.0
+        run: pip install google-api-python-client==2.143.0 requests==2.32.3
 
       - name: Snapshot analytics
         env:
@@ -34,9 +34,14 @@ jobs:
           YOUTUBE_CHANNEL_ID: ${{ secrets.YOUTUBE_CHANNEL_ID }}
         run: python agents/analytics_agent.py
 
+      - name: Warn if the YouTube token is about to expire
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+        run: python agents/token_watchdog.py
+
       - name: Commit analytics data
         run: |
-          git add data/analytics_latest.json data/analytics_history.json
+          git add data/analytics_latest.json data/analytics_history.json data/token_issued_at.json
           if git diff --cached --quiet; then
             echo "No analytics changes to commit"
             exit 0

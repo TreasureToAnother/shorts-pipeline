@@ -10,8 +10,10 @@ from Google Cloud Console). After the first run, config/token.json
 caches the refresh token so future runs (including GitHub Actions,
 with the token stored as a secret) don't need re-consent.
 """
+import json
 import os
 import sys
+from datetime import datetime, timezone
 
 from google.auth.transport.requests import Request
 from google.oauth2.credentials import Credentials
@@ -26,6 +28,20 @@ SCOPES = ["https://www.googleapis.com/auth/youtube.upload"]
 CONFIG_DIR = os.path.join(os.path.dirname(__file__), "..", "config")
 CLIENT_SECRET_PATH = os.path.join(CONFIG_DIR, "client_secret.json")
 TOKEN_PATH = os.path.join(CONFIG_DIR, "token.json")
+TOKEN_ISSUED_AT_PATH = os.path.join(os.path.dirname(__file__), "..", "data", "token_issued_at.json")
+
+
+def _record_fresh_consent():
+    """
+    Testing-mode Google OAuth apps cap refresh tokens at ~7 days from
+    when they're minted, regardless of use — see token_watchdog.py.
+    Only a brand-new browser consent (not an access-token refresh)
+    resets that clock, so this only fires from the fresh-consent branch
+    below.
+    """
+    os.makedirs(os.path.dirname(TOKEN_ISSUED_AT_PATH), exist_ok=True)
+    with open(TOKEN_ISSUED_AT_PATH, "w") as f:
+        json.dump({"issued_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")}, f, indent=2)
 
 
 def _get_credentials():
@@ -38,6 +54,7 @@ def _get_credentials():
         else:
             flow = InstalledAppFlow.from_client_secrets_file(CLIENT_SECRET_PATH, SCOPES)
             creds = flow.run_local_server(port=0)  # one-time browser consent
+            _record_fresh_consent()
         with open(TOKEN_PATH, "w") as f:
             f.write(creds.to_json())
     return creds
