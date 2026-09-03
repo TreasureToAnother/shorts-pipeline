@@ -44,10 +44,10 @@
     {
       "slot": 5,
       "hour_et": 9,
-      "stage": "generating",
-      "title": null,
-      "video_url": null,
-      "publish_at": null
+      "stage": "uploaded",
+      "title": "I'm sitting in my dorm room, staring at my phone.",
+      "video_url": "https://youtube.com/shorts/1i_x3rp01kg",
+      "publish_at": "2026-09-03T17:06:32Z"
     }
   ]
 }
