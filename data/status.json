@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-09-03T08:20:04Z"
+    "status": "done",
+    "message": "generated: I thought I'd found my person in Alex, my apartment's resident charmer, always m",
+    "updated_at": "2026-09-03T08:20:47Z"
   },
   "video_agent": {
     "status": "idle",
