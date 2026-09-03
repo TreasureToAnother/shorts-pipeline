@@ -1,22 +1,22 @@
 {
   "script_agent": {
-    "status": "done",
-    "message": "generated: I thought I'd found my person in Alex, my apartment's resident charmer, always m",
-    "updated_at": "2026-09-03T08:20:47Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "video_agent": {
-    "status": "done",
-    "message": "/home/runner/work/shorts-pipeline/shorts-pipeline/agents/../data/output/79258a88.mp4",
-    "updated_at": "2026-09-03T08:21:57Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "upload_agent": {
-    "status": "done",
-    "message": "scheduled for 2026-09-03T13:21:58Z: https://youtube.com/shorts/qp4Nqpl6imQ",
-    "updated_at": "2026-09-03T08:22:00Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "discord_agent": {
-    "status": "done",
-    "message": "notified: I thought I'd found my person in Alex, my apartment's resident charmer, always m (scheduled 2026-09-03T13:21:58Z UTC)",
-    "updated_at": "2026-09-03T08:22:02Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   }
 }
