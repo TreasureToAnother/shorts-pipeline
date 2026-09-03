@@ -17,7 +17,7 @@ load_dotenv(os.path.join(os.path.dirname(__file__), "config", ".env"))
 from agents.script_agent import generate_script
 from agents.video_agent import build_video
 from agents.upload_agent import upload_video
-from agents.discord_agent import notify_upload
+from agents.discord_agent import notify_upload, notify_pipeline_failure
 from status_store import reset, set_status
 from daily_queue import claim_next_slot, mark_uploaded, mark_error
 
@@ -71,9 +71,12 @@ def run_pipeline():
         return url
 
     except Exception:
+        error_text = traceback.format_exc()
         traceback.print_exc()
-        set_status("orchestrator", "error", traceback.format_exc()[-500:])
+        set_status("orchestrator", "error", error_text[-500:])
         mark_error(slot_index)
+        if IS_CI:
+            notify_pipeline_failure(os.getenv("DISCORD_WEBHOOK_URL", ""), error_text)
         raise
 
 

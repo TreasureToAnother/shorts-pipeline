@@ -44,6 +44,28 @@ def notify_upload(webhook_url: str, title: str, url: str, thumbnail_url: str = "
         raise
 
 
+def notify_pipeline_failure(webhook_url: str, error_summary: str):
+    """
+    Pings Discord when a pipeline run fails, so a broken run shows up
+    immediately instead of only being noticed days later as channel
+    silence. Deliberately swallows its own errors — a failed alert
+    should never mask or replace the original pipeline failure.
+    """
+    if not webhook_url:
+        return
+    try:
+        payload = {
+            "embeds": [{
+                "title": "Pipeline run failed",
+                "description": f"```{error_summary[-1000:]}```",
+                "color": 0xE53E3E,
+            }]
+        }
+        requests.post(webhook_url, json=payload, timeout=15)
+    except Exception:
+        pass
+
+
 # ---------------------------------------------------------------------
 # Persistent bot (run separately: `python agents/discord_agent.py bot`)
 # ---------------------------------------------------------------------
