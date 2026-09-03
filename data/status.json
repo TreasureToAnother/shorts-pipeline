@@ -1,22 +1,22 @@
 {
   "script_agent": {
-    "status": "done",
-    "message": "generated: My Best Friend's Secret Life\"\n\n#BetrayalAtFirstSight",
-    "updated_at": "2026-09-03T09:14:37Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "video_agent": {
-    "status": "done",
-    "message": "/home/runner/work/shorts-pipeline/shorts-pipeline/agents/../data/output/190be250.mp4",
-    "updated_at": "2026-09-03T09:15:40Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "upload_agent": {
-    "status": "done",
-    "message": "scheduled for 2026-09-03T14:15:41Z: https://youtube.com/shorts/sZZMi-4tG4U",
-    "updated_at": "2026-09-03T09:15:44Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "discord_agent": {
-    "status": "done",
-    "message": "notified: My Best Friend's Secret Life\"\n\n#BetrayalAtFirstSight (scheduled 2026-09-03T14:15:41Z UTC)",
-    "updated_at": "2026-09-03T09:15:47Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   }
 }
