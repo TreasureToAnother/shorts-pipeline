@@ -36,10 +36,10 @@
     {
       "slot": 4,
       "hour_et": 8,
-      "stage": "generating",
-      "title": null,
-      "video_url": null,
-      "publish_at": null
+      "stage": "uploaded",
+      "title": "I thought I'd never hear from him again.",
+      "video_url": "https://youtube.com/shorts/d6zxPnRDyfU",
+      "publish_at": "2026-09-03T16:12:30Z"
     },
     {
       "slot": 5,
