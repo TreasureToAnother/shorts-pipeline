@@ -1,15 +1,25 @@
 {
-  "updated_at": "2026-09-03T17:17:57Z",
+  "updated_at": "2026-09-03T18:21:57Z",
   "channel": {
     "title": "Treasure To Another",
     "thumbnail": "https://yt3.ggpht.com/4iJRPFXBUDoj_XhTxdvPBJUbrheeqCvqcnlTcGzDHMocWRgdOwhDvE-26GhG7FemNVIeIG_hYQ=s88-c-k-c0x00ffffff-no-rj",
     "subscriberCount": 14,
     "viewCount": 10860,
-    "videoCount": 26,
+    "videoCount": 27,
     "subsThisMonth": 1,
     "viewsThisMonth": -4
   },
   "latestVideos": [
+    {
+      "id": "hSMbpfoRQco",
+      "title": "subscribe for more fun stories #storytime #story",
+      "publishedAt": "2026-09-03T18:12:05Z",
+      "thumbnail": "https://i.ytimg.com/vi/hSMbpfoRQco/mqdefault.jpg",
+      "views": 0,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://youtube.com/shorts/hSMbpfoRQco"
+    },
     {
       "id": "1i_x3rp01kg",
       "title": "subscribe for more fun stories #storytime #story",
@@ -25,7 +35,7 @@
       "title": "subscribe for more fun stories #storytime #story",
       "publishedAt": "2026-09-03T16:13:05Z",
       "thumbnail": "https://i.ytimg.com/vi/d6zxPnRDyfU/mqdefault.jpg",
-      "views": 4,
+      "views": 0,
       "likes": 0,
       "comments": 0,
       "url": "https://youtube.com/shorts/d6zxPnRDyfU"
@@ -35,7 +45,7 @@
       "title": "subscribe for more fun stories #storytime #story",
       "publishedAt": "2026-09-03T15:19:17Z",
       "thumbnail": "https://i.ytimg.com/vi/r6H6_e7eLpk/mqdefault.jpg",
-      "views": 39,
+      "views": 40,
       "likes": 1,
       "comments": 0,
       "url": "https://youtube.com/shorts/r6H6_e7eLpk"
@@ -49,16 +59,6 @@
       "likes": 0,
       "comments": 0,
       "url": "https://youtube.com/shorts/sZZMi-4tG4U"
-    },
-    {
-      "id": "qp4Nqpl6imQ",
-      "title": "subscribe for more fun stories #storytime #story",
-      "publishedAt": "2026-09-03T13:22:16Z",
-      "thumbnail": "https://i.ytimg.com/vi/qp4Nqpl6imQ/mqdefault.jpg",
-      "views": 0,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://youtube.com/shorts/qp4Nqpl6imQ"
     }
   ]
 }
