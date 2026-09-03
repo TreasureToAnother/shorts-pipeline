@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-09-03T09:14:11Z"
+    "status": "done",
+    "message": "generated: My Best Friend's Secret Life\"\n\n#BetrayalAtFirstSight",
+    "updated_at": "2026-09-03T09:14:37Z"
   },
   "video_agent": {
     "status": "idle",
