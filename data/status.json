@@ -1,22 +1,22 @@
 {
   "script_agent": {
-    "status": "done",
-    "message": "generated: Midnight text that shattered my world \ud83d\udc94 #POV",
-    "updated_at": "2026-09-04T09:13:21Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "video_agent": {
-    "status": "done",
-    "message": "/home/runner/work/shorts-pipeline/shorts-pipeline/agents/../data/output/fec3888b.mp4",
-    "updated_at": "2026-09-04T09:14:43Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "upload_agent": {
-    "status": "done",
-    "message": "scheduled for 2026-09-04T14:14:45Z: https://youtube.com/shorts/2YWEy9Pm9lg",
-    "updated_at": "2026-09-04T09:14:49Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "discord_agent": {
-    "status": "done",
-    "message": "notified: Midnight text that shattered my world \ud83d\udc94 #POV (scheduled 2026-09-04T14:14:45Z UTC)",
-    "updated_at": "2026-09-04T09:14:52Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   }
 }
