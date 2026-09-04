@@ -28,10 +28,10 @@
     {
       "slot": 3,
       "hour_et": 7,
-      "stage": "generating",
-      "title": null,
-      "video_url": null,
-      "publish_at": null
+      "stage": "uploaded",
+      "title": "I stared blankly at my phone, the screen still glowing with the group chat from ",
+      "video_url": "https://youtube.com/shorts/DnqeOA_nDm0",
+      "publish_at": "2026-09-04T16:13:41Z"
     },
     {
       "slot": 4,
