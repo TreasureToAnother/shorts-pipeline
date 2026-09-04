@@ -15,8 +15,8 @@
     "updated_at": "2026-09-04T13:10:36Z"
   },
   "discord_agent": {
-    "status": "running",
-    "message": "posting upload notification",
-    "updated_at": "2026-09-04T13:10:37Z"
+    "status": "done",
+    "message": "notified: I'm sitting here at the hostess stand, pretending to be busy, but really I'm jus (scheduled 2026-09-04T18:10:32Z UTC)",
+    "updated_at": "2026-09-04T13:10:39Z"
   }
 }
