@@ -44,10 +44,10 @@
     {
       "slot": 5,
       "hour_et": 9,
-      "stage": "generating",
-      "title": null,
-      "video_url": null,
-      "publish_at": null
+      "stage": "uploaded",
+      "title": "I'm sitting here at the hostess stand, pretending to be busy, but really I'm jus",
+      "video_url": "https://youtube.com/shorts/aJdmC82x-5k",
+      "publish_at": "2026-09-04T18:10:32Z"
     }
   ]
 }
