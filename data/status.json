@@ -10,9 +10,9 @@
     "updated_at": "2026-09-04T09:14:43Z"
   },
   "upload_agent": {
-    "status": "running",
-    "message": "uploading fec3888b.mp4",
-    "updated_at": "2026-09-04T09:14:45Z"
+    "status": "done",
+    "message": "scheduled for 2026-09-04T14:14:45Z: https://youtube.com/shorts/2YWEy9Pm9lg",
+    "updated_at": "2026-09-04T09:14:49Z"
   },
   "discord_agent": {
     "status": "idle",
