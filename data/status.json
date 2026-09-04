@@ -1,22 +1,22 @@
 {
   "script_agent": {
-    "status": "done",
-    "message": "generated: I stared blankly at my phone, the screen still glowing with the group chat from ",
-    "updated_at": "2026-09-04T11:12:04Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "video_agent": {
-    "status": "done",
-    "message": "/home/runner/work/shorts-pipeline/shorts-pipeline/agents/../data/output/92588929.mp4",
-    "updated_at": "2026-09-04T11:13:40Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "upload_agent": {
-    "status": "done",
-    "message": "scheduled for 2026-09-04T16:13:41Z: https://youtube.com/shorts/DnqeOA_nDm0",
-    "updated_at": "2026-09-04T11:13:45Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "discord_agent": {
-    "status": "done",
-    "message": "notified: I stared blankly at my phone, the screen still glowing with the group chat from  (scheduled 2026-09-04T16:13:41Z UTC)",
-    "updated_at": "2026-09-04T11:13:48Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   }
 }
