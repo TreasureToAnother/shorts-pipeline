@@ -36,10 +36,10 @@
     {
       "slot": 4,
       "hour_et": 8,
-      "stage": "generating",
-      "title": null,
-      "video_url": null,
-      "publish_at": null
+      "stage": "uploaded",
+      "title": "She sent me the last text he sent her",
+      "video_url": "https://youtube.com/shorts/03g4-7XR2Xw",
+      "publish_at": "2026-09-04T17:06:25Z"
     },
     {
       "slot": 5,
