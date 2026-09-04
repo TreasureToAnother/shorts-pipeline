@@ -1,53 +1,53 @@
 {
-  "date": "2026-09-03",
+  "date": "2026-09-04",
   "slots": [
     {
       "slot": 0,
       "hour_et": 4,
-      "stage": "uploaded",
-      "title": "I'm still trying to process the gut punch I got while we were stuck in traffic o",
-      "video_url": "https://youtube.com/shorts/s52GcmmiCHg",
-      "publish_at": "2026-09-03T12:58:19Z"
+      "stage": "generating",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 1,
       "hour_et": 5,
-      "stage": "uploaded",
-      "title": "I thought I'd found my person in Alex, my apartment's resident charmer, always m",
-      "video_url": "https://youtube.com/shorts/qp4Nqpl6imQ",
-      "publish_at": "2026-09-03T13:21:58Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 2,
       "hour_et": 6,
-      "stage": "uploaded",
-      "title": "My Best Friend's Secret Life\"\n\n#BetrayalAtFirstSight",
-      "video_url": "https://youtube.com/shorts/sZZMi-4tG4U",
-      "publish_at": "2026-09-03T14:15:41Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 3,
       "hour_et": 7,
-      "stage": "uploaded",
-      "title": "I've had a crush on Alex for what feels like forever, but I've been too scared t",
-      "video_url": "https://youtube.com/shorts/r6H6_e7eLpk",
-      "publish_at": "2026-09-03T15:19:16Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 4,
       "hour_et": 8,
-      "stage": "uploaded",
-      "title": "I thought I'd never hear from him again.",
-      "video_url": "https://youtube.com/shorts/d6zxPnRDyfU",
-      "publish_at": "2026-09-03T16:12:30Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 5,
       "hour_et": 9,
-      "stage": "uploaded",
-      "title": "I'm sitting in my dorm room, staring at my phone.",
-      "video_url": "https://youtube.com/shorts/1i_x3rp01kg",
-      "publish_at": "2026-09-03T17:06:32Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     }
   ]
 }
