@@ -1,22 +1,22 @@
 {
   "script_agent": {
-    "status": "done",
-    "message": "generated: Midnight kiss, but was it real? \ud83d\udea8",
-    "updated_at": "2026-09-03T13:09:38Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "video_agent": {
-    "status": "done",
-    "message": "/home/runner/work/shorts-pipeline/shorts-pipeline/agents/../data/output/a31b87e9.mp4",
-    "updated_at": "2026-09-03T13:11:33Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "upload_agent": {
-    "status": "done",
-    "message": "scheduled for 2026-09-03T18:11:35Z: https://youtube.com/shorts/hSMbpfoRQco",
-    "updated_at": "2026-09-03T13:11:39Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "discord_agent": {
-    "status": "done",
-    "message": "notified: Midnight kiss, but was it real? \ud83d\udea8 (scheduled 2026-09-03T18:11:35Z UTC)",
-    "updated_at": "2026-09-03T13:11:42Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   }
 }
