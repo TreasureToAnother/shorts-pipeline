@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-09-05T08:19:12Z"
+    "status": "done",
+    "message": "generated: I was steaming milk for a latte when I saw him - my boyfriend, Alex, laughing an",
+    "updated_at": "2026-09-05T08:19:48Z"
   },
   "video_agent": {
     "status": "idle",
