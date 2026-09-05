@@ -1,21 +1,31 @@
 {
-  "updated_at": "2026-09-05T16:17:47Z",
+  "updated_at": "2026-09-05T17:15:45Z",
   "channel": {
     "title": "Treasure To Another",
     "thumbnail": "https://yt3.ggpht.com/4iJRPFXBUDoj_XhTxdvPBJUbrheeqCvqcnlTcGzDHMocWRgdOwhDvE-26GhG7FemNVIeIG_hYQ=s88-c-k-c0x00ffffff-no-rj",
-    "subscriberCount": 17,
+    "subscriberCount": 18,
     "viewCount": 10861,
-    "videoCount": 37,
-    "subsThisMonth": 4,
+    "videoCount": 38,
+    "subsThisMonth": 5,
     "viewsThisMonth": -3
   },
   "latestVideos": [
+    {
+      "id": "yrts5jXroFs",
+      "title": "subscribe for more fun stories #storytime #story",
+      "publishedAt": "2026-09-05T17:06:11Z",
+      "thumbnail": "https://i.ytimg.com/vi/yrts5jXroFs/mqdefault.jpg",
+      "views": 2,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://youtube.com/shorts/yrts5jXroFs"
+    },
     {
       "id": "0dP1iZVAgi0",
       "title": "subscribe for more fun stories #storytime #story",
       "publishedAt": "2026-09-05T16:10:59Z",
       "thumbnail": "https://i.ytimg.com/vi/0dP1iZVAgi0/mqdefault.jpg",
-      "views": 81,
+      "views": 365,
       "likes": 0,
       "comments": 0,
       "url": "https://youtube.com/shorts/0dP1iZVAgi0"
@@ -25,7 +35,7 @@
       "title": "subscribe for more fun stories #storytime #story",
       "publishedAt": "2026-09-05T15:16:01Z",
       "thumbnail": "https://i.ytimg.com/vi/Cgt37Q_QTAI/mqdefault.jpg",
-      "views": 223,
+      "views": 240,
       "likes": 3,
       "comments": 0,
       "url": "https://youtube.com/shorts/Cgt37Q_QTAI"
@@ -45,20 +55,10 @@
       "title": "subscribe for more fun stories #storytime #story",
       "publishedAt": "2026-09-05T13:21:26Z",
       "thumbnail": "https://i.ytimg.com/vi/PDOyZzIFLMg/mqdefault.jpg",
-      "views": 378,
-      "likes": 4,
+      "views": 464,
+      "likes": 10,
       "comments": 1,
       "url": "https://youtube.com/shorts/PDOyZzIFLMg"
-    },
-    {
-      "id": "aJdmC82x-5k",
-      "title": "subscribe for more fun stories #storytime #story",
-      "publishedAt": "2026-09-04T18:11:11Z",
-      "thumbnail": "https://i.ytimg.com/vi/aJdmC82x-5k/mqdefault.jpg",
-      "views": 870,
-      "likes": 6,
-      "comments": 0,
-      "url": "https://youtube.com/shorts/aJdmC82x-5k"
     }
   ]
 }
