@@ -44,10 +44,10 @@
     {
       "slot": 5,
       "hour_et": 9,
-      "stage": "generating",
-      "title": null,
-      "video_url": null,
-      "publish_at": null
+      "stage": "uploaded",
+      "title": "I'll never forget the way I felt at Sarah's birthday party, surrounded by our mu",
+      "video_url": "https://youtube.com/shorts/azw4SOUiptE",
+      "publish_at": "2026-09-05T18:09:50Z"
     }
   ]
 }
