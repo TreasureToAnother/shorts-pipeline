@@ -1,53 +1,53 @@
 {
-  "date": "2026-09-04",
+  "date": "2026-09-05",
   "slots": [
     {
       "slot": 0,
       "hour_et": 4,
-      "stage": "uploaded",
-      "title": "I pour my heart into every table, but none more so than the ones I share with my",
-      "video_url": "https://youtube.com/shorts/w0cNVitc6k0",
-      "publish_at": "2026-09-04T13:22:19Z"
+      "stage": "generating",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 1,
       "hour_et": 5,
-      "stage": "uploaded",
-      "title": "Midnight text that shattered my world \ud83d\udc94 #POV",
-      "video_url": "https://youtube.com/shorts/2YWEy9Pm9lg",
-      "publish_at": "2026-09-04T14:14:45Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 2,
       "hour_et": 6,
-      "stage": "uploaded",
-      "title": "I'll never forget the night I stumbled upon the secret.",
-      "video_url": "https://youtube.com/shorts/dipb2vUNNM8",
-      "publish_at": "2026-09-04T15:18:06Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 3,
       "hour_et": 7,
-      "stage": "uploaded",
-      "title": "I stared blankly at my phone, the screen still glowing with the group chat from ",
-      "video_url": "https://youtube.com/shorts/DnqeOA_nDm0",
-      "publish_at": "2026-09-04T16:13:41Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 4,
       "hour_et": 8,
-      "stage": "uploaded",
-      "title": "She sent me the last text he sent her",
-      "video_url": "https://youtube.com/shorts/03g4-7XR2Xw",
-      "publish_at": "2026-09-04T17:06:25Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 5,
       "hour_et": 9,
-      "stage": "uploaded",
-      "title": "I'm sitting here at the hostess stand, pretending to be busy, but really I'm jus",
-      "video_url": "https://youtube.com/shorts/aJdmC82x-5k",
-      "publish_at": "2026-09-04T18:10:32Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     }
   ]
 }
