@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-09-05T12:03:17Z"
+    "status": "done",
+    "message": "generated: I'm still trying to process how my best friend of three years could do this to m",
+    "updated_at": "2026-09-05T12:04:03Z"
   },
   "video_agent": {
     "status": "idle",
