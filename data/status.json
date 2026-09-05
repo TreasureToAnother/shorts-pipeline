@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-09-05T13:07:32Z"
+    "status": "done",
+    "message": "generated: I'll never forget the way I felt at Sarah's birthday party, surrounded by our mu",
+    "updated_at": "2026-09-05T13:08:16Z"
   },
   "video_agent": {
     "status": "idle",
