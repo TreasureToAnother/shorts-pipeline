@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-09-05T11:08:56Z"
+    "status": "done",
+    "message": "generated: Uncovering a secret that was never meant to be mine\" \ud83d\ude33",
+    "updated_at": "2026-09-05T11:09:34Z"
   },
   "video_agent": {
     "status": "idle",
