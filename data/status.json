@@ -1,22 +1,22 @@
 {
   "script_agent": {
-    "status": "done",
-    "message": "generated: Steaming hot coffee meets a cold shoulder\"\n\n#POV",
-    "updated_at": "2026-09-05T10:14:44Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "video_agent": {
-    "status": "done",
-    "message": "/home/runner/work/shorts-pipeline/shorts-pipeline/agents/../data/output/637acbdd.mp4",
-    "updated_at": "2026-09-05T10:15:52Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "upload_agent": {
-    "status": "done",
-    "message": "scheduled for 2026-09-05T15:15:53Z: https://youtube.com/shorts/Cgt37Q_QTAI",
-    "updated_at": "2026-09-05T10:15:58Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "discord_agent": {
-    "status": "done",
-    "message": "notified: Steaming hot coffee meets a cold shoulder\"\n\n#POV (scheduled 2026-09-05T15:15:53Z UTC)",
-    "updated_at": "2026-09-05T10:16:01Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   }
 }
