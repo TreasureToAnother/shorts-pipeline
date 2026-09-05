@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-09-05T10:14:11Z"
+    "status": "done",
+    "message": "generated: Steaming hot coffee meets a cold shoulder\"\n\n#POV",
+    "updated_at": "2026-09-05T10:14:44Z"
   },
   "video_agent": {
     "status": "idle",
