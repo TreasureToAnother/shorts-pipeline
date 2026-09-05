@@ -12,10 +12,10 @@
     {
       "slot": 1,
       "hour_et": 5,
-      "stage": "generating",
-      "title": null,
-      "video_url": null,
-      "publish_at": null
+      "stage": "uploaded",
+      "title": "I've had a crush on him for months, the barista who makes my morning coffee.",
+      "video_url": "https://youtube.com/shorts/TQFYUiH1d58",
+      "publish_at": "2026-09-05T14:14:16Z"
     },
     {
       "slot": 2,
