@@ -36,10 +36,10 @@
     {
       "slot": 4,
       "hour_et": 8,
-      "stage": "generating",
-      "title": null,
-      "video_url": null,
-      "publish_at": null
+      "stage": "uploaded",
+      "title": "I'm still trying to process what I found in the medical records of a patient I w",
+      "video_url": "https://youtube.com/shorts/n0JOdBwuqw0",
+      "publish_at": "2026-09-06T17:05:35Z"
     },
     {
       "slot": 5,
