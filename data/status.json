@@ -15,8 +15,8 @@
     "updated_at": "2026-09-06T12:05:39Z"
   },
   "discord_agent": {
-    "status": "running",
-    "message": "posting upload notification",
-    "updated_at": "2026-09-06T12:05:40Z"
+    "status": "done",
+    "message": "notified: I'm still trying to process what I found in the medical records of a patient I w (scheduled 2026-09-06T17:05:35Z UTC)",
+    "updated_at": "2026-09-06T12:05:42Z"
   }
 }
