@@ -1,22 +1,22 @@
 {
   "script_agent": {
-    "status": "done",
-    "message": "generated: I'm still trying to process what I found in the medical records of a patient I w",
-    "updated_at": "2026-09-06T12:03:57Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "video_agent": {
-    "status": "done",
-    "message": "/home/runner/work/shorts-pipeline/shorts-pipeline/agents/../data/output/b86d0fa7.mp4",
-    "updated_at": "2026-09-06T12:05:34Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "upload_agent": {
-    "status": "done",
-    "message": "scheduled for 2026-09-06T17:05:35Z: https://youtube.com/shorts/n0JOdBwuqw0",
-    "updated_at": "2026-09-06T12:05:39Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "discord_agent": {
-    "status": "done",
-    "message": "notified: I'm still trying to process what I found in the medical records of a patient I w (scheduled 2026-09-06T17:05:35Z UTC)",
-    "updated_at": "2026-09-06T12:05:42Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   }
 }
