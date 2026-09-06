@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-09-06T12:03:07Z"
+    "status": "done",
+    "message": "generated: I'm still trying to process what I found in the medical records of a patient I w",
+    "updated_at": "2026-09-06T12:03:57Z"
   },
   "video_agent": {
     "status": "idle",
