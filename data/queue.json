@@ -44,10 +44,10 @@
     {
       "slot": 5,
       "hour_et": 9,
-      "stage": "generating",
-      "title": null,
-      "video_url": null,
-      "publish_at": null
+      "stage": "uploaded",
+      "title": "I still remember the night we were working on our group project, surrounded by l",
+      "video_url": "https://youtube.com/shorts/f4qURZsUbW4",
+      "publish_at": "2026-09-06T18:09:43Z"
     }
   ]
 }
