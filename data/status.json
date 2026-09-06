@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-09-06T10:15:48Z"
+    "status": "done",
+    "message": "generated: I pour steaming hot coffee into the cup, my mind elsewhere.",
+    "updated_at": "2026-09-06T10:16:24Z"
   },
   "video_agent": {
     "status": "idle",
