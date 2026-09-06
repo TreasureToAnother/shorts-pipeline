@@ -1,53 +1,53 @@
 {
-  "date": "2026-09-05",
+  "date": "2026-09-06",
   "slots": [
     {
       "slot": 0,
       "hour_et": 4,
-      "stage": "uploaded",
-      "title": "I was steaming milk for a latte when I saw him - my boyfriend, Alex, laughing an",
-      "video_url": "https://youtube.com/shorts/PDOyZzIFLMg",
-      "publish_at": "2026-09-05T13:20:49Z"
+      "stage": "generating",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 1,
       "hour_et": 5,
-      "stage": "uploaded",
-      "title": "I've had a crush on him for months, the barista who makes my morning coffee.",
-      "video_url": "https://youtube.com/shorts/TQFYUiH1d58",
-      "publish_at": "2026-09-05T14:14:16Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 2,
       "hour_et": 6,
-      "stage": "uploaded",
-      "title": "Steaming hot coffee meets a cold shoulder\"\n\n#POV",
-      "video_url": "https://youtube.com/shorts/Cgt37Q_QTAI",
-      "publish_at": "2026-09-05T15:15:53Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 3,
       "hour_et": 7,
-      "stage": "uploaded",
-      "title": "Uncovering a secret that was never meant to be mine\" \ud83d\ude33",
-      "video_url": "https://youtube.com/shorts/0dP1iZVAgi0",
-      "publish_at": "2026-09-05T16:10:51Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 4,
       "hour_et": 8,
-      "stage": "uploaded",
-      "title": "I'm still trying to process how my best friend of three years could do this to m",
-      "video_url": "https://youtube.com/shorts/yrts5jXroFs",
-      "publish_at": "2026-09-05T17:05:36Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 5,
       "hour_et": 9,
-      "stage": "uploaded",
-      "title": "I'll never forget the way I felt at Sarah's birthday party, surrounded by our mu",
-      "video_url": "https://youtube.com/shorts/azw4SOUiptE",
-      "publish_at": "2026-09-05T18:09:50Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     }
   ]
 }
