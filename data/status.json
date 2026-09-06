@@ -1,22 +1,22 @@
 {
   "script_agent": {
-    "status": "done",
-    "message": "generated: I poured my heart into the birthday party, greeting guests with a smile as they ",
-    "updated_at": "2026-09-06T08:20:00Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "video_agent": {
-    "status": "done",
-    "message": "/home/runner/work/shorts-pipeline/shorts-pipeline/agents/../data/output/f30c9f16.mp4",
-    "updated_at": "2026-09-06T08:20:53Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "upload_agent": {
-    "status": "done",
-    "message": "scheduled for 2026-09-06T13:20:53Z: https://youtube.com/shorts/HY8PjAbBK7k",
-    "updated_at": "2026-09-06T08:20:56Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "discord_agent": {
-    "status": "done",
-    "message": "notified: I poured my heart into the birthday party, greeting guests with a smile as they  (scheduled 2026-09-06T13:20:53Z UTC)",
-    "updated_at": "2026-09-06T08:20:57Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   }
 }
