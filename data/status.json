@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-09-06T11:09:22Z"
+    "status": "done",
+    "message": "generated: I'll never forget the night I stumbled upon the truth in our dorm's laundry room",
+    "updated_at": "2026-09-06T11:10:09Z"
   },
   "video_agent": {
     "status": "idle",
