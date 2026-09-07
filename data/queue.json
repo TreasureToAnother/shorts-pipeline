@@ -1,53 +1,53 @@
 {
-  "date": "2026-09-06",
+  "date": "2026-09-07",
   "slots": [
     {
       "slot": 0,
       "hour_et": 4,
-      "stage": "uploaded",
-      "title": "I poured my heart into the birthday party, greeting guests with a smile as they ",
-      "video_url": "https://youtube.com/shorts/HY8PjAbBK7k",
-      "publish_at": "2026-09-06T13:20:53Z"
+      "stage": "generating",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 1,
       "hour_et": 5,
-      "stage": "uploaded",
-      "title": "I poured steaming hot coffee into the cup, my mind still reeling from the conver",
-      "video_url": "https://youtube.com/shorts/2QXkqdhY2Do",
-      "publish_at": "2026-09-06T14:14:41Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 2,
       "hour_et": 6,
-      "stage": "uploaded",
-      "title": "I pour steaming hot coffee into the cup, my mind elsewhere.",
-      "video_url": "https://youtube.com/shorts/RfkYvrwkgHw",
-      "publish_at": "2026-09-06T15:17:42Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 3,
       "hour_et": 7,
-      "stage": "uploaded",
-      "title": "I'll never forget the night I stumbled upon the truth in our dorm's laundry room",
-      "video_url": "https://youtube.com/shorts/dDnoswWVvRM",
-      "publish_at": "2026-09-06T16:11:30Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 4,
       "hour_et": 8,
-      "stage": "uploaded",
-      "title": "I'm still trying to process what I found in the medical records of a patient I w",
-      "video_url": "https://youtube.com/shorts/n0JOdBwuqw0",
-      "publish_at": "2026-09-06T17:05:35Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 5,
       "hour_et": 9,
-      "stage": "uploaded",
-      "title": "I still remember the night we were working on our group project, surrounded by l",
-      "video_url": "https://youtube.com/shorts/f4qURZsUbW4",
-      "publish_at": "2026-09-06T18:09:43Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     }
   ]
 }
