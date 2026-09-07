@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-09-07T08:21:17Z"
+    "status": "done",
+    "message": "generated: I sat across from my crush, Alex, at the coffee shop, fidgeting with my napkin a",
+    "updated_at": "2026-09-07T08:22:18Z"
   },
   "video_agent": {
     "status": "idle",
