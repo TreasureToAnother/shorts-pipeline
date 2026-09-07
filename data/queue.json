@@ -20,10 +20,10 @@
     {
       "slot": 2,
       "hour_et": 6,
-      "stage": "generating",
-      "title": null,
-      "video_url": null,
-      "publish_at": null
+      "stage": "uploaded",
+      "title": "I'll never forget the night we met on our friends' road trip, the one where ever",
+      "video_url": "https://youtube.com/shorts/Sbtk17FdupM",
+      "publish_at": "2026-09-07T14:16:51Z"
     },
     {
       "slot": 3,
