@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-09-07T12:06:16Z"
+    "status": "done",
+    "message": "generated: I was supposed to be excited, surrounded by my friends on a road trip adventure.",
+    "updated_at": "2026-09-07T12:06:54Z"
   },
   "video_agent": {
     "status": "idle",
