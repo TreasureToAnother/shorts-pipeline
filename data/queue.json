@@ -36,10 +36,10 @@
     {
       "slot": 4,
       "hour_et": 8,
-      "stage": "generating",
-      "title": null,
-      "video_url": null,
-      "publish_at": null
+      "stage": "uploaded",
+      "title": "I was supposed to be excited, surrounded by my friends on a road trip adventure.",
+      "video_url": "https://youtube.com/shorts/5gyrsicBZOw",
+      "publish_at": "2026-09-07T17:08:24Z"
     },
     {
       "slot": 5,
