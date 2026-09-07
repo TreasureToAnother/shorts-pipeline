@@ -1,22 +1,22 @@
 {
   "script_agent": {
-    "status": "done",
-    "message": "generated: I still remember the night we were working on our group project, surrounded by l",
-    "updated_at": "2026-09-06T13:08:10Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "video_agent": {
-    "status": "done",
-    "message": "/home/runner/work/shorts-pipeline/shorts-pipeline/agents/../data/output/ae961aa0.mp4",
-    "updated_at": "2026-09-06T13:09:41Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "upload_agent": {
-    "status": "done",
-    "message": "scheduled for 2026-09-06T18:09:43Z: https://youtube.com/shorts/f4qURZsUbW4",
-    "updated_at": "2026-09-06T13:09:46Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "discord_agent": {
-    "status": "done",
-    "message": "notified: I still remember the night we were working on our group project, surrounded by l (scheduled 2026-09-06T18:09:43Z UTC)",
-    "updated_at": "2026-09-06T13:09:48Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   }
 }
