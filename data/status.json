@@ -1,22 +1,22 @@
 {
   "script_agent": {
-    "status": "done",
-    "message": "generated: I poured steaming coffee into the waiting cup, my hands moving on autopilot as I",
-    "updated_at": "2026-09-07T08:44:47Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "video_agent": {
-    "status": "done",
-    "message": "/home/runner/work/shorts-pipeline/shorts-pipeline/agents/../data/output/82150b97.mp4",
-    "updated_at": "2026-09-07T08:46:17Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "upload_agent": {
-    "status": "done",
-    "message": "scheduled for 2026-09-07T13:46:18Z: https://youtube.com/shorts/DXKe2tyqbPw",
-    "updated_at": "2026-09-07T08:46:22Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "discord_agent": {
-    "status": "done",
-    "message": "notified: I poured steaming coffee into the waiting cup, my hands moving on autopilot as I (scheduled 2026-09-07T13:46:18Z UTC)",
-    "updated_at": "2026-09-07T08:46:25Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   }
 }
