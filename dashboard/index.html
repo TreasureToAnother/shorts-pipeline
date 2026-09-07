@@ -307,7 +307,7 @@
   <div class="telemetry-row">
     <div class="stat"><span class="val" id="clock-et">--:--</span><span class="lbl">Local Time (ET)</span></div>
     <div class="stat"><span class="val" id="next-flight">--:--</span><span class="lbl">Next Upload In</span></div>
-    <div class="stat"><span class="val" id="flights-done">0 / 6</span><span class="lbl">Today's Uploads</span></div>
+    <div class="stat"><span class="val" id="flights-done">0 / 3</span><span class="lbl">Today's Uploads</span></div>
     <div class="stat"><span class="val" id="last-synced">--</span><span class="lbl">Analytics Synced</span></div>
   </div>
 </header>
@@ -396,7 +396,7 @@
 const IS_LOCAL = ["localhost", "127.0.0.1"].includes(window.location.hostname);
 const GITHUB_RAW_BASE = "https://raw.githubusercontent.com/TreasureToAnother/shorts-pipeline/main/data";
 const url = (name) => IS_LOCAL ? `/${name}.json` : `${GITHUB_RAW_BASE}/${name}.json`;
-const SLOT_HOURS = [4,5,6,7,8,9];
+const SLOT_HOURS = [4,6,8];
 
 function fmtHour(h) {
   const period = h >= 12 ? "PM" : "AM";

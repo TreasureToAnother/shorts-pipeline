@@ -61,7 +61,8 @@ def _get_credentials():
 
 
 def upload_video(video_path: str, title: str, description: str, tags=None,
-                  publish_at: str = None, privacy_status: str = None) -> str:
+                  publish_at: str = None, privacy_status: str = None,
+                  is_short: bool = True) -> str:
     set_status("upload_agent", "running", f"uploading {os.path.basename(video_path)}")
     try:
         creds = _get_credentials()
@@ -92,7 +93,7 @@ def upload_video(video_path: str, title: str, description: str, tags=None,
         while response is None:
             status_resp, response = request.next_chunk()
         video_id = response["id"]
-        url = f"https://youtube.com/shorts/{video_id}"
+        url = f"https://youtube.com/shorts/{video_id}" if is_short else f"https://youtube.com/watch?v={video_id}"
         if publish_at:
             msg = f"scheduled for {publish_at}: {url}"
         elif privacy_status == "private":

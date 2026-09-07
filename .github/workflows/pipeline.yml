@@ -3,11 +3,8 @@ name: Run History Shorts Pipeline
 on:
   schedule:
     - cron: "0 8 * * *"   # 4:00 AM ET generation -> 9:00 AM ET publish
-    - cron: "0 9 * * *"   # 5:00 AM ET generation -> 10:00 AM ET publish
     - cron: "0 10 * * *"  # 6:00 AM ET generation -> 11:00 AM ET publish
-    - cron: "0 11 * * *"  # 7:00 AM ET generation -> 12:00 PM ET publish
     - cron: "0 12 * * *"  # 8:00 AM ET generation -> 1:00 PM ET publish
-    - cron: "0 13 * * *"  # 9:00 AM ET generation -> 2:00 PM ET publish
   workflow_dispatch: {}
 
 permissions:

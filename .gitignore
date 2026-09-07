@@ -3,6 +3,8 @@ config/client_secret.json
 config/token.json
 data/work/
 data/output/
+data/longform_backgrounds/
+data/longform_used_topics.json
 __pycache__/
 *.pyc
 .DS_Store

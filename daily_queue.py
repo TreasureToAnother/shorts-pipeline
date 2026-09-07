@@ -17,7 +17,7 @@ except Exception:
     ET = None
 
 QUEUE_PATH = os.path.join(os.path.dirname(__file__), "data", "queue.json")
-SLOT_HOURS_ET = [4, 5, 6, 7, 8, 9]
+SLOT_HOURS_ET = [4, 6, 8]
 
 
 def _now_et():
