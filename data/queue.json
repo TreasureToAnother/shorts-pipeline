@@ -1,49 +1,25 @@
 {
-  "date": "2026-09-07",
+  "date": "2026-09-08",
   "slots": [
     {
       "slot": 0,
       "hour_et": 4,
-      "stage": "uploaded",
-      "title": "I sat across from my crush, Alex, at the coffee shop, fidgeting with my napkin a",
-      "video_url": "https://youtube.com/shorts/ZDXQncybSqk",
-      "publish_at": "2026-09-07T13:24:41Z"
+      "stage": "generating",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 1,
-      "hour_et": 5,
-      "stage": "uploaded",
-      "title": "I poured steaming coffee into the waiting cup, my hands moving on autopilot as I",
-      "video_url": "https://youtube.com/shorts/DXKe2tyqbPw",
-      "publish_at": "2026-09-07T13:46:18Z"
+      "hour_et": 6,
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 2,
-      "hour_et": 6,
-      "stage": "uploaded",
-      "title": "I'll never forget the night we met on our friends' road trip, the one where ever",
-      "video_url": "https://youtube.com/shorts/Sbtk17FdupM",
-      "publish_at": "2026-09-07T14:16:51Z"
-    },
-    {
-      "slot": 3,
-      "hour_et": 7,
-      "stage": "uploaded",
-      "title": "Did I just misread the girl I've had a crush on? \ud83e\udd14",
-      "video_url": "https://youtube.com/shorts/P1D28JRtGvQ",
-      "publish_at": "2026-09-07T15:18:10Z"
-    },
-    {
-      "slot": 4,
       "hour_et": 8,
-      "stage": "uploaded",
-      "title": "I was supposed to be excited, surrounded by my friends on a road trip adventure.",
-      "video_url": "https://youtube.com/shorts/5gyrsicBZOw",
-      "publish_at": "2026-09-07T17:08:24Z"
-    },
-    {
-      "slot": 5,
-      "hour_et": 9,
       "stage": "pending",
       "title": null,
       "video_url": null,
