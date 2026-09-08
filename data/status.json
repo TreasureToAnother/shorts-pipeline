@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-09-08T12:03:36Z"
+    "status": "done",
+    "message": "generated: I'm still trying to process how my world was turned upside down in an instant.",
+    "updated_at": "2026-09-08T12:04:34Z"
   },
   "video_agent": {
     "status": "idle",
