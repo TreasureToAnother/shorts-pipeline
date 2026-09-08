@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-09-08T08:20:55Z"
+    "status": "done",
+    "message": "generated: Crushed: when the guy who made you feel alive turns out to be sending texts to someone else \ud83d\ude14",
+    "updated_at": "2026-09-08T08:21:41Z"
   },
   "video_agent": {
     "status": "idle",
