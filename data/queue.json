@@ -20,10 +20,10 @@
     {
       "slot": 2,
       "hour_et": 8,
-      "stage": "generating",
-      "title": null,
-      "video_url": null,
-      "publish_at": null
+      "stage": "uploaded",
+      "title": "I'm still trying to process how my world was turned upside down in an instant.",
+      "video_url": "https://youtube.com/shorts/h6lMTfPIoyo",
+      "publish_at": "2026-09-08T17:06:29Z"
     }
   ]
 }
