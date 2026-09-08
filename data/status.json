@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-09-08T10:16:42Z"
+    "status": "done",
+    "message": "generated: I came home to find him \ud83d\udc94\"\n\n( #betrayalfound )",
+    "updated_at": "2026-09-08T10:17:17Z"
   },
   "video_agent": {
     "status": "idle",
