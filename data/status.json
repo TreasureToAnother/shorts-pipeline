@@ -1,22 +1,22 @@
 {
   "script_agent": {
-    "status": "done",
-    "message": "generated: I was supposed to be excited, surrounded by my friends on a road trip adventure.",
-    "updated_at": "2026-09-07T12:06:54Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "video_agent": {
-    "status": "done",
-    "message": "/home/runner/work/shorts-pipeline/shorts-pipeline/agents/../data/output/97be4728.mp4",
-    "updated_at": "2026-09-07T12:08:22Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "upload_agent": {
-    "status": "done",
-    "message": "scheduled for 2026-09-07T17:08:24Z: https://youtube.com/shorts/5gyrsicBZOw",
-    "updated_at": "2026-09-07T12:08:28Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "discord_agent": {
-    "status": "done",
-    "message": "notified: I was supposed to be excited, surrounded by my friends on a road trip adventure. (scheduled 2026-09-07T17:08:24Z UTC)",
-    "updated_at": "2026-09-07T12:08:31Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   }
 }
