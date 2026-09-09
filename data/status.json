@@ -1,22 +1,22 @@
 {
   "script_agent": {
-    "status": "done",
-    "message": "generated: Tripped over my own ego \ud83d\ude33\" #POVstory",
-    "updated_at": "2026-09-09T10:18:42Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "video_agent": {
-    "status": "done",
-    "message": "/home/runner/work/shorts-pipeline/shorts-pipeline/agents/../data/output/f37029d8.mp4",
-    "updated_at": "2026-09-09T10:20:15Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "upload_agent": {
-    "status": "done",
-    "message": "scheduled for 2026-09-09T15:20:15Z: https://youtube.com/shorts/L7RFeaJirxM",
-    "updated_at": "2026-09-09T10:20:18Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "discord_agent": {
-    "status": "done",
-    "message": "notified: Tripped over my own ego \ud83d\ude33\" #POVstory (scheduled 2026-09-09T15:20:15Z UTC)",
-    "updated_at": "2026-09-09T10:20:20Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   }
 }
