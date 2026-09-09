@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-09-09T08:20:02Z"
+    "status": "done",
+    "message": "generated: \ud83d\udce8 The note that made my heart skip a beat",
+    "updated_at": "2026-09-09T08:20:40Z"
   },
   "video_agent": {
     "status": "idle",
