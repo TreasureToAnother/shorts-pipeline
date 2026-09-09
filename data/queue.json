@@ -20,10 +20,10 @@
     {
       "slot": 2,
       "hour_et": 8,
-      "stage": "generating",
-      "title": null,
-      "video_url": null,
-      "publish_at": null
+      "stage": "uploaded",
+      "title": "I poured the steamed milk into the cup with a shaky hand, my eyes locked on the ",
+      "video_url": "https://youtube.com/shorts/SbCz_4cWzPI",
+      "publish_at": "2026-09-09T17:05:05Z"
     }
   ]
 }
