@@ -1,29 +1,29 @@
 {
-  "date": "2026-09-08",
+  "date": "2026-09-09",
   "slots": [
     {
       "slot": 0,
       "hour_et": 4,
-      "stage": "uploaded",
-      "title": "Crushed: when the guy who made you feel alive turns out to be sending texts to someone else \ud83d\ude14",
-      "video_url": "https://youtube.com/shorts/eVyT2b7iyEE",
-      "publish_at": "2026-09-08T13:23:17Z"
+      "stage": "generating",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 1,
       "hour_et": 6,
-      "stage": "uploaded",
-      "title": "I came home to find him \ud83d\udc94\"\n\n( #betrayalfound )",
-      "video_url": "https://youtube.com/shorts/zhm0_quwJXs",
-      "publish_at": "2026-09-08T15:18:28Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 2,
       "hour_et": 8,
-      "stage": "uploaded",
-      "title": "I'm still trying to process how my world was turned upside down in an instant.",
-      "video_url": "https://youtube.com/shorts/h6lMTfPIoyo",
-      "publish_at": "2026-09-08T17:06:29Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     }
   ]
 }
