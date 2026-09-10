@@ -1,15 +1,25 @@
 {
-  "updated_at": "2026-09-10T16:18:52Z",
+  "updated_at": "2026-09-10T17:17:56Z",
   "channel": {
     "title": "Treasure To Another",
     "thumbnail": "https://yt3.ggpht.com/4iJRPFXBUDoj_XhTxdvPBJUbrheeqCvqcnlTcGzDHMocWRgdOwhDvE-26GhG7FemNVIeIG_hYQ=s88-c-k-c0x00ffffff-no-rj",
     "subscriberCount": 25,
-    "viewCount": 24101,
-    "videoCount": 58,
+    "viewCount": 24667,
+    "videoCount": 59,
     "subsThisMonth": 12,
-    "viewsThisMonth": 13237
+    "viewsThisMonth": 13803
   },
   "latestVideos": [
+    {
+      "id": "Ec3XMdmERkk",
+      "title": "subscribe for more fun stories #storytime #story",
+      "publishedAt": "2026-09-10T17:07:06Z",
+      "thumbnail": "https://i.ytimg.com/vi/Ec3XMdmERkk/mqdefault.jpg",
+      "views": 0,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://youtube.com/shorts/Ec3XMdmERkk"
+    },
     {
       "id": "MTjdoj2GNWY",
       "title": "subscribe for more fun stories #storytime #story",
@@ -25,8 +35,8 @@
       "title": "subscribe for more fun stories #storytime #story",
       "publishedAt": "2026-09-10T13:22:27Z",
       "thumbnail": "https://i.ytimg.com/vi/a23g0c7dBMw/mqdefault.jpg",
-      "views": 131,
-      "likes": 4,
+      "views": 311,
+      "likes": 6,
       "comments": 0,
       "url": "https://youtube.com/shorts/a23g0c7dBMw"
     },
@@ -35,7 +45,7 @@
       "title": "subscribe for more fun stories #storytime #story",
       "publishedAt": "2026-09-09T17:05:14Z",
       "thumbnail": "https://i.ytimg.com/vi/SbCz_4cWzPI/mqdefault.jpg",
-      "views": 256,
+      "views": 263,
       "likes": 0,
       "comments": 0,
       "url": "https://youtube.com/shorts/SbCz_4cWzPI"
@@ -49,16 +59,6 @@
       "likes": 2,
       "comments": 0,
       "url": "https://youtube.com/shorts/L7RFeaJirxM"
-    },
-    {
-      "id": "Z4Lt1x_7ui4",
-      "title": "subscribe for more fun stories #storytime #story",
-      "publishedAt": "2026-09-09T13:22:33Z",
-      "thumbnail": "https://i.ytimg.com/vi/Z4Lt1x_7ui4/mqdefault.jpg",
-      "views": 174,
-      "likes": 3,
-      "comments": 0,
-      "url": "https://youtube.com/shorts/Z4Lt1x_7ui4"
     }
   ]
 }
