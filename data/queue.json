@@ -12,10 +12,10 @@
     {
       "slot": 1,
       "hour_et": 6,
-      "stage": "generating",
-      "title": null,
-      "video_url": null,
-      "publish_at": null
+      "stage": "uploaded",
+      "title": "I still remember the night we stopped at that quirky diner on the side of the hi",
+      "video_url": "https://youtube.com/shorts/MTjdoj2GNWY",
+      "publish_at": "2026-09-10T15:20:04Z"
     },
     {
       "slot": 2,
