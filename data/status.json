@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-09-10T12:04:56Z"
+    "status": "done",
+    "message": "generated: He caught me staring, and I knew I wasn't blind\" \ud83d\ude43",
+    "updated_at": "2026-09-10T12:05:34Z"
   },
   "video_agent": {
     "status": "idle",
