@@ -1,22 +1,22 @@
 {
   "script_agent": {
-    "status": "done",
-    "message": "generated: I poured the steamed milk into the cup with a shaky hand, my eyes locked on the ",
-    "updated_at": "2026-09-09T12:03:35Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "video_agent": {
-    "status": "done",
-    "message": "/home/runner/work/shorts-pipeline/shorts-pipeline/agents/../data/output/5cab71b5.mp4",
-    "updated_at": "2026-09-09T12:05:04Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "upload_agent": {
-    "status": "done",
-    "message": "scheduled for 2026-09-09T17:05:05Z: https://youtube.com/shorts/SbCz_4cWzPI",
-    "updated_at": "2026-09-09T12:05:09Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "discord_agent": {
-    "status": "done",
-    "message": "notified: I poured the steamed milk into the cup with a shaky hand, my eyes locked on the  (scheduled 2026-09-09T17:05:05Z UTC)",
-    "updated_at": "2026-09-09T12:05:11Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   }
 }
