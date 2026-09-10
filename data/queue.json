@@ -1,29 +1,29 @@
 {
-  "date": "2026-09-09",
+  "date": "2026-09-10",
   "slots": [
     {
       "slot": 0,
       "hour_et": 4,
-      "stage": "uploaded",
-      "title": "\ud83d\udce8 The note that made my heart skip a beat",
-      "video_url": "https://youtube.com/shorts/Z4Lt1x_7ui4",
-      "publish_at": "2026-09-09T13:22:02Z"
+      "stage": "generating",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 1,
       "hour_et": 6,
-      "stage": "uploaded",
-      "title": "Tripped over my own ego \ud83d\ude33\" #POVstory",
-      "video_url": "https://youtube.com/shorts/L7RFeaJirxM",
-      "publish_at": "2026-09-09T15:20:15Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 2,
       "hour_et": 8,
-      "stage": "uploaded",
-      "title": "I poured the steamed milk into the cup with a shaky hand, my eyes locked on the ",
-      "video_url": "https://youtube.com/shorts/SbCz_4cWzPI",
-      "publish_at": "2026-09-09T17:05:05Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     }
   ]
 }
