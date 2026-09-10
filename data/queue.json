@@ -20,10 +20,10 @@
     {
       "slot": 2,
       "hour_et": 8,
-      "stage": "generating",
-      "title": null,
-      "video_url": null,
-      "publish_at": null
+      "stage": "uploaded",
+      "title": "He caught me staring, and I knew I wasn't blind\" \ud83d\ude43",
+      "video_url": "https://youtube.com/shorts/Ec3XMdmERkk",
+      "publish_at": "2026-09-10T17:06:48Z"
     }
   ]
 }
