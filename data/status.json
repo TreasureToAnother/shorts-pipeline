@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-09-11T08:19:46Z"
+    "status": "done",
+    "message": "generated: I was supposed to keep it quiet, but the road trip was the perfect cover.",
+    "updated_at": "2026-09-11T08:20:28Z"
   },
   "video_agent": {
     "status": "idle",
