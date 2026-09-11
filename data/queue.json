@@ -1,29 +1,29 @@
 {
-  "date": "2026-09-10",
+  "date": "2026-09-11",
   "slots": [
     {
       "slot": 0,
       "hour_et": 4,
-      "stage": "uploaded",
-      "title": "His smile was my crush, but yours was the one that broke me\" \ud83d\udc94 #betrayal",
-      "video_url": "https://youtube.com/shorts/a23g0c7dBMw",
-      "publish_at": "2026-09-10T13:21:53Z"
+      "stage": "generating",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 1,
       "hour_et": 6,
-      "stage": "uploaded",
-      "title": "I still remember the night we stopped at that quirky diner on the side of the hi",
-      "video_url": "https://youtube.com/shorts/MTjdoj2GNWY",
-      "publish_at": "2026-09-10T15:20:04Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 2,
       "hour_et": 8,
-      "stage": "uploaded",
-      "title": "He caught me staring, and I knew I wasn't blind\" \ud83d\ude43",
-      "video_url": "https://youtube.com/shorts/Ec3XMdmERkk",
-      "publish_at": "2026-09-10T17:06:48Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     }
   ]
 }
