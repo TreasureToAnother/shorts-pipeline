@@ -15,8 +15,8 @@
     "updated_at": "2026-09-11T08:21:51Z"
   },
   "discord_agent": {
-    "status": "running",
-    "message": "posting upload notification",
-    "updated_at": "2026-09-11T08:21:52Z"
+    "status": "done",
+    "message": "notified: I was supposed to keep it quiet, but the road trip was the perfect cover. (scheduled 2026-09-11T13:21:49Z UTC)",
+    "updated_at": "2026-09-11T08:21:53Z"
   }
 }
