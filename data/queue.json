@@ -4,10 +4,10 @@
     {
       "slot": 0,
       "hour_et": 4,
-      "stage": "generating",
-      "title": null,
-      "video_url": null,
-      "publish_at": null
+      "stage": "uploaded",
+      "title": "I was supposed to keep it quiet, but the road trip was the perfect cover.",
+      "video_url": "https://youtube.com/shorts/QcowudpOs-Y",
+      "publish_at": "2026-09-11T13:21:49Z"
     },
     {
       "slot": 1,
