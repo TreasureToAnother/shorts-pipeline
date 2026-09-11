@@ -1,22 +1,22 @@
 {
   "script_agent": {
-    "status": "done",
-    "message": "generated: I couldn't shake the feeling that I was in trouble as I locked eyes with him ove",
-    "updated_at": "2026-09-11T10:18:42Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "video_agent": {
-    "status": "done",
-    "message": "/home/runner/work/shorts-pipeline/shorts-pipeline/agents/../data/output/fd7ae78b.mp4",
-    "updated_at": "2026-09-11T10:20:27Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "upload_agent": {
-    "status": "done",
-    "message": "scheduled for 2026-09-11T15:20:27Z: https://youtube.com/shorts/UtPysOmti3M",
-    "updated_at": "2026-09-11T10:20:30Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "discord_agent": {
-    "status": "done",
-    "message": "notified: I couldn't shake the feeling that I was in trouble as I locked eyes with him ove (scheduled 2026-09-11T15:20:27Z UTC)",
-    "updated_at": "2026-09-11T10:20:32Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   }
 }
