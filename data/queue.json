@@ -20,10 +20,10 @@
     {
       "slot": 2,
       "hour_et": 8,
-      "stage": "generating",
-      "title": null,
-      "video_url": null,
-      "publish_at": null
+      "stage": "uploaded",
+      "title": "I poured my heart out to him over steaming cups of coffee, from my job as a wait",
+      "video_url": "https://youtube.com/shorts/Q7Spd5bUMWk",
+      "publish_at": "2026-09-12T17:04:36Z"
     }
   ]
 }
