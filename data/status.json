@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-09-12T12:03:01Z"
+    "status": "done",
+    "message": "generated: I poured my heart out to him over steaming cups of coffee, from my job as a wait",
+    "updated_at": "2026-09-12T12:03:38Z"
   },
   "video_agent": {
     "status": "idle",
