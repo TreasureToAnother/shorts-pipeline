@@ -15,8 +15,8 @@
     "updated_at": "2026-09-12T08:21:02Z"
   },
   "discord_agent": {
-    "status": "running",
-    "message": "posting upload notification",
-    "updated_at": "2026-09-12T08:21:03Z"
+    "status": "done",
+    "message": "notified: Waiter's table, secret revealed \ud83d\udc94 (scheduled 2026-09-12T13:20:59Z UTC)",
+    "updated_at": "2026-09-12T08:21:05Z"
   }
 }
