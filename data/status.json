@@ -1,22 +1,22 @@
 {
   "script_agent": {
-    "status": "done",
-    "message": "generated: Waiter's table, secret revealed \ud83d\udc94",
-    "updated_at": "2026-09-12T08:20:03Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "video_agent": {
-    "status": "done",
-    "message": "/home/runner/work/shorts-pipeline/shorts-pipeline/agents/../data/output/cd965665.mp4",
-    "updated_at": "2026-09-12T08:20:59Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "upload_agent": {
-    "status": "done",
-    "message": "scheduled for 2026-09-12T13:20:59Z: https://youtube.com/shorts/VaV-_s9pgQ4",
-    "updated_at": "2026-09-12T08:21:02Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "discord_agent": {
-    "status": "done",
-    "message": "notified: Waiter's table, secret revealed \ud83d\udc94 (scheduled 2026-09-12T13:20:59Z UTC)",
-    "updated_at": "2026-09-12T08:21:05Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   }
 }
