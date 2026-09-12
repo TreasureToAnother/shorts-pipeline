@@ -15,8 +15,8 @@
     "updated_at": "2026-09-12T08:21:02Z"
   },
   "discord_agent": {
-    "status": "idle",
-    "message": "",
-    "updated_at": null
+    "status": "running",
+    "message": "posting upload notification",
+    "updated_at": "2026-09-12T08:21:03Z"
   }
 }
