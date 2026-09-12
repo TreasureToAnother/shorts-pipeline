@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-09-12T10:15:01Z"
+    "status": "done",
+    "message": "generated: I've had a crush on my coworker, Alex, for what feels like an eternity - as if t",
+    "updated_at": "2026-09-12T10:15:46Z"
   },
   "video_agent": {
     "status": "idle",
