@@ -1,22 +1,32 @@
 {
-  "updated_at": "2026-09-12T15:16:50Z",
+  "updated_at": "2026-09-12T16:18:23Z",
   "channel": {
     "title": "Treasure To Another",
     "thumbnail": "https://yt3.ggpht.com/4iJRPFXBUDoj_XhTxdvPBJUbrheeqCvqcnlTcGzDHMocWRgdOwhDvE-26GhG7FemNVIeIG_hYQ=s88-c-k-c0x00ffffff-no-rj",
     "subscriberCount": 28,
-    "viewCount": 26176,
-    "videoCount": 63,
+    "viewCount": 27401,
+    "videoCount": 64,
     "subsThisMonth": 15,
-    "viewsThisMonth": 15312
+    "viewsThisMonth": 16537
   },
   "latestVideos": [
+    {
+      "id": "2yZ1YxTZxOo",
+      "title": "subscribe for more fun stories #storytime #story",
+      "publishedAt": "2026-09-12T15:17:36Z",
+      "thumbnail": "https://i.ytimg.com/vi/2yZ1YxTZxOo/mqdefault.jpg",
+      "views": 24,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://youtube.com/shorts/2yZ1YxTZxOo"
+    },
     {
       "id": "VaV-_s9pgQ4",
       "title": "subscribe for more fun stories #storytime #story",
       "publishedAt": "2026-09-12T13:21:01Z",
       "thumbnail": "https://i.ytimg.com/vi/VaV-_s9pgQ4/mqdefault.jpg",
-      "views": 204,
-      "likes": 7,
+      "views": 297,
+      "likes": 9,
       "comments": 0,
       "url": "https://youtube.com/shorts/VaV-_s9pgQ4"
     },
@@ -35,7 +45,7 @@
       "title": "subscribe for more fun stories #storytime #story",
       "publishedAt": "2026-09-11T15:20:31Z",
       "thumbnail": "https://i.ytimg.com/vi/UtPysOmti3M/mqdefault.jpg",
-      "views": 42,
+      "views": 43,
       "likes": 1,
       "comments": 0,
       "url": "https://youtube.com/shorts/UtPysOmti3M"
@@ -45,20 +55,10 @@
       "title": "subscribe for more fun stories #storytime #story",
       "publishedAt": "2026-09-11T13:22:19Z",
       "thumbnail": "https://i.ytimg.com/vi/QcowudpOs-Y/mqdefault.jpg",
-      "views": 181,
+      "views": 176,
       "likes": 4,
       "comments": 0,
       "url": "https://youtube.com/shorts/QcowudpOs-Y"
-    },
-    {
-      "id": "Ec3XMdmERkk",
-      "title": "subscribe for more fun stories #storytime #story",
-      "publishedAt": "2026-09-10T17:07:06Z",
-      "thumbnail": "https://i.ytimg.com/vi/Ec3XMdmERkk/mqdefault.jpg",
-      "views": 69,
-      "likes": 3,
-      "comments": 0,
-      "url": "https://youtube.com/shorts/Ec3XMdmERkk"
     }
   ]
 }
