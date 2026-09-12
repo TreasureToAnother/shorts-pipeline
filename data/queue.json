@@ -1,29 +1,29 @@
 {
-  "date": "2026-09-11",
+  "date": "2026-09-12",
   "slots": [
     {
       "slot": 0,
       "hour_et": 4,
-      "stage": "uploaded",
-      "title": "I was supposed to keep it quiet, but the road trip was the perfect cover.",
-      "video_url": "https://youtube.com/shorts/QcowudpOs-Y",
-      "publish_at": "2026-09-11T13:21:49Z"
+      "stage": "generating",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 1,
       "hour_et": 6,
-      "stage": "uploaded",
-      "title": "I couldn't shake the feeling that I was in trouble as I locked eyes with him ove",
-      "video_url": "https://youtube.com/shorts/UtPysOmti3M",
-      "publish_at": "2026-09-11T15:20:27Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 2,
       "hour_et": 8,
-      "stage": "uploaded",
-      "title": "I stood across from him, laughing and smiling at the wedding reception, as he wh",
-      "video_url": "https://youtube.com/shorts/CVSRkcEF3Sg",
-      "publish_at": "2026-09-11T17:05:30Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     }
   ]
 }
