@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-09-13T12:03:23Z"
+    "status": "done",
+    "message": "generated: The Secret She Kept \ud83d\udcdd\"\n\n#POVstory",
+    "updated_at": "2026-09-13T12:03:59Z"
   },
   "video_agent": {
     "status": "idle",
