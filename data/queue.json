@@ -1,29 +1,29 @@
 {
-  "date": "2026-09-12",
+  "date": "2026-09-13",
   "slots": [
     {
       "slot": 0,
       "hour_et": 4,
-      "stage": "uploaded",
-      "title": "Waiter's table, secret revealed \ud83d\udc94",
-      "video_url": "https://youtube.com/shorts/VaV-_s9pgQ4",
-      "publish_at": "2026-09-12T13:20:59Z"
+      "stage": "generating",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 1,
       "hour_et": 6,
-      "stage": "uploaded",
-      "title": "I've had a crush on my coworker, Alex, for what feels like an eternity - as if t",
-      "video_url": "https://youtube.com/shorts/2yZ1YxTZxOo",
-      "publish_at": "2026-09-12T15:17:10Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 2,
       "hour_et": 8,
-      "stage": "uploaded",
-      "title": "I poured my heart out to him over steaming cups of coffee, from my job as a wait",
-      "video_url": "https://youtube.com/shorts/Q7Spd5bUMWk",
-      "publish_at": "2026-09-12T17:04:36Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     }
   ]
 }
