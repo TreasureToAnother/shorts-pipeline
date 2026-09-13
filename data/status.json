@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-09-13T08:18:59Z"
+    "status": "done",
+    "message": "generated: I still remember the night I stumbled upon the truth.",
+    "updated_at": "2026-09-13T08:19:46Z"
   },
   "video_agent": {
     "status": "idle",
