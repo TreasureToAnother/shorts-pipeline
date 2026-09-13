@@ -1,22 +1,22 @@
 {
   "script_agent": {
-    "status": "done",
-    "message": "generated: His ringtone was his confession\" \ud83d\udc94",
-    "updated_at": "2026-09-13T10:21:24Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "video_agent": {
-    "status": "done",
-    "message": "/home/runner/work/shorts-pipeline/shorts-pipeline/agents/../data/output/0d13c975.mp4",
-    "updated_at": "2026-09-13T10:23:02Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "upload_agent": {
-    "status": "done",
-    "message": "scheduled for 2026-09-13T15:23:03Z: https://youtube.com/shorts/TMKE_uCofVM",
-    "updated_at": "2026-09-13T10:23:06Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "discord_agent": {
-    "status": "done",
-    "message": "notified: His ringtone was his confession\" \ud83d\udc94 (scheduled 2026-09-13T15:23:03Z UTC)",
-    "updated_at": "2026-09-13T10:23:08Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   }
 }
