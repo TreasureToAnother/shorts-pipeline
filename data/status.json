@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-09-14T12:03:31Z"
+    "status": "done",
+    "message": "generated: Spilled the secret: what I didn't know about my 'frienemy",
+    "updated_at": "2026-09-14T12:04:10Z"
   },
   "video_agent": {
     "status": "idle",
