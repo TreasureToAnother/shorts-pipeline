@@ -15,8 +15,8 @@
     "updated_at": "2026-09-14T12:05:33Z"
   },
   "discord_agent": {
-    "status": "running",
-    "message": "posting upload notification",
-    "updated_at": "2026-09-14T12:05:34Z"
+    "status": "done",
+    "message": "notified: Spilled the secret: what I didn't know about my 'frienemy (scheduled 2026-09-14T17:05:30Z UTC)",
+    "updated_at": "2026-09-14T12:05:35Z"
   }
 }
