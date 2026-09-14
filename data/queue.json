@@ -1,29 +1,29 @@
 {
-  "date": "2026-09-13",
+  "date": "2026-09-14",
   "slots": [
     {
       "slot": 0,
       "hour_et": 4,
-      "stage": "uploaded",
-      "title": "I still remember the night I stumbled upon the truth.",
-      "video_url": "https://youtube.com/shorts/je4bkvOQjdk",
-      "publish_at": "2026-09-13T13:21:19Z"
+      "stage": "generating",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 1,
       "hour_et": 6,
-      "stage": "uploaded",
-      "title": "His ringtone was his confession\" \ud83d\udc94",
-      "video_url": "https://youtube.com/shorts/TMKE_uCofVM",
-      "publish_at": "2026-09-13T15:23:03Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 2,
       "hour_et": 8,
-      "stage": "uploaded",
-      "title": "The Secret She Kept \ud83d\udcdd\"\n\n#POVstory",
-      "video_url": "https://youtube.com/shorts/2Ah32un1aJo",
-      "publish_at": "2026-09-13T17:05:08Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     }
   ]
 }
