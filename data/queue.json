@@ -12,10 +12,10 @@
     {
       "slot": 1,
       "hour_et": 6,
-      "stage": "generating",
-      "title": null,
-      "video_url": null,
-      "publish_at": null
+      "stage": "uploaded",
+      "title": "I still remember the text that changed everything.",
+      "video_url": "https://youtube.com/shorts/2wkRtQ_EK-g",
+      "publish_at": "2026-09-14T15:18:25Z"
     },
     {
       "slot": 2,
