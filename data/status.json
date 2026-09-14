@@ -1,22 +1,22 @@
 {
   "script_agent": {
-    "status": "done",
-    "message": "generated: I watched as Alex laughed with our mutual friend, her eyes sparkling in the dim ",
-    "updated_at": "2026-09-14T08:21:49Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "video_agent": {
-    "status": "done",
-    "message": "/home/runner/work/shorts-pipeline/shorts-pipeline/agents/../data/output/581ea0e4.mp4",
-    "updated_at": "2026-09-14T08:22:48Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "upload_agent": {
-    "status": "done",
-    "message": "scheduled for 2026-09-14T13:22:49Z: https://youtube.com/shorts/z3AAh_EtR-c",
-    "updated_at": "2026-09-14T08:22:51Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "discord_agent": {
-    "status": "done",
-    "message": "notified: I watched as Alex laughed with our mutual friend, her eyes sparkling in the dim  (scheduled 2026-09-14T13:22:49Z UTC)",
-    "updated_at": "2026-09-14T08:22:52Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   }
 }
