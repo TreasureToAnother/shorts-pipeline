@@ -15,8 +15,8 @@
     "updated_at": "2026-09-14T10:18:28Z"
   },
   "discord_agent": {
-    "status": "running",
-    "message": "posting upload notification",
-    "updated_at": "2026-09-14T10:18:29Z"
+    "status": "done",
+    "message": "notified: I still remember the text that changed everything. (scheduled 2026-09-14T15:18:25Z UTC)",
+    "updated_at": "2026-09-14T10:18:31Z"
   }
 }
