@@ -12,10 +12,10 @@
     {
       "slot": 1,
       "hour_et": 6,
-      "stage": "generating",
-      "title": null,
-      "video_url": null,
-      "publish_at": null
+      "stage": "uploaded",
+      "title": "I'm stuck at my friend's birthday party, sipping lukewarm wine and trying to pre",
+      "video_url": "https://youtube.com/shorts/eudFtYcFLKo",
+      "publish_at": "2026-09-15T15:17:55Z"
     },
     {
       "slot": 2,
