@@ -15,8 +15,8 @@
     "updated_at": "2026-09-15T10:18:00Z"
   },
   "discord_agent": {
-    "status": "running",
-    "message": "posting upload notification",
-    "updated_at": "2026-09-15T10:18:01Z"
+    "status": "done",
+    "message": "notified: I'm stuck at my friend's birthday party, sipping lukewarm wine and trying to pre (scheduled 2026-09-15T15:17:55Z UTC)",
+    "updated_at": "2026-09-15T10:18:03Z"
   }
 }
