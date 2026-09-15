@@ -20,10 +20,10 @@
     {
       "slot": 2,
       "hour_et": 8,
-      "stage": "generating",
-      "title": null,
-      "video_url": null,
-      "publish_at": null
+      "stage": "uploaded",
+      "title": "I was supposed to be having the time of my life, pouring drinks and smiling for ",
+      "video_url": "https://youtube.com/shorts/P78VWt4_tm8",
+      "publish_at": "2026-09-15T17:05:29Z"
     }
   ]
 }
