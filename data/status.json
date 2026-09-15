@@ -1,22 +1,22 @@
 {
   "script_agent": {
-    "status": "done",
-    "message": "generated: I still remember the day I met him, I was rushing to class, backpack spilling bo",
-    "updated_at": "2026-09-15T08:22:47Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "video_agent": {
-    "status": "done",
-    "message": "/home/runner/work/shorts-pipeline/shorts-pipeline/agents/../data/output/343d96f0.mp4",
-    "updated_at": "2026-09-15T08:24:26Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "upload_agent": {
-    "status": "done",
-    "message": "scheduled for 2026-09-15T13:24:26Z: https://youtube.com/shorts/tXTsEXl0NHU",
-    "updated_at": "2026-09-15T08:24:29Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "discord_agent": {
-    "status": "done",
-    "message": "notified: I still remember the day I met him, I was rushing to class, backpack spilling bo (scheduled 2026-09-15T13:24:26Z UTC)",
-    "updated_at": "2026-09-15T08:24:31Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   }
 }
