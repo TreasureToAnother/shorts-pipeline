@@ -1,21 +1,31 @@
 {
-  "updated_at": "2026-09-15T14:20:03Z",
+  "updated_at": "2026-09-15T15:18:31Z",
   "channel": {
     "title": "Treasure To Another",
     "thumbnail": "https://yt3.ggpht.com/4iJRPFXBUDoj_XhTxdvPBJUbrheeqCvqcnlTcGzDHMocWRgdOwhDvE-26GhG7FemNVIeIG_hYQ=s88-c-k-c0x00ffffff-no-rj",
     "subscriberCount": 30,
     "viewCount": 30862,
-    "videoCount": 72,
+    "videoCount": 73,
     "subsThisMonth": 17,
     "viewsThisMonth": 19998
   },
   "latestVideos": [
     {
+      "id": "eudFtYcFLKo",
+      "title": "subscribe for more fun stories #storytime #story",
+      "publishedAt": "2026-09-15T15:17:58Z",
+      "thumbnail": "https://i.ytimg.com/vi/eudFtYcFLKo/mqdefault.jpg",
+      "views": 0,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://youtube.com/shorts/eudFtYcFLKo"
+    },
+    {
       "id": "tXTsEXl0NHU",
       "title": "subscribe for more fun stories #storytime #story",
       "publishedAt": "2026-09-15T13:24:36Z",
       "thumbnail": "https://i.ytimg.com/vi/tXTsEXl0NHU/mqdefault.jpg",
-      "views": 19,
+      "views": 23,
       "likes": 0,
       "comments": 0,
       "url": "https://youtube.com/shorts/tXTsEXl0NHU"
@@ -35,8 +45,8 @@
       "title": "subscribe for more fun stories #storytime #story",
       "publishedAt": "2026-09-14T15:18:46Z",
       "thumbnail": "https://i.ytimg.com/vi/2wkRtQ_EK-g/mqdefault.jpg",
-      "views": 546,
-      "likes": 19,
+      "views": 671,
+      "likes": 21,
       "comments": 0,
       "url": "https://youtube.com/shorts/2wkRtQ_EK-g"
     },
@@ -45,20 +55,10 @@
       "title": "subscribe for more fun stories #storytime #story",
       "publishedAt": "2026-09-14T13:23:07Z",
       "thumbnail": "https://i.ytimg.com/vi/z3AAh_EtR-c/mqdefault.jpg",
-      "views": 343,
+      "views": 371,
       "likes": 3,
       "comments": 0,
       "url": "https://youtube.com/shorts/z3AAh_EtR-c"
-    },
-    {
-      "id": "2Ah32un1aJo",
-      "title": "subscribe for more fun stories #storytime #story",
-      "publishedAt": "2026-09-13T17:05:48Z",
-      "thumbnail": "https://i.ytimg.com/vi/2Ah32un1aJo/mqdefault.jpg",
-      "views": 302,
-      "likes": 3,
-      "comments": 0,
-      "url": "https://youtube.com/shorts/2Ah32un1aJo"
     }
   ]
 }
