@@ -10,9 +10,9 @@
     "updated_at": "2026-09-15T08:24:26Z"
   },
   "upload_agent": {
-    "status": "idle",
-    "message": "",
-    "updated_at": null
+    "status": "running",
+    "message": "uploading 343d96f0.mp4",
+    "updated_at": "2026-09-15T08:24:26Z"
   },
   "discord_agent": {
     "status": "idle",
