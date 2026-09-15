@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-09-15T08:21:55Z"
+    "status": "done",
+    "message": "generated: I still remember the day I met him, I was rushing to class, backpack spilling bo",
+    "updated_at": "2026-09-15T08:22:47Z"
   },
   "video_agent": {
     "status": "idle",
