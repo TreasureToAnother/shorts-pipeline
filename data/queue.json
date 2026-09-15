@@ -1,29 +1,29 @@
 {
-  "date": "2026-09-14",
+  "date": "2026-09-15",
   "slots": [
     {
       "slot": 0,
       "hour_et": 4,
-      "stage": "uploaded",
-      "title": "I watched as Alex laughed with our mutual friend, her eyes sparkling in the dim ",
-      "video_url": "https://youtube.com/shorts/z3AAh_EtR-c",
-      "publish_at": "2026-09-14T13:22:49Z"
+      "stage": "generating",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 1,
       "hour_et": 6,
-      "stage": "uploaded",
-      "title": "I still remember the text that changed everything.",
-      "video_url": "https://youtube.com/shorts/2wkRtQ_EK-g",
-      "publish_at": "2026-09-14T15:18:25Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 2,
       "hour_et": 8,
-      "stage": "uploaded",
-      "title": "Spilled the secret: what I didn't know about my 'frienemy",
-      "video_url": "https://youtube.com/shorts/myxOMrsURd0",
-      "publish_at": "2026-09-14T17:05:30Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     }
   ]
 }
