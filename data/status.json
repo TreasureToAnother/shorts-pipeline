@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-09-16T12:03:09Z"
+    "status": "done",
+    "message": "generated: I sat at the coffee shop, my camera lens gazing out the window as I scribbled no",
+    "updated_at": "2026-09-16T12:03:45Z"
   },
   "video_agent": {
     "status": "idle",
