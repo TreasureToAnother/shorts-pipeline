@@ -5,9 +5,9 @@
     "updated_at": "2026-09-16T12:03:45Z"
   },
   "video_agent": {
-    "status": "running",
-    "message": "assembling scenes",
-    "updated_at": "2026-09-16T12:03:47Z"
+    "status": "done",
+    "message": "/home/runner/work/shorts-pipeline/shorts-pipeline/agents/../data/output/deaaf715.mp4",
+    "updated_at": "2026-09-16T12:04:50Z"
   },
   "upload_agent": {
     "status": "idle",
