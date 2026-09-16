@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-09-16T08:20:02Z"
+    "status": "done",
+    "message": "generated: I woke up to the smell of freshly brewed coffee, which always meant our roommate",
+    "updated_at": "2026-09-16T08:20:41Z"
   },
   "video_agent": {
     "status": "idle",
