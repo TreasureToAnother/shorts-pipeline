@@ -15,8 +15,8 @@
     "updated_at": "2026-09-16T08:22:06Z"
   },
   "discord_agent": {
-    "status": "running",
-    "message": "posting upload notification",
-    "updated_at": "2026-09-16T08:22:07Z"
+    "status": "done",
+    "message": "notified: I woke up to the smell of freshly brewed coffee, which always meant our roommate (scheduled 2026-09-16T13:22:03Z UTC)",
+    "updated_at": "2026-09-16T08:22:08Z"
   }
 }
