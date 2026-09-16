@@ -1,29 +1,29 @@
 {
-  "date": "2026-09-15",
+  "date": "2026-09-16",
   "slots": [
     {
       "slot": 0,
       "hour_et": 4,
-      "stage": "uploaded",
-      "title": "I still remember the day I met him, I was rushing to class, backpack spilling bo",
-      "video_url": "https://youtube.com/shorts/tXTsEXl0NHU",
-      "publish_at": "2026-09-15T13:24:26Z"
+      "stage": "generating",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 1,
       "hour_et": 6,
-      "stage": "uploaded",
-      "title": "I'm stuck at my friend's birthday party, sipping lukewarm wine and trying to pre",
-      "video_url": "https://youtube.com/shorts/eudFtYcFLKo",
-      "publish_at": "2026-09-15T15:17:55Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 2,
       "hour_et": 8,
-      "stage": "uploaded",
-      "title": "I was supposed to be having the time of my life, pouring drinks and smiling for ",
-      "video_url": "https://youtube.com/shorts/P78VWt4_tm8",
-      "publish_at": "2026-09-15T17:05:29Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     }
   ]
 }
