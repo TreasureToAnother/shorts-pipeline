@@ -5,9 +5,9 @@
     "updated_at": "2026-09-17T10:16:40Z"
   },
   "video_agent": {
-    "status": "running",
-    "message": "assembling scenes",
-    "updated_at": "2026-09-17T10:16:41Z"
+    "status": "done",
+    "message": "/home/runner/work/shorts-pipeline/shorts-pipeline/agents/../data/output/ef4086a4.mp4",
+    "updated_at": "2026-09-17T10:17:51Z"
   },
   "upload_agent": {
     "status": "idle",
