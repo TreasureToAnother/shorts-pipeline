@@ -1,22 +1,22 @@
 {
   "script_agent": {
-    "status": "done",
-    "message": "generated: I stand at the edge of the party, nursing my drink and watching him laugh with a",
-    "updated_at": "2026-09-17T10:16:40Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "video_agent": {
-    "status": "done",
-    "message": "/home/runner/work/shorts-pipeline/shorts-pipeline/agents/../data/output/ef4086a4.mp4",
-    "updated_at": "2026-09-17T10:17:51Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "upload_agent": {
-    "status": "done",
-    "message": "scheduled for 2026-09-17T15:17:52Z: https://youtube.com/shorts/-Ix05ZnHSvw",
-    "updated_at": "2026-09-17T10:17:56Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "discord_agent": {
-    "status": "done",
-    "message": "notified: I stand at the edge of the party, nursing my drink and watching him laugh with a (scheduled 2026-09-17T15:17:52Z UTC)",
-    "updated_at": "2026-09-17T10:17:59Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   }
 }
