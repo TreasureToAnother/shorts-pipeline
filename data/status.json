@@ -10,9 +10,9 @@
     "updated_at": "2026-09-17T10:17:51Z"
   },
   "upload_agent": {
-    "status": "idle",
-    "message": "",
-    "updated_at": null
+    "status": "running",
+    "message": "uploading ef4086a4.mp4",
+    "updated_at": "2026-09-17T10:17:52Z"
   },
   "discord_agent": {
     "status": "idle",
