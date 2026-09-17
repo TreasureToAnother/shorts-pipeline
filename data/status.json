@@ -10,9 +10,9 @@
     "updated_at": "2026-09-17T10:17:51Z"
   },
   "upload_agent": {
-    "status": "running",
-    "message": "uploading ef4086a4.mp4",
-    "updated_at": "2026-09-17T10:17:52Z"
+    "status": "done",
+    "message": "scheduled for 2026-09-17T15:17:52Z: https://youtube.com/shorts/-Ix05ZnHSvw",
+    "updated_at": "2026-09-17T10:17:56Z"
   },
   "discord_agent": {
     "status": "idle",
