@@ -1,29 +1,29 @@
 {
-  "date": "2026-09-17",
+  "date": "2026-09-18",
   "slots": [
     {
       "slot": 0,
       "hour_et": 4,
-      "stage": "uploaded",
-      "title": "I thought our long-distance relationship was a test of patience, not faith.",
-      "video_url": "https://youtube.com/shorts/fsRwWGRNWpc",
-      "publish_at": "2026-09-17T13:23:14Z"
+      "stage": "generating",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 1,
       "hour_et": 6,
-      "stage": "uploaded",
-      "title": "I stand at the edge of the party, nursing my drink and watching him laugh with a",
-      "video_url": "https://youtube.com/shorts/-Ix05ZnHSvw",
-      "publish_at": "2026-09-17T15:17:52Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 2,
       "hour_et": 8,
-      "stage": "uploaded",
-      "title": "I stood frozen behind the camera, lens trained on my friend's laughing face.",
-      "video_url": "https://youtube.com/shorts/df_kuLKbSv0",
-      "publish_at": "2026-09-17T17:05:08Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     }
   ]
 }
