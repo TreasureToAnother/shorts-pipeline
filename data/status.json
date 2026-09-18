@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-09-18T08:20:54Z"
+    "status": "done",
+    "message": "generated: I stood behind the bar, fidgeting with the birthday candle, watching as Alex too",
+    "updated_at": "2026-09-18T08:21:38Z"
   },
   "video_agent": {
     "status": "idle",
