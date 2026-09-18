@@ -1,22 +1,22 @@
 {
   "script_agent": {
-    "status": "done",
-    "message": "generated: I stood frozen behind the camera, lens trained on my friend's laughing face.",
-    "updated_at": "2026-09-17T12:03:32Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "video_agent": {
-    "status": "done",
-    "message": "/home/runner/work/shorts-pipeline/shorts-pipeline/agents/../data/output/08246ec7.mp4",
-    "updated_at": "2026-09-17T12:05:07Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "upload_agent": {
-    "status": "done",
-    "message": "scheduled for 2026-09-17T17:05:08Z: https://youtube.com/shorts/df_kuLKbSv0",
-    "updated_at": "2026-09-17T12:05:12Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "discord_agent": {
-    "status": "done",
-    "message": "notified: I stood frozen behind the camera, lens trained on my friend's laughing face. (scheduled 2026-09-17T17:05:08Z UTC)",
-    "updated_at": "2026-09-17T12:05:14Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   }
 }
