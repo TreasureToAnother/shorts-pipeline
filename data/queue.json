@@ -4,10 +4,10 @@
     {
       "slot": 0,
       "hour_et": 4,
-      "stage": "generating",
-      "title": null,
-      "video_url": null,
-      "publish_at": null
+      "stage": "uploaded",
+      "title": "I stood behind the bar, fidgeting with the birthday candle, watching as Alex too",
+      "video_url": "https://youtube.com/shorts/7ABAspQF65E",
+      "publish_at": "2026-09-18T13:23:00Z"
     },
     {
       "slot": 1,
