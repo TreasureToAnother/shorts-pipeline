@@ -1,22 +1,22 @@
 {
   "script_agent": {
-    "status": "done",
-    "message": "generated: I stood behind the bar, fidgeting with the birthday candle, watching as Alex too",
-    "updated_at": "2026-09-18T08:21:38Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "video_agent": {
-    "status": "done",
-    "message": "/home/runner/work/shorts-pipeline/shorts-pipeline/agents/../data/output/9d840467.mp4",
-    "updated_at": "2026-09-18T08:22:59Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "upload_agent": {
-    "status": "done",
-    "message": "scheduled for 2026-09-18T13:23:00Z: https://youtube.com/shorts/7ABAspQF65E",
-    "updated_at": "2026-09-18T08:23:03Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "discord_agent": {
-    "status": "done",
-    "message": "notified: I stood behind the bar, fidgeting with the birthday candle, watching as Alex too (scheduled 2026-09-18T13:23:00Z UTC)",
-    "updated_at": "2026-09-18T08:23:04Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   }
 }
