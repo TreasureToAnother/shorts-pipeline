@@ -15,8 +15,8 @@
     "updated_at": "2026-09-19T10:16:20Z"
   },
   "discord_agent": {
-    "status": "running",
-    "message": "posting upload notification",
-    "updated_at": "2026-09-19T10:16:22Z"
+    "status": "done",
+    "message": "notified: I pour the champagne, my hands shaking as I hand it to the groom's best man. (scheduled 2026-09-19T15:16:17Z UTC)",
+    "updated_at": "2026-09-19T10:16:23Z"
   }
 }
