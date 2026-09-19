@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-09-19T13:14:49Z"
+    "status": "done",
+    "message": "generated: Married to his BFF, but I think he just betrayed me\" \ud83d\udc94",
+    "updated_at": "2026-09-19T13:15:21Z"
   },
   "video_agent": {
     "status": "idle",
