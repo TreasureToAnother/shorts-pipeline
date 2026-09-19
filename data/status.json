@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-09-19T11:16:41Z"
+    "status": "done",
+    "message": "generated: I stood behind my camera, capturing the vibrant colors of the party, my mind els",
+    "updated_at": "2026-09-19T11:17:05Z"
   },
   "video_agent": {
     "status": "idle",
