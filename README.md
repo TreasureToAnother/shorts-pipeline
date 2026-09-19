@@ -105,10 +105,13 @@ python agents/discord_agent.py bot
 
 ## 3. Run it for free, on a schedule (GitHub Actions)
 
-This is the "set it and forget it" free-hosting option — 3 scheduled
-shorts/day, well under YouTube's 6-upload quota, at zero dollar cost.
+This is the "set it and forget it" free-hosting option — 6 scheduled
+shorts/day, right at YouTube's 6-upload/day quota, at zero dollar cost.
 A separate long-form pipeline (1-2hr self-improvement videos, Minecraft
-parkour background) runs locally — see section 6.
+parkour background) runs locally — see section 6. Note: running a
+long-form upload on the same day as all 6 shorts means 7 uploads that
+day, one over the quota — the 7th will fail until the daily quota
+resets.
 
 1. Push this repo to GitHub (make sure `.gitignore` is respected —
    never commit `.env`, `client_secret.json`, or `token.json` directly).
@@ -124,7 +127,7 @@ parkour background) runs locally — see section 6.
    - `YOUTUBE_TOKEN_JSON` — paste the full contents of your local
      `config/token.json` (generated in step 1.4.7 above)
 3. The workflow in `.github/workflows/pipeline.yml` runs automatically
-   3x/day. Adjust the three `cron` lines to your preferred posting times
+   6x/day. Adjust the six `cron` lines to your preferred posting times
    (they're in UTC).
 4. You can also trigger a run manually anytime from the repo's
    **Actions** tab -> "Run History Shorts Pipeline" -> **Run workflow**.
@@ -150,8 +153,10 @@ Railway's or Fly.io's free tier.
 
 ## 5. Costs & limits to know about
 
-- YouTube: 6 uploads/day on an unverified OAuth app — 3 shorts + 1
-  long-form/day stays comfortably under that.
+- YouTube: 6 uploads/day quota (a hard API limit, independent of the
+  Testing/Production publishing status) — the 6 shorts alone use all
+  of it, so a long-form upload on the same day pushes to 7 and the
+  extra one will fail until the quota resets.
 - Pexels/Freesound free tiers: generous rate limits, fine for a few videos/day.
 - Whisper `tiny.en` model runs on CPU in GitHub Actions' free runner
   (2 cores/7GB RAM) without issue for ~60s clips.
