@@ -12,10 +12,10 @@
     {
       "slot": 1,
       "hour_et": 6,
-      "stage": "generating",
-      "title": null,
-      "video_url": null,
-      "publish_at": null
+      "stage": "uploaded",
+      "title": "I pour the champagne, my hands shaking as I hand it to the groom's best man.",
+      "video_url": "https://youtube.com/shorts/N2k1h_Bk1j4",
+      "publish_at": "2026-09-19T15:16:17Z"
     },
     {
       "slot": 2,
