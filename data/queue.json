@@ -1,29 +1,29 @@
 {
-  "date": "2026-09-18",
+  "date": "2026-09-19",
   "slots": [
     {
       "slot": 0,
       "hour_et": 4,
-      "stage": "uploaded",
-      "title": "I stood behind the bar, fidgeting with the birthday candle, watching as Alex too",
-      "video_url": "https://youtube.com/shorts/7ABAspQF65E",
-      "publish_at": "2026-09-18T13:23:00Z"
+      "stage": "generating",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 1,
       "hour_et": 6,
-      "stage": "uploaded",
-      "title": "I poured steaming hot coffee into the cup of the guy I was \"seeing\".",
-      "video_url": "https://youtube.com/shorts/Aqjv2ILGV5Q",
-      "publish_at": "2026-09-18T15:19:06Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 2,
       "hour_et": 8,
-      "stage": "uploaded",
-      "title": "I'll never forget that summer at Camp Clearwater, where my best friend, Rachel, ",
-      "video_url": "https://youtube.com/shorts/Q7maDoCN0Gw",
-      "publish_at": "2026-09-18T17:07:41Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     }
   ]
 }
