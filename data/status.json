@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-09-19T12:04:26Z"
+    "status": "done",
+    "message": "generated: I'll never forget the night my best friend, Emily, turned on me.",
+    "updated_at": "2026-09-19T12:04:55Z"
   },
   "video_agent": {
     "status": "idle",
