@@ -20,10 +20,10 @@
     {
       "slot": 2,
       "hour_et": 8,
-      "stage": "generating",
-      "title": null,
-      "video_url": null,
-      "publish_at": null
+      "stage": "uploaded",
+      "title": "I stood behind my camera, capturing the vibrant colors of the party, my mind els",
+      "video_url": "https://youtube.com/shorts/c0KF45q2y58",
+      "publish_at": "2026-09-19T16:18:08Z"
     }
   ]
 }
