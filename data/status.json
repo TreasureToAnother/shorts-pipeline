@@ -1,22 +1,22 @@
 {
   "script_agent": {
-    "status": "done",
-    "message": "generated: I stood behind my camera, capturing the vibrant colors of the party, my mind els",
-    "updated_at": "2026-09-19T11:17:05Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "video_agent": {
-    "status": "done",
-    "message": "/home/runner/work/shorts-pipeline/shorts-pipeline/agents/../data/output/498a9949.mp4",
-    "updated_at": "2026-09-19T11:18:07Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "upload_agent": {
-    "status": "done",
-    "message": "scheduled for 2026-09-19T16:18:08Z: https://youtube.com/shorts/c0KF45q2y58",
-    "updated_at": "2026-09-19T11:18:10Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "discord_agent": {
-    "status": "done",
-    "message": "notified: I stood behind my camera, capturing the vibrant colors of the party, my mind els (scheduled 2026-09-19T16:18:08Z UTC)",
-    "updated_at": "2026-09-19T11:18:12Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   }
 }
