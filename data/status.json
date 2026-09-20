@@ -1,22 +1,22 @@
 {
   "script_agent": {
-    "status": "done",
-    "message": "generated: I'll never forget that sweltering summer at camp, where the only thing hotter th",
-    "updated_at": "2026-09-20T10:15:10Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "video_agent": {
-    "status": "done",
-    "message": "/home/runner/work/shorts-pipeline/shorts-pipeline/agents/../data/output/6ec48b83.mp4",
-    "updated_at": "2026-09-20T10:16:18Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "upload_agent": {
-    "status": "done",
-    "message": "scheduled for 2026-09-20T15:16:19Z: https://youtube.com/shorts/Aiam_O3yvB8",
-    "updated_at": "2026-09-20T10:16:23Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "discord_agent": {
-    "status": "done",
-    "message": "notified: I'll never forget that sweltering summer at camp, where the only thing hotter th (scheduled 2026-09-20T15:16:19Z UTC)",
-    "updated_at": "2026-09-20T10:16:25Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   }
 }
