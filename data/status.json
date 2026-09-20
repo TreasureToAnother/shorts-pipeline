@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-09-20T10:14:28Z"
+    "status": "done",
+    "message": "generated: I'll never forget that sweltering summer at camp, where the only thing hotter th",
+    "updated_at": "2026-09-20T10:15:10Z"
   },
   "video_agent": {
     "status": "idle",
