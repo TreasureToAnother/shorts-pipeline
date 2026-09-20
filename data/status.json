@@ -10,9 +10,9 @@
     "updated_at": "2026-09-20T11:18:44Z"
   },
   "upload_agent": {
-    "status": "running",
-    "message": "uploading 749a8852.mp4",
-    "updated_at": "2026-09-20T11:18:44Z"
+    "status": "done",
+    "message": "scheduled for 2026-09-20T16:18:44Z: https://youtube.com/shorts/DeAtiAQp9tA",
+    "updated_at": "2026-09-20T11:18:47Z"
   },
   "discord_agent": {
     "status": "idle",
