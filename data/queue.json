@@ -1,29 +1,53 @@
 {
-  "date": "2026-09-19",
+  "date": "2026-09-20",
   "slots": [
     {
       "slot": 0,
       "hour_et": 4,
-      "stage": "uploaded",
-      "title": "His phone buzzed, and I knew\"\n\n#BetrayalInTheMorning",
-      "video_url": "https://youtube.com/shorts/i5biHNkDtUY",
-      "publish_at": "2026-09-19T13:21:49Z"
+      "stage": "generating",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 1,
-      "hour_et": 6,
-      "stage": "uploaded",
-      "title": "I pour the champagne, my hands shaking as I hand it to the groom's best man.",
-      "video_url": "https://youtube.com/shorts/N2k1h_Bk1j4",
-      "publish_at": "2026-09-19T15:16:17Z"
+      "hour_et": 5,
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 2,
+      "hour_et": 6,
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
+    },
+    {
+      "slot": 3,
+      "hour_et": 7,
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
+    },
+    {
+      "slot": 4,
       "hour_et": 8,
-      "stage": "uploaded",
-      "title": "I stood behind my camera, capturing the vibrant colors of the party, my mind els",
-      "video_url": "https://youtube.com/shorts/c0KF45q2y58",
-      "publish_at": "2026-09-19T16:18:08Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
+    },
+    {
+      "slot": 5,
+      "hour_et": 9,
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     }
   ]
 }
