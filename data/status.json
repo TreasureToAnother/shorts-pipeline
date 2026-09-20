@@ -1,22 +1,22 @@
 {
   "script_agent": {
-    "status": "done",
-    "message": "generated: Mr. Jenkins just dropped a bombshell that's got my whole world spinning\"\n\n( # BetrayalAtBellaVita )",
-    "updated_at": "2026-09-20T11:16:58Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "video_agent": {
-    "status": "done",
-    "message": "/home/runner/work/shorts-pipeline/shorts-pipeline/agents/../data/output/749a8852.mp4",
-    "updated_at": "2026-09-20T11:18:44Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "upload_agent": {
-    "status": "done",
-    "message": "scheduled for 2026-09-20T16:18:44Z: https://youtube.com/shorts/DeAtiAQp9tA",
-    "updated_at": "2026-09-20T11:18:47Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "discord_agent": {
-    "status": "done",
-    "message": "notified: Mr. Jenkins just dropped a bombshell that's got my whole world spinning\"\n\n( # BetrayalAtBellaVita ) (scheduled 2026-09-20T16:18:44Z UTC)",
-    "updated_at": "2026-09-20T11:18:49Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   }
 }
