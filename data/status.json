@@ -10,9 +10,9 @@
     "updated_at": "2026-09-20T13:15:35Z"
   },
   "upload_agent": {
-    "status": "running",
-    "message": "uploading bb953598.mp4",
-    "updated_at": "2026-09-20T13:15:37Z"
+    "status": "done",
+    "message": "scheduled for 2026-09-20T18:15:37Z: https://youtube.com/shorts/E3zqIRfck-s",
+    "updated_at": "2026-09-20T13:15:40Z"
   },
   "discord_agent": {
     "status": "idle",
