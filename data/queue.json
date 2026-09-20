@@ -44,10 +44,10 @@
     {
       "slot": 5,
       "hour_et": 9,
-      "stage": "generating",
-      "title": null,
-      "video_url": null,
-      "publish_at": null
+      "stage": "uploaded",
+      "title": "His car, but not for me \ud83d\ude14 #betrayed",
+      "video_url": "https://youtube.com/shorts/E3zqIRfck-s",
+      "publish_at": "2026-09-20T18:15:37Z"
     }
   ]
 }
