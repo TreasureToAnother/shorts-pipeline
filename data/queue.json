@@ -44,10 +44,10 @@
     {
       "slot": 5,
       "hour_et": 9,
-      "stage": "generating",
-      "title": null,
-      "video_url": null,
-      "publish_at": null
+      "stage": "uploaded",
+      "title": "My crush turned patient - and it blew my mind \ud83d\udc94",
+      "video_url": "https://youtube.com/shorts/HvqECi82t7k",
+      "publish_at": "2026-09-21T18:16:25Z"
     }
   ]
 }
