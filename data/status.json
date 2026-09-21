@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-09-21T12:04:56Z"
+    "status": "done",
+    "message": "generated: I'm standing behind the counter, steaming milk and trying to focus on the party ",
+    "updated_at": "2026-09-21T12:05:34Z"
   },
   "video_agent": {
     "status": "idle",
