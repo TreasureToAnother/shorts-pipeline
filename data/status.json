@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-09-21T11:19:25Z"
+    "status": "done",
+    "message": "generated: I'm still trying to process what I found in the dorm's hidden room, tucked away ",
+    "updated_at": "2026-09-21T11:20:14Z"
   },
   "video_agent": {
     "status": "idle",
