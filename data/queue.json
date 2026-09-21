@@ -36,10 +36,10 @@
     {
       "slot": 4,
       "hour_et": 8,
-      "stage": "generating",
-      "title": null,
-      "video_url": null,
-      "publish_at": null
+      "stage": "uploaded",
+      "title": "I'm standing behind the counter, steaming milk and trying to focus on the party ",
+      "video_url": "https://youtube.com/shorts/GlSLt3AM56I",
+      "publish_at": "2026-09-21T17:06:59Z"
     },
     {
       "slot": 5,
