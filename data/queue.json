@@ -1,53 +1,53 @@
 {
-  "date": "2026-09-20",
+  "date": "2026-09-21",
   "slots": [
     {
       "slot": 0,
       "hour_et": 4,
-      "stage": "uploaded",
-      "title": "I'll never forget that summer at camp, where the sun beat down on the lake and m",
-      "video_url": "https://youtube.com/shorts/Nv89qBrZunw",
-      "publish_at": "2026-09-20T13:22:10Z"
+      "stage": "generating",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 1,
       "hour_et": 5,
-      "stage": "uploaded",
-      "title": "I've been obsessing over Alex since day one of my internship.",
-      "video_url": "https://youtube.com/shorts/pzs10XoV8Ww",
-      "publish_at": "2026-09-20T14:17:11Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 2,
       "hour_et": 6,
-      "stage": "uploaded",
-      "title": "I'll never forget that sweltering summer at camp, where the only thing hotter th",
-      "video_url": "https://youtube.com/shorts/Aiam_O3yvB8",
-      "publish_at": "2026-09-20T15:16:19Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 3,
       "hour_et": 7,
-      "stage": "uploaded",
-      "title": "Mr. Jenkins just dropped a bombshell that's got my whole world spinning\"\n\n( # BetrayalAtBellaVita )",
-      "video_url": "https://youtube.com/shorts/DeAtiAQp9tA",
-      "publish_at": "2026-09-20T16:18:44Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 4,
       "hour_et": 8,
-      "stage": "uploaded",
-      "title": "He told me I was amazing with someone else \ud83d\udc94",
-      "video_url": "https://youtube.com/shorts/LiPVDF8wH-I",
-      "publish_at": "2026-09-20T17:04:35Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 5,
       "hour_et": 9,
-      "stage": "uploaded",
-      "title": "His car, but not for me \ud83d\ude14 #betrayed",
-      "video_url": "https://youtube.com/shorts/E3zqIRfck-s",
-      "publish_at": "2026-09-20T18:15:37Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     }
   ]
 }
