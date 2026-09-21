@@ -1,22 +1,22 @@
 {
   "script_agent": {
-    "status": "done",
-    "message": "generated: Caught in the Frame \ud83d\udc94\" #POV",
-    "updated_at": "2026-09-21T08:21:29Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "video_agent": {
-    "status": "done",
-    "message": "/home/runner/work/shorts-pipeline/shorts-pipeline/agents/../data/output/b4826d86.mp4",
-    "updated_at": "2026-09-21T08:22:35Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "upload_agent": {
-    "status": "done",
-    "message": "scheduled for 2026-09-21T13:22:36Z: https://youtube.com/shorts/2M9-IkuPkIA",
-    "updated_at": "2026-09-21T08:22:39Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "discord_agent": {
-    "status": "done",
-    "message": "notified: Caught in the Frame \ud83d\udc94\" #POV (scheduled 2026-09-21T13:22:36Z UTC)",
-    "updated_at": "2026-09-21T08:22:41Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   }
 }
