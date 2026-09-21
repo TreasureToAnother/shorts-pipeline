@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-09-21T10:17:17Z"
+    "status": "done",
+    "message": "generated: I walked in on the truth\"\n\n#TruthHurts",
+    "updated_at": "2026-09-21T10:17:47Z"
   },
   "video_agent": {
     "status": "idle",
