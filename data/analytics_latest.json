@@ -1,15 +1,25 @@
 {
-  "updated_at": "2026-09-21T15:17:34Z",
+  "updated_at": "2026-09-21T16:19:28Z",
   "channel": {
     "title": "Treasure To Another",
     "thumbnail": "https://yt3.ggpht.com/4iJRPFXBUDoj_XhTxdvPBJUbrheeqCvqcnlTcGzDHMocWRgdOwhDvE-26GhG7FemNVIeIG_hYQ=s88-c-k-c0x00ffffff-no-rj",
-    "subscriberCount": 33,
+    "subscriberCount": 34,
     "viewCount": 38876,
-    "videoCount": 96,
-    "subsThisMonth": 20,
+    "videoCount": 97,
+    "subsThisMonth": 21,
     "viewsThisMonth": 28012
   },
   "latestVideos": [
+    {
+      "id": "ZVJk2oyZjrY",
+      "title": "subscribe for more fun stories #storytime #story",
+      "publishedAt": "2026-09-21T15:19:15Z",
+      "thumbnail": "https://i.ytimg.com/vi/ZVJk2oyZjrY/mqdefault.jpg",
+      "views": 8,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://youtube.com/shorts/ZVJk2oyZjrY"
+    },
     {
       "id": "iG3ETgtkP6g",
       "title": "subscribe for more fun stories #storytime #story",
@@ -25,7 +35,7 @@
       "title": "subscribe for more fun stories #storytime #story",
       "publishedAt": "2026-09-21T13:23:04Z",
       "thumbnail": "https://i.ytimg.com/vi/2M9-IkuPkIA/mqdefault.jpg",
-      "views": 367,
+      "views": 559,
       "likes": 14,
       "comments": 0,
       "url": "https://youtube.com/shorts/2M9-IkuPkIA"
@@ -49,16 +59,6 @@
       "likes": 7,
       "comments": 0,
       "url": "https://youtube.com/shorts/LiPVDF8wH-I"
-    },
-    {
-      "id": "DeAtiAQp9tA",
-      "title": "subscribe for more fun stories #storytime #story",
-      "publishedAt": "2026-09-20T16:19:03Z",
-      "thumbnail": "https://i.ytimg.com/vi/DeAtiAQp9tA/mqdefault.jpg",
-      "views": 17,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://youtube.com/shorts/DeAtiAQp9tA"
     }
   ]
 }
