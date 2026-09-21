@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-09-21T08:21:05Z"
+    "status": "done",
+    "message": "generated: Caught in the Frame \ud83d\udc94\" #POV",
+    "updated_at": "2026-09-21T08:21:29Z"
   },
   "video_agent": {
     "status": "idle",
