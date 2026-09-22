@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-09-22T09:16:14Z"
+    "status": "done",
+    "message": "generated: I sat alone at the small caf\u00e9, my camera slung over my shoulder, capturing the m",
+    "updated_at": "2026-09-22T09:16:53Z"
   },
   "video_agent": {
     "status": "idle",
