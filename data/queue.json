@@ -1,53 +1,53 @@
 {
-  "date": "2026-09-21",
+  "date": "2026-09-22",
   "slots": [
     {
       "slot": 0,
       "hour_et": 4,
-      "stage": "uploaded",
-      "title": "Caught in the Frame \ud83d\udc94\" #POV",
-      "video_url": "https://youtube.com/shorts/2M9-IkuPkIA",
-      "publish_at": "2026-09-21T13:22:36Z"
+      "stage": "generating",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 1,
       "hour_et": 5,
-      "stage": "uploaded",
-      "title": "I'll never forget the night I moved into our shared apartment, excited to start ",
-      "video_url": "https://youtube.com/shorts/iG3ETgtkP6g",
-      "publish_at": "2026-09-21T14:20:02Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 2,
       "hour_et": 6,
-      "stage": "uploaded",
-      "title": "I walked in on the truth\"\n\n#TruthHurts",
-      "video_url": "https://youtube.com/shorts/ZVJk2oyZjrY",
-      "publish_at": "2026-09-21T15:19:07Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 3,
       "hour_et": 7,
-      "stage": "uploaded",
-      "title": "I'm still trying to process what I found in the dorm's hidden room, tucked away ",
-      "video_url": "https://youtube.com/shorts/uLI5N78Z6cg",
-      "publish_at": "2026-09-21T16:21:50Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 4,
       "hour_et": 8,
-      "stage": "uploaded",
-      "title": "I'm standing behind the counter, steaming milk and trying to focus on the party ",
-      "video_url": "https://youtube.com/shorts/GlSLt3AM56I",
-      "publish_at": "2026-09-21T17:06:59Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 5,
       "hour_et": 9,
-      "stage": "uploaded",
-      "title": "My crush turned patient - and it blew my mind \ud83d\udc94",
-      "video_url": "https://youtube.com/shorts/HvqECi82t7k",
-      "publish_at": "2026-09-21T18:16:25Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     }
   ]
 }
