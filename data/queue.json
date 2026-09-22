@@ -44,10 +44,10 @@
     {
       "slot": 5,
       "hour_et": 9,
-      "stage": "generating",
-      "title": null,
-      "video_url": null,
-      "publish_at": null
+      "stage": "uploaded",
+      "title": "Meet the guy who was supposed to be there for me, but wasn't\" \ud83d\udc94 #POV",
+      "video_url": "https://youtube.com/shorts/0OsrlMWIxLY",
+      "publish_at": "2026-09-22T18:17:31Z"
     }
   ]
 }
