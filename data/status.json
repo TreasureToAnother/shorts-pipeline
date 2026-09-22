@@ -1,22 +1,22 @@
 {
   "script_agent": {
-    "status": "done",
-    "message": "generated: I sat alone at the small caf\u00e9, my camera slung over my shoulder, capturing the m",
-    "updated_at": "2026-09-22T09:16:53Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "video_agent": {
-    "status": "done",
-    "message": "/home/runner/work/shorts-pipeline/shorts-pipeline/agents/../data/output/50943489.mp4",
-    "updated_at": "2026-09-22T09:18:03Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "upload_agent": {
-    "status": "done",
-    "message": "scheduled for 2026-09-22T14:18:05Z: https://youtube.com/shorts/gIBSK4RQdFw",
-    "updated_at": "2026-09-22T09:18:08Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "discord_agent": {
-    "status": "done",
-    "message": "notified: I sat alone at the small caf\u00e9, my camera slung over my shoulder, capturing the m (scheduled 2026-09-22T14:18:05Z UTC)",
-    "updated_at": "2026-09-22T09:18:11Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   }
 }
