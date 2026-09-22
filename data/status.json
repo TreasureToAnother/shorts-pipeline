@@ -1,22 +1,22 @@
 {
   "script_agent": {
-    "status": "done",
-    "message": "generated: I stood by the punch bowl, sipping my drink, and scanning the room for an escape",
-    "updated_at": "2026-09-22T11:19:02Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "video_agent": {
-    "status": "done",
-    "message": "/home/runner/work/shorts-pipeline/shorts-pipeline/agents/../data/output/a3e008bf.mp4",
-    "updated_at": "2026-09-22T11:20:22Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "upload_agent": {
-    "status": "done",
-    "message": "scheduled for 2026-09-22T16:20:23Z: https://youtube.com/shorts/84AKQN2DtLk",
-    "updated_at": "2026-09-22T11:20:27Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "discord_agent": {
-    "status": "done",
-    "message": "notified: I stood by the punch bowl, sipping my drink, and scanning the room for an escape (scheduled 2026-09-22T16:20:23Z UTC)",
-    "updated_at": "2026-09-22T11:20:30Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   }
 }
