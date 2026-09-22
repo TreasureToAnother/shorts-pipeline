@@ -28,10 +28,10 @@
     {
       "slot": 3,
       "hour_et": 7,
-      "stage": "generating",
-      "title": null,
-      "video_url": null,
-      "publish_at": null
+      "stage": "uploaded",
+      "title": "I stood by the punch bowl, sipping my drink, and scanning the room for an escape",
+      "video_url": "https://youtube.com/shorts/84AKQN2DtLk",
+      "publish_at": "2026-09-22T16:20:23Z"
     },
     {
       "slot": 4,
