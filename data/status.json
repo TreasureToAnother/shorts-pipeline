@@ -1,22 +1,22 @@
 {
   "script_agent": {
-    "status": "done",
-    "message": "generated: A friend I thought I knew... \ud83d\udc40\" #BetrayalFeels",
-    "updated_at": "2026-09-22T12:03:21Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "video_agent": {
-    "status": "done",
-    "message": "/home/runner/work/shorts-pipeline/shorts-pipeline/agents/../data/output/0dc095fd.mp4",
-    "updated_at": "2026-09-22T12:05:07Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "upload_agent": {
-    "status": "done",
-    "message": "scheduled for 2026-09-22T17:05:08Z: https://youtube.com/shorts/_DT9ksB06yA",
-    "updated_at": "2026-09-22T12:05:12Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "discord_agent": {
-    "status": "done",
-    "message": "notified: A friend I thought I knew... \ud83d\udc40\" #BetrayalFeels (scheduled 2026-09-22T17:05:08Z UTC)",
-    "updated_at": "2026-09-22T12:05:15Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   }
 }
