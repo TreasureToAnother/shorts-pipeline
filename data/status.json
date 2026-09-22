@@ -15,8 +15,8 @@
     "updated_at": "2026-09-22T11:20:27Z"
   },
   "discord_agent": {
-    "status": "running",
-    "message": "posting upload notification",
-    "updated_at": "2026-09-22T11:20:28Z"
+    "status": "done",
+    "message": "notified: I stood by the punch bowl, sipping my drink, and scanning the room for an escape (scheduled 2026-09-22T16:20:23Z UTC)",
+    "updated_at": "2026-09-22T11:20:30Z"
   }
 }
