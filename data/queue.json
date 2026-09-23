@@ -12,10 +12,10 @@
     {
       "slot": 1,
       "hour_et": 5,
-      "stage": "generating",
-      "title": null,
-      "video_url": null,
-      "publish_at": null
+      "stage": "uploaded",
+      "title": "I was supposed to be mingling, not snooping, but my curiosity got the better of ",
+      "video_url": "https://youtube.com/shorts/WTZP_dWmH-k",
+      "publish_at": "2026-09-23T19:51:25Z"
     },
     {
       "slot": 2,
