@@ -1,22 +1,22 @@
 {
   "script_agent": {
-    "status": "done",
-    "message": "generated: I was supposed to be mingling, not snooping, but my curiosity got the better of ",
-    "updated_at": "2026-09-23T14:50:03Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "video_agent": {
-    "status": "done",
-    "message": "/home/runner/work/shorts-pipeline/shorts-pipeline/agents/../data/output/7f23418c.mp4",
-    "updated_at": "2026-09-23T14:51:23Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "upload_agent": {
-    "status": "done",
-    "message": "scheduled for 2026-09-23T19:51:25Z: https://youtube.com/shorts/WTZP_dWmH-k",
-    "updated_at": "2026-09-23T14:51:28Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "discord_agent": {
-    "status": "done",
-    "message": "notified: I was supposed to be mingling, not snooping, but my curiosity got the better of  (scheduled 2026-09-23T19:51:25Z UTC)",
-    "updated_at": "2026-09-23T14:51:32Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   }
 }
