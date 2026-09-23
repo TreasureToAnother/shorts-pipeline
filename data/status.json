@@ -1,22 +1,22 @@
 {
   "script_agent": {
-    "status": "done",
-    "message": "generated: I've been working as a hostess at that quirky roadside diner for years, watching",
-    "updated_at": "2026-09-23T15:40:34Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "video_agent": {
-    "status": "done",
-    "message": "/home/runner/work/shorts-pipeline/shorts-pipeline/agents/../data/output/a105674d.mp4",
-    "updated_at": "2026-09-23T15:41:57Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "upload_agent": {
-    "status": "done",
-    "message": "scheduled for 2026-09-23T20:41:58Z: https://youtube.com/shorts/H8nXJgAIwZg",
-    "updated_at": "2026-09-23T15:42:02Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "discord_agent": {
-    "status": "done",
-    "message": "notified: I've been working as a hostess at that quirky roadside diner for years, watching (scheduled 2026-09-23T20:41:58Z UTC)",
-    "updated_at": "2026-09-23T15:42:05Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   }
 }
