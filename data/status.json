@@ -1,22 +1,22 @@
 {
   "script_agent": {
-    "status": "done",
-    "message": "generated: A video call that crushed me \ud83d\ude14\" #betrayal",
-    "updated_at": "2026-09-24T13:31:48Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "video_agent": {
-    "status": "done",
-    "message": "/home/runner/work/shorts-pipeline/shorts-pipeline/agents/../data/output/64a5a124.mp4",
-    "updated_at": "2026-09-24T13:33:14Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "upload_agent": {
-    "status": "done",
-    "message": "scheduled for 2026-09-24T18:33:20Z: https://youtube.com/shorts/KEfxLBnFEBQ",
-    "updated_at": "2026-09-24T13:33:29Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "discord_agent": {
-    "status": "done",
-    "message": "notified: A video call that crushed me \ud83d\ude14\" #betrayal (scheduled 2026-09-24T18:33:20Z UTC)",
-    "updated_at": "2026-09-24T13:33:42Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   }
 }
