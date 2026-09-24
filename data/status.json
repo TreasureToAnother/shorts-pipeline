@@ -1,22 +1,22 @@
 {
   "script_agent": {
-    "status": "done",
-    "message": "generated: His phone call changed everything \ud83d\ude33",
-    "updated_at": "2026-09-23T17:50:10Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "video_agent": {
-    "status": "done",
-    "message": "/home/runner/work/shorts-pipeline/shorts-pipeline/agents/../data/output/c4b60a6a.mp4",
-    "updated_at": "2026-09-23T17:51:51Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "upload_agent": {
-    "status": "done",
-    "message": "scheduled for 2026-09-23T22:51:52Z: https://youtube.com/shorts/UWTYC-mlmzU",
-    "updated_at": "2026-09-23T17:51:56Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "discord_agent": {
-    "status": "done",
-    "message": "notified: His phone call changed everything \ud83d\ude33 (scheduled 2026-09-23T22:51:52Z UTC)",
-    "updated_at": "2026-09-23T17:52:00Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   }
 }
