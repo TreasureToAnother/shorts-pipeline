@@ -28,10 +28,10 @@
     {
       "slot": 3,
       "hour_et": 7,
-      "stage": "generating",
-      "title": null,
-      "video_url": null,
-      "publish_at": null
+      "stage": "uploaded",
+      "title": "I still remember the way the setting sun painted our dusty road, a warm backdrop",
+      "video_url": "https://youtube.com/shorts/UDlPKd8CRgQ",
+      "publish_at": "2026-09-24T21:03:27Z"
     },
     {
       "slot": 4,
