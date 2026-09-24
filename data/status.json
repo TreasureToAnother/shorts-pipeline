@@ -1,22 +1,22 @@
 {
   "script_agent": {
-    "status": "done",
-    "message": "generated: I poured my heart into tonight's tip, but it wasn't the customers that had me on",
-    "updated_at": "2026-09-24T14:46:52Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "video_agent": {
-    "status": "done",
-    "message": "/home/runner/work/shorts-pipeline/shorts-pipeline/agents/../data/output/35f9d6d3.mp4",
-    "updated_at": "2026-09-24T14:48:08Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "upload_agent": {
-    "status": "done",
-    "message": "scheduled for 2026-09-24T19:48:10Z: https://youtube.com/shorts/DvPC6UvGCRk",
-    "updated_at": "2026-09-24T14:48:15Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "discord_agent": {
-    "status": "done",
-    "message": "notified: I poured my heart into tonight's tip, but it wasn't the customers that had me on (scheduled 2026-09-24T19:48:10Z UTC)",
-    "updated_at": "2026-09-24T14:48:18Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   }
 }
