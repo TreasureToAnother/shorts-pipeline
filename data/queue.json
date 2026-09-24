@@ -44,10 +44,10 @@
     {
       "slot": 5,
       "hour_et": 9,
-      "stage": "generating",
-      "title": null,
-      "video_url": null,
-      "publish_at": null
+      "stage": "uploaded",
+      "title": "A video call that crushed me \ud83d\ude14\" #betrayal",
+      "video_url": "https://youtube.com/shorts/KEfxLBnFEBQ",
+      "publish_at": "2026-09-24T18:33:20Z"
     }
   ]
 }
