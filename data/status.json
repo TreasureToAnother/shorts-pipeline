@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-09-24T16:01:27Z"
+    "status": "done",
+    "message": "generated: I still remember the way the setting sun painted our dusty road, a warm backdrop",
+    "updated_at": "2026-09-24T16:02:09Z"
   },
   "video_agent": {
     "status": "idle",
