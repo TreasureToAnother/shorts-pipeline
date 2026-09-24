@@ -1,53 +1,53 @@
 {
-  "date": "2026-09-23",
+  "date": "2026-09-24",
   "slots": [
     {
       "slot": 0,
       "hour_et": 4,
-      "stage": "uploaded",
-      "title": "I'll never forget the day I landed my internship at a prestigious firm, but litt",
-      "video_url": "https://youtube.com/shorts/5lBav6CZQ-M",
-      "publish_at": "2026-09-23T19:14:01Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 1,
       "hour_et": 5,
-      "stage": "uploaded",
-      "title": "I was supposed to be mingling, not snooping, but my curiosity got the better of ",
-      "video_url": "https://youtube.com/shorts/WTZP_dWmH-k",
-      "publish_at": "2026-09-23T19:51:25Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 2,
       "hour_et": 6,
-      "stage": "uploaded",
-      "title": "I poured my heart out to my best friend, Rachel, about the party that night.",
-      "video_url": "https://youtube.com/shorts/EVi-nW1XZ6k",
-      "publish_at": "2026-09-23T20:27:27Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 3,
       "hour_et": 7,
-      "stage": "uploaded",
-      "title": "I've been working as a hostess at that quirky roadside diner for years, watching",
-      "video_url": "https://youtube.com/shorts/H8nXJgAIwZg",
-      "publish_at": "2026-09-23T20:41:58Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 4,
       "hour_et": 8,
-      "stage": "uploaded",
-      "title": "His phone call changed everything \ud83d\ude33",
-      "video_url": "https://youtube.com/shorts/UWTYC-mlmzU",
-      "publish_at": "2026-09-23T22:51:52Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 5,
       "hour_et": 9,
-      "stage": "uploaded",
-      "title": "I stared at the screen, a 3am snapshot of his face, our faces, forever captured ",
-      "video_url": "https://youtube.com/shorts/SRdeiyCHmEQ",
-      "publish_at": "2026-09-23T18:38:04Z"
+      "stage": "generating",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     }
   ]
 }
