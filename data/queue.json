@@ -12,10 +12,10 @@
     {
       "slot": 1,
       "hour_et": 5,
-      "stage": "generating",
-      "title": null,
-      "video_url": null,
-      "publish_at": null
+      "stage": "uploaded",
+      "title": "I poured my heart into tonight's tip, but it wasn't the customers that had me on",
+      "video_url": "https://youtube.com/shorts/DvPC6UvGCRk",
+      "publish_at": "2026-09-24T19:48:10Z"
     },
     {
       "slot": 2,
