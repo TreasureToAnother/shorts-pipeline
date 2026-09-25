@@ -44,10 +44,10 @@
     {
       "slot": 5,
       "hour_et": 9,
-      "stage": "generating",
-      "title": null,
-      "video_url": null,
-      "publish_at": null
+      "stage": "uploaded",
+      "title": "I pour steaming hot coffee into a waiting cup, my mind a million miles away.",
+      "video_url": "https://youtube.com/shorts/ikMg_qRt6HA",
+      "publish_at": "2026-09-25T18:41:28Z"
     }
   ]
 }
