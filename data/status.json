@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-09-25T17:50:02Z"
+    "status": "done",
+    "message": "generated: Caught in the middle",
+    "updated_at": "2026-09-25T17:50:51Z"
   },
   "video_agent": {
     "status": "idle",
