@@ -1,22 +1,22 @@
 {
   "script_agent": {
-    "status": "done",
-    "message": "generated: I'm stuck with my worst nightmare - a group project with the two guys I secretly",
-    "updated_at": "2026-09-24T17:50:18Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "video_agent": {
-    "status": "done",
-    "message": "/home/runner/work/shorts-pipeline/shorts-pipeline/agents/../data/output/129fad15.mp4",
-    "updated_at": "2026-09-24T17:51:37Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "upload_agent": {
-    "status": "done",
-    "message": "scheduled for 2026-09-24T22:51:38Z: https://youtube.com/shorts/kQ3yMLcZ62A",
-    "updated_at": "2026-09-24T17:51:42Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "discord_agent": {
-    "status": "done",
-    "message": "notified: I'm stuck with my worst nightmare - a group project with the two guys I secretly (scheduled 2026-09-24T22:51:38Z UTC)",
-    "updated_at": "2026-09-24T17:51:45Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   }
 }
