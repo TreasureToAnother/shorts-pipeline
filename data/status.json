@@ -15,8 +15,8 @@
     "updated_at": "2026-09-25T17:52:49Z"
   },
   "discord_agent": {
-    "status": "running",
-    "message": "posting upload notification",
-    "updated_at": "2026-09-25T17:52:51Z"
+    "status": "done",
+    "message": "notified: Caught in the middle (scheduled 2026-09-25T22:52:44Z UTC)",
+    "updated_at": "2026-09-25T17:52:52Z"
   }
 }
