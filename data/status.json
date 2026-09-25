@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-09-25T15:06:11Z"
+    "status": "done",
+    "message": "generated: Who is the guy who just sent me a text with my ex's name? \ud83e\udd14",
+    "updated_at": "2026-09-25T15:06:46Z"
   },
   "video_agent": {
     "status": "idle",
