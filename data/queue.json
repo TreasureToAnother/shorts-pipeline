@@ -28,10 +28,10 @@
     {
       "slot": 3,
       "hour_et": 7,
-      "stage": "generating",
-      "title": null,
-      "video_url": null,
-      "publish_at": null
+      "stage": "uploaded",
+      "title": "I'll never forget the day our group project turned into a minefield of unrequite",
+      "video_url": "https://youtube.com/shorts/TCVkTTHmfWo",
+      "publish_at": "2026-09-25T21:04:05Z"
     },
     {
       "slot": 4,
