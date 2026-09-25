@@ -1,53 +1,53 @@
 {
-  "date": "2026-09-24",
+  "date": "2026-09-25",
   "slots": [
     {
       "slot": 0,
       "hour_et": 4,
-      "stage": "uploaded",
-      "title": "He's been getting his coffee ready, while I'm really getting him a clue",
-      "video_url": "https://youtube.com/shorts/UPg2eMVaMms",
-      "publish_at": "2026-09-24T19:10:33Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 1,
       "hour_et": 5,
-      "stage": "uploaded",
-      "title": "I poured my heart into tonight's tip, but it wasn't the customers that had me on",
-      "video_url": "https://youtube.com/shorts/DvPC6UvGCRk",
-      "publish_at": "2026-09-24T19:48:10Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 2,
       "hour_et": 6,
-      "stage": "uploaded",
-      "title": "I'll never forget the text that changed everything - from my roommate's perfect ",
-      "video_url": "https://youtube.com/shorts/o7chGzmmGWU",
-      "publish_at": "2026-09-24T20:51:34Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 3,
       "hour_et": 7,
-      "stage": "uploaded",
-      "title": "I still remember the way the setting sun painted our dusty road, a warm backdrop",
-      "video_url": "https://youtube.com/shorts/UDlPKd8CRgQ",
-      "publish_at": "2026-09-24T21:03:27Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 4,
       "hour_et": 8,
-      "stage": "uploaded",
-      "title": "I'm stuck with my worst nightmare - a group project with the two guys I secretly",
-      "video_url": "https://youtube.com/shorts/kQ3yMLcZ62A",
-      "publish_at": "2026-09-24T22:51:38Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 5,
       "hour_et": 9,
-      "stage": "uploaded",
-      "title": "A video call that crushed me \ud83d\ude14\" #betrayal",
-      "video_url": "https://youtube.com/shorts/KEfxLBnFEBQ",
-      "publish_at": "2026-09-24T18:33:20Z"
+      "stage": "generating",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     }
   ]
 }
