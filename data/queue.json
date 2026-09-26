@@ -12,10 +12,10 @@
     {
       "slot": 1,
       "hour_et": 5,
-      "stage": "generating",
-      "title": null,
-      "video_url": null,
-      "publish_at": null
+      "stage": "uploaded",
+      "title": "I'll never forget the day I saw him, leaning against the dorm's worn wooden door",
+      "video_url": "https://youtube.com/shorts/XoPn1NAlMjk",
+      "publish_at": "2026-09-26T20:00:15Z"
     },
     {
       "slot": 2,
