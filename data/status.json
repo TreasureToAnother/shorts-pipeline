@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-09-26T12:59:20Z"
+    "status": "done",
+    "message": "generated: His stories started to unravel... until his ex walked in",
+    "updated_at": "2026-09-26T12:59:42Z"
   },
   "video_agent": {
     "status": "idle",
