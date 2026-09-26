@@ -1,22 +1,22 @@
 {
   "script_agent": {
-    "status": "done",
-    "message": "generated: Caught in the middle",
-    "updated_at": "2026-09-25T17:50:51Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "video_agent": {
-    "status": "done",
-    "message": "/home/runner/work/shorts-pipeline/shorts-pipeline/agents/../data/output/7684a283.mp4",
-    "updated_at": "2026-09-25T17:52:42Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "upload_agent": {
-    "status": "done",
-    "message": "scheduled for 2026-09-25T22:52:44Z: https://youtube.com/shorts/iAyrLGkSN64",
-    "updated_at": "2026-09-25T17:52:49Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "discord_agent": {
-    "status": "done",
-    "message": "notified: Caught in the middle (scheduled 2026-09-25T22:52:44Z UTC)",
-    "updated_at": "2026-09-25T17:52:52Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   }
 }
