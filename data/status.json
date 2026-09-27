@@ -1,22 +1,22 @@
 {
   "script_agent": {
-    "status": "done",
-    "message": "generated: The files that shook everything I thought I knew\"\n\n( #betrayaluncovered)",
-    "updated_at": "2026-09-27T13:51:14Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "video_agent": {
-    "status": "done",
-    "message": "/home/runner/work/shorts-pipeline/shorts-pipeline/agents/../data/output/6641bea4.mp4",
-    "updated_at": "2026-09-27T13:52:23Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "upload_agent": {
-    "status": "done",
-    "message": "scheduled for 2026-09-27T18:52:24Z: https://youtube.com/shorts/l4go95F5W4I",
-    "updated_at": "2026-09-27T13:52:28Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "discord_agent": {
-    "status": "done",
-    "message": "notified: The files that shook everything I thought I knew\"\n\n( #betrayaluncovered) (scheduled 2026-09-27T18:52:24Z UTC)",
-    "updated_at": "2026-09-27T13:52:29Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   }
 }
