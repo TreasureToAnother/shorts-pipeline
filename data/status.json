@@ -1,22 +1,22 @@
 {
   "script_agent": {
-    "status": "done",
-    "message": "generated: I poured steaming hot coffee into the worn wooden mug, the scent of summer camp ",
-    "updated_at": "2026-09-27T15:38:59Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "video_agent": {
-    "status": "done",
-    "message": "/home/runner/work/shorts-pipeline/shorts-pipeline/agents/../data/output/58ee21e0.mp4",
-    "updated_at": "2026-09-27T15:41:00Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "upload_agent": {
-    "status": "done",
-    "message": "scheduled for 2026-09-27T20:41:01Z: https://youtube.com/shorts/eUf1X4jasKk",
-    "updated_at": "2026-09-27T15:41:06Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "discord_agent": {
-    "status": "done",
-    "message": "notified: I poured steaming hot coffee into the worn wooden mug, the scent of summer camp  (scheduled 2026-09-27T20:41:01Z UTC)",
-    "updated_at": "2026-09-27T15:41:09Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   }
 }
