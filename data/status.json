@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-09-27T15:04:15Z"
+    "status": "done",
+    "message": "generated: I'll never forget the summer I spent at Camp Clearwater, the one where my heart ",
+    "updated_at": "2026-09-27T15:05:16Z"
   },
   "video_agent": {
     "status": "idle",
