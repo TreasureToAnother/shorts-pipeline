@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-09-27T13:50:38Z"
+    "status": "done",
+    "message": "generated: The files that shook everything I thought I knew\"\n\n( #betrayaluncovered)",
+    "updated_at": "2026-09-27T13:51:14Z"
   },
   "video_agent": {
     "status": "idle",
