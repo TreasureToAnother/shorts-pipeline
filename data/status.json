@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-09-27T14:39:40Z"
+    "status": "done",
+    "message": "generated: His secrets were hidden in my patient notes \ud83d\udc94",
+    "updated_at": "2026-09-27T14:40:05Z"
   },
   "video_agent": {
     "status": "idle",
