@@ -15,8 +15,8 @@
     "updated_at": "2026-09-27T14:41:22Z"
   },
   "discord_agent": {
-    "status": "running",
-    "message": "posting upload notification",
-    "updated_at": "2026-09-27T14:41:24Z"
+    "status": "done",
+    "message": "notified: His secrets were hidden in my patient notes \ud83d\udc94 (scheduled 2026-09-27T19:41:18Z UTC)",
+    "updated_at": "2026-09-27T14:41:25Z"
   }
 }
