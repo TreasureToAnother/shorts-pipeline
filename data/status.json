@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-09-27T15:56:13Z"
+    "status": "done",
+    "message": "generated: I stood at the altar, watching him take his wife's hand, and I felt my heart sha",
+    "updated_at": "2026-09-27T15:56:44Z"
   },
   "video_agent": {
     "status": "idle",
