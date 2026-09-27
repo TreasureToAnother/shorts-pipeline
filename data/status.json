@@ -1,22 +1,22 @@
 {
   "script_agent": {
-    "status": "done",
-    "message": "generated: I stood at the altar, watching him take his wife's hand, and I felt my heart sha",
-    "updated_at": "2026-09-27T15:56:44Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "video_agent": {
-    "status": "done",
-    "message": "/home/runner/work/shorts-pipeline/shorts-pipeline/agents/../data/output/a40ae267.mp4",
-    "updated_at": "2026-09-27T15:57:56Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "upload_agent": {
-    "status": "done",
-    "message": "scheduled for 2026-09-27T20:57:57Z: https://youtube.com/shorts/1elJGULb3FA",
-    "updated_at": "2026-09-27T15:58:01Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "discord_agent": {
-    "status": "done",
-    "message": "notified: I stood at the altar, watching him take his wife's hand, and I felt my heart sha (scheduled 2026-09-27T20:57:57Z UTC)",
-    "updated_at": "2026-09-27T15:58:03Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   }
 }
