@@ -36,10 +36,10 @@
     {
       "slot": 4,
       "hour_et": 8,
-      "stage": "generating",
-      "title": null,
-      "video_url": null,
-      "publish_at": null
+      "stage": "uploaded",
+      "title": "Text that exposed the truth",
+      "video_url": "https://youtube.com/shorts/rxHHUQ8bXLI",
+      "publish_at": "2026-09-27T22:39:25Z"
     },
     {
       "slot": 5,
