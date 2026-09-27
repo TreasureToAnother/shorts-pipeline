@@ -15,8 +15,8 @@
     "updated_at": "2026-09-27T17:39:28Z"
   },
   "discord_agent": {
-    "status": "running",
-    "message": "posting upload notification",
-    "updated_at": "2026-09-27T17:39:30Z"
+    "status": "done",
+    "message": "notified: Text that exposed the truth (scheduled 2026-09-27T22:39:25Z UTC)",
+    "updated_at": "2026-09-27T17:39:31Z"
   }
 }
