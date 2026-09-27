@@ -44,10 +44,10 @@
     {
       "slot": 5,
       "hour_et": 9,
-      "stage": "generating",
-      "title": null,
-      "video_url": null,
-      "publish_at": null
+      "stage": "uploaded",
+      "title": "The files that shook everything I thought I knew\"\n\n( #betrayaluncovered)",
+      "video_url": "https://youtube.com/shorts/l4go95F5W4I",
+      "publish_at": "2026-09-27T18:52:24Z"
     }
   ]
 }
