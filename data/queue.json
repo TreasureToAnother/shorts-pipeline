@@ -12,10 +12,10 @@
     {
       "slot": 1,
       "hour_et": 5,
-      "stage": "generating",
-      "title": null,
-      "video_url": null,
-      "publish_at": null
+      "stage": "uploaded",
+      "title": "I'll never forget the summer I spent at Camp Clearwater, the one where my heart ",
+      "video_url": "https://youtube.com/shorts/dWDeQvTvJ-A",
+      "publish_at": "2026-09-27T20:07:37Z"
     },
     {
       "slot": 2,
