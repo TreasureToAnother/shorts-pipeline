@@ -1,22 +1,22 @@
 {
   "script_agent": {
-    "status": "done",
-    "message": "generated: I thought I had it all - a full-time nursing program, a loving boyfriend, and a ",
-    "updated_at": "2026-09-28T18:03:37Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "video_agent": {
-    "status": "done",
-    "message": "/home/runner/work/shorts-pipeline/shorts-pipeline/agents/../data/output/aca2af7d.mp4",
-    "updated_at": "2026-09-28T18:05:27Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "upload_agent": {
-    "status": "done",
-    "message": "scheduled for 2026-09-28T23:05:28Z: https://youtube.com/shorts/y01Z2oMs9ko",
-    "updated_at": "2026-09-28T18:05:32Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "discord_agent": {
-    "status": "done",
-    "message": "notified: I thought I had it all - a full-time nursing program, a loving boyfriend, and a  (scheduled 2026-09-28T23:05:28Z UTC)",
-    "updated_at": "2026-09-28T18:05:35Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   }
 }
