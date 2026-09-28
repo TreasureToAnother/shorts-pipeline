@@ -1,22 +1,22 @@
 {
   "script_agent": {
-    "status": "done",
-    "message": "generated: Text that exposed the truth",
-    "updated_at": "2026-09-27T17:37:21Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "video_agent": {
-    "status": "done",
-    "message": "/home/runner/work/shorts-pipeline/shorts-pipeline/agents/../data/output/23830c77.mp4",
-    "updated_at": "2026-09-27T17:39:24Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "upload_agent": {
-    "status": "done",
-    "message": "scheduled for 2026-09-27T22:39:25Z: https://youtube.com/shorts/rxHHUQ8bXLI",
-    "updated_at": "2026-09-27T17:39:28Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "discord_agent": {
-    "status": "done",
-    "message": "notified: Text that exposed the truth (scheduled 2026-09-27T22:39:25Z UTC)",
-    "updated_at": "2026-09-27T17:39:31Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   }
 }
