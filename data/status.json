@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-09-28T18:35:32Z"
+    "status": "done",
+    "message": "generated: I was sipping wine and pretending to be a hostess, not a witness, when he asked ",
+    "updated_at": "2026-09-28T18:36:16Z"
   },
   "video_agent": {
     "status": "idle",
