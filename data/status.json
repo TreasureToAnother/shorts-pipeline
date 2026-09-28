@@ -1,22 +1,22 @@
 {
   "script_agent": {
-    "status": "done",
-    "message": "generated: Face-to-face with the lie \ud83d\udc94 #betrayal",
-    "updated_at": "2026-09-28T17:31:51Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "video_agent": {
-    "status": "done",
-    "message": "/home/runner/work/shorts-pipeline/shorts-pipeline/agents/../data/output/fb5ff35a.mp4",
-    "updated_at": "2026-09-28T17:32:55Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "upload_agent": {
-    "status": "done",
-    "message": "scheduled for 2026-09-28T22:32:57Z: https://youtube.com/shorts/heiHz78I1_A",
-    "updated_at": "2026-09-28T17:33:00Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "discord_agent": {
-    "status": "done",
-    "message": "notified: Face-to-face with the lie \ud83d\udc94 #betrayal (scheduled 2026-09-28T22:32:57Z UTC)",
-    "updated_at": "2026-09-28T17:33:03Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   }
 }
