@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-09-28T18:50:42Z"
+    "status": "done",
+    "message": "generated: The Shot That Didn't Capture His True Face\"\n\n#POV #CrushConfession",
+    "updated_at": "2026-09-28T18:51:23Z"
   },
   "video_agent": {
     "status": "idle",
