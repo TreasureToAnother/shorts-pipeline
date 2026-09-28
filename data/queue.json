@@ -1,53 +1,53 @@
 {
-  "date": "2026-09-27",
+  "date": "2026-09-28",
   "slots": [
     {
       "slot": 0,
       "hour_et": 4,
-      "stage": "uploaded",
-      "title": "His secrets were hidden in my patient notes \ud83d\udc94",
-      "video_url": "https://youtube.com/shorts/AdbDinmLnZw",
-      "publish_at": "2026-09-27T19:41:18Z"
+      "stage": "generating",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 1,
       "hour_et": 5,
-      "stage": "uploaded",
-      "title": "I'll never forget the summer I spent at Camp Clearwater, the one where my heart ",
-      "video_url": "https://youtube.com/shorts/dWDeQvTvJ-A",
-      "publish_at": "2026-09-27T20:07:37Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 2,
       "hour_et": 6,
-      "stage": "uploaded",
-      "title": "I poured steaming hot coffee into the worn wooden mug, the scent of summer camp ",
-      "video_url": "https://youtube.com/shorts/eUf1X4jasKk",
-      "publish_at": "2026-09-27T20:41:01Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 3,
       "hour_et": 7,
-      "stage": "uploaded",
-      "title": "I stood at the altar, watching him take his wife's hand, and I felt my heart sha",
-      "video_url": "https://youtube.com/shorts/1elJGULb3FA",
-      "publish_at": "2026-09-27T20:57:57Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 4,
       "hour_et": 8,
-      "stage": "uploaded",
-      "title": "Text that exposed the truth",
-      "video_url": "https://youtube.com/shorts/rxHHUQ8bXLI",
-      "publish_at": "2026-09-27T22:39:25Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 5,
       "hour_et": 9,
-      "stage": "uploaded",
-      "title": "The files that shook everything I thought I knew\"\n\n( #betrayaluncovered)",
-      "video_url": "https://youtube.com/shorts/l4go95F5W4I",
-      "publish_at": "2026-09-27T18:52:24Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     }
   ]
 }
