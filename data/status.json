@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-09-29T18:32:45Z"
+    "status": "done",
+    "message": "generated: I couldn't stop smiling as I took his picture - the way the sunlight danced thro",
+    "updated_at": "2026-09-29T18:33:34Z"
   },
   "video_agent": {
     "status": "idle",
