@@ -1,22 +1,22 @@
 {
   "script_agent": {
-    "status": "done",
-    "message": "generated: I've been hiding in the dorm's corner store for months, restocking shelves while",
-    "updated_at": "2026-09-29T15:36:02Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "video_agent": {
-    "status": "done",
-    "message": "/home/runner/work/shorts-pipeline/shorts-pipeline/agents/../data/output/e2adc82c.mp4",
-    "updated_at": "2026-09-29T15:37:59Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "upload_agent": {
-    "status": "done",
-    "message": "scheduled for 2026-09-29T20:38:01Z: https://youtube.com/shorts/JqkT8Zq3bis",
-    "updated_at": "2026-09-29T15:38:05Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "discord_agent": {
-    "status": "done",
-    "message": "notified: I've been hiding in the dorm's corner store for months, restocking shelves while (scheduled 2026-09-29T20:38:01Z UTC)",
-    "updated_at": "2026-09-29T15:38:08Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   }
 }
