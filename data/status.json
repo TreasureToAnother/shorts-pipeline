@@ -1,22 +1,22 @@
 {
   "script_agent": {
-    "status": "done",
-    "message": "generated: I've been sitting next to him for weeks, trying to muster the courage to say any",
-    "updated_at": "2026-09-29T17:08:00Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "video_agent": {
-    "status": "done",
-    "message": "/home/runner/work/shorts-pipeline/shorts-pipeline/agents/../data/output/16c4c89f.mp4",
-    "updated_at": "2026-09-29T17:09:31Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "upload_agent": {
-    "status": "done",
-    "message": "scheduled for 2026-09-29T22:09:32Z: https://youtube.com/shorts/-kaM0VzM514",
-    "updated_at": "2026-09-29T17:09:36Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "discord_agent": {
-    "status": "done",
-    "message": "notified: I've been sitting next to him for weeks, trying to muster the courage to say any (scheduled 2026-09-29T22:09:32Z UTC)",
-    "updated_at": "2026-09-29T17:09:39Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   }
 }
