@@ -1,53 +1,53 @@
 {
-  "date": "2026-09-28",
+  "date": "2026-09-29",
   "slots": [
     {
       "slot": 0,
       "hour_et": 4,
-      "stage": "uploaded",
-      "title": "The text that made me question everything\"\n\n#BetrayalInTheDMs",
-      "video_url": "https://youtube.com/shorts/n2b8dzB2o4U",
-      "publish_at": "2026-09-28T21:46:53Z"
+      "stage": "generating",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 1,
       "hour_et": 5,
-      "stage": "uploaded",
-      "title": "Face-to-face with the lie \ud83d\udc94 #betrayal",
-      "video_url": "https://youtube.com/shorts/heiHz78I1_A",
-      "publish_at": "2026-09-28T22:32:57Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 2,
       "hour_et": 6,
-      "stage": "uploaded",
-      "title": "I thought I had it all - a full-time nursing program, a loving boyfriend, and a ",
-      "video_url": "https://youtube.com/shorts/y01Z2oMs9ko",
-      "publish_at": "2026-09-28T23:05:28Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 3,
       "hour_et": 7,
-      "stage": "uploaded",
-      "title": "I was sipping wine and pretending to be a hostess, not a witness, when he asked ",
-      "video_url": "https://youtube.com/shorts/E-5DJbs8p5w",
-      "publish_at": "2026-09-28T23:37:41Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 4,
       "hour_et": 8,
-      "stage": "uploaded",
-      "title": "The Shot That Didn't Capture His True Face\"\n\n#POV #CrushConfession",
-      "video_url": "https://youtube.com/shorts/vdU4_lUqQ3I",
-      "publish_at": "2026-09-28T23:53:01Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 5,
       "hour_et": 9,
-      "stage": "uploaded",
-      "title": "I'll never forget the way he smiled at me, like he was the only one in the coffe",
-      "video_url": "https://youtube.com/shorts/c7exmyfn9zk",
-      "publish_at": "2026-09-29T01:05:25Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     }
   ]
 }
