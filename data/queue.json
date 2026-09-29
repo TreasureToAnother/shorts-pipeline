@@ -36,10 +36,10 @@
     {
       "slot": 4,
       "hour_et": 8,
-      "stage": "generating",
-      "title": null,
-      "video_url": null,
-      "publish_at": null
+      "stage": "uploaded",
+      "title": "I've been sitting next to him for weeks, trying to muster the courage to say any",
+      "video_url": "https://youtube.com/shorts/-kaM0VzM514",
+      "publish_at": "2026-09-29T22:09:32Z"
     },
     {
       "slot": 5,
