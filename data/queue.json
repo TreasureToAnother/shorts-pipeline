@@ -44,10 +44,10 @@
     {
       "slot": 5,
       "hour_et": 9,
-      "stage": "generating",
-      "title": null,
-      "video_url": null,
-      "publish_at": null
+      "stage": "uploaded",
+      "title": "I couldn't stop smiling as I took his picture - the way the sunlight danced thro",
+      "video_url": "https://youtube.com/shorts/ehKEIAKobDM",
+      "publish_at": "2026-09-29T23:34:47Z"
     }
   ]
 }
