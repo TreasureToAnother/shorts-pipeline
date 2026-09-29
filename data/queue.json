@@ -28,10 +28,10 @@
     {
       "slot": 3,
       "hour_et": 7,
-      "stage": "generating",
-      "title": null,
-      "video_url": null,
-      "publish_at": null
+      "stage": "uploaded",
+      "title": "Meet the guy who crushed my hopes \ud83d\udc94",
+      "video_url": "https://youtube.com/shorts/G2kzrnZxLso",
+      "publish_at": "2026-09-29T21:55:08Z"
     },
     {
       "slot": 4,
