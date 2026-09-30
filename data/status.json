@@ -1,22 +1,22 @@
 {
   "script_agent": {
-    "status": "done",
-    "message": "generated: He's been hiding it from me all along",
-    "updated_at": "2026-09-30T15:02:22Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "video_agent": {
-    "status": "done",
-    "message": "/home/runner/work/shorts-pipeline/shorts-pipeline/agents/../data/output/ac2e6a6c.mp4",
-    "updated_at": "2026-09-30T15:03:38Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "upload_agent": {
-    "status": "done",
-    "message": "scheduled for 2026-09-30T20:03:39Z: https://youtube.com/shorts/poZgjqp4kMY",
-    "updated_at": "2026-09-30T15:03:43Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "discord_agent": {
-    "status": "done",
-    "message": "notified: He's been hiding it from me all along (scheduled 2026-09-30T20:03:39Z UTC)",
-    "updated_at": "2026-09-30T15:03:46Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   }
 }
