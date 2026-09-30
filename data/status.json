@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-09-30T16:20:46Z"
+    "status": "done",
+    "message": "generated: I was thrilled to be an intern at the most talked-about wedding of the season.",
+    "updated_at": "2026-09-30T16:21:49Z"
   },
   "video_agent": {
     "status": "idle",
