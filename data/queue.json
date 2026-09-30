@@ -4,10 +4,10 @@
     {
       "slot": 0,
       "hour_et": 4,
-      "stage": "generating",
-      "title": null,
-      "video_url": null,
-      "publish_at": null
+      "stage": "uploaded",
+      "title": "He's been hiding it from me all along",
+      "video_url": "https://youtube.com/shorts/poZgjqp4kMY",
+      "publish_at": "2026-09-30T20:03:39Z"
     },
     {
       "slot": 1,
