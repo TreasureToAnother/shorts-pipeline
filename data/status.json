@@ -1,22 +1,22 @@
 {
   "script_agent": {
-    "status": "done",
-    "message": "generated: I couldn't believe it when he agreed to go on a second date with me.",
-    "updated_at": "2026-09-30T15:47:59Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "video_agent": {
-    "status": "done",
-    "message": "/home/runner/work/shorts-pipeline/shorts-pipeline/agents/../data/output/ccbc1a94.mp4",
-    "updated_at": "2026-09-30T15:49:05Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "upload_agent": {
-    "status": "done",
-    "message": "scheduled for 2026-09-30T20:49:06Z: https://youtube.com/shorts/rpAvwbvsmhA",
-    "updated_at": "2026-09-30T15:49:09Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "discord_agent": {
-    "status": "done",
-    "message": "notified: I couldn't believe it when he agreed to go on a second date with me. (scheduled 2026-09-30T20:49:06Z UTC)",
-    "updated_at": "2026-09-30T15:49:12Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   }
 }
