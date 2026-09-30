@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-09-30T17:05:30Z"
+    "status": "done",
+    "message": "generated: The Red Flag I Saw That Night\" #POV",
+    "updated_at": "2026-09-30T17:06:08Z"
   },
   "video_agent": {
     "status": "idle",
