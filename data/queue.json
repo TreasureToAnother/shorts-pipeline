@@ -28,10 +28,10 @@
     {
       "slot": 3,
       "hour_et": 7,
-      "stage": "generating",
-      "title": null,
-      "video_url": null,
-      "publish_at": null
+      "stage": "uploaded",
+      "title": "I poured another round of beers for the partygoers at our college dorm's weekly ",
+      "video_url": "https://youtube.com/shorts/6dyfcUkkFAU",
+      "publish_at": "2026-09-30T21:50:20Z"
     },
     {
       "slot": 4,
