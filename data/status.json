@@ -1,22 +1,22 @@
 {
   "script_agent": {
-    "status": "done",
-    "message": "generated: I couldn't stop smiling as I took his picture - the way the sunlight danced thro",
-    "updated_at": "2026-09-29T18:33:34Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "video_agent": {
-    "status": "done",
-    "message": "/home/runner/work/shorts-pipeline/shorts-pipeline/agents/../data/output/a3da4c8a.mp4",
-    "updated_at": "2026-09-29T18:34:45Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "upload_agent": {
-    "status": "done",
-    "message": "scheduled for 2026-09-29T23:34:47Z: https://youtube.com/shorts/ehKEIAKobDM",
-    "updated_at": "2026-09-29T18:34:51Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "discord_agent": {
-    "status": "done",
-    "message": "notified: I couldn't stop smiling as I took his picture - the way the sunlight danced thro (scheduled 2026-09-29T23:34:47Z UTC)",
-    "updated_at": "2026-09-29T18:34:55Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   }
 }
