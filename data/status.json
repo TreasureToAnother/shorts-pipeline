@@ -10,9 +10,9 @@
     "updated_at": "2026-09-30T15:49:05Z"
   },
   "upload_agent": {
-    "status": "running",
-    "message": "uploading ccbc1a94.mp4",
-    "updated_at": "2026-09-30T15:49:06Z"
+    "status": "done",
+    "message": "scheduled for 2026-09-30T20:49:06Z: https://youtube.com/shorts/rpAvwbvsmhA",
+    "updated_at": "2026-09-30T15:49:09Z"
   },
   "discord_agent": {
     "status": "idle",
