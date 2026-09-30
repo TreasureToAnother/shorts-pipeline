@@ -44,10 +44,10 @@
     {
       "slot": 5,
       "hour_et": 9,
-      "stage": "generating",
-      "title": null,
-      "video_url": null,
-      "publish_at": null
+      "stage": "uploaded",
+      "title": "I still remember the way he smiled at me behind the counter, the way his eyes cr",
+      "video_url": "https://youtube.com/shorts/HVeug_Mpogc",
+      "publish_at": "2026-09-30T23:21:47Z"
     }
   ]
 }
