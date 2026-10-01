@@ -20,10 +20,10 @@
     {
       "slot": 2,
       "hour_et": 6,
-      "stage": "generating",
-      "title": null,
-      "video_url": null,
-      "publish_at": null
+      "stage": "uploaded",
+      "title": "Rachel's secret confession \ud83d\udcdd",
+      "video_url": "https://youtube.com/shorts/xUZSOmGJtHM",
+      "publish_at": "2026-10-01T22:30:48Z"
     },
     {
       "slot": 3,
