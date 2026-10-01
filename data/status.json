@@ -1,22 +1,22 @@
 {
   "script_agent": {
-    "status": "done",
-    "message": "generated: When the lens on my heart was already cracked \ud83d\udc94",
-    "updated_at": "2026-10-01T17:37:23Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "video_agent": {
-    "status": "done",
-    "message": "/home/runner/work/shorts-pipeline/shorts-pipeline/agents/../data/output/88185f77.mp4",
-    "updated_at": "2026-10-01T17:38:25Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "upload_agent": {
-    "status": "done",
-    "message": "scheduled for 2026-10-01T22:38:27Z: https://youtube.com/shorts/-KS6zeU9SuM",
-    "updated_at": "2026-10-01T17:38:30Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "discord_agent": {
-    "status": "done",
-    "message": "notified: When the lens on my heart was already cracked \ud83d\udc94 (scheduled 2026-10-01T22:38:27Z UTC)",
-    "updated_at": "2026-10-01T17:38:33Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   }
 }
