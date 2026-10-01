@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-10-01T17:28:54Z"
+    "status": "done",
+    "message": "generated: Rachel's secret confession \ud83d\udcdd",
+    "updated_at": "2026-10-01T17:29:33Z"
   },
   "video_agent": {
     "status": "idle",
