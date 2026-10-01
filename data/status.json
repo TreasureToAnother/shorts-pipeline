@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-10-01T15:33:16Z"
+    "status": "done",
+    "message": "generated: I can barely type this, my hands are shaking.",
+    "updated_at": "2026-10-01T15:33:50Z"
   },
   "video_agent": {
     "status": "idle",
