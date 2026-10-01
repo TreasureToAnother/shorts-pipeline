@@ -1,22 +1,22 @@
 {
   "script_agent": {
-    "status": "done",
-    "message": "generated: Rachel's secret project turned into a betrayal \ud83d\udc94 #BetrayalStory",
-    "updated_at": "2026-10-01T16:21:09Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "video_agent": {
-    "status": "done",
-    "message": "/home/runner/work/shorts-pipeline/shorts-pipeline/agents/../data/output/f6312030.mp4",
-    "updated_at": "2026-10-01T16:22:33Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "upload_agent": {
-    "status": "done",
-    "message": "scheduled for 2026-10-01T21:22:34Z: https://youtube.com/shorts/OG6YQ4ytKTg",
-    "updated_at": "2026-10-01T16:22:37Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "discord_agent": {
-    "status": "done",
-    "message": "notified: Rachel's secret project turned into a betrayal \ud83d\udc94 #BetrayalStory (scheduled 2026-10-01T21:22:34Z UTC)",
-    "updated_at": "2026-10-01T16:22:38Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   }
 }
