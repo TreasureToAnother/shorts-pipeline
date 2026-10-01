@@ -1,22 +1,22 @@
 {
   "script_agent": {
-    "status": "done",
-    "message": "generated: I can barely type this, my hands are shaking.",
-    "updated_at": "2026-10-01T15:33:50Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "video_agent": {
-    "status": "done",
-    "message": "/home/runner/work/shorts-pipeline/shorts-pipeline/agents/../data/output/78e844a3.mp4",
-    "updated_at": "2026-10-01T15:35:11Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "upload_agent": {
-    "status": "done",
-    "message": "scheduled for 2026-10-01T20:35:13Z: https://youtube.com/shorts/FiWzGxypP_Y",
-    "updated_at": "2026-10-01T15:35:16Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "discord_agent": {
-    "status": "done",
-    "message": "notified: I can barely type this, my hands are shaking. (scheduled 2026-10-01T20:35:13Z UTC)",
-    "updated_at": "2026-10-01T15:35:18Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   }
 }
