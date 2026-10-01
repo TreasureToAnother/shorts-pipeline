@@ -1,53 +1,53 @@
 {
-  "date": "2026-09-30",
+  "date": "2026-10-01",
   "slots": [
     {
       "slot": 0,
       "hour_et": 4,
-      "stage": "uploaded",
-      "title": "He's been hiding it from me all along",
-      "video_url": "https://youtube.com/shorts/poZgjqp4kMY",
-      "publish_at": "2026-09-30T20:03:39Z"
+      "stage": "generating",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 1,
       "hour_et": 5,
-      "stage": "uploaded",
-      "title": "I couldn't believe it when he agreed to go on a second date with me.",
-      "video_url": "https://youtube.com/shorts/rpAvwbvsmhA",
-      "publish_at": "2026-09-30T20:49:06Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 2,
       "hour_et": 6,
-      "stage": "uploaded",
-      "title": "I was thrilled to be an intern at the most talked-about wedding of the season.",
-      "video_url": "https://youtube.com/shorts/mqG-4X05ZBI",
-      "publish_at": "2026-09-30T21:23:21Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 3,
       "hour_et": 7,
-      "stage": "uploaded",
-      "title": "I poured another round of beers for the partygoers at our college dorm's weekly ",
-      "video_url": "https://youtube.com/shorts/6dyfcUkkFAU",
-      "publish_at": "2026-09-30T21:50:20Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 4,
       "hour_et": 8,
-      "stage": "uploaded",
-      "title": "The Red Flag I Saw That Night\" #POV",
-      "video_url": "https://youtube.com/shorts/q53ifVvtaxo",
-      "publish_at": "2026-09-30T22:07:22Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 5,
       "hour_et": 9,
-      "stage": "uploaded",
-      "title": "I still remember the way he smiled at me behind the counter, the way his eyes cr",
-      "video_url": "https://youtube.com/shorts/HVeug_Mpogc",
-      "publish_at": "2026-09-30T23:21:47Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     }
   ]
 }
