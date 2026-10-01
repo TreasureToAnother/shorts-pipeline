@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-10-01T18:45:21Z"
+    "status": "done",
+    "message": "generated: Date night turned into a secret admirer's confession \ud83d\udc94\" #StoryTime",
+    "updated_at": "2026-10-01T18:45:57Z"
   },
   "video_agent": {
     "status": "idle",
