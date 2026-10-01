@@ -15,8 +15,8 @@
     "updated_at": "2026-10-01T17:30:50Z"
   },
   "discord_agent": {
-    "status": "running",
-    "message": "posting upload notification",
-    "updated_at": "2026-10-01T17:30:52Z"
+    "status": "done",
+    "message": "notified: Rachel's secret confession \ud83d\udcdd (scheduled 2026-10-01T22:30:48Z UTC)",
+    "updated_at": "2026-10-01T17:30:53Z"
   }
 }
