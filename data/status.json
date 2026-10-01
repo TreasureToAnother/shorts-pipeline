@@ -1,22 +1,22 @@
 {
   "script_agent": {
-    "status": "done",
-    "message": "generated: Rachel's secret confession \ud83d\udcdd",
-    "updated_at": "2026-10-01T17:29:33Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "video_agent": {
-    "status": "done",
-    "message": "/home/runner/work/shorts-pipeline/shorts-pipeline/agents/../data/output/5bb1ba6c.mp4",
-    "updated_at": "2026-10-01T17:30:47Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "upload_agent": {
-    "status": "done",
-    "message": "scheduled for 2026-10-01T22:30:48Z: https://youtube.com/shorts/xUZSOmGJtHM",
-    "updated_at": "2026-10-01T17:30:50Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "discord_agent": {
-    "status": "done",
-    "message": "notified: Rachel's secret confession \ud83d\udcdd (scheduled 2026-10-01T22:30:48Z UTC)",
-    "updated_at": "2026-10-01T17:30:53Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   }
 }
