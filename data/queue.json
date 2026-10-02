@@ -1,45 +1,45 @@
 {
-  "date": "2026-10-01",
+  "date": "2026-10-02",
   "slots": [
     {
       "slot": 0,
       "hour_et": 4,
-      "stage": "uploaded",
-      "title": "I can barely type this, my hands are shaking.",
-      "video_url": "https://youtube.com/shorts/FiWzGxypP_Y",
-      "publish_at": "2026-10-01T20:35:13Z"
+      "stage": "generating",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 1,
       "hour_et": 5,
-      "stage": "uploaded",
-      "title": "Rachel's secret project turned into a betrayal \ud83d\udc94 #BetrayalStory",
-      "video_url": "https://youtube.com/shorts/OG6YQ4ytKTg",
-      "publish_at": "2026-10-01T21:22:34Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 2,
       "hour_et": 6,
-      "stage": "uploaded",
-      "title": "Rachel's secret confession \ud83d\udcdd",
-      "video_url": "https://youtube.com/shorts/xUZSOmGJtHM",
-      "publish_at": "2026-10-01T22:30:48Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 3,
       "hour_et": 7,
-      "stage": "uploaded",
-      "title": "When the lens on my heart was already cracked \ud83d\udc94",
-      "video_url": "https://youtube.com/shorts/-KS6zeU9SuM",
-      "publish_at": "2026-10-01T22:38:27Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 4,
       "hour_et": 8,
-      "stage": "uploaded",
-      "title": "Date night turned into a secret admirer's confession \ud83d\udc94\" #StoryTime",
-      "video_url": "https://youtube.com/shorts/gbeNwb87GmU",
-      "publish_at": "2026-10-01T23:47:09Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 5,
