@@ -10,9 +10,9 @@
     "updated_at": "2026-10-02T16:39:34Z"
   },
   "upload_agent": {
-    "status": "running",
-    "message": "uploading cd3a2038.mp4",
-    "updated_at": "2026-10-02T16:39:35Z"
+    "status": "done",
+    "message": "scheduled for 2026-10-02T21:39:35Z: https://youtube.com/shorts/H_kb7o8i9L4",
+    "updated_at": "2026-10-02T16:39:39Z"
   },
   "discord_agent": {
     "status": "idle",
