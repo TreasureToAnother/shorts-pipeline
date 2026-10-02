@@ -1,22 +1,22 @@
 {
   "script_agent": {
-    "status": "done",
-    "message": "generated: Date night turned into a secret admirer's confession \ud83d\udc94\" #StoryTime",
-    "updated_at": "2026-10-01T18:45:57Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "video_agent": {
-    "status": "done",
-    "message": "/home/runner/work/shorts-pipeline/shorts-pipeline/agents/../data/output/5e38f8d4.mp4",
-    "updated_at": "2026-10-01T18:47:08Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "upload_agent": {
-    "status": "done",
-    "message": "scheduled for 2026-10-01T23:47:09Z: https://youtube.com/shorts/gbeNwb87GmU",
-    "updated_at": "2026-10-01T18:47:12Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "discord_agent": {
-    "status": "done",
-    "message": "notified: Date night turned into a secret admirer's confession \ud83d\udc94\" #StoryTime (scheduled 2026-10-01T23:47:09Z UTC)",
-    "updated_at": "2026-10-01T18:47:15Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   }
 }
