@@ -1,22 +1,22 @@
 {
   "script_agent": {
-    "status": "done",
-    "message": "generated: I stepped off the bus and into the summer camp, the smell of s'mores and sweat h",
-    "updated_at": "2026-10-02T16:37:44Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "video_agent": {
-    "status": "done",
-    "message": "/home/runner/work/shorts-pipeline/shorts-pipeline/agents/../data/output/cd3a2038.mp4",
-    "updated_at": "2026-10-02T16:39:34Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "upload_agent": {
-    "status": "done",
-    "message": "scheduled for 2026-10-02T21:39:35Z: https://youtube.com/shorts/H_kb7o8i9L4",
-    "updated_at": "2026-10-02T16:39:39Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "discord_agent": {
-    "status": "done",
-    "message": "notified: I stepped off the bus and into the summer camp, the smell of s'mores and sweat h (scheduled 2026-10-02T21:39:35Z UTC)",
-    "updated_at": "2026-10-02T16:39:41Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   }
 }
