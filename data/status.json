@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-10-02T14:43:03Z"
+    "status": "done",
+    "message": "generated: I'll never forget the summer I spent as an intern, driving across the country wi",
+    "updated_at": "2026-10-02T14:43:45Z"
   },
   "video_agent": {
     "status": "idle",
