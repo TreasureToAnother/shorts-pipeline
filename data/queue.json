@@ -20,10 +20,10 @@
     {
       "slot": 2,
       "hour_et": 6,
-      "stage": "generating",
-      "title": null,
-      "video_url": null,
-      "publish_at": null
+      "stage": "uploaded",
+      "title": "I was rummaging through the messy drawers in our shared apartment, searching for",
+      "video_url": "https://youtube.com/shorts/4eJxcZ0KQcw",
+      "publish_at": "2026-10-02T21:12:57Z"
     },
     {
       "slot": 3,
