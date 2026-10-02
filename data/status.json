@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-10-02T16:36:53Z"
+    "status": "done",
+    "message": "generated: I stepped off the bus and into the summer camp, the smell of s'mores and sweat h",
+    "updated_at": "2026-10-02T16:37:44Z"
   },
   "video_agent": {
     "status": "idle",
