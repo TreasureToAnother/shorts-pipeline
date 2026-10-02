@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-10-02T15:36:56Z"
+    "status": "done",
+    "message": "generated: I stared at the screen, my heart racing as I scrolled through the group chat.",
+    "updated_at": "2026-10-02T15:37:23Z"
   },
   "video_agent": {
     "status": "idle",
