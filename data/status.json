@@ -10,9 +10,9 @@
     "updated_at": "2026-10-03T15:11:18Z"
   },
   "upload_agent": {
-    "status": "running",
-    "message": "uploading e87ed230.mp4",
-    "updated_at": "2026-10-03T15:11:19Z"
+    "status": "error",
+    "message": "<HttpError 409 when requesting None returned \"Requested entity already exists\". Details: \"[{'message': 'Requested entity already exists', 'domain': 'global', 'reason': 'alreadyExists'}]\">",
+    "updated_at": "2026-10-03T15:11:24Z"
   },
   "discord_agent": {
     "status": "idle",
