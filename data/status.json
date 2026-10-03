@@ -15,8 +15,8 @@
     "updated_at": "2026-10-03T14:40:24Z"
   },
   "discord_agent": {
-    "status": "running",
-    "message": "posting upload notification",
-    "updated_at": "2026-10-03T14:40:25Z"
+    "status": "done",
+    "message": "notified: I've been searching for answers for weeks, but they're always just out of reach. (scheduled 2026-10-03T19:40:21Z UTC)",
+    "updated_at": "2026-10-03T14:40:27Z"
   }
 }
