@@ -44,10 +44,10 @@
     {
       "slot": 5,
       "hour_et": 9,
-      "stage": "generating",
-      "title": null,
-      "video_url": null,
-      "publish_at": null
+      "stage": "uploaded",
+      "title": "I poured my heart into that group project, pouring steaming cups of coffee for m",
+      "video_url": "https://youtube.com/shorts/O1Fxh-Lofx4",
+      "publish_at": "2026-10-03T18:21:21Z"
     }
   ]
 }
