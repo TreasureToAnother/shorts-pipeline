@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-10-03T17:04:12Z"
+    "status": "done",
+    "message": "generated: I thought I knew the perfect guy, the one I'd swoon over on a road trip with fri",
+    "updated_at": "2026-10-03T17:04:53Z"
   },
   "video_agent": {
     "status": "idle",
