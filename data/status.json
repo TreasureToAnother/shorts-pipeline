@@ -1,22 +1,22 @@
 {
   "script_agent": {
-    "status": "done",
-    "message": "generated: I poured my heart into that group project, pouring steaming cups of coffee for m",
-    "updated_at": "2026-10-03T13:19:46Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "video_agent": {
-    "status": "done",
-    "message": "/home/runner/work/shorts-pipeline/shorts-pipeline/agents/../data/output/957ccbe7.mp4",
-    "updated_at": "2026-10-03T13:21:20Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "upload_agent": {
-    "status": "done",
-    "message": "scheduled for 2026-10-03T18:21:21Z: https://youtube.com/shorts/O1Fxh-Lofx4",
-    "updated_at": "2026-10-03T13:21:24Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "discord_agent": {
-    "status": "done",
-    "message": "notified: I poured my heart into that group project, pouring steaming cups of coffee for m (scheduled 2026-10-03T18:21:21Z UTC)",
-    "updated_at": "2026-10-03T13:21:26Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   }
 }
