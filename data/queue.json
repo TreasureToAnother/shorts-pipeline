@@ -1,53 +1,53 @@
 {
-  "date": "2026-10-02",
+  "date": "2026-10-03",
   "slots": [
     {
       "slot": 0,
       "hour_et": 4,
-      "stage": "uploaded",
-      "title": "I'll never forget the summer I spent as an intern, driving across the country wi",
-      "video_url": "https://youtube.com/shorts/xF8u30rWwSk",
-      "publish_at": "2026-10-02T19:44:53Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 1,
       "hour_et": 5,
-      "stage": "uploaded",
-      "title": "I stared at the screen, my heart racing as I scrolled through the group chat.",
-      "video_url": "https://youtube.com/shorts/sMHzFao1wDo",
-      "publish_at": "2026-10-02T20:38:38Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 2,
       "hour_et": 6,
-      "stage": "uploaded",
-      "title": "I was rummaging through the messy drawers in our shared apartment, searching for",
-      "video_url": "https://youtube.com/shorts/4eJxcZ0KQcw",
-      "publish_at": "2026-10-02T21:12:57Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 3,
       "hour_et": 7,
-      "stage": "uploaded",
-      "title": "I stepped off the bus and into the summer camp, the smell of s'mores and sweat h",
-      "video_url": "https://youtube.com/shorts/H_kb7o8i9L4",
-      "publish_at": "2026-10-02T21:39:35Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 4,
       "hour_et": 8,
-      "stage": "uploaded",
-      "title": "I wrote his name on the mirror, then he walked in\"\n\n#BetrayalAtHome",
-      "video_url": "https://youtube.com/shorts/tC0X_aIYH-w",
-      "publish_at": "2026-10-02T21:56:18Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 5,
       "hour_et": 9,
-      "stage": "uploaded",
-      "title": "I couldn't stop thinking about him, the guy who always orders a venti iced coffe",
-      "video_url": "https://youtube.com/shorts/aH5eDYWMQ4o",
-      "publish_at": "2026-10-02T23:18:45Z"
+      "stage": "generating",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     }
   ]
 }
