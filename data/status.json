@@ -1,22 +1,22 @@
 {
   "script_agent": {
-    "status": "done",
-    "message": "generated: I've been searching for answers for weeks, but they're always just out of reach.",
-    "updated_at": "2026-10-03T14:38:59Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "video_agent": {
-    "status": "done",
-    "message": "/home/runner/work/shorts-pipeline/shorts-pipeline/agents/../data/output/7cd923b0.mp4",
-    "updated_at": "2026-10-03T14:40:19Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "upload_agent": {
-    "status": "done",
-    "message": "scheduled for 2026-10-03T19:40:21Z: https://youtube.com/shorts/ldiaZ0x-uLw",
-    "updated_at": "2026-10-03T14:40:24Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "discord_agent": {
-    "status": "done",
-    "message": "notified: I've been searching for answers for weeks, but they're always just out of reach. (scheduled 2026-10-03T19:40:21Z UTC)",
-    "updated_at": "2026-10-03T14:40:27Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   }
 }
