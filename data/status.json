@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-10-04T13:54:37Z"
+    "status": "done",
+    "message": "generated: I'm standing at the hostess stand, watching the party unfold.",
+    "updated_at": "2026-10-04T13:55:17Z"
   },
   "video_agent": {
     "status": "idle",
