@@ -1,26 +1,26 @@
 {
-  "date": "2026-10-03",
+  "date": "2026-10-04",
   "slots": [
     {
       "slot": 0,
       "hour_et": 4,
-      "stage": "uploaded",
-      "title": "I still remember the day our group project fell apart, and not just because of o",
-      "video_url": "https://youtube.com/shorts/zW-1wUb6i8Y",
-      "publish_at": "2026-10-03T19:18:19Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 1,
       "hour_et": 5,
-      "stage": "uploaded",
-      "title": "I've been searching for answers for weeks, but they're always just out of reach.",
-      "video_url": "https://youtube.com/shorts/ldiaZ0x-uLw",
-      "publish_at": "2026-10-03T19:40:21Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 2,
       "hour_et": 6,
-      "stage": "error",
+      "stage": "pending",
       "title": null,
       "video_url": null,
       "publish_at": null
@@ -28,26 +28,26 @@
     {
       "slot": 3,
       "hour_et": 7,
-      "stage": "uploaded",
-      "title": "Red flag: he's not the only one I've been hiding from \ud83d\ude33",
-      "video_url": "https://youtube.com/shorts/mHx1TAvoUqw",
-      "publish_at": "2026-10-03T20:21:52Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 4,
       "hour_et": 8,
-      "stage": "uploaded",
-      "title": "I thought I knew the perfect guy, the one I'd swoon over on a road trip with fri",
-      "video_url": "https://youtube.com/shorts/1NWQA_Catnw",
-      "publish_at": "2026-10-03T22:06:09Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 5,
       "hour_et": 9,
-      "stage": "uploaded",
-      "title": "I poured my heart into that group project, pouring steaming cups of coffee for m",
-      "video_url": "https://youtube.com/shorts/O1Fxh-Lofx4",
-      "publish_at": "2026-10-03T18:21:21Z"
+      "stage": "generating",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     }
   ]
 }
