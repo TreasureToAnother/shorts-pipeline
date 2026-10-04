@@ -1,22 +1,22 @@
 {
   "script_agent": {
-    "status": "done",
-    "message": "generated: She texted him right after I said goodbye \ud83d\udc94",
-    "updated_at": "2026-10-04T15:46:50Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "video_agent": {
-    "status": "done",
-    "message": "/home/runner/work/shorts-pipeline/shorts-pipeline/agents/../data/output/c9578468.mp4",
-    "updated_at": "2026-10-04T15:48:19Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "upload_agent": {
-    "status": "done",
-    "message": "scheduled for 2026-10-04T20:48:20Z: https://youtube.com/shorts/_FBkXziCDp8",
-    "updated_at": "2026-10-04T15:48:23Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "discord_agent": {
-    "status": "done",
-    "message": "notified: She texted him right after I said goodbye \ud83d\udc94 (scheduled 2026-10-04T20:48:20Z UTC)",
-    "updated_at": "2026-10-04T15:48:26Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   }
 }
