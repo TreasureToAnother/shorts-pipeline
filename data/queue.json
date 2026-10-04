@@ -44,10 +44,10 @@
     {
       "slot": 5,
       "hour_et": 9,
-      "stage": "generating",
-      "title": null,
-      "video_url": null,
-      "publish_at": null
+      "stage": "uploaded",
+      "title": "I'm standing at the hostess stand, watching the party unfold.",
+      "video_url": "https://youtube.com/shorts/_7-uTDbxDl8",
+      "publish_at": "2026-10-04T18:56:29Z"
     }
   ]
 }
