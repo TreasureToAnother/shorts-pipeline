@@ -1,22 +1,22 @@
 {
   "script_agent": {
-    "status": "done",
-    "message": "generated: I pour steaming hot coffee into a waiting cup, my mind a million miles away.",
-    "updated_at": "2026-10-04T14:45:04Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "video_agent": {
-    "status": "done",
-    "message": "/home/runner/work/shorts-pipeline/shorts-pipeline/agents/../data/output/c8045470.mp4",
-    "updated_at": "2026-10-04T14:45:51Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "upload_agent": {
-    "status": "done",
-    "message": "scheduled for 2026-10-04T19:45:52Z: https://youtube.com/shorts/1-Uzs7ysd0Q",
-    "updated_at": "2026-10-04T14:45:55Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "discord_agent": {
-    "status": "done",
-    "message": "notified: I pour steaming hot coffee into a waiting cup, my mind a million miles away. (scheduled 2026-10-04T19:45:52Z UTC)",
-    "updated_at": "2026-10-04T14:45:57Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   }
 }
