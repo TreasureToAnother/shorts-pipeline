@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-10-05T21:02:55Z"
+    "status": "done",
+    "message": "generated: His eyes locked onto hers, but I saw the truth\"\n\n#BetrayalAtTheClub",
+    "updated_at": "2026-10-05T21:03:30Z"
   },
   "video_agent": {
     "status": "idle",
