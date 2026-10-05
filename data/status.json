@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-10-05T18:11:42Z"
+    "status": "done",
+    "message": "generated: I thought we were in this together, best friend Emma and me, at Sarah's birthday",
+    "updated_at": "2026-10-05T18:12:24Z"
   },
   "video_agent": {
     "status": "idle",
