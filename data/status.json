@@ -1,22 +1,22 @@
 {
   "script_agent": {
-    "status": "done",
-    "message": "generated: I pour steaming hot coffee into a worn-out cup, the steam rising like my anxiety",
-    "updated_at": "2026-10-04T17:23:17Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "video_agent": {
-    "status": "done",
-    "message": "/home/runner/work/shorts-pipeline/shorts-pipeline/agents/../data/output/3bd5f541.mp4",
-    "updated_at": "2026-10-04T17:24:56Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "upload_agent": {
-    "status": "done",
-    "message": "scheduled for 2026-10-04T22:24:57Z: https://youtube.com/shorts/BDW4q2Emaaw",
-    "updated_at": "2026-10-04T17:25:00Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "discord_agent": {
-    "status": "done",
-    "message": "notified: I pour steaming hot coffee into a worn-out cup, the steam rising like my anxiety (scheduled 2026-10-04T22:24:57Z UTC)",
-    "updated_at": "2026-10-04T17:25:03Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   }
 }
