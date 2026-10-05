@@ -4,10 +4,10 @@
     {
       "slot": 0,
       "hour_et": 4,
-      "stage": "generating",
-      "title": null,
-      "video_url": null,
-      "publish_at": null
+      "stage": "uploaded",
+      "title": "I've been crushing on Alex since our group project presentation, where I spilled",
+      "video_url": "https://youtube.com/shorts/NW1yMehHiZ0",
+      "publish_at": "2026-10-05T22:08:28Z"
     },
     {
       "slot": 1,
