@@ -1,53 +1,53 @@
 {
-  "date": "2026-10-04",
+  "date": "2026-10-05",
   "slots": [
     {
       "slot": 0,
       "hour_et": 4,
-      "stage": "uploaded",
-      "title": "I pour steaming hot coffee into a waiting cup, my mind a million miles away.",
-      "video_url": "https://youtube.com/shorts/1-Uzs7ysd0Q",
-      "publish_at": "2026-10-04T19:45:52Z"
+      "stage": "generating",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 1,
       "hour_et": 5,
-      "stage": "uploaded",
-      "title": "I'll never forget the day I sent him that text - a casual \"hey, long time no tal",
-      "video_url": "https://youtube.com/shorts/F5BLh0npjQg",
-      "publish_at": "2026-10-04T20:16:14Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 2,
       "hour_et": 6,
-      "stage": "uploaded",
-      "title": "She texted him right after I said goodbye \ud83d\udc94",
-      "video_url": "https://youtube.com/shorts/_FBkXziCDp8",
-      "publish_at": "2026-10-04T20:48:20Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 3,
       "hour_et": 7,
-      "stage": "uploaded",
-      "title": "\ud83d\udcf1 The truth I wasn't supposed to see\" #BetrayalAlert",
-      "video_url": "https://youtube.com/shorts/uA3zA9KzrV8",
-      "publish_at": "2026-10-04T21:05:02Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 4,
       "hour_et": 8,
-      "stage": "uploaded",
-      "title": "I pour steaming hot coffee into a worn-out cup, the steam rising like my anxiety",
-      "video_url": "https://youtube.com/shorts/BDW4q2Emaaw",
-      "publish_at": "2026-10-04T22:24:57Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 5,
       "hour_et": 9,
-      "stage": "uploaded",
-      "title": "I'm standing at the hostess stand, watching the party unfold.",
-      "video_url": "https://youtube.com/shorts/_7-uTDbxDl8",
-      "publish_at": "2026-10-04T18:56:29Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     }
   ]
 }
