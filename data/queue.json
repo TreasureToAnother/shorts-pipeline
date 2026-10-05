@@ -12,10 +12,10 @@
     {
       "slot": 1,
       "hour_et": 5,
-      "stage": "generating",
-      "title": null,
-      "video_url": null,
-      "publish_at": null
+      "stage": "uploaded",
+      "title": "I thought we were in this together, best friend Emma and me, at Sarah's birthday",
+      "video_url": "https://youtube.com/shorts/vIkEeoXUIsw",
+      "publish_at": "2026-10-05T23:13:34Z"
     },
     {
       "slot": 2,
