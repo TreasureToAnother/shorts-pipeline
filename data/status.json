@@ -1,22 +1,22 @@
 {
   "script_agent": {
-    "status": "done",
-    "message": "generated: His eyes locked onto hers, but I saw the truth\"\n\n#BetrayalAtTheClub",
-    "updated_at": "2026-10-05T21:03:30Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "video_agent": {
-    "status": "done",
-    "message": "/home/runner/work/shorts-pipeline/shorts-pipeline/agents/../data/output/d15caaed.mp4",
-    "updated_at": "2026-10-05T21:04:44Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "upload_agent": {
-    "status": "done",
-    "message": "scheduled for 2026-10-06T02:04:45Z: https://youtube.com/shorts/GjTBFv6flFk",
-    "updated_at": "2026-10-05T21:04:48Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "discord_agent": {
-    "status": "done",
-    "message": "notified: His eyes locked onto hers, but I saw the truth\"\n\n#BetrayalAtTheClub (scheduled 2026-10-06T02:04:45Z UTC)",
-    "updated_at": "2026-10-05T21:04:51Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   }
 }
