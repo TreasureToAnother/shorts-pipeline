@@ -4,10 +4,10 @@
     {
       "slot": 0,
       "hour_et": 4,
-      "stage": "generating",
-      "title": null,
-      "video_url": null,
-      "publish_at": null
+      "stage": "uploaded",
+      "title": "I'll never forget the night that text changed everything.",
+      "video_url": "https://youtube.com/shorts/CyWbmuxY22Q",
+      "publish_at": "2026-10-06T20:03:29Z"
     },
     {
       "slot": 1,
