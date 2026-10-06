@@ -10,9 +10,9 @@
     "updated_at": "2026-10-06T17:32:25Z"
   },
   "upload_agent": {
-    "status": "running",
-    "message": "uploading a2be0bab.mp4",
-    "updated_at": "2026-10-06T17:32:26Z"
+    "status": "done",
+    "message": "scheduled for 2026-10-06T22:32:26Z: https://youtube.com/shorts/RN--ST20xNI",
+    "updated_at": "2026-10-06T17:32:29Z"
   },
   "discord_agent": {
     "status": "idle",
