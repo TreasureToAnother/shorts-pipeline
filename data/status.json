@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-10-06T18:51:17Z"
+    "status": "done",
+    "message": "generated: \ud83d\udcdd I found my boyfriend's secret - and it's the last thing I needed to know\" #betrayal",
+    "updated_at": "2026-10-06T18:51:42Z"
   },
   "video_agent": {
     "status": "idle",
