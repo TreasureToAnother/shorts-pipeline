@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-10-07T18:11:19Z"
+    "status": "done",
+    "message": "generated: I couldn't help but notice him across the crowded room, his eyes locked on mine ",
+    "updated_at": "2026-10-07T18:12:05Z"
   },
   "video_agent": {
     "status": "idle",
