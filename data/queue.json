@@ -36,10 +36,10 @@
     {
       "slot": 4,
       "hour_et": 8,
-      "stage": "generating",
-      "title": null,
-      "video_url": null,
-      "publish_at": null
+      "stage": "uploaded",
+      "title": "I'll never forget the summer I spent at Camp Willow Creek, where the lake sparkl",
+      "video_url": "https://youtube.com/shorts/XZ7dVZC3ISA",
+      "publish_at": "2026-10-08T00:18:55Z"
     },
     {
       "slot": 5,
