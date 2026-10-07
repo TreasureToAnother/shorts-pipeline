@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-10-07T15:35:57Z"
+    "status": "done",
+    "message": "generated: I thought our long-distance relationship was strong enough to withstand anything",
+    "updated_at": "2026-10-07T15:36:40Z"
   },
   "video_agent": {
     "status": "idle",
