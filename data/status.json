@@ -15,8 +15,8 @@
     "updated_at": "2026-10-07T17:48:28Z"
   },
   "discord_agent": {
-    "status": "running",
-    "message": "posting upload notification",
-    "updated_at": "2026-10-07T17:48:29Z"
+    "status": "done",
+    "message": "notified: He came back to me, but with a warning (scheduled 2026-10-07T22:48:24Z UTC)",
+    "updated_at": "2026-10-07T17:48:30Z"
   }
 }
