@@ -1,53 +1,53 @@
 {
-  "date": "2026-10-06",
+  "date": "2026-10-07",
   "slots": [
     {
       "slot": 0,
       "hour_et": 4,
-      "stage": "uploaded",
-      "title": "I'll never forget the night that text changed everything.",
-      "video_url": "https://youtube.com/shorts/CyWbmuxY22Q",
-      "publish_at": "2026-10-06T20:03:29Z"
+      "stage": "generating",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 1,
       "hour_et": 5,
-      "stage": "uploaded",
-      "title": "I wiped down the counter for what felt like the hundredth time, my mind still re",
-      "video_url": "https://youtube.com/shorts/XOMFoqQKX0s",
-      "publish_at": "2026-10-06T20:53:29Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 2,
       "hour_et": 6,
-      "stage": "uploaded",
-      "title": "I watched as Sarah blew out the candles on her birthday cake, the warm glow of t",
-      "video_url": "https://youtube.com/shorts/3L89omFCNVc",
-      "publish_at": "2026-10-06T21:38:40Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 3,
       "hour_et": 7,
-      "stage": "uploaded",
-      "title": "His texts weren't just 'friendly' \ud83d\udcf1\" #POVStoryTime",
-      "video_url": "https://youtube.com/shorts/8Ydw0RQrZoE",
-      "publish_at": "2026-10-06T22:13:12Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 4,
       "hour_et": 8,
-      "stage": "uploaded",
-      "title": "I thought I'd found the one at the coffee shop.",
-      "video_url": "https://youtube.com/shorts/RN--ST20xNI",
-      "publish_at": "2026-10-06T22:32:26Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 5,
       "hour_et": 9,
-      "stage": "uploaded",
-      "title": "\ud83d\udcdd I found my boyfriend's secret - and it's the last thing I needed to know\" #betrayal",
-      "video_url": "https://youtube.com/shorts/xD6KJJInYdE",
-      "publish_at": "2026-10-06T23:52:47Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     }
   ]
 }
