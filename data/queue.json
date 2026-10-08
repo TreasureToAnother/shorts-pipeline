@@ -12,10 +12,10 @@
     {
       "slot": 1,
       "hour_et": 5,
-      "stage": "generating",
-      "title": null,
-      "video_url": null,
-      "publish_at": null
+      "stage": "uploaded",
+      "title": "I'm still reeling from the text that dropped during the wedding reception.",
+      "video_url": "https://youtube.com/shorts/nHZEZkRnlbE",
+      "publish_at": "2026-10-08T21:18:27Z"
     },
     {
       "slot": 2,
