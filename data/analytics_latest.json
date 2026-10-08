@@ -1,21 +1,41 @@
 {
-  "updated_at": "2026-10-08T16:22:24Z",
+  "updated_at": "2026-10-08T21:59:17Z",
   "channel": {
     "title": "Treasure To Another",
     "thumbnail": "https://yt3.ggpht.com/4iJRPFXBUDoj_XhTxdvPBJUbrheeqCvqcnlTcGzDHMocWRgdOwhDvE-26GhG7FemNVIeIG_hYQ=s88-c-k-c0x00ffffff-no-rj",
     "subscriberCount": 59,
-    "viewCount": 69218,
-    "videoCount": 192,
+    "viewCount": 70226,
+    "videoCount": 194,
     "subsThisMonth": 18,
-    "viewsThisMonth": 13156
+    "viewsThisMonth": 14164
   },
   "latestVideos": [
+    {
+      "id": "nHZEZkRnlbE",
+      "title": "subscribe for more fun stories #storytime #story",
+      "publishedAt": "2026-10-08T21:18:49Z",
+      "thumbnail": "https://i.ytimg.com/vi/nHZEZkRnlbE/mqdefault.jpg",
+      "views": 145,
+      "likes": 1,
+      "comments": 0,
+      "url": "https://youtube.com/shorts/nHZEZkRnlbE"
+    },
+    {
+      "id": "7ttgb5H-v6o",
+      "title": "subscribe for more fun stories #storytime #story",
+      "publishedAt": "2026-10-08T20:33:58Z",
+      "thumbnail": "https://i.ytimg.com/vi/7ttgb5H-v6o/mqdefault.jpg",
+      "views": 184,
+      "likes": 4,
+      "comments": 0,
+      "url": "https://youtube.com/shorts/7ttgb5H-v6o"
+    },
     {
       "id": "XZ7dVZC3ISA",
       "title": "subscribe for more fun stories #storytime #story",
       "publishedAt": "2026-10-08T00:19:25Z",
       "thumbnail": "https://i.ytimg.com/vi/XZ7dVZC3ISA/mqdefault.jpg",
-      "views": 181,
+      "views": 220,
       "likes": 0,
       "comments": 0,
       "url": "https://youtube.com/shorts/XZ7dVZC3ISA"
@@ -25,7 +45,7 @@
       "title": "subscribe for more fun stories #storytime #story",
       "publishedAt": "2026-10-07T23:13:45Z",
       "thumbnail": "https://i.ytimg.com/vi/aNlwvuV4AD8/mqdefault.jpg",
-      "views": 122,
+      "views": 159,
       "likes": 2,
       "comments": 0,
       "url": "https://youtube.com/shorts/aNlwvuV4AD8"
@@ -35,30 +55,10 @@
       "title": "subscribe for more fun stories #storytime #story",
       "publishedAt": "2026-10-07T22:48:48Z",
       "thumbnail": "https://i.ytimg.com/vi/bO-WAgbnyyo/mqdefault.jpg",
-      "views": 63,
+      "views": 85,
       "likes": 2,
       "comments": 0,
       "url": "https://youtube.com/shorts/bO-WAgbnyyo"
-    },
-    {
-      "id": "1_8XNKtqMdc",
-      "title": "subscribe for more fun stories #storytime #story",
-      "publishedAt": "2026-10-07T22:26:13Z",
-      "thumbnail": "https://i.ytimg.com/vi/1_8XNKtqMdc/mqdefault.jpg",
-      "views": 113,
-      "likes": 1,
-      "comments": 0,
-      "url": "https://youtube.com/shorts/1_8XNKtqMdc"
-    },
-    {
-      "id": "djPtnIgNVAo",
-      "title": "subscribe for more fun stories #storytime #story",
-      "publishedAt": "2026-10-07T20:38:28Z",
-      "thumbnail": "https://i.ytimg.com/vi/djPtnIgNVAo/mqdefault.jpg",
-      "views": 652,
-      "likes": 6,
-      "comments": 0,
-      "url": "https://youtube.com/shorts/djPtnIgNVAo"
     }
   ]
 }
