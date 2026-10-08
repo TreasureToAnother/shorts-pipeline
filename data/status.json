@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-10-08T16:16:47Z"
+    "status": "done",
+    "message": "generated: I'm still reeling from the text that dropped during the wedding reception.",
+    "updated_at": "2026-10-08T16:17:25Z"
   },
   "video_agent": {
     "status": "idle",
