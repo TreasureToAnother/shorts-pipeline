@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-10-08T19:13:47Z"
+    "status": "done",
+    "message": "generated: I click my camera's shutter, capturing the perfect shot of us laughing together.",
+    "updated_at": "2026-10-08T19:14:20Z"
   },
   "video_agent": {
     "status": "idle",
