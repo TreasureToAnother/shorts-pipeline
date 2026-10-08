@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-10-08T17:19:14Z"
+    "status": "done",
+    "message": "generated: \ud83d\udcdd The moment I realized I was being lied to",
+    "updated_at": "2026-10-08T17:20:06Z"
   },
   "video_agent": {
     "status": "idle",
