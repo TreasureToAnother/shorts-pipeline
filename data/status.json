@@ -15,8 +15,8 @@
     "updated_at": "2026-10-08T19:15:38Z"
   },
   "discord_agent": {
-    "status": "running",
-    "message": "posting upload notification",
-    "updated_at": "2026-10-08T19:15:39Z"
+    "status": "done",
+    "message": "notified: I click my camera's shutter, capturing the perfect shot of us laughing together. (scheduled 2026-10-09T00:15:34Z UTC)",
+    "updated_at": "2026-10-08T19:15:41Z"
   }
 }
