@@ -1,45 +1,45 @@
 {
-  "date": "2026-10-07",
+  "date": "2026-10-08",
   "slots": [
     {
       "slot": 0,
       "hour_et": 4,
-      "stage": "uploaded",
-      "title": "I thought our long-distance relationship was strong enough to withstand anything",
-      "video_url": "https://youtube.com/shorts/djPtnIgNVAo",
-      "publish_at": "2026-10-07T20:38:01Z"
+      "stage": "generating",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 1,
       "hour_et": 5,
-      "stage": "uploaded",
-      "title": "I'll never forget the road trip where everything fell apart.",
-      "video_url": "https://youtube.com/shorts/1_8XNKtqMdc",
-      "publish_at": "2026-10-07T22:25:42Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 2,
       "hour_et": 6,
-      "stage": "uploaded",
-      "title": "He came back to me, but with a warning",
-      "video_url": "https://youtube.com/shorts/bO-WAgbnyyo",
-      "publish_at": "2026-10-07T22:48:24Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 3,
       "hour_et": 7,
-      "stage": "uploaded",
-      "title": "I couldn't help but notice him across the crowded room, his eyes locked on mine ",
-      "video_url": "https://youtube.com/shorts/aNlwvuV4AD8",
-      "publish_at": "2026-10-07T23:13:27Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 4,
       "hour_et": 8,
-      "stage": "uploaded",
-      "title": "I'll never forget the summer I spent at Camp Willow Creek, where the lake sparkl",
-      "video_url": "https://youtube.com/shorts/XZ7dVZC3ISA",
-      "publish_at": "2026-10-08T00:18:55Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 5,
