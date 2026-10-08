@@ -44,10 +44,10 @@
     {
       "slot": 5,
       "hour_et": 9,
-      "stage": "generating",
-      "title": null,
-      "video_url": null,
-      "publish_at": null
+      "stage": "uploaded",
+      "title": "I click my camera's shutter, capturing the perfect shot of us laughing together.",
+      "video_url": "https://youtube.com/shorts/LDj4u3WhIhw",
+      "publish_at": "2026-10-09T00:15:34Z"
     }
   ]
 }
