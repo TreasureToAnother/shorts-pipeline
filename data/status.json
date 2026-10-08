@@ -15,8 +15,8 @@
     "updated_at": "2026-10-08T17:22:32Z"
   },
   "discord_agent": {
-    "status": "running",
-    "message": "posting upload notification",
-    "updated_at": "2026-10-08T17:22:34Z"
+    "status": "done",
+    "message": "notified: \ud83d\udcdd The moment I realized I was being lied to (scheduled 2026-10-08T22:22:27Z UTC)",
+    "updated_at": "2026-10-08T17:22:35Z"
   }
 }
