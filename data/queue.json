@@ -20,10 +20,10 @@
     {
       "slot": 2,
       "hour_et": 6,
-      "stage": "generating",
-      "title": null,
-      "video_url": null,
-      "publish_at": null
+      "stage": "uploaded",
+      "title": "\ud83d\udcdd The moment I realized I was being lied to",
+      "video_url": "https://youtube.com/shorts/HXa2ecn6c48",
+      "publish_at": "2026-10-08T22:22:27Z"
     },
     {
       "slot": 3,
