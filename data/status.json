@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-10-08T15:31:36Z"
+    "status": "done",
+    "message": "generated: I thought I had it all figured out - the perfect summer crush.",
+    "updated_at": "2026-10-08T15:32:14Z"
   },
   "video_agent": {
     "status": "idle",
