@@ -1,22 +1,22 @@
 {
   "script_agent": {
-    "status": "done",
-    "message": "generated: \ud83d\udcdd The moment I realized I was being lied to",
-    "updated_at": "2026-10-08T17:20:06Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "video_agent": {
-    "status": "done",
-    "message": "/home/runner/work/shorts-pipeline/shorts-pipeline/agents/../data/output/20e61720.mp4",
-    "updated_at": "2026-10-08T17:22:26Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "upload_agent": {
-    "status": "done",
-    "message": "scheduled for 2026-10-08T22:22:27Z: https://youtube.com/shorts/HXa2ecn6c48",
-    "updated_at": "2026-10-08T17:22:32Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "discord_agent": {
-    "status": "done",
-    "message": "notified: \ud83d\udcdd The moment I realized I was being lied to (scheduled 2026-10-08T22:22:27Z UTC)",
-    "updated_at": "2026-10-08T17:22:35Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   }
 }
