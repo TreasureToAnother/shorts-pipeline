@@ -28,10 +28,10 @@
     {
       "slot": 3,
       "hour_et": 7,
-      "stage": "generating",
-      "title": null,
-      "video_url": null,
-      "publish_at": null
+      "stage": "uploaded",
+      "title": "Ryan's 'just a friend' was the red flag I ignored",
+      "video_url": "https://youtube.com/shorts/IApJbZ82IJ4",
+      "publish_at": "2026-10-09T22:28:05Z"
     },
     {
       "slot": 4,
