@@ -1,22 +1,22 @@
 {
   "script_agent": {
-    "status": "done",
-    "message": "generated: His gaze on my best friend made me wonder if I'd just met my own ex\"\n\n#POV",
-    "updated_at": "2026-10-09T16:54:44Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "video_agent": {
-    "status": "done",
-    "message": "/home/runner/work/shorts-pipeline/shorts-pipeline/agents/../data/output/20750229.mp4",
-    "updated_at": "2026-10-09T16:56:09Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "upload_agent": {
-    "status": "done",
-    "message": "scheduled for 2026-10-09T21:56:10Z: https://youtube.com/shorts/RQRbvyPOAk4",
-    "updated_at": "2026-10-09T16:56:13Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "discord_agent": {
-    "status": "done",
-    "message": "notified: His gaze on my best friend made me wonder if I'd just met my own ex\"\n\n#POV (scheduled 2026-10-09T21:56:10Z UTC)",
-    "updated_at": "2026-10-09T16:56:15Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   }
 }
