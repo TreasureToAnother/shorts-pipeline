@@ -1,53 +1,53 @@
 {
-  "date": "2026-10-08",
+  "date": "2026-10-09",
   "slots": [
     {
       "slot": 0,
       "hour_et": 4,
-      "stage": "uploaded",
-      "title": "I thought I had it all figured out - the perfect summer crush.",
-      "video_url": "https://youtube.com/shorts/7ttgb5H-v6o",
-      "publish_at": "2026-10-08T20:33:24Z"
+      "stage": "generating",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 1,
       "hour_et": 5,
-      "stage": "uploaded",
-      "title": "I'm still reeling from the text that dropped during the wedding reception.",
-      "video_url": "https://youtube.com/shorts/nHZEZkRnlbE",
-      "publish_at": "2026-10-08T21:18:27Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 2,
       "hour_et": 6,
-      "stage": "uploaded",
-      "title": "\ud83d\udcdd The moment I realized I was being lied to",
-      "video_url": "https://youtube.com/shorts/HXa2ecn6c48",
-      "publish_at": "2026-10-08T22:22:27Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 3,
       "hour_et": 7,
-      "stage": "uploaded",
-      "title": "I'll never forget the summer I spent at Camp Willow, surrounded by the serene be",
-      "video_url": "https://youtube.com/shorts/He0dpBbecQI",
-      "publish_at": "2026-10-08T22:52:40Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 4,
       "hour_et": 8,
-      "stage": "uploaded",
-      "title": "Kiss and Betrayal \ud83d\udd25\"\n\n#GirlsStoryTime",
-      "video_url": "https://youtube.com/shorts/rzV09bgXRw0",
-      "publish_at": "2026-10-08T23:07:48Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 5,
       "hour_et": 9,
-      "stage": "uploaded",
-      "title": "I click my camera's shutter, capturing the perfect shot of us laughing together.",
-      "video_url": "https://youtube.com/shorts/LDj4u3WhIhw",
-      "publish_at": "2026-10-09T00:15:34Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     }
   ]
 }
