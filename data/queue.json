@@ -4,10 +4,10 @@
     {
       "slot": 0,
       "hour_et": 4,
-      "stage": "generating",
-      "title": null,
-      "video_url": null,
-      "publish_at": null
+      "stage": "uploaded",
+      "title": "Found a note that changed everything \ud83d\udc94 #storytime",
+      "video_url": "https://youtube.com/shorts/dKQVifDz-00",
+      "publish_at": "2026-10-09T20:16:16Z"
     },
     {
       "slot": 1,
