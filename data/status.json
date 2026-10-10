@@ -1,22 +1,22 @@
 {
   "script_agent": {
-    "status": "done",
-    "message": "generated: \ud83d\udd0d I found a secret in my class project that changed everything",
-    "updated_at": "2026-10-10T16:28:21Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "video_agent": {
-    "status": "done",
-    "message": "/home/runner/work/shorts-pipeline/shorts-pipeline/agents/../data/output/9962c52d.mp4",
-    "updated_at": "2026-10-10T16:30:46Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "upload_agent": {
-    "status": "done",
-    "message": "scheduled for 2026-10-10T21:30:47Z: https://youtube.com/shorts/h92hmaDu3ks",
-    "updated_at": "2026-10-10T16:30:50Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "discord_agent": {
-    "status": "done",
-    "message": "notified: \ud83d\udd0d I found a secret in my class project that changed everything (scheduled 2026-10-10T21:30:47Z UTC)",
-    "updated_at": "2026-10-10T16:30:52Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   }
 }
