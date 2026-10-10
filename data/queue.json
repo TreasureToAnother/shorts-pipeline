@@ -20,10 +20,10 @@
     {
       "slot": 2,
       "hour_et": 6,
-      "stage": "generating",
-      "title": null,
-      "video_url": null,
-      "publish_at": null
+      "stage": "uploaded",
+      "title": "I poured coffee for what felt like the hundredth time that day, my mind still re",
+      "video_url": "https://youtube.com/shorts/JIly-hNfDTA",
+      "publish_at": "2026-10-10T20:50:43Z"
     },
     {
       "slot": 3,
