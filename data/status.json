@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-10-10T15:09:28Z"
+    "status": "done",
+    "message": "generated: I never thought I'd find love at summer camp, but here I was, 22 and head over h",
+    "updated_at": "2026-10-10T15:09:51Z"
   },
   "video_agent": {
     "status": "idle",
