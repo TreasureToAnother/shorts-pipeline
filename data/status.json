@@ -1,22 +1,22 @@
 {
   "script_agent": {
-    "status": "done",
-    "message": "generated: I never thought I'd find love at summer camp, but here I was, 22 and head over h",
-    "updated_at": "2026-10-10T15:09:51Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "video_agent": {
-    "status": "done",
-    "message": "/home/runner/work/shorts-pipeline/shorts-pipeline/agents/../data/output/166616ed.mp4",
-    "updated_at": "2026-10-10T15:10:53Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "upload_agent": {
-    "status": "done",
-    "message": "scheduled for 2026-10-10T20:10:54Z: https://youtube.com/shorts/l2-Pd356nTQ",
-    "updated_at": "2026-10-10T15:10:58Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "discord_agent": {
-    "status": "done",
-    "message": "notified: I never thought I'd find love at summer camp, but here I was, 22 and head over h (scheduled 2026-10-10T20:10:54Z UTC)",
-    "updated_at": "2026-10-10T15:11:00Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   }
 }
