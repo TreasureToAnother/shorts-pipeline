@@ -1,15 +1,25 @@
 {
-  "updated_at": "2026-10-10T06:57:04Z",
+  "updated_at": "2026-10-10T13:32:44Z",
   "channel": {
     "title": "Treasure To Another",
     "thumbnail": "https://yt3.ggpht.com/4iJRPFXBUDoj_XhTxdvPBJUbrheeqCvqcnlTcGzDHMocWRgdOwhDvE-26GhG7FemNVIeIG_hYQ=s88-c-k-c0x00ffffff-no-rj",
-    "subscriberCount": 62,
-    "viewCount": 71858,
+    "subscriberCount": 63,
+    "viewCount": 72101,
     "videoCount": 204,
-    "subsThisMonth": 21,
-    "viewsThisMonth": 15796
+    "subsThisMonth": 22,
+    "viewsThisMonth": 16039
   },
   "latestVideos": [
+    {
+      "id": "fF0mhbB1kFc",
+      "title": "subscribe for more fun stories #storytime #story",
+      "publishedAt": "2026-10-09T23:45:48Z",
+      "thumbnail": "https://i.ytimg.com/vi/fF0mhbB1kFc/mqdefault.jpg",
+      "views": 350,
+      "likes": 5,
+      "comments": 0,
+      "url": "https://youtube.com/shorts/fF0mhbB1kFc"
+    },
     {
       "id": "8zRRYrduj68",
       "title": "subscribe for more fun stories #storytime #story",
@@ -35,8 +45,8 @@
       "title": "subscribe for more fun stories #storytime #story",
       "publishedAt": "2026-10-09T21:56:16Z",
       "thumbnail": "https://i.ytimg.com/vi/RQRbvyPOAk4/mqdefault.jpg",
-      "views": 110,
-      "likes": 2,
+      "views": 221,
+      "likes": 4,
       "comments": 0,
       "url": "https://youtube.com/shorts/RQRbvyPOAk4"
     },
@@ -45,20 +55,10 @@
       "title": "subscribe for more fun stories #storytime #story",
       "publishedAt": "2026-10-09T21:03:52Z",
       "thumbnail": "https://i.ytimg.com/vi/nYLhIK9DdSQ/mqdefault.jpg",
-      "views": 345,
-      "likes": 4,
+      "views": 494,
+      "likes": 7,
       "comments": 0,
       "url": "https://youtube.com/shorts/nYLhIK9DdSQ"
-    },
-    {
-      "id": "dKQVifDz-00",
-      "title": "subscribe for more fun stories #storytime #story",
-      "publishedAt": "2026-10-09T20:16:21Z",
-      "thumbnail": "https://i.ytimg.com/vi/dKQVifDz-00/mqdefault.jpg",
-      "views": 453,
-      "likes": 9,
-      "comments": 0,
-      "url": "https://youtube.com/shorts/dKQVifDz-00"
     }
   ]
 }
