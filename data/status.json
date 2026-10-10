@@ -15,8 +15,8 @@
     "updated_at": "2026-10-10T14:29:28Z"
   },
   "discord_agent": {
-    "status": "running",
-    "message": "posting upload notification",
-    "updated_at": "2026-10-10T14:29:29Z"
+    "status": "done",
+    "message": "notified: The note that changed everything\" \ud83d\udc94 (scheduled 2026-10-10T19:29:25Z UTC)",
+    "updated_at": "2026-10-10T14:29:30Z"
   }
 }
