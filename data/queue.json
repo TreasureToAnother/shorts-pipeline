@@ -36,10 +36,10 @@
     {
       "slot": 4,
       "hour_et": 8,
-      "stage": "generating",
-      "title": null,
-      "video_url": null,
-      "publish_at": null
+      "stage": "uploaded",
+      "title": "\ud83d\udd0d I found a secret in my class project that changed everything",
+      "video_url": "https://youtube.com/shorts/h92hmaDu3ks",
+      "publish_at": "2026-10-10T21:30:47Z"
     },
     {
       "slot": 5,
