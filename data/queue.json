@@ -1,53 +1,53 @@
 {
-  "date": "2026-10-09",
+  "date": "2026-10-10",
   "slots": [
     {
       "slot": 0,
       "hour_et": 4,
-      "stage": "uploaded",
-      "title": "Found a note that changed everything \ud83d\udc94 #storytime",
-      "video_url": "https://youtube.com/shorts/dKQVifDz-00",
-      "publish_at": "2026-10-09T20:16:16Z"
+      "stage": "generating",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 1,
       "hour_et": 5,
-      "stage": "uploaded",
-      "title": "His return call shakes everything \ud83d\udc94 #betrayed",
-      "video_url": "https://youtube.com/shorts/nYLhIK9DdSQ",
-      "publish_at": "2026-10-09T21:03:36Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 2,
       "hour_et": 6,
-      "stage": "uploaded",
-      "title": "His gaze on my best friend made me wonder if I'd just met my own ex\"\n\n#POV",
-      "video_url": "https://youtube.com/shorts/RQRbvyPOAk4",
-      "publish_at": "2026-10-09T21:56:10Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 3,
       "hour_et": 7,
-      "stage": "uploaded",
-      "title": "Ryan's 'just a friend' was the red flag I ignored",
-      "video_url": "https://youtube.com/shorts/IApJbZ82IJ4",
-      "publish_at": "2026-10-09T22:28:05Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 4,
       "hour_et": 8,
-      "stage": "uploaded",
-      "title": "I thought I'd found the one on that road trip with friends, the one who'd apprec",
-      "video_url": "https://youtube.com/shorts/8zRRYrduj68",
-      "publish_at": "2026-10-09T22:39:18Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 5,
       "hour_et": 9,
-      "stage": "uploaded",
-      "title": "I stood beside my best friend, Emma, as we exchanged gifts and fake smiles at he",
-      "video_url": "https://youtube.com/shorts/fF0mhbB1kFc",
-      "publish_at": "2026-10-09T23:45:18Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     }
   ]
 }
