@@ -44,10 +44,10 @@
     {
       "slot": 5,
       "hour_et": 9,
-      "stage": "generating",
-      "title": null,
-      "video_url": null,
-      "publish_at": null
+      "stage": "uploaded",
+      "title": "I met Alex on a Tuesday, in our shared apartment's living room, while he was hel",
+      "video_url": "https://youtube.com/shorts/_BHpdmzcHas",
+      "publish_at": "2026-10-10T22:44:53Z"
     }
   ]
 }
