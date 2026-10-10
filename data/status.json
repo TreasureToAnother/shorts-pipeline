@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-10-10T15:48:56Z"
+    "status": "done",
+    "message": "generated: I poured coffee for what felt like the hundredth time that day, my mind still re",
+    "updated_at": "2026-10-10T15:49:35Z"
   },
   "video_agent": {
     "status": "idle",
