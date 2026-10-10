@@ -1,22 +1,22 @@
 {
   "script_agent": {
-    "status": "done",
-    "message": "generated: I poured coffee for what felt like the hundredth time that day, my mind still re",
-    "updated_at": "2026-10-10T15:49:35Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "video_agent": {
-    "status": "done",
-    "message": "/home/runner/work/shorts-pipeline/shorts-pipeline/agents/../data/output/97a58aa9.mp4",
-    "updated_at": "2026-10-10T15:50:42Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "upload_agent": {
-    "status": "done",
-    "message": "scheduled for 2026-10-10T20:50:43Z: https://youtube.com/shorts/JIly-hNfDTA",
-    "updated_at": "2026-10-10T15:50:47Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "discord_agent": {
-    "status": "done",
-    "message": "notified: I poured coffee for what felt like the hundredth time that day, my mind still re (scheduled 2026-10-10T20:50:43Z UTC)",
-    "updated_at": "2026-10-10T15:50:50Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   }
 }
