@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-10-11T16:52:50Z"
+    "status": "done",
+    "message": "generated: I nervously fidgeted with the silver necklace hanging around my neck, a gift fro",
+    "updated_at": "2026-10-11T16:53:31Z"
   },
   "video_agent": {
     "status": "idle",
