@@ -15,8 +15,8 @@
     "updated_at": "2026-10-11T15:31:59Z"
   },
   "discord_agent": {
-    "status": "running",
-    "message": "posting upload notification",
-    "updated_at": "2026-10-11T15:32:00Z"
+    "status": "done",
+    "message": "notified: He texted me from 200 miles away, and it was over \ud83d\udc94 (scheduled 2026-10-11T20:31:55Z UTC)",
+    "updated_at": "2026-10-11T15:32:01Z"
   }
 }
