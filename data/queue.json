@@ -44,10 +44,10 @@
     {
       "slot": 5,
       "hour_et": 9,
-      "stage": "generating",
-      "title": null,
-      "video_url": null,
-      "publish_at": null
+      "stage": "uploaded",
+      "title": "I stared blankly at my camera, a new lens waiting to be used, as my phone buzzed",
+      "video_url": "https://youtube.com/shorts/jy22Ysf31MI",
+      "publish_at": "2026-10-11T22:59:06Z"
     }
   ]
 }
