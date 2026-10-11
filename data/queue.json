@@ -1,53 +1,53 @@
 {
-  "date": "2026-10-10",
+  "date": "2026-10-11",
   "slots": [
     {
       "slot": 0,
       "hour_et": 4,
-      "stage": "uploaded",
-      "title": "The note that changed everything\" \ud83d\udc94",
-      "video_url": "https://youtube.com/shorts/qxsXtCiSuWU",
-      "publish_at": "2026-10-10T19:29:25Z"
+      "stage": "generating",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 1,
       "hour_et": 5,
-      "stage": "uploaded",
-      "title": "I never thought I'd find love at summer camp, but here I was, 22 and head over h",
-      "video_url": "https://youtube.com/shorts/l2-Pd356nTQ",
-      "publish_at": "2026-10-10T20:10:54Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 2,
       "hour_et": 6,
-      "stage": "uploaded",
-      "title": "I poured coffee for what felt like the hundredth time that day, my mind still re",
-      "video_url": "https://youtube.com/shorts/JIly-hNfDTA",
-      "publish_at": "2026-10-10T20:50:43Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 3,
       "hour_et": 7,
-      "stage": "uploaded",
-      "title": "Crashing into him, but is he crashing out of my heart?\" \ud83d\udc94 #storytime",
-      "video_url": "https://youtube.com/shorts/Ffqt9GwHa9o",
-      "publish_at": "2026-10-10T21:12:48Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 4,
       "hour_et": 8,
-      "stage": "uploaded",
-      "title": "\ud83d\udd0d I found a secret in my class project that changed everything",
-      "video_url": "https://youtube.com/shorts/h92hmaDu3ks",
-      "publish_at": "2026-10-10T21:30:47Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 5,
       "hour_et": 9,
-      "stage": "uploaded",
-      "title": "I met Alex on a Tuesday, in our shared apartment's living room, while he was hel",
-      "video_url": "https://youtube.com/shorts/_BHpdmzcHas",
-      "publish_at": "2026-10-10T22:44:53Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     }
   ]
 }
