@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-10-11T17:57:08Z"
+    "status": "done",
+    "message": "generated: I stared blankly at my camera, a new lens waiting to be used, as my phone buzzed",
+    "updated_at": "2026-10-11T17:57:50Z"
   },
   "video_agent": {
     "status": "idle",
