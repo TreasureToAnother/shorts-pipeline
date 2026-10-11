@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-10-11T15:30:23Z"
+    "status": "done",
+    "message": "generated: He texted me from 200 miles away, and it was over \ud83d\udc94",
+    "updated_at": "2026-10-11T15:30:45Z"
   },
   "video_agent": {
     "status": "idle",
