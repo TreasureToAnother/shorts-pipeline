@@ -1,22 +1,22 @@
 {
   "script_agent": {
-    "status": "done",
-    "message": "generated: I've had a crush on my coworker, Alex, for what feels like forever.",
-    "updated_at": "2026-10-11T14:53:56Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "video_agent": {
-    "status": "done",
-    "message": "/home/runner/work/shorts-pipeline/shorts-pipeline/agents/../data/output/a846253b.mp4",
-    "updated_at": "2026-10-11T14:55:12Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "upload_agent": {
-    "status": "done",
-    "message": "scheduled for 2026-10-11T19:55:13Z: https://youtube.com/shorts/bw6lU6GXNts",
-    "updated_at": "2026-10-11T14:55:19Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "discord_agent": {
-    "status": "done",
-    "message": "notified: I've had a crush on my coworker, Alex, for what feels like forever. (scheduled 2026-10-11T19:55:13Z UTC)",
-    "updated_at": "2026-10-11T14:55:22Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   }
 }
