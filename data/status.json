@@ -15,8 +15,8 @@
     "updated_at": "2026-10-11T14:55:19Z"
   },
   "discord_agent": {
-    "status": "running",
-    "message": "posting upload notification",
-    "updated_at": "2026-10-11T14:55:20Z"
+    "status": "done",
+    "message": "notified: I've had a crush on my coworker, Alex, for what feels like forever. (scheduled 2026-10-11T19:55:13Z UTC)",
+    "updated_at": "2026-10-11T14:55:22Z"
   }
 }
