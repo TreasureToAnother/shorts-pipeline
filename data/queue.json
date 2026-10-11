@@ -28,10 +28,10 @@
     {
       "slot": 3,
       "hour_et": 7,
-      "stage": "generating",
-      "title": null,
-      "video_url": null,
-      "publish_at": null
+      "stage": "uploaded",
+      "title": "Jake's return sparks my darkest secret \ud83d\udd25",
+      "video_url": "https://youtube.com/shorts/UNItlESLi5s",
+      "publish_at": "2026-10-11T21:40:56Z"
     },
     {
       "slot": 4,
