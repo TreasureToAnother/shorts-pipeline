@@ -1,22 +1,22 @@
 {
   "script_agent": {
-    "status": "done",
-    "message": "generated: I met Alex on a Tuesday, in our shared apartment's living room, while he was hel",
-    "updated_at": "2026-10-10T17:43:19Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "video_agent": {
-    "status": "done",
-    "message": "/home/runner/work/shorts-pipeline/shorts-pipeline/agents/../data/output/458a268c.mp4",
-    "updated_at": "2026-10-10T17:44:52Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "upload_agent": {
-    "status": "done",
-    "message": "scheduled for 2026-10-10T22:44:53Z: https://youtube.com/shorts/_BHpdmzcHas",
-    "updated_at": "2026-10-10T17:44:56Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "discord_agent": {
-    "status": "done",
-    "message": "notified: I met Alex on a Tuesday, in our shared apartment's living room, while he was hel (scheduled 2026-10-10T22:44:53Z UTC)",
-    "updated_at": "2026-10-10T17:44:58Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   }
 }
