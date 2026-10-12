@@ -18,5 +18,10 @@
     "status": "idle",
     "message": "",
     "updated_at": null
+  },
+  "orchestrator": {
+    "status": "error",
+    "message": "11.17/x64/lib/python3.11/site-packages/aiohttp/client.py\", line 1329, in _ws_connect\n    raise WSServerHandshakeError(\naiohttp.client_exceptions.WSServerHandshakeError: 403, message='Invalid response status', url='wss://speech.platform.bing.com/consumer/speech/synthesize/readaloud/edge/v1?TrustedClientToken=6A5AA1D4EAFF4E9FB37E23D68491D6F4&ConnectionId=b4b693a9a353409b85179ee4455baa09&Sec-MS-GEC=115F3223657E5EAC389E9445E5666B7E5655121D72320C7CB54A954A24BEDE7E&Sec-MS-GEC-Version=1-143.0.3650.75'\n",
+    "updated_at": "2026-10-12T18:50:14Z"
   }
 }
