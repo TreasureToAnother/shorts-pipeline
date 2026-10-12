@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-10-12T20:30:20Z"
+    "status": "done",
+    "message": "generated: I'll never forget the night I stumbled upon the truth in our college dorm's diml",
+    "updated_at": "2026-10-12T20:30:48Z"
   },
   "video_agent": {
     "status": "idle",
