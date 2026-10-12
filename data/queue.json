@@ -1,53 +1,53 @@
 {
-  "date": "2026-10-11",
+  "date": "2026-10-12",
   "slots": [
     {
       "slot": 0,
       "hour_et": 4,
-      "stage": "uploaded",
-      "title": "I've had a crush on my coworker, Alex, for what feels like forever.",
-      "video_url": "https://youtube.com/shorts/bw6lU6GXNts",
-      "publish_at": "2026-10-11T19:55:13Z"
+      "stage": "generating",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 1,
       "hour_et": 5,
-      "stage": "uploaded",
-      "title": "He texted me from 200 miles away, and it was over \ud83d\udc94",
-      "video_url": "https://youtube.com/shorts/M8ho6m3agDg",
-      "publish_at": "2026-10-11T20:31:55Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 2,
       "hour_et": 6,
-      "stage": "uploaded",
-      "title": "Found the text that shattered my future \ud83d\udc94\" #POV",
-      "video_url": "https://youtube.com/shorts/Fd3DEdkRtqQ",
-      "publish_at": "2026-10-11T21:15:07Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 3,
       "hour_et": 7,
-      "stage": "uploaded",
-      "title": "Jake's return sparks my darkest secret \ud83d\udd25",
-      "video_url": "https://youtube.com/shorts/UNItlESLi5s",
-      "publish_at": "2026-10-11T21:40:56Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 4,
       "hour_et": 8,
-      "stage": "uploaded",
-      "title": "I nervously fidgeted with the silver necklace hanging around my neck, a gift fro",
-      "video_url": "https://youtube.com/shorts/YWtm-zkCge8",
-      "publish_at": "2026-10-11T21:54:48Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 5,
       "hour_et": 9,
-      "stage": "uploaded",
-      "title": "I stared blankly at my camera, a new lens waiting to be used, as my phone buzzed",
-      "video_url": "https://youtube.com/shorts/jy22Ysf31MI",
-      "publish_at": "2026-10-11T22:59:06Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     }
   ]
 }
