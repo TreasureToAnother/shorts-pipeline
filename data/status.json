@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-10-12T19:42:57Z"
+    "status": "done",
+    "message": "generated: I was pouring drinks and pretending to be the hostess with the mostest, when I s",
+    "updated_at": "2026-10-12T19:43:37Z"
   },
   "video_agent": {
     "status": "idle",
