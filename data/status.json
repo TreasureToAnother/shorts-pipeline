@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-10-12T17:45:48Z"
+    "status": "done",
+    "message": "generated: Here's a potential title for the story:\n\n\"I caught Emily with the one person I thought I knew best",
+    "updated_at": "2026-10-12T17:46:26Z"
   },
   "video_agent": {
     "status": "idle",
