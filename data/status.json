@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-10-12T18:49:30Z"
+    "status": "done",
+    "message": "generated: Opening the wedding guest's secret folder \ud83d\udc94\" #BetrayalAtTheAltar",
+    "updated_at": "2026-10-12T18:50:09Z"
   },
   "video_agent": {
     "status": "idle",
