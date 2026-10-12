@@ -5,9 +5,9 @@
     "updated_at": "2026-10-12T19:43:37Z"
   },
   "video_agent": {
-    "status": "running",
-    "message": "assembling scenes",
-    "updated_at": "2026-10-12T19:43:38Z"
+    "status": "error",
+    "message": "403, message='Invalid response status', url='wss://speech.platform.bing.com/consumer/speech/synthesize/readaloud/edge/v1?TrustedClientToken=6A5AA1D4EAFF4E9FB37E23D68491D6F4&ConnectionId=d68ca692ede84c869520987996caac41&Sec-MS-GEC=759E66F5A462A95299DB1823834AA5467ECBB01FEAFC2E96F9DD967526E89094&Sec-MS-GEC-Version=1-143.0.3650.75'",
+    "updated_at": "2026-10-12T19:43:40Z"
   },
   "upload_agent": {
     "status": "idle",
