@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-10-12T20:14:37Z"
+    "status": "done",
+    "message": "generated: I've been a barista for three years, and it's always the same story - pour-over,",
+    "updated_at": "2026-10-12T20:15:20Z"
   },
   "video_agent": {
     "status": "idle",
