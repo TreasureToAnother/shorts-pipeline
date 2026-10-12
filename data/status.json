@@ -1,13 +1,13 @@
 {
   "script_agent": {
-    "status": "done",
-    "message": "generated: Here's a potential title for the story:\n\n\"I caught Emily with the one person I thought I knew best",
-    "updated_at": "2026-10-12T17:46:26Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "video_agent": {
-    "status": "error",
-    "message": "403, message='Invalid response status', url='wss://speech.platform.bing.com/consumer/speech/synthesize/readaloud/edge/v1?TrustedClientToken=6A5AA1D4EAFF4E9FB37E23D68491D6F4&ConnectionId=084d79aad39e4877ac0b78ae745cf567&Sec-MS-GEC=98A892B62EA4FE3DEE67CD9D03E1C86DC0F224E3B9CCDF722C84C642A202417E&Sec-MS-GEC-Version=1-143.0.3650.75'",
-    "updated_at": "2026-10-12T17:46:28Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "upload_agent": {
     "status": "idle",
@@ -18,10 +18,5 @@
     "status": "idle",
     "message": "",
     "updated_at": null
-  },
-  "orchestrator": {
-    "status": "error",
-    "message": "11.17/x64/lib/python3.11/site-packages/aiohttp/client.py\", line 1329, in _ws_connect\n    raise WSServerHandshakeError(\naiohttp.client_exceptions.WSServerHandshakeError: 403, message='Invalid response status', url='wss://speech.platform.bing.com/consumer/speech/synthesize/readaloud/edge/v1?TrustedClientToken=6A5AA1D4EAFF4E9FB37E23D68491D6F4&ConnectionId=084d79aad39e4877ac0b78ae745cf567&Sec-MS-GEC=98A892B62EA4FE3DEE67CD9D03E1C86DC0F224E3B9CCDF722C84C642A202417E&Sec-MS-GEC-Version=1-143.0.3650.75'\n",
-    "updated_at": "2026-10-12T17:46:28Z"
   }
 }
