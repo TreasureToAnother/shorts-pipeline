@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-10-12T21:39:00Z"
+    "status": "done",
+    "message": "generated: \ud83d\udd25 I was the last person she trusted. Turns out, I was her biggest secret\" #TrustBroken",
+    "updated_at": "2026-10-12T21:39:34Z"
   },
   "video_agent": {
     "status": "idle",
