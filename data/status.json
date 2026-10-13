@@ -1,22 +1,22 @@
 {
   "script_agent": {
-    "status": "done",
-    "message": "generated: I'm standing behind the bar, refilling glasses and pretending to be a functionin",
-    "updated_at": "2026-10-13T17:28:33Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "video_agent": {
-    "status": "done",
-    "message": "/home/runner/work/shorts-pipeline/shorts-pipeline/agents/../data/output/ea848767.mp4",
-    "updated_at": "2026-10-13T17:29:41Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "upload_agent": {
-    "status": "done",
-    "message": "scheduled for 2026-10-13T22:29:43Z: https://youtube.com/shorts/hniHlhaDAOA",
-    "updated_at": "2026-10-13T17:29:46Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "discord_agent": {
-    "status": "done",
-    "message": "notified: I'm standing behind the bar, refilling glasses and pretending to be a functionin (scheduled 2026-10-13T22:29:43Z UTC)",
-    "updated_at": "2026-10-13T17:29:49Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   }
 }
