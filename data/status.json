@@ -10,9 +10,9 @@
     "updated_at": "2026-10-13T19:49:33Z"
   },
   "upload_agent": {
-    "status": "running",
-    "message": "uploading fc103bc4.mp4",
-    "updated_at": "2026-10-13T19:49:34Z"
+    "status": "done",
+    "message": "scheduled for 2026-10-14T00:49:34Z: https://youtube.com/shorts/pWag8Q1kcEY",
+    "updated_at": "2026-10-13T19:49:38Z"
   },
   "discord_agent": {
     "status": "idle",
