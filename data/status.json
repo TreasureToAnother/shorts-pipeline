@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-10-13T18:06:57Z"
+    "status": "done",
+    "message": "generated: He saw the wrong picture, and now I'm in trouble\"\n\n#BetrayalAtTheParty",
+    "updated_at": "2026-10-13T18:07:17Z"
   },
   "video_agent": {
     "status": "idle",
