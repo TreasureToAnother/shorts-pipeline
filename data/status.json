@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-10-13T15:52:50Z"
+    "status": "done",
+    "message": "generated: I stepped into the dimly lit room, where the scent of candles and cheap champagn",
+    "updated_at": "2026-10-13T15:53:36Z"
   },
   "video_agent": {
     "status": "idle",
