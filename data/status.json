@@ -1,22 +1,22 @@
 {
   "script_agent": {
-    "status": "done",
-    "message": "generated: I was stuck on the Johnson-Smith account, stuck on the Johnson-Smith account, st",
-    "updated_at": "2026-10-13T18:36:22Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "video_agent": {
-    "status": "done",
-    "message": "/home/runner/work/shorts-pipeline/shorts-pipeline/agents/../data/output/40b85e6a.mp4",
-    "updated_at": "2026-10-13T18:37:32Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "upload_agent": {
-    "status": "done",
-    "message": "scheduled for 2026-10-13T23:37:33Z: https://youtube.com/shorts/atQ4CSuWsRw",
-    "updated_at": "2026-10-13T18:37:37Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "discord_agent": {
-    "status": "done",
-    "message": "notified: I was stuck on the Johnson-Smith account, stuck on the Johnson-Smith account, st (scheduled 2026-10-13T23:37:33Z UTC)",
-    "updated_at": "2026-10-13T18:37:39Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   }
 }
