@@ -10,9 +10,9 @@
     "updated_at": "2026-10-13T15:55:17Z"
   },
   "upload_agent": {
-    "status": "running",
-    "message": "uploading 6deca03c.mp4",
-    "updated_at": "2026-10-13T15:55:18Z"
+    "status": "done",
+    "message": "scheduled for 2026-10-13T20:55:18Z: https://youtube.com/shorts/0gFj8v04iaE",
+    "updated_at": "2026-10-13T15:55:21Z"
   },
   "discord_agent": {
     "status": "idle",
