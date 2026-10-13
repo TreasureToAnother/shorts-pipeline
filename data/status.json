@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-10-13T18:35:49Z"
+    "status": "done",
+    "message": "generated: I was stuck on the Johnson-Smith account, stuck on the Johnson-Smith account, st",
+    "updated_at": "2026-10-13T18:36:22Z"
   },
   "video_agent": {
     "status": "idle",
