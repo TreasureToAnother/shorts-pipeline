@@ -15,8 +15,8 @@
     "updated_at": "2026-10-14T15:50:42Z"
   },
   "discord_agent": {
-    "status": "running",
-    "message": "posting upload notification",
-    "updated_at": "2026-10-14T15:50:43Z"
+    "status": "done",
+    "message": "notified: Alex kissed me, but Jake's been hiding something (scheduled 2026-10-14T20:50:38Z UTC)",
+    "updated_at": "2026-10-14T15:50:45Z"
   }
 }
