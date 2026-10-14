@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-10-14T15:48:19Z"
+    "status": "done",
+    "message": "generated: Alex kissed me, but Jake's been hiding something",
+    "updated_at": "2026-10-14T15:48:54Z"
   },
   "video_agent": {
     "status": "idle",
