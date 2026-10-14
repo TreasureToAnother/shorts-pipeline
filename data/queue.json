@@ -44,10 +44,10 @@
     {
       "slot": 5,
       "hour_et": 9,
-      "stage": "generating",
-      "title": null,
-      "video_url": null,
-      "publish_at": null
+      "stage": "uploaded",
+      "title": "He saw me, but did he feel it too? \ud83d\ude0a #POV",
+      "video_url": "https://youtube.com/shorts/Y2prutIBMWM",
+      "publish_at": "2026-10-14T18:38:42Z"
     }
   ]
 }
