@@ -28,10 +28,10 @@
     {
       "slot": 3,
       "hour_et": 7,
-      "stage": "generating",
-      "title": null,
-      "video_url": null,
-      "publish_at": null
+      "stage": "uploaded",
+      "title": "I'm still reeling from the argument we had a few days ago, but I tried to shake ",
+      "video_url": "https://youtube.com/shorts/fdqp6t05_Os",
+      "publish_at": "2026-10-14T21:05:42Z"
     },
     {
       "slot": 4,
