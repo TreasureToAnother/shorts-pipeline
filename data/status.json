@@ -1,22 +1,22 @@
 {
   "script_agent": {
-    "status": "done",
-    "message": "generated: She snapped his pic, but not what I saw\"\n\n( #betrayalalert )",
-    "updated_at": "2026-10-13T19:48:36Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "video_agent": {
-    "status": "done",
-    "message": "/home/runner/work/shorts-pipeline/shorts-pipeline/agents/../data/output/fc103bc4.mp4",
-    "updated_at": "2026-10-13T19:49:33Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "upload_agent": {
-    "status": "done",
-    "message": "scheduled for 2026-10-14T00:49:34Z: https://youtube.com/shorts/pWag8Q1kcEY",
-    "updated_at": "2026-10-13T19:49:38Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "discord_agent": {
-    "status": "done",
-    "message": "notified: She snapped his pic, but not what I saw\"\n\n( #betrayalalert ) (scheduled 2026-10-14T00:49:34Z UTC)",
-    "updated_at": "2026-10-13T19:49:40Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   }
 }
