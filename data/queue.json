@@ -36,10 +36,10 @@
     {
       "slot": 4,
       "hour_et": 8,
-      "stage": "generating",
-      "title": null,
-      "video_url": null,
-      "publish_at": null
+      "stage": "uploaded",
+      "title": "I'm still trying to process how my best friend, Sarah, could do this to me.",
+      "video_url": "https://youtube.com/shorts/tOewSUfReZc",
+      "publish_at": "2026-10-14T22:53:53Z"
     },
     {
       "slot": 5,
