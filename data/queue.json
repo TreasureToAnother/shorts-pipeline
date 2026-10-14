@@ -1,53 +1,53 @@
 {
-  "date": "2026-10-13",
+  "date": "2026-10-14",
   "slots": [
     {
       "slot": 0,
       "hour_et": 4,
-      "stage": "uploaded",
-      "title": "I stepped into the dimly lit room, where the scent of candles and cheap champagn",
-      "video_url": "https://youtube.com/shorts/0gFj8v04iaE",
-      "publish_at": "2026-10-13T20:55:18Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 1,
       "hour_et": 5,
-      "stage": "uploaded",
-      "title": "I'll never forget the night I spilled coffee all over my notes during our group ",
-      "video_url": "https://youtube.com/shorts/ifmotxf-UMg",
-      "publish_at": "2026-10-13T21:53:13Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 2,
       "hour_et": 6,
-      "stage": "uploaded",
-      "title": "I'm standing behind the bar, refilling glasses and pretending to be a functionin",
-      "video_url": "https://youtube.com/shorts/hniHlhaDAOA",
-      "publish_at": "2026-10-13T22:29:43Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 3,
       "hour_et": 7,
-      "stage": "uploaded",
-      "title": "He saw the wrong picture, and now I'm in trouble\"\n\n#BetrayalAtTheParty",
-      "video_url": "https://youtube.com/shorts/M80gA24eatI",
-      "publish_at": "2026-10-13T23:08:23Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 4,
       "hour_et": 8,
-      "stage": "uploaded",
-      "title": "I was stuck on the Johnson-Smith account, stuck on the Johnson-Smith account, st",
-      "video_url": "https://youtube.com/shorts/atQ4CSuWsRw",
-      "publish_at": "2026-10-13T23:37:33Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 5,
       "hour_et": 9,
-      "stage": "uploaded",
-      "title": "She snapped his pic, but not what I saw\"\n\n( #betrayalalert )",
-      "video_url": "https://youtube.com/shorts/pWag8Q1kcEY",
-      "publish_at": "2026-10-14T00:49:34Z"
+      "stage": "generating",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     }
   ]
 }
