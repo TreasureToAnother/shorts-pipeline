@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-10-15T14:47:07Z"
+    "status": "done",
+    "message": "generated: I'll never forget the day I stumbled upon the note in the back of the coffee sho",
+    "updated_at": "2026-10-15T14:47:55Z"
   },
   "video_agent": {
     "status": "idle",
