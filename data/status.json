@@ -1,22 +1,22 @@
 {
   "script_agent": {
-    "status": "done",
-    "message": "generated: I'll never forget the day I stumbled upon the note in the back of the coffee sho",
-    "updated_at": "2026-10-15T14:47:55Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "video_agent": {
-    "status": "done",
-    "message": "/home/runner/work/shorts-pipeline/shorts-pipeline/agents/../data/output/5b948148.mp4",
-    "updated_at": "2026-10-15T14:49:30Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "upload_agent": {
-    "status": "done",
-    "message": "scheduled for 2026-10-15T19:49:31Z: https://youtube.com/shorts/3GvJ5y2GYKY",
-    "updated_at": "2026-10-15T14:49:35Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "discord_agent": {
-    "status": "done",
-    "message": "notified: I'll never forget the day I stumbled upon the note in the back of the coffee sho (scheduled 2026-10-15T19:49:31Z UTC)",
-    "updated_at": "2026-10-15T14:49:39Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   }
 }
