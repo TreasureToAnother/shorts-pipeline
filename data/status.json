@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-10-15T15:34:52Z"
+    "status": "done",
+    "message": "generated: I thought I'd found my perfect partner in crime when Alex joined our group proje",
+    "updated_at": "2026-10-15T15:35:30Z"
   },
   "video_agent": {
     "status": "idle",
