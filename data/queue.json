@@ -36,10 +36,10 @@
     {
       "slot": 4,
       "hour_et": 8,
-      "stage": "generating",
-      "title": null,
-      "video_url": null,
-      "publish_at": null
+      "stage": "uploaded",
+      "title": "I'll never forget the morning that text message changed everything.",
+      "video_url": "https://youtube.com/shorts/xzg6kiWKPOE",
+      "publish_at": "2026-10-15T22:44:07Z"
     },
     {
       "slot": 5,
