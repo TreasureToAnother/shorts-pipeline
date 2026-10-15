@@ -10,9 +10,9 @@
     "updated_at": "2026-10-15T17:44:06Z"
   },
   "upload_agent": {
-    "status": "running",
-    "message": "uploading f26f8079.mp4",
-    "updated_at": "2026-10-15T17:44:07Z"
+    "status": "done",
+    "message": "scheduled for 2026-10-15T22:44:07Z: https://youtube.com/shorts/xzg6kiWKPOE",
+    "updated_at": "2026-10-15T17:44:12Z"
   },
   "discord_agent": {
     "status": "idle",
