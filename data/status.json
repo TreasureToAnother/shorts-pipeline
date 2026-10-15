@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-10-15T15:52:02Z"
+    "status": "done",
+    "message": "generated: I was caught off guard when I saw him walk into the party, his eyes scanning the",
+    "updated_at": "2026-10-15T15:52:29Z"
   },
   "video_agent": {
     "status": "idle",
