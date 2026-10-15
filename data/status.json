@@ -1,22 +1,22 @@
 {
   "script_agent": {
-    "status": "done",
-    "message": "generated: I was caught off guard when I saw him walk into the party, his eyes scanning the",
-    "updated_at": "2026-10-15T15:52:29Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "video_agent": {
-    "status": "done",
-    "message": "/home/runner/work/shorts-pipeline/shorts-pipeline/agents/../data/output/2f4bf633.mp4",
-    "updated_at": "2026-10-15T15:53:34Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "upload_agent": {
-    "status": "done",
-    "message": "scheduled for 2026-10-15T20:53:35Z: https://youtube.com/shorts/C6oGfgGTD4o",
-    "updated_at": "2026-10-15T15:53:40Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "discord_agent": {
-    "status": "done",
-    "message": "notified: I was caught off guard when I saw him walk into the party, his eyes scanning the (scheduled 2026-10-15T20:53:35Z UTC)",
-    "updated_at": "2026-10-15T15:53:42Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   }
 }
