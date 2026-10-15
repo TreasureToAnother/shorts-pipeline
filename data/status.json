@@ -1,22 +1,22 @@
 {
   "script_agent": {
-    "status": "done",
-    "message": "generated: I poured steaming hot coffee into the cups, the sound of the beans grinding in t",
-    "updated_at": "2026-10-15T14:05:39Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "video_agent": {
-    "status": "done",
-    "message": "/home/runner/work/shorts-pipeline/shorts-pipeline/agents/../data/output/5aa91650.mp4",
-    "updated_at": "2026-10-15T14:07:31Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "upload_agent": {
-    "status": "done",
-    "message": "scheduled for 2026-10-15T19:07:32Z: https://youtube.com/shorts/pMOcn8clnTo",
-    "updated_at": "2026-10-15T14:07:36Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "discord_agent": {
-    "status": "done",
-    "message": "notified: I poured steaming hot coffee into the cups, the sound of the beans grinding in t (scheduled 2026-10-15T19:07:32Z UTC)",
-    "updated_at": "2026-10-15T14:07:39Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   }
 }
