@@ -1,53 +1,53 @@
 {
-  "date": "2026-10-14",
+  "date": "2026-10-15",
   "slots": [
     {
       "slot": 0,
       "hour_et": 4,
-      "stage": "uploaded",
-      "title": "I'm sitting at my desk, sipping on my morning coffee, when I see him walk in - t",
-      "video_url": "https://youtube.com/shorts/yHvcBN6PXTg",
-      "publish_at": "2026-10-14T19:28:57Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 1,
       "hour_et": 5,
-      "stage": "uploaded",
-      "title": "He noticed me, but I thought he didn't\" \ud83d\udc94 #guiltypleasures",
-      "video_url": "https://youtube.com/shorts/OEGwXV0RKLM",
-      "publish_at": "2026-10-14T20:00:20Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 2,
       "hour_et": 6,
-      "stage": "uploaded",
-      "title": "Alex kissed me, but Jake's been hiding something",
-      "video_url": "https://youtube.com/shorts/1qysE9_ZD5Y",
-      "publish_at": "2026-10-14T20:50:38Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 3,
       "hour_et": 7,
-      "stage": "uploaded",
-      "title": "I'm still reeling from the argument we had a few days ago, but I tried to shake ",
-      "video_url": "https://youtube.com/shorts/fdqp6t05_Os",
-      "publish_at": "2026-10-14T21:05:42Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 4,
       "hour_et": 8,
-      "stage": "uploaded",
-      "title": "I'm still trying to process how my best friend, Sarah, could do this to me.",
-      "video_url": "https://youtube.com/shorts/tOewSUfReZc",
-      "publish_at": "2026-10-14T22:53:53Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 5,
       "hour_et": 9,
-      "stage": "uploaded",
-      "title": "He saw me, but did he feel it too? \ud83d\ude0a #POV",
-      "video_url": "https://youtube.com/shorts/Y2prutIBMWM",
-      "publish_at": "2026-10-14T18:38:42Z"
+      "stage": "generating",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     }
   ]
 }
