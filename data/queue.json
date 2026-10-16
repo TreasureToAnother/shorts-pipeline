@@ -44,10 +44,10 @@
     {
       "slot": 5,
       "hour_et": 9,
-      "stage": "generating",
-      "title": null,
-      "video_url": null,
-      "publish_at": null
+      "stage": "uploaded",
+      "title": "His text was the last thing I saw\"\n\n#Betrayed",
+      "video_url": "https://youtube.com/shorts/SDjM1_C_Kxo",
+      "publish_at": "2026-10-16T18:13:42Z"
     }
   ]
 }
