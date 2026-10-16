@@ -28,10 +28,10 @@
     {
       "slot": 3,
       "hour_et": 7,
-      "stage": "generating",
-      "title": null,
-      "video_url": null,
-      "publish_at": null
+      "stage": "uploaded",
+      "title": "I've been studying for exams in my dorm room for what feels like an eternity, th",
+      "video_url": "https://youtube.com/shorts/abXh6unaT7E",
+      "publish_at": "2026-10-16T20:42:46Z"
     },
     {
       "slot": 4,
