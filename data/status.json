@@ -1,22 +1,22 @@
 {
   "script_agent": {
-    "status": "done",
-    "message": "generated: I'll never forget the night I stumbled upon the hidden room at Camp Clearwater.",
-    "updated_at": "2026-10-16T15:23:02Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "video_agent": {
-    "status": "done",
-    "message": "/home/runner/work/shorts-pipeline/shorts-pipeline/agents/../data/output/b1367b31.mp4",
-    "updated_at": "2026-10-16T15:24:01Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "upload_agent": {
-    "status": "done",
-    "message": "scheduled for 2026-10-16T20:24:02Z: https://youtube.com/shorts/vxQLcSfBmMw",
-    "updated_at": "2026-10-16T15:24:06Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "discord_agent": {
-    "status": "done",
-    "message": "notified: I'll never forget the night I stumbled upon the hidden room at Camp Clearwater. (scheduled 2026-10-16T20:24:02Z UTC)",
-    "updated_at": "2026-10-16T15:24:09Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   }
 }
