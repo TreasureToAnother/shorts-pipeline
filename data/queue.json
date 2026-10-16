@@ -1,53 +1,53 @@
 {
-  "date": "2026-10-15",
+  "date": "2026-10-16",
   "slots": [
     {
       "slot": 0,
       "hour_et": 4,
-      "stage": "uploaded",
-      "title": "I poured steaming hot coffee into the cups, the sound of the beans grinding in t",
-      "video_url": "https://youtube.com/shorts/pMOcn8clnTo",
-      "publish_at": "2026-10-15T19:07:32Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 1,
       "hour_et": 5,
-      "stage": "uploaded",
-      "title": "I'll never forget the day I stumbled upon the note in the back of the coffee sho",
-      "video_url": "https://youtube.com/shorts/3GvJ5y2GYKY",
-      "publish_at": "2026-10-15T19:49:31Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 2,
       "hour_et": 6,
-      "stage": "uploaded",
-      "title": "I thought I'd found my perfect partner in crime when Alex joined our group proje",
-      "video_url": "https://youtube.com/shorts/69nLYefS87I",
-      "publish_at": "2026-10-15T20:36:39Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 3,
       "hour_et": 7,
-      "stage": "uploaded",
-      "title": "I was caught off guard when I saw him walk into the party, his eyes scanning the",
-      "video_url": "https://youtube.com/shorts/C6oGfgGTD4o",
-      "publish_at": "2026-10-15T20:53:35Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 4,
       "hour_et": 8,
-      "stage": "uploaded",
-      "title": "I'll never forget the morning that text message changed everything.",
-      "video_url": "https://youtube.com/shorts/xzg6kiWKPOE",
-      "publish_at": "2026-10-15T22:44:07Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 5,
       "hour_et": 9,
-      "stage": "uploaded",
-      "title": "I poured steaming hot coffee for the 12th time that morning, still reeling from ",
-      "video_url": "https://youtube.com/shorts/bERj1nqw_kk",
-      "publish_at": "2026-10-15T18:22:07Z"
+      "stage": "generating",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     }
   ]
 }
