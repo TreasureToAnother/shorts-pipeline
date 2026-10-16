@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-10-16T13:12:21Z"
+    "status": "done",
+    "message": "generated: His text was the last thing I saw\"\n\n#Betrayed",
+    "updated_at": "2026-10-16T13:12:39Z"
   },
   "video_agent": {
     "status": "idle",
