@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-10-16T13:52:53Z"
+    "status": "done",
+    "message": "generated: I'll never forget the day I found out my best friend, Rachel, was secretly takin",
+    "updated_at": "2026-10-16T13:53:43Z"
   },
   "video_agent": {
     "status": "idle",
