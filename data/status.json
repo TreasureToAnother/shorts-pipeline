@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-10-16T17:13:23Z"
+    "status": "done",
+    "message": "generated: I'm still shaking as I replay that night, when I was the hostess at my best frie",
+    "updated_at": "2026-10-16T17:14:00Z"
   },
   "video_agent": {
     "status": "idle",
