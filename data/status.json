@@ -1,22 +1,22 @@
 {
   "script_agent": {
-    "status": "done",
-    "message": "generated: I'll never forget the morning that text message changed everything.",
-    "updated_at": "2026-10-15T17:42:21Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "video_agent": {
-    "status": "done",
-    "message": "/home/runner/work/shorts-pipeline/shorts-pipeline/agents/../data/output/f26f8079.mp4",
-    "updated_at": "2026-10-15T17:44:06Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "upload_agent": {
-    "status": "done",
-    "message": "scheduled for 2026-10-15T22:44:07Z: https://youtube.com/shorts/xzg6kiWKPOE",
-    "updated_at": "2026-10-15T17:44:12Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "discord_agent": {
-    "status": "done",
-    "message": "notified: I'll never forget the morning that text message changed everything. (scheduled 2026-10-15T22:44:07Z UTC)",
-    "updated_at": "2026-10-15T17:44:15Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   }
 }
