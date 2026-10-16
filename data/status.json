@@ -1,22 +1,22 @@
 {
   "script_agent": {
-    "status": "done",
-    "message": "generated: I've been studying for exams in my dorm room for what feels like an eternity, th",
-    "updated_at": "2026-10-16T15:41:23Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "video_agent": {
-    "status": "done",
-    "message": "/home/runner/work/shorts-pipeline/shorts-pipeline/agents/../data/output/43e84b37.mp4",
-    "updated_at": "2026-10-16T15:42:43Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "upload_agent": {
-    "status": "done",
-    "message": "scheduled for 2026-10-16T20:42:46Z: https://youtube.com/shorts/abXh6unaT7E",
-    "updated_at": "2026-10-16T15:42:50Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "discord_agent": {
-    "status": "done",
-    "message": "notified: I've been studying for exams in my dorm room for what feels like an eternity, th (scheduled 2026-10-16T20:42:46Z UTC)",
-    "updated_at": "2026-10-16T15:42:53Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   }
 }
