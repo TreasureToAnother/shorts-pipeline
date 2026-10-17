@@ -20,10 +20,10 @@
     {
       "slot": 2,
       "hour_et": 6,
-      "stage": "generating",
-      "title": null,
-      "video_url": null,
-      "publish_at": null
+      "stage": "uploaded",
+      "title": "I'm still trying to process the past hour, but it's all feeling like a blur.",
+      "video_url": "https://youtube.com/shorts/nH4kd_SlBf0",
+      "publish_at": "2026-10-17T19:33:48Z"
     },
     {
       "slot": 3,
