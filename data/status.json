@@ -1,22 +1,22 @@
 {
   "script_agent": {
-    "status": "done",
-    "message": "generated: I'm still shaking as I replay that night, when I was the hostess at my best frie",
-    "updated_at": "2026-10-16T17:14:00Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "video_agent": {
-    "status": "done",
-    "message": "/home/runner/work/shorts-pipeline/shorts-pipeline/agents/../data/output/41306dad.mp4",
-    "updated_at": "2026-10-16T17:15:08Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "upload_agent": {
-    "status": "done",
-    "message": "scheduled for 2026-10-16T22:15:09Z: https://youtube.com/shorts/46y_5iy0Cnw",
-    "updated_at": "2026-10-16T17:15:12Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "discord_agent": {
-    "status": "done",
-    "message": "notified: I'm still shaking as I replay that night, when I was the hostess at my best frie (scheduled 2026-10-16T22:15:09Z UTC)",
-    "updated_at": "2026-10-16T17:15:15Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   }
 }
