@@ -15,8 +15,8 @@
     "updated_at": "2026-10-17T14:33:52Z"
   },
   "discord_agent": {
-    "status": "running",
-    "message": "posting upload notification",
-    "updated_at": "2026-10-17T14:33:53Z"
+    "status": "done",
+    "message": "notified: I'm still trying to process the past hour, but it's all feeling like a blur. (scheduled 2026-10-17T19:33:48Z UTC)",
+    "updated_at": "2026-10-17T14:33:54Z"
   }
 }
