@@ -4,10 +4,10 @@
     {
       "slot": 0,
       "hour_et": 4,
-      "stage": "generating",
-      "title": null,
-      "video_url": null,
-      "publish_at": null
+      "stage": "uploaded",
+      "title": "I poured steaming coffee for my date, Alex, a charming senior with a warm smile.",
+      "video_url": "https://youtube.com/shorts/09ugxEkxe38",
+      "publish_at": "2026-10-17T17:53:04Z"
     },
     {
       "slot": 1,
