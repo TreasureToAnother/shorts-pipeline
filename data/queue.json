@@ -12,10 +12,10 @@
     {
       "slot": 1,
       "hour_et": 5,
-      "stage": "generating",
-      "title": null,
-      "video_url": null,
-      "publish_at": null
+      "stage": "uploaded",
+      "title": "I pour myself another cup of coffee, my eyes scanning the group project room for",
+      "video_url": "https://youtube.com/shorts/U7XfXvtNoQk",
+      "publish_at": "2026-10-17T19:11:38Z"
     },
     {
       "slot": 2,
