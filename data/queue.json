@@ -1,53 +1,53 @@
 {
-  "date": "2026-10-16",
+  "date": "2026-10-17",
   "slots": [
     {
       "slot": 0,
       "hour_et": 4,
-      "stage": "uploaded",
-      "title": "I'll never forget the day I found out my best friend, Rachel, was secretly takin",
-      "video_url": "https://youtube.com/shorts/qve14FsQokw",
-      "publish_at": "2026-10-16T18:55:29Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 1,
       "hour_et": 5,
-      "stage": "uploaded",
-      "title": "I thought we were invincible, like two pieces of a puzzle meant to be together, ",
-      "video_url": "https://youtube.com/shorts/sdqs51eXbLY",
-      "publish_at": "2026-10-16T19:43:46Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 2,
       "hour_et": 6,
-      "stage": "uploaded",
-      "title": "I'll never forget the night I stumbled upon the hidden room at Camp Clearwater.",
-      "video_url": "https://youtube.com/shorts/vxQLcSfBmMw",
-      "publish_at": "2026-10-16T20:24:02Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 3,
       "hour_et": 7,
-      "stage": "uploaded",
-      "title": "I've been studying for exams in my dorm room for what feels like an eternity, th",
-      "video_url": "https://youtube.com/shorts/abXh6unaT7E",
-      "publish_at": "2026-10-16T20:42:46Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 4,
       "hour_et": 8,
-      "stage": "uploaded",
-      "title": "I'm still shaking as I replay that night, when I was the hostess at my best frie",
-      "video_url": "https://youtube.com/shorts/46y_5iy0Cnw",
-      "publish_at": "2026-10-16T22:15:09Z"
+      "stage": "generating",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 5,
       "hour_et": 9,
-      "stage": "uploaded",
-      "title": "His text was the last thing I saw\"\n\n#Betrayed",
-      "video_url": "https://youtube.com/shorts/SDjM1_C_Kxo",
-      "publish_at": "2026-10-16T18:13:42Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     }
   ]
 }
