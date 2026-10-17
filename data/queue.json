@@ -44,10 +44,10 @@
     {
       "slot": 5,
       "hour_et": 9,
-      "stage": "generating",
-      "title": null,
-      "video_url": null,
-      "publish_at": null
+      "stage": "uploaded",
+      "title": "I stood at the edge of the crowded room, nursing a glass of wine, as we all wait",
+      "video_url": "https://youtube.com/shorts/UXfilJln_bc",
+      "publish_at": "2026-10-17T18:35:19Z"
     }
   ]
 }
