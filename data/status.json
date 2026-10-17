@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-10-17T12:50:24Z"
+    "status": "done",
+    "message": "generated: I poured steaming coffee for my date, Alex, a charming senior with a warm smile.",
+    "updated_at": "2026-10-17T12:51:16Z"
   },
   "video_agent": {
     "status": "idle",
