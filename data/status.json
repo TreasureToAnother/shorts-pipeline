@@ -15,8 +15,8 @@
     "updated_at": "2026-10-17T16:14:42Z"
   },
   "discord_agent": {
-    "status": "running",
-    "message": "posting upload notification",
-    "updated_at": "2026-10-17T16:14:43Z"
+    "status": "done",
+    "message": "notified: I've been hosting for months, but tonight's the worst. (scheduled 2026-10-17T21:14:38Z UTC)",
+    "updated_at": "2026-10-17T16:14:45Z"
   }
 }
