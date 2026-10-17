@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-10-17T13:33:05Z"
+    "status": "done",
+    "message": "generated: I stood at the edge of the crowded room, nursing a glass of wine, as we all wait",
+    "updated_at": "2026-10-17T13:33:47Z"
   },
   "video_agent": {
     "status": "idle",
