@@ -44,10 +44,10 @@
     {
       "slot": 5,
       "hour_et": 9,
-      "stage": "generating",
-      "title": null,
-      "video_url": null,
-      "publish_at": null
+      "stage": "uploaded",
+      "title": "I'm still trying to process the night that changed everything.",
+      "video_url": "https://youtube.com/shorts/YmLgDYz0f0k",
+      "publish_at": "2026-10-18T18:09:38Z"
     }
   ]
 }
