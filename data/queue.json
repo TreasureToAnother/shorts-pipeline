@@ -1,53 +1,53 @@
 {
-  "date": "2026-10-17",
+  "date": "2026-10-18",
   "slots": [
     {
       "slot": 0,
       "hour_et": 4,
-      "stage": "uploaded",
-      "title": "I poured steaming coffee for my date, Alex, a charming senior with a warm smile.",
-      "video_url": "https://youtube.com/shorts/09ugxEkxe38",
-      "publish_at": "2026-10-17T17:53:04Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 1,
       "hour_et": 5,
-      "stage": "uploaded",
-      "title": "I pour myself another cup of coffee, my eyes scanning the group project room for",
-      "video_url": "https://youtube.com/shorts/U7XfXvtNoQk",
-      "publish_at": "2026-10-17T19:11:38Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 2,
       "hour_et": 6,
-      "stage": "uploaded",
-      "title": "I'm still trying to process the past hour, but it's all feeling like a blur.",
-      "video_url": "https://youtube.com/shorts/nH4kd_SlBf0",
-      "publish_at": "2026-10-17T19:33:48Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 3,
       "hour_et": 7,
-      "stage": "uploaded",
-      "title": "I've been hosting for months, but tonight's the worst.",
-      "video_url": "https://youtube.com/shorts/eaHGZBpjr7s",
-      "publish_at": "2026-10-17T21:14:38Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 4,
       "hour_et": 8,
-      "stage": "uploaded",
-      "title": "I've been crushing on Alex for months, our long-distance relationship a perfect ",
-      "video_url": "https://youtube.com/shorts/ypxh91_BrxE",
-      "publish_at": "2026-10-17T17:09:54Z"
+      "stage": "generating",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 5,
       "hour_et": 9,
-      "stage": "uploaded",
-      "title": "I stood at the edge of the crowded room, nursing a glass of wine, as we all wait",
-      "video_url": "https://youtube.com/shorts/UXfilJln_bc",
-      "publish_at": "2026-10-17T18:35:19Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     }
   ]
 }
