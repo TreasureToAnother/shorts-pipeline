@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-10-18T14:58:30Z"
+    "status": "done",
+    "message": "generated: I've been stuck in this love triangle for what feels like an eternity, stuck bet",
+    "updated_at": "2026-10-18T14:59:16Z"
   },
   "video_agent": {
     "status": "idle",
