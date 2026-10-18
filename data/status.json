@@ -15,8 +15,8 @@
     "updated_at": "2026-10-18T13:09:41Z"
   },
   "discord_agent": {
-    "status": "running",
-    "message": "posting upload notification",
-    "updated_at": "2026-10-18T13:09:42Z"
+    "status": "done",
+    "message": "notified: I'm still trying to process the night that changed everything. (scheduled 2026-10-18T18:09:38Z UTC)",
+    "updated_at": "2026-10-18T13:09:43Z"
   }
 }
