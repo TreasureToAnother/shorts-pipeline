@@ -10,9 +10,9 @@
     "updated_at": "2026-10-18T13:09:37Z"
   },
   "upload_agent": {
-    "status": "running",
-    "message": "uploading ead5d7a1.mp4",
-    "updated_at": "2026-10-18T13:09:38Z"
+    "status": "done",
+    "message": "scheduled for 2026-10-18T18:09:38Z: https://youtube.com/shorts/YmLgDYz0f0k",
+    "updated_at": "2026-10-18T13:09:41Z"
   },
   "discord_agent": {
     "status": "idle",
