@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-10-18T16:25:40Z"
+    "status": "done",
+    "message": "generated: He whispered a secret that would shatter everything",
+    "updated_at": "2026-10-18T16:26:22Z"
   },
   "video_agent": {
     "status": "idle",
