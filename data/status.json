@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-10-18T13:52:10Z"
+    "status": "done",
+    "message": "generated: I stood by the fire pit, watching my friends laugh and dance, as I tried to shak",
+    "updated_at": "2026-10-18T13:52:56Z"
   },
   "video_agent": {
     "status": "idle",
