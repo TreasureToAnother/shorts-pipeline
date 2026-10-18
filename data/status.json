@@ -1,22 +1,22 @@
 {
   "script_agent": {
-    "status": "done",
-    "message": "generated: His gaze is my worst warning sign\" \ud83d\udd77\ufe0f",
-    "updated_at": "2026-10-18T12:36:40Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "video_agent": {
-    "status": "done",
-    "message": "/home/runner/work/shorts-pipeline/shorts-pipeline/agents/../data/output/7dd9e784.mp4",
-    "updated_at": "2026-10-18T12:37:38Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "upload_agent": {
-    "status": "done",
-    "message": "scheduled for 2026-10-18T17:37:39Z: https://youtube.com/shorts/v15Ue4zq8TY",
-    "updated_at": "2026-10-18T12:37:42Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "discord_agent": {
-    "status": "done",
-    "message": "notified: His gaze is my worst warning sign\" \ud83d\udd77\ufe0f (scheduled 2026-10-18T17:37:39Z UTC)",
-    "updated_at": "2026-10-18T12:37:44Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   }
 }
