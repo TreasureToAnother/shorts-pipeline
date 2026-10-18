@@ -15,8 +15,8 @@
     "updated_at": "2026-10-18T16:28:01Z"
   },
   "discord_agent": {
-    "status": "running",
-    "message": "posting upload notification",
-    "updated_at": "2026-10-18T16:28:02Z"
+    "status": "done",
+    "message": "notified: He whispered a secret that would shatter everything (scheduled 2026-10-18T21:27:58Z UTC)",
+    "updated_at": "2026-10-18T16:28:04Z"
   }
 }
