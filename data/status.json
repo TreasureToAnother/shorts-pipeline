@@ -10,9 +10,9 @@
     "updated_at": "2026-10-18T14:30:36Z"
   },
   "upload_agent": {
-    "status": "running",
-    "message": "uploading ab52fa40.mp4",
-    "updated_at": "2026-10-18T14:30:37Z"
+    "status": "done",
+    "message": "scheduled for 2026-10-18T19:30:37Z: https://youtube.com/shorts/FxJZC65Y4B0",
+    "updated_at": "2026-10-18T14:30:40Z"
   },
   "discord_agent": {
     "status": "idle",
