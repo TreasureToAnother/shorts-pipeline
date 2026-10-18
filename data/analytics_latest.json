@@ -1,21 +1,31 @@
 {
-  "updated_at": "2026-10-18T14:29:23Z",
+  "updated_at": "2026-10-18T17:59:53Z",
   "channel": {
     "title": "Treasure To Another",
     "thumbnail": "https://yt3.ggpht.com/4iJRPFXBUDoj_XhTxdvPBJUbrheeqCvqcnlTcGzDHMocWRgdOwhDvE-26GhG7FemNVIeIG_hYQ=s88-c-k-c0x00ffffff-no-rj",
     "subscriberCount": 67,
-    "viewCount": 85315,
-    "videoCount": 246,
+    "viewCount": 87016,
+    "videoCount": 247,
     "subsThisMonth": 26,
-    "viewsThisMonth": 29253
+    "viewsThisMonth": 30954
   },
   "latestVideos": [
+    {
+      "id": "v15Ue4zq8TY",
+      "title": "subscribe for more fun stories #storytime #story",
+      "publishedAt": "2026-10-18T17:38:04Z",
+      "thumbnail": "https://i.ytimg.com/vi/v15Ue4zq8TY/mqdefault.jpg",
+      "views": 3,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://youtube.com/shorts/v15Ue4zq8TY"
+    },
     {
       "id": "eaHGZBpjr7s",
       "title": "subscribe for more fun stories #storytime #story",
       "publishedAt": "2026-10-17T21:14:49Z",
       "thumbnail": "https://i.ytimg.com/vi/eaHGZBpjr7s/mqdefault.jpg",
-      "views": 7,
+      "views": 8,
       "likes": 0,
       "comments": 0,
       "url": "https://youtube.com/shorts/eaHGZBpjr7s"
@@ -35,7 +45,7 @@
       "title": "subscribe for more fun stories #storytime #story",
       "publishedAt": "2026-10-17T19:12:04Z",
       "thumbnail": "https://i.ytimg.com/vi/U7XfXvtNoQk/mqdefault.jpg",
-      "views": 8,
+      "views": 10,
       "likes": 0,
       "comments": 0,
       "url": "https://youtube.com/shorts/U7XfXvtNoQk"
@@ -49,16 +59,6 @@
       "likes": 0,
       "comments": 0,
       "url": "https://youtube.com/shorts/UXfilJln_bc"
-    },
-    {
-      "id": "09ugxEkxe38",
-      "title": "subscribe for more fun stories #storytime #story",
-      "publishedAt": "2026-10-17T17:53:43Z",
-      "thumbnail": "https://i.ytimg.com/vi/09ugxEkxe38/mqdefault.jpg",
-      "views": 12,
-      "likes": 0,
-      "comments": 0,
-      "url": "https://youtube.com/shorts/09ugxEkxe38"
     }
   ]
 }
