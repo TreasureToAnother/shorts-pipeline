@@ -28,10 +28,10 @@
     {
       "slot": 3,
       "hour_et": 7,
-      "stage": "generating",
-      "title": null,
-      "video_url": null,
-      "publish_at": null
+      "stage": "uploaded",
+      "title": "He whispered a secret that would shatter everything",
+      "video_url": "https://youtube.com/shorts/07f1WWh3ORY",
+      "publish_at": "2026-10-18T21:27:58Z"
     },
     {
       "slot": 4,
