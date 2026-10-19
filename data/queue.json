@@ -12,10 +12,10 @@
     {
       "slot": 1,
       "hour_et": 5,
-      "stage": "generating",
-      "title": null,
-      "video_url": null,
-      "publish_at": null
+      "stage": "uploaded",
+      "title": "I've been pouring coffee for him every morning at the group project's favorite c",
+      "video_url": "https://youtube.com/shorts/ER0PBltkJ04",
+      "publish_at": "2026-10-19T21:24:01Z"
     },
     {
       "slot": 2,
