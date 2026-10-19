@@ -36,10 +36,10 @@
     {
       "slot": 4,
       "hour_et": 8,
-      "stage": "generating",
-      "title": null,
-      "video_url": null,
-      "publish_at": null
+      "stage": "uploaded",
+      "title": "I'll never forget the night my best friend, Rachel, betrayed me.",
+      "video_url": "https://youtube.com/shorts/m-aznXPRMck",
+      "publish_at": "2026-10-19T22:53:45Z"
     },
     {
       "slot": 5,
