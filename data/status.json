@@ -1,22 +1,22 @@
 {
   "script_agent": {
-    "status": "done",
-    "message": "generated: I've been pouring coffee for him every morning at the group project's favorite c",
-    "updated_at": "2026-10-19T16:22:34Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "video_agent": {
-    "status": "done",
-    "message": "/home/runner/work/shorts-pipeline/shorts-pipeline/agents/../data/output/fe758ef2.mp4",
-    "updated_at": "2026-10-19T16:23:59Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "upload_agent": {
-    "status": "done",
-    "message": "scheduled for 2026-10-19T21:24:01Z: https://youtube.com/shorts/ER0PBltkJ04",
-    "updated_at": "2026-10-19T16:24:04Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "discord_agent": {
-    "status": "done",
-    "message": "notified: I've been pouring coffee for him every morning at the group project's favorite c (scheduled 2026-10-19T21:24:01Z UTC)",
-    "updated_at": "2026-10-19T16:24:07Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   }
 }
