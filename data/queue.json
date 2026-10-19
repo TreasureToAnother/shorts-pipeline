@@ -1,53 +1,53 @@
 {
-  "date": "2026-10-18",
+  "date": "2026-10-19",
   "slots": [
     {
       "slot": 0,
       "hour_et": 4,
-      "stage": "uploaded",
-      "title": "I stood by the fire pit, watching my friends laugh and dance, as I tried to shak",
-      "video_url": "https://youtube.com/shorts/cD1tjZxFqDQ",
-      "publish_at": "2026-10-18T18:54:20Z"
+      "stage": "generating",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 1,
       "hour_et": 5,
-      "stage": "uploaded",
-      "title": "I'll never forget the night I stumbled upon the secret.",
-      "video_url": "https://youtube.com/shorts/FxJZC65Y4B0",
-      "publish_at": "2026-10-18T19:30:37Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 2,
       "hour_et": 6,
-      "stage": "uploaded",
-      "title": "I've been stuck in this love triangle for what feels like an eternity, stuck bet",
-      "video_url": "https://youtube.com/shorts/jrLmw86U9eo",
-      "publish_at": "2026-10-18T20:00:38Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 3,
       "hour_et": 7,
-      "stage": "uploaded",
-      "title": "He whispered a secret that would shatter everything",
-      "video_url": "https://youtube.com/shorts/07f1WWh3ORY",
-      "publish_at": "2026-10-18T21:27:58Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 4,
       "hour_et": 8,
-      "stage": "uploaded",
-      "title": "His gaze is my worst warning sign\" \ud83d\udd77\ufe0f",
-      "video_url": "https://youtube.com/shorts/v15Ue4zq8TY",
-      "publish_at": "2026-10-18T17:37:39Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 5,
       "hour_et": 9,
-      "stage": "uploaded",
-      "title": "I'm still trying to process the night that changed everything.",
-      "video_url": "https://youtube.com/shorts/YmLgDYz0f0k",
-      "publish_at": "2026-10-18T18:09:38Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     }
   ]
 }
