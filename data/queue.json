@@ -28,10 +28,10 @@
     {
       "slot": 3,
       "hour_et": 7,
-      "stage": "generating",
-      "title": null,
-      "video_url": null,
-      "publish_at": null
+      "stage": "uploaded",
+      "title": "I stood at the edge of the party, nursing my drink as the music pulsed around me",
+      "video_url": "https://youtube.com/shorts/CD8Ap3RKVAo",
+      "publish_at": "2026-10-19T22:30:11Z"
     },
     {
       "slot": 4,
