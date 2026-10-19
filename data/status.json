@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-10-19T15:32:00Z"
+    "status": "done",
+    "message": "generated: I've been watching him from behind the counter for weeks, our eyes meeting in fl",
+    "updated_at": "2026-10-19T15:32:49Z"
   },
   "video_agent": {
     "status": "idle",
