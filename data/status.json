@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-10-19T17:28:08Z"
+    "status": "done",
+    "message": "generated: I stood at the edge of the party, nursing my drink as the music pulsed around me",
+    "updated_at": "2026-10-19T17:28:49Z"
   },
   "video_agent": {
     "status": "idle",
