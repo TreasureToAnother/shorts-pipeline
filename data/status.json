@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-10-19T16:53:24Z"
+    "status": "done",
+    "message": "generated: Caught off guard by his smile \ud83d\udcf8\" #SuspenseStory",
+    "updated_at": "2026-10-19T16:54:03Z"
   },
   "video_agent": {
     "status": "idle",
