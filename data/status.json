@@ -5,9 +5,9 @@
     "updated_at": "2026-10-19T17:52:07Z"
   },
   "video_agent": {
-    "status": "running",
-    "message": "assembling scenes",
-    "updated_at": "2026-10-19T17:52:08Z"
+    "status": "done",
+    "message": "/home/runner/work/shorts-pipeline/shorts-pipeline/agents/../data/output/ac1e1216.mp4",
+    "updated_at": "2026-10-19T17:53:44Z"
   },
   "upload_agent": {
     "status": "idle",
