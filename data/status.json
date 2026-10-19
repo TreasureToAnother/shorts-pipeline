@@ -1,22 +1,22 @@
 {
   "script_agent": {
-    "status": "done",
-    "message": "generated: I stood at the edge of the party, nursing my drink as the music pulsed around me",
-    "updated_at": "2026-10-19T17:28:49Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "video_agent": {
-    "status": "done",
-    "message": "/home/runner/work/shorts-pipeline/shorts-pipeline/agents/../data/output/4948ecb7.mp4",
-    "updated_at": "2026-10-19T17:30:10Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "upload_agent": {
-    "status": "done",
-    "message": "scheduled for 2026-10-19T22:30:11Z: https://youtube.com/shorts/CD8Ap3RKVAo",
-    "updated_at": "2026-10-19T17:30:14Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "discord_agent": {
-    "status": "done",
-    "message": "notified: I stood at the edge of the party, nursing my drink as the music pulsed around me (scheduled 2026-10-19T22:30:11Z UTC)",
-    "updated_at": "2026-10-19T17:30:16Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   }
 }
