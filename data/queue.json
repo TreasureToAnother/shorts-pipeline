@@ -44,10 +44,10 @@
     {
       "slot": 5,
       "hour_et": 9,
-      "stage": "generating",
-      "title": null,
-      "video_url": null,
-      "publish_at": null
+      "stage": "uploaded",
+      "title": "I'll never forget the night we were all laughing and screaming at the karaoke ba",
+      "video_url": "https://youtube.com/shorts/VbQMhj5ueyc",
+      "publish_at": "2026-10-20T00:12:36Z"
     }
   ]
 }
