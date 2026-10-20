@@ -44,10 +44,10 @@
     {
       "slot": 5,
       "hour_et": 9,
-      "stage": "generating",
-      "title": null,
-      "video_url": null,
-      "publish_at": null
+      "stage": "uploaded",
+      "title": "I stared through my camera lens, capturing the vibrant colors of our group proje",
+      "video_url": "https://youtube.com/shorts/hVX8Vt08OdU",
+      "publish_at": "2026-10-20T18:33:21Z"
     }
   ]
 }
