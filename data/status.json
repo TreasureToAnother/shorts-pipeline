@@ -1,22 +1,22 @@
 {
   "script_agent": {
-    "status": "done",
-    "message": "generated: He just showed up and I wasn't ready \ud83d\udc94",
-    "updated_at": "2026-10-20T15:56:02Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "video_agent": {
-    "status": "done",
-    "message": "/home/runner/work/shorts-pipeline/shorts-pipeline/agents/../data/output/58c24dd2.mp4",
-    "updated_at": "2026-10-20T15:57:22Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "upload_agent": {
-    "status": "done",
-    "message": "scheduled for 2026-10-20T20:57:23Z: https://youtube.com/shorts/T2OvAwyRji8",
-    "updated_at": "2026-10-20T15:57:28Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "discord_agent": {
-    "status": "done",
-    "message": "notified: He just showed up and I wasn't ready \ud83d\udc94 (scheduled 2026-10-20T20:57:23Z UTC)",
-    "updated_at": "2026-10-20T15:57:30Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   }
 }
