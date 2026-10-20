@@ -1,53 +1,53 @@
 {
-  "date": "2026-10-19",
+  "date": "2026-10-20",
   "slots": [
     {
       "slot": 0,
       "hour_et": 4,
-      "stage": "uploaded",
-      "title": "I've been watching him from behind the counter for weeks, our eyes meeting in fl",
-      "video_url": "https://youtube.com/shorts/xu1ae06P8lU",
-      "publish_at": "2026-10-19T20:34:20Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 1,
       "hour_et": 5,
-      "stage": "uploaded",
-      "title": "I've been pouring coffee for him every morning at the group project's favorite c",
-      "video_url": "https://youtube.com/shorts/ER0PBltkJ04",
-      "publish_at": "2026-10-19T21:24:01Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 2,
       "hour_et": 6,
-      "stage": "uploaded",
-      "title": "Caught off guard by his smile \ud83d\udcf8\" #SuspenseStory",
-      "video_url": "https://youtube.com/shorts/pr-WLoUTUZQ",
-      "publish_at": "2026-10-19T21:55:34Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 3,
       "hour_et": 7,
-      "stage": "uploaded",
-      "title": "I stood at the edge of the party, nursing my drink as the music pulsed around me",
-      "video_url": "https://youtube.com/shorts/CD8Ap3RKVAo",
-      "publish_at": "2026-10-19T22:30:11Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 4,
       "hour_et": 8,
-      "stage": "uploaded",
-      "title": "I'll never forget the night my best friend, Rachel, betrayed me.",
-      "video_url": "https://youtube.com/shorts/m-aznXPRMck",
-      "publish_at": "2026-10-19T22:53:45Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 5,
       "hour_et": 9,
-      "stage": "uploaded",
-      "title": "I'll never forget the night we were all laughing and screaming at the karaoke ba",
-      "video_url": "https://youtube.com/shorts/VbQMhj5ueyc",
-      "publish_at": "2026-10-20T00:12:36Z"
+      "stage": "generating",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     }
   ]
 }
