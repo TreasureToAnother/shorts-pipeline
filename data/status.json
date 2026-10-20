@@ -15,8 +15,8 @@
     "updated_at": "2026-10-20T17:52:28Z"
   },
   "discord_agent": {
-    "status": "running",
-    "message": "posting upload notification",
-    "updated_at": "2026-10-20T17:52:29Z"
+    "status": "done",
+    "message": "notified: She answered his phone (scheduled 2026-10-20T22:52:24Z UTC)",
+    "updated_at": "2026-10-20T17:52:31Z"
   }
 }
