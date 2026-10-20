@@ -28,10 +28,10 @@
     {
       "slot": 3,
       "hour_et": 7,
-      "stage": "generating",
-      "title": null,
-      "video_url": null,
-      "publish_at": null
+      "stage": "uploaded",
+      "title": "He just showed up and I wasn't ready \ud83d\udc94",
+      "video_url": "https://youtube.com/shorts/T2OvAwyRji8",
+      "publish_at": "2026-10-20T20:57:23Z"
     },
     {
       "slot": 4,
