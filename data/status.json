@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-10-20T15:55:34Z"
+    "status": "done",
+    "message": "generated: He just showed up and I wasn't ready \ud83d\udc94",
+    "updated_at": "2026-10-20T15:56:02Z"
   },
   "video_agent": {
     "status": "idle",
