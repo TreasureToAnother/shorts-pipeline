@@ -36,10 +36,10 @@
     {
       "slot": 4,
       "hour_et": 8,
-      "stage": "generating",
-      "title": null,
-      "video_url": null,
-      "publish_at": null
+      "stage": "uploaded",
+      "title": "She answered his phone",
+      "video_url": "https://youtube.com/shorts/F4VEMJFeq4g",
+      "publish_at": "2026-10-20T22:52:24Z"
     },
     {
       "slot": 5,
