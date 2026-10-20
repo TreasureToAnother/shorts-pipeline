@@ -10,9 +10,9 @@
     "updated_at": "2026-10-20T14:16:36Z"
   },
   "upload_agent": {
-    "status": "running",
-    "message": "uploading 709beb49.mp4",
-    "updated_at": "2026-10-20T14:16:37Z"
+    "status": "done",
+    "message": "scheduled for 2026-10-20T19:16:37Z: https://youtube.com/shorts/dliWoap_578",
+    "updated_at": "2026-10-20T14:16:41Z"
   },
   "discord_agent": {
     "status": "idle",
