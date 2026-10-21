@@ -15,8 +15,8 @@
     "updated_at": "2026-10-21T15:00:23Z"
   },
   "discord_agent": {
-    "status": "running",
-    "message": "posting upload notification",
-    "updated_at": "2026-10-21T15:00:24Z"
+    "status": "done",
+    "message": "notified: I sat at the small coffee shop, nursing my latte and staring at my phone. (scheduled 2026-10-21T20:00:19Z UTC)",
+    "updated_at": "2026-10-21T15:00:26Z"
   }
 }
