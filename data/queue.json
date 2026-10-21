@@ -28,10 +28,10 @@
     {
       "slot": 3,
       "hour_et": 7,
-      "stage": "generating",
-      "title": null,
-      "video_url": null,
-      "publish_at": null
+      "stage": "uploaded",
+      "title": "I've been crushing on him for weeks, the guy who makes my coffee every morning.",
+      "video_url": "https://youtube.com/shorts/QAkbzAheLJo",
+      "publish_at": "2026-10-21T21:14:26Z"
     },
     {
       "slot": 4,
