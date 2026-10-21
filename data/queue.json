@@ -1,53 +1,53 @@
 {
-  "date": "2026-10-20",
+  "date": "2026-10-21",
   "slots": [
     {
       "slot": 0,
       "hour_et": 4,
-      "stage": "uploaded",
-      "title": "I'll never forget the summer I fell for Alex, the guy who lived in the apartment",
-      "video_url": "https://youtube.com/shorts/dliWoap_578",
-      "publish_at": "2026-10-20T19:16:37Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 1,
       "hour_et": 5,
-      "stage": "uploaded",
-      "title": "He walked in and shattered my heart \ud83d\udc94",
-      "video_url": "https://youtube.com/shorts/Qr-Es50kyUk",
-      "publish_at": "2026-10-20T19:53:04Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 2,
       "hour_et": 6,
-      "stage": "uploaded",
-      "title": "I've been staring at his smile for what feels like an eternity, my palms sweatin",
-      "video_url": "https://youtube.com/shorts/PTRy1XKpOgI",
-      "publish_at": "2026-10-20T20:41:13Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 3,
       "hour_et": 7,
-      "stage": "uploaded",
-      "title": "He just showed up and I wasn't ready \ud83d\udc94",
-      "video_url": "https://youtube.com/shorts/T2OvAwyRji8",
-      "publish_at": "2026-10-20T20:57:23Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 4,
       "hour_et": 8,
-      "stage": "uploaded",
-      "title": "She answered his phone",
-      "video_url": "https://youtube.com/shorts/F4VEMJFeq4g",
-      "publish_at": "2026-10-20T22:52:24Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 5,
       "hour_et": 9,
-      "stage": "uploaded",
-      "title": "I stared through my camera lens, capturing the vibrant colors of our group proje",
-      "video_url": "https://youtube.com/shorts/hVX8Vt08OdU",
-      "publish_at": "2026-10-20T18:33:21Z"
+      "stage": "generating",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     }
   ]
 }
