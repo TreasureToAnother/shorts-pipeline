@@ -15,8 +15,8 @@
     "updated_at": "2026-10-21T17:59:14Z"
   },
   "discord_agent": {
-    "status": "running",
-    "message": "posting upload notification",
-    "updated_at": "2026-10-21T17:59:15Z"
+    "status": "done",
+    "message": "notified: The text that made me question everything\"\n\n( #betrayalalert ) (scheduled 2026-10-21T22:59:11Z UTC)",
+    "updated_at": "2026-10-21T17:59:17Z"
   }
 }
