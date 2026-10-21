@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-10-21T16:12:28Z"
+    "status": "done",
+    "message": "generated: I've been crushing on him for weeks, the guy who makes my coffee every morning.",
+    "updated_at": "2026-10-21T16:12:55Z"
   },
   "video_agent": {
     "status": "idle",
