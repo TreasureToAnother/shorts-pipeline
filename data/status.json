@@ -1,22 +1,22 @@
 {
   "script_agent": {
-    "status": "done",
-    "message": "generated: I've been crushing on him for weeks, the guy who makes my coffee every morning.",
-    "updated_at": "2026-10-21T16:12:55Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "video_agent": {
-    "status": "done",
-    "message": "/home/runner/work/shorts-pipeline/shorts-pipeline/agents/../data/output/32affcb9.mp4",
-    "updated_at": "2026-10-21T16:14:25Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "upload_agent": {
-    "status": "done",
-    "message": "scheduled for 2026-10-21T21:14:26Z: https://youtube.com/shorts/QAkbzAheLJo",
-    "updated_at": "2026-10-21T16:14:30Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "discord_agent": {
-    "status": "done",
-    "message": "notified: I've been crushing on him for weeks, the guy who makes my coffee every morning. (scheduled 2026-10-21T21:14:26Z UTC)",
-    "updated_at": "2026-10-21T16:14:33Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   }
 }
