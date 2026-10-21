@@ -1,22 +1,22 @@
 {
   "script_agent": {
-    "status": "done",
-    "message": "generated: I thought I'd found my perfect match in Alex, the charming guy who always knew h",
-    "updated_at": "2026-10-21T14:27:38Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "video_agent": {
-    "status": "done",
-    "message": "/home/runner/work/shorts-pipeline/shorts-pipeline/agents/../data/output/623a50b4.mp4",
-    "updated_at": "2026-10-21T14:28:50Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "upload_agent": {
-    "status": "done",
-    "message": "scheduled for 2026-10-21T19:28:51Z: https://youtube.com/shorts/AgXbtdzmxMY",
-    "updated_at": "2026-10-21T14:28:56Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "discord_agent": {
-    "status": "done",
-    "message": "notified: I thought I'd found my perfect match in Alex, the charming guy who always knew h (scheduled 2026-10-21T19:28:51Z UTC)",
-    "updated_at": "2026-10-21T14:29:00Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   }
 }
