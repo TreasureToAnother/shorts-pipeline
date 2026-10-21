@@ -44,10 +44,10 @@
     {
       "slot": 5,
       "hour_et": 9,
-      "stage": "generating",
-      "title": null,
-      "video_url": null,
-      "publish_at": null
+      "stage": "uploaded",
+      "title": "I've been pining for him since our photography trip.",
+      "video_url": "https://youtube.com/shorts/rajSNhY_0UI",
+      "publish_at": "2026-10-21T18:43:15Z"
     }
   ]
 }
