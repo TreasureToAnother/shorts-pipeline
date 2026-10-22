@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-10-22T17:55:49Z"
+    "status": "done",
+    "message": "generated: I stood frozen in the crowd, watching the bride's white dress shimmer in the sun",
+    "updated_at": "2026-10-22T17:56:32Z"
   },
   "video_agent": {
     "status": "idle",
