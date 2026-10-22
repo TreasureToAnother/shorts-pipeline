@@ -15,8 +15,8 @@
     "updated_at": "2026-10-22T14:59:58Z"
   },
   "discord_agent": {
-    "status": "running",
-    "message": "posting upload notification",
-    "updated_at": "2026-10-22T14:59:59Z"
+    "status": "done",
+    "message": "notified: Caught in the Lie\"\n\n#BetrayalAlert (scheduled 2026-10-22T19:59:54Z UTC)",
+    "updated_at": "2026-10-22T15:00:00Z"
   }
 }
