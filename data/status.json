@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-10-22T15:52:59Z"
+    "status": "done",
+    "message": "generated: I still remember the night I texted my \"best friend\" Rachel, asking her to meet ",
+    "updated_at": "2026-10-22T15:53:53Z"
   },
   "video_agent": {
     "status": "idle",
