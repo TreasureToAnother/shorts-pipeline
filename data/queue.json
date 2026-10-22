@@ -28,10 +28,10 @@
     {
       "slot": 3,
       "hour_et": 7,
-      "stage": "generating",
-      "title": null,
-      "video_url": null,
-      "publish_at": null
+      "stage": "uploaded",
+      "title": "I'll never forget the night I stumbled upon the secret.",
+      "video_url": "https://youtube.com/shorts/zlBmXlTPo6U",
+      "publish_at": "2026-10-22T21:13:37Z"
     },
     {
       "slot": 4,
