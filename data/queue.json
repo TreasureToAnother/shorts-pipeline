@@ -36,10 +36,10 @@
     {
       "slot": 4,
       "hour_et": 8,
-      "stage": "generating",
-      "title": null,
-      "video_url": null,
-      "publish_at": null
+      "stage": "uploaded",
+      "title": "I stood frozen in the crowd, watching the bride's white dress shimmer in the sun",
+      "video_url": "https://youtube.com/shorts/_8Y5WA0huYA",
+      "publish_at": "2026-10-22T22:57:56Z"
     },
     {
       "slot": 5,
