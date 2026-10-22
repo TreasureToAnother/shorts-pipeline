@@ -1,53 +1,53 @@
 {
-  "date": "2026-10-21",
+  "date": "2026-10-22",
   "slots": [
     {
       "slot": 0,
       "hour_et": 4,
-      "stage": "uploaded",
-      "title": "I thought I'd found my perfect match in Alex, the charming guy who always knew h",
-      "video_url": "https://youtube.com/shorts/AgXbtdzmxMY",
-      "publish_at": "2026-10-21T19:28:51Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 1,
       "hour_et": 5,
-      "stage": "uploaded",
-      "title": "I sat at the small coffee shop, nursing my latte and staring at my phone.",
-      "video_url": "https://youtube.com/shorts/F9y_PeO0aLk",
-      "publish_at": "2026-10-21T20:00:19Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 2,
       "hour_et": 6,
-      "stage": "uploaded",
-      "title": "I caught him lying about his past \ud83e\udd15",
-      "video_url": "https://youtube.com/shorts/i_hRZG_5J7w",
-      "publish_at": "2026-10-21T20:59:20Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 3,
       "hour_et": 7,
-      "stage": "uploaded",
-      "title": "I've been crushing on him for weeks, the guy who makes my coffee every morning.",
-      "video_url": "https://youtube.com/shorts/QAkbzAheLJo",
-      "publish_at": "2026-10-21T21:14:26Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 4,
       "hour_et": 8,
-      "stage": "uploaded",
-      "title": "The text that made me question everything\"\n\n( #betrayalalert )",
-      "video_url": "https://youtube.com/shorts/nYUYFLHgUaw",
-      "publish_at": "2026-10-21T22:59:11Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 5,
       "hour_et": 9,
-      "stage": "uploaded",
-      "title": "I've been pining for him since our photography trip.",
-      "video_url": "https://youtube.com/shorts/rajSNhY_0UI",
-      "publish_at": "2026-10-21T18:43:15Z"
+      "stage": "generating",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     }
   ]
 }
