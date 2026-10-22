@@ -1,22 +1,22 @@
 {
   "script_agent": {
-    "status": "done",
-    "message": "generated: I still remember the night I texted my \"best friend\" Rachel, asking her to meet ",
-    "updated_at": "2026-10-22T15:53:53Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "video_agent": {
-    "status": "done",
-    "message": "/home/runner/work/shorts-pipeline/shorts-pipeline/agents/../data/output/949067c0.mp4",
-    "updated_at": "2026-10-22T15:55:41Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "upload_agent": {
-    "status": "done",
-    "message": "scheduled for 2026-10-22T20:55:43Z: https://youtube.com/shorts/2a0zX3HXWkk",
-    "updated_at": "2026-10-22T15:55:46Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "discord_agent": {
-    "status": "done",
-    "message": "notified: I still remember the night I texted my \"best friend\" Rachel, asking her to meet  (scheduled 2026-10-22T20:55:43Z UTC)",
-    "updated_at": "2026-10-22T15:55:49Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   }
 }
