@@ -44,10 +44,10 @@
     {
       "slot": 5,
       "hour_et": 9,
-      "stage": "generating",
-      "title": null,
-      "video_url": null,
-      "publish_at": null
+      "stage": "uploaded",
+      "title": "He was right across from me the whole time",
+      "video_url": "https://youtube.com/shorts/3z60q99aqgI",
+      "publish_at": "2026-10-22T18:45:22Z"
     }
   ]
 }
