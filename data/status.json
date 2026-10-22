@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-10-22T13:43:46Z"
+    "status": "done",
+    "message": "generated: He was right across from me the whole time",
+    "updated_at": "2026-10-22T13:44:18Z"
   },
   "video_agent": {
     "status": "idle",
