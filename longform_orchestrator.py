@@ -30,11 +30,7 @@ from status_store import reset, set_status
 
 IS_CI = os.getenv("GITHUB_ACTIONS") == "true"
 LONGFORM_HASHTAGS = "#history #militaryhistory #artofwar"
-CREDITS = (
-    "Music: \"Investigations\" by Kevin MacLeod (incompetech.com), "
-    "licensed under Creative Commons: By Attribution 4.0.\n"
-    "Footage: Pexels."
-)
+CREDITS = "Narration and illustrations generated with AI."
 
 
 def run_longform_pipeline(target_minutes: int = None, privacy_status: str = "public"):
@@ -45,7 +41,7 @@ def run_longform_pipeline(target_minutes: int = None, privacy_status: str = "pub
     try:
         script = generate_longform_script(ollama_model=ollama_model, target_minutes=target_minutes)
 
-        video_path = build_longform_video(script, pexels_key=os.getenv("PEXELS_API_KEY", ""))
+        video_path = build_longform_video(script, ollama_model=ollama_model)
         thumbnail_path = generate_thumbnail(script, video_path, ollama_model=ollama_model)
 
         if not IS_CI:

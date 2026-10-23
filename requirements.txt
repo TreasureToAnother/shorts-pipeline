@@ -12,6 +12,7 @@ faster-whisper  # CPU-friendly free Whisper implementation
 moviepy==1.0.3
 Pillow==10.4.0
 numpy==1.26.4
+opencv-python-headless==4.10.0.84  # smooth sub-pixel zoom on long-form illustrations
 
 # --- YouTube upload ---
 google-api-python-client==2.143.0

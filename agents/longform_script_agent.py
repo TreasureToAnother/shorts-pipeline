@@ -37,10 +37,20 @@ OUTRO_WORDS = 100
 # text (2-4 words; the last line is drawn in yellow). Never put a real
 # person's name in look/visual — the image API's safety filter refuses
 # prompts that name real people.
+# army and enemies (one per battle, same order) drive the long-form
+# illustrations in longform_video_agent.py: "names" are the words the
+# narration uses for that side (rewritten to OUR MEN / ENEMY MEN in scene
+# prompts), and "look" is how that side is drawn.
 GENERALS = [
     {"name": "Hannibal Barca", "era": "ancient",
      "look": "a round bronze helmet with a short crest on top and a long purple cape",
      "thumb": {"battle": 2, "visual": "a small crowd of scared tiny cartoon men in red-crested helmets squeezed together, surrounded on all sides by tiny smiling cartoon men", "ground": "flat sandy ground", "hook": "THE PERFECT TRAP"},
+     "army": {"names": ["Carthaginian", "Carthaginians", "Punic"], "look": "brown tunics and round bronze helmets"},
+     "enemies": [
+        {"names": ["Roman", "Romans"], "look": "red tunics and bronze helmets with red crests"},
+        {"names": ["Roman", "Romans"], "look": "red tunics and bronze helmets with red crests"},
+        {"names": ["Roman", "Romans"], "look": "red tunics and bronze helmets with red crests"},
+     ],
      "battles": [
         ("Battle of the Trebia (218 BC)", "luring the Romans across a freezing river into a hidden ambush"),
         ("Battle of Lake Trasimene (217 BC)", "ambushing an entire Roman army marching along a fog-covered lakeshore"),
@@ -49,6 +59,12 @@ GENERALS = [
     {"name": "Alexander the Great", "era": "ancient",
      "look": "a bronze helmet with a tall white plume, a gold breastplate and a red cape",
      "thumb": {"battle": 2, "visual": "tiny cartoon horsemen charging in a pointy wedge shape through a gap in a long line of tiny surprised cartoon men", "ground": "flat dusty yellow ground", "hook": "STRAIGHT FOR THE KING"},
+     "army": {"names": ["Macedonian", "Macedonians", "Greek", "Greeks"], "look": "white tunics, bronze helmets and very long spears"},
+     "enemies": [
+        {"names": ["Persian", "Persians", "Achaemenid"], "look": "colorful robes and soft cloth hats"},
+        {"names": ["Persian", "Persians", "Achaemenid"], "look": "colorful robes and soft cloth hats"},
+        {"names": ["Persian", "Persians", "Achaemenid"], "look": "colorful robes and soft cloth hats"},
+     ],
      "battles": [
         ("Battle of the Granicus (334 BC)", "seizing the initiative with a cavalry charge across a defended river"),
         ("Battle of Issus (333 BC)", "fighting on a narrow coastal plain that cancelled out Persia's numbers, then striking straight at Darius"),
@@ -57,6 +73,12 @@ GENERALS = [
     {"name": "Julius Caesar", "era": "ancient",
      "look": "a green leaf wreath around his head, a white robe and a red cape",
      "thumb": {"battle": 2, "visual": "a long wooden wall curving around in a big circle, with tiny annoyed cartoon men peeking over it", "ground": "flat brown ground", "hook": "WALLS ON BOTH SIDES"},
+     "army": {"names": ["Roman", "Romans"], "look": "red tunics and bronze helmets with red crests"},
+     "enemies": [
+        {"names": ["Pompeian", "Pompeians", "Republican", "Republicans"], "look": "grey tunics and plain iron helmets"},
+        {"names": ["Pompeian", "Pompeians", "Republican", "Republicans"], "look": "grey tunics and plain iron helmets"},
+        {"names": ["Gaul", "Gauls", "Gallic", "Gaulish", "Celtic", "Celts"], "look": "checkered trousers and long green cloaks"},
+     ],
      "battles": [
         ("Ilerda campaign (49 BC)", "winning by maneuver, cutting the enemy off from water and supplies until they surrendered"),
         ("Battle of Pharsalus (48 BC)", "hiding a fourth line of infantry to ambush Pompey's cavalry"),
@@ -65,6 +87,12 @@ GENERALS = [
     {"name": "Scipio Africanus", "era": "ancient",
      "look": "a bronze Roman helmet with a red crest and a red cape",
      "thumb": {"battle": 2, "visual": "a big grey cartoon elephant running harmlessly down an open lane between two rows of tiny relieved cartoon men", "ground": "flat sandy ground", "hook": "LET THEM THROUGH"},
+     "army": {"names": ["Roman", "Romans"], "look": "red tunics and bronze helmets with red crests"},
+     "enemies": [
+        {"names": ["Carthaginian", "Carthaginians", "Punic"], "look": "brown tunics and round bronze helmets"},
+        {"names": ["Carthaginian", "Carthaginians", "Punic"], "look": "brown tunics and round bronze helmets"},
+        {"names": ["Carthaginian", "Carthaginians", "Punic"], "look": "brown tunics and round bronze helmets"},
+     ],
      "battles": [
         ("Capture of New Carthage (209 BC)", "storming the city across a lagoon at low tide"),
         ("Battle of Ilipa (206 BC)", "reversing his usual deployment to put his best troops on the wings"),
@@ -73,6 +101,12 @@ GENERALS = [
     {"name": "Han Xin", "era": "eastern",
      "look": "a small black Chinese official's hat and a long dark red robe",
      "thumb": {"battle": 0, "visual": "a flat blue river right behind him, and on a far hill tiny cartoon men swapping a big flag for a red one", "ground": "flat green grass", "hook": "BACK TO THE RIVER"},
+     "army": {"names": ["Han"], "look": "red robes and black cloth caps"},
+     "enemies": [
+        {"names": ["Zhao"], "look": "black robes and leather caps"},
+        {"names": ["Chu", "Qi"], "look": "dark blue robes and pointed caps"},
+        {"names": ["Chu"], "look": "dark blue robes and pointed caps"},
+     ],
      "battles": [
         ("Battle of Jingxing (204 BC)", "fighting with his back to a river while a hidden force swapped the enemy camp's flags"),
         ("Battle of Wei River (203 BC)", "damming a river, then releasing it to split the enemy army in half"),
@@ -81,6 +115,12 @@ GENERALS = [
     {"name": "Belisarius", "era": "ancient",
      "look": "a shiny round helmet and a purple cape over golden armor",
      "thumb": {"battle": 0, "visual": "a long straight ditch in the ground with tiny confused cartoon men stopped at its edge", "ground": "flat dusty ground", "hook": "THE DITCH TRICK"},
+     "army": {"names": ["Roman", "Romans", "Byzantine", "Byzantines"], "look": "blue tunics and round iron helmets"},
+     "enemies": [
+        {"names": ["Persian", "Persians", "Sasanian", "Sasanians", "Sassanid", "Sassanids"], "look": "shiny armor and tall pointed helmets"},
+        {"names": ["Vandal", "Vandals"], "look": "brown tunics and furry cloaks"},
+        {"names": ["Goth", "Goths", "Gothic", "Ostrogoth", "Ostrogoths", "Ostrogothic"], "look": "green tunics and round wooden shields"},
+     ],
      "battles": [
         ("Battle of Dara (530)", "digging ditches to channel the Persian attack and hiding cavalry to strike its flank"),
         ("Battle of Ad Decimum (533)", "keeping control of his army while a poorly coordinated Vandal ambush fell apart"),
@@ -89,6 +129,12 @@ GENERALS = [
     {"name": "Khalid ibn al-Walid", "era": "ancient",
      "look": "a white turban and a long white robe",
      "thumb": {"battle": 1, "visual": "a long line of tiny cartoon men riding camels across an empty yellow desert under a big sun", "ground": "flat yellow desert sand", "hook": "CROSSED THE IMPOSSIBLE DESERT"},
+     "army": {"names": ["Muslim", "Muslims", "Arab", "Arabs", "Rashidun"], "look": "white robes and white turbans"},
+     "enemies": [
+        {"names": ["Persian", "Persians", "Sasanian", "Sasanians", "Sassanid", "Sassanids"], "look": "shiny armor and tall pointed helmets"},
+        {"names": ["Byzantine", "Byzantines", "Roman", "Romans"], "look": "red cloaks and shiny round helmets"},
+        {"names": ["Byzantine", "Byzantines", "Roman", "Romans"], "look": "red cloaks and shiny round helmets"},
+     ],
      "battles": [
         ("Battle of Walaja (633)", "a double envelopment using cavalry hidden behind the enemy's flanks"),
         ("March across the Syrian desert (634)", "a surprise desert crossing that put his army behind enemy lines"),
@@ -97,6 +143,12 @@ GENERALS = [
     {"name": "Subutai", "era": "eastern",
      "look": "a round fur-trimmed Mongol hat and a brown fur coat",
      "thumb": {"battle": 0, "visual": "tiny cartoon horsemen riding away while a long, tired line of tiny cartoon men chases after them", "ground": "flat green steppe grass", "hook": "THE FAKE RETREAT"},
+     "army": {"names": ["Mongol", "Mongols", "Mongolian"], "look": "fur hats and brown fur coats"},
+     "enemies": [
+        {"names": ["Rus", "Rus'", "Kievan", "Cuman", "Cumans", "Russian", "Russians"], "look": "red tunics and pointed metal helmets"},
+        {"names": ["Polish", "Poles", "Hungarian", "Hungarians", "European", "Europeans", "Teutonic", "Christian"], "look": "shiny armor and white tunics with red crosses"},
+        {"names": ["Hungarian", "Hungarians", "Magyar", "Magyars"], "look": "shiny armor and red and white shields"},
+     ],
      "battles": [
         ("Battle of the Kalka River (1223)", "a long feigned retreat that strung out the pursuing armies"),
         ("Invasion of Europe (1241)", "several armies advancing on separate fronts in close coordination"),
@@ -105,6 +157,12 @@ GENERALS = [
     {"name": "Oda Nobunaga", "era": "eastern",
      "look": "black samurai armor and a samurai helmet with two tall gold horns",
      "thumb": {"battle": 1, "visual": "a long wooden fence with puffs of white smoke rising from behind it, and tiny cartoon horsemen stopping in surprise", "ground": "flat green grass", "hook": "GUNS VS SAMURAI"},
+     "army": {"names": ["Oda"], "look": "black armor and flags with yellow flowers"},
+     "enemies": [
+        {"names": ["Imagawa"], "look": "blue armor and tall white flags"},
+        {"names": ["Takeda"], "look": "red armor and helmets with gold horns"},
+        {"names": ["Mori", "Mōri"], "look": "white armor and round black hats"},
+     ],
      "battles": [
         ("Battle of Okehazama (1560)", "a surprise attack under cover of a rainstorm against a far larger army"),
         ("Battle of Nagashino (1575)", "massed gunfire from behind wooden palisades to break cavalry charges"),
@@ -113,6 +171,12 @@ GENERALS = [
     {"name": "Admiral Yi Sun-sin", "era": "naval",
      "look": "a black wide-brimmed Korean hat with a red tassel and a red robe",
      "thumb": {"battle": 1, "visual": "a few small wooden ships in a narrow channel between two cliffs, facing a huge crowd of enemy ships", "ground": "flat blue sea", "hook": "13 SHIPS VS 133"},
+     "army": {"names": ["Korean", "Koreans", "Joseon"], "look": "blue robes and black wide-brimmed hats"},
+     "enemies": [
+        {"names": ["Japanese"], "look": "red armor and tall pointed helmets"},
+        {"names": ["Japanese"], "look": "red armor and tall pointed helmets"},
+        {"names": ["Japanese"], "look": "red armor and tall pointed helmets"},
+     ],
      "battles": [
         ("Battle of Hansan Island (1592)", "luring the Japanese fleet into open water and closing a crane-wing formation around it"),
         ("Battle of Myeongnyang (1597)", "holding a narrow strait with just 13 ships against more than 130"),
@@ -121,6 +185,12 @@ GENERALS = [
     {"name": "Gustavus Adolphus", "era": "gunpowder",
      "look": "a wide black hat with a white feather and a yellow leather coat",
      "thumb": {"battle": 0, "visual": "small cartoon cannons on wheels being pushed along by tiny cheerful cartoon men", "ground": "flat green field", "hook": "THE CANNON REVOLUTION"},
+     "army": {"names": ["Swedish", "Swede", "Swedes"], "look": "blue coats and wide-brimmed hats"},
+     "enemies": [
+        {"names": ["Imperial", "Imperials", "Habsburg", "Catholic League", "League"], "look": "white coats and round metal helmets"},
+        {"names": ["Imperial", "Imperials", "Habsburg", "Catholic League", "League"], "look": "white coats and round metal helmets"},
+        {"names": ["Imperial", "Imperials", "Habsburg", "Catholic League", "League"], "look": "white coats and round metal helmets"},
+     ],
      "battles": [
         ("Battle of Breitenfeld (1631)", "small, flexible brigades and mobile field artillery against massive tercio formations"),
         ("Battle of Rain (1632)", "crossing the Lech River under a smoke screen and artillery cover"),
@@ -129,6 +199,12 @@ GENERALS = [
     {"name": "Frederick the Great", "era": "gunpowder",
      "look": "a black three-cornered hat and a dark blue coat",
      "thumb": {"battle": 2, "visual": "tiny cartoon men marching secretly behind a low green hill while other tiny cartoon men look the wrong way", "ground": "flat green field", "hook": "THE HIDDEN MARCH"},
+     "army": {"names": ["Prussian", "Prussians"], "look": "dark blue coats and black three-cornered hats"},
+     "enemies": [
+        {"names": ["Austrian", "Austrians", "Saxon", "Saxons"], "look": "white coats and black three-cornered hats"},
+        {"names": ["French", "Imperial", "Imperials", "Frenchmen"], "look": "white coats and grey three-cornered hats"},
+        {"names": ["Austrian", "Austrians", "Saxon", "Saxons"], "look": "white coats and black three-cornered hats"},
+     ],
      "battles": [
         ("Battle of Hohenfriedberg (1745)", "a night march to catch the enemy unprepared at dawn"),
         ("Battle of Rossbach (1757)", "a hidden march behind hills to strike an enemy column on the move"),
@@ -137,6 +213,12 @@ GENERALS = [
     {"name": "Napoleon Bonaparte", "era": "gunpowder",
      "look": "a huge black hat shaped like a half moon, worn sideways with the points sticking out left and right, and a dark blue coat with gold buttons",
      "thumb": {"battle": 2, "visual": "tiny cartoon men in white coats walking down off a green hill, not noticing what is waiting for them", "ground": "flat green field", "hook": "HE FAKED WEAKNESS"},
+     "army": {"names": ["French", "Frenchmen"], "look": "dark blue coats and tall black hats"},
+     "enemies": [
+        {"names": ["Austrian", "Austrians"], "look": "white coats and black leather helmets"},
+        {"names": ["Austrian", "Austrians"], "look": "white coats and black leather helmets"},
+        {"names": ["Austrian", "Austrians", "Russian", "Russians", "Allied", "Allies", "Coalition"], "look": "green coats and tall black hats"},
+     ],
      "battles": [
         ("Battle of Rivoli (1797)", "the central position, using interior lines to beat separated enemy columns one at a time"),
         ("Ulm campaign (1805)", "a huge wheeling march that surrounded an entire Austrian army before it understood what was happening"),
@@ -145,6 +227,12 @@ GENERALS = [
     {"name": "the Duke of Wellington", "era": "gunpowder",
      "look": "a huge black hat shaped like a half moon, worn sideways with the points sticking out left and right, and a plain dark blue coat",
      "thumb": {"battle": 2, "visual": "a row of tiny cartoon men in red coats hiding just behind the top of a green hill", "ground": "flat green field", "hook": "HIDE BEHIND THE HILL"},
+     "army": {"names": ["British", "English", "Anglo", "Portuguese", "Allied", "Allies", "Redcoats"], "look": "red coats and tall black hats"},
+     "enemies": [
+        {"names": ["French", "Frenchmen"], "look": "dark blue coats and tall black hats"},
+        {"names": ["French", "Frenchmen"], "look": "dark blue coats and tall black hats"},
+        {"names": ["French", "Frenchmen"], "look": "dark blue coats and tall black hats"},
+     ],
      "battles": [
         ("Lines of Torres Vedras (1810)", "secretly built defensive lines and a scorched-earth retreat that starved the French"),
         ("Battle of Salamanca (1812)", "spotting a gap in an overextended French march and striking at once"),
@@ -153,6 +241,12 @@ GENERALS = [
     {"name": "Admiral Horatio Nelson", "era": "naval",
      "look": "a huge black hat shaped like a half moon, worn sideways with the points sticking out left and right, and a navy blue coat with gold shoulder pads, one empty sleeve pinned to his chest",
      "thumb": {"battle": 2, "visual": "two lines of small wooden sailing ships heading straight at a long row of enemy ships", "ground": "flat blue sea", "hook": "SAIL STRAIGHT AT THEM"},
+     "army": {"names": ["British", "English", "Royal Navy"], "look": "blue sailor jackets and round straw hats"},
+     "enemies": [
+        {"names": ["French", "Frenchmen"], "look": "dark blue coats and tall black hats"},
+        {"names": ["Danish", "Dane", "Danes"], "look": "red jackets and round black hats"},
+        {"names": ["French", "Spanish", "Franco-Spanish", "Combined", "Spaniards", "Frenchmen"], "look": "dark blue coats and black two-cornered hats"},
+     ],
      "battles": [
         ("Battle of the Nile (1798)", "sailing between an anchored French fleet and the shore to attack it from both sides"),
         ("Battle of Copenhagen (1801)", "pressing the attack in shallow, dangerous waters despite orders to break off"),
@@ -161,6 +255,12 @@ GENERALS = [
     {"name": "Ulysses S. Grant", "era": "gunpowder",
      "look": "a slouchy black hat, a short scruffy beard and a dark blue army coat",
      "thumb": {"battle": 1, "visual": "small boats sailing past a hilltop town at night under a big yellow moon", "ground": "flat brown riverbank", "hook": "RUN THE GAUNTLET"},
+     "army": {"names": ["Union", "Federal", "Federals", "Northern", "Northerners", "Yankee", "Yankees"], "look": "dark blue coats and blue caps"},
+     "enemies": [
+        {"names": ["Confederate", "Confederates", "Southern", "Southerners", "Rebel", "Rebels"], "look": "grey coats and grey caps"},
+        {"names": ["Confederate", "Confederates", "Southern", "Southerners", "Rebel", "Rebels"], "look": "grey coats and grey caps"},
+        {"names": ["Confederate", "Confederates", "Southern", "Southerners", "Rebel", "Rebels"], "look": "grey coats and grey caps"},
+     ],
      "battles": [
         ("Battle of Fort Donelson (1862)", "combined river and land operations, ending in a demand for unconditional surrender"),
         ("Vicksburg campaign (1863)", "running gunboats past the river batteries, landing south of the city, and cutting loose from his supply lines"),
@@ -169,6 +269,12 @@ GENERALS = [
     {"name": "Robert E. Lee", "era": "gunpowder",
      "look": "a neat white beard and a grey army coat",
      "thumb": {"battle": 2, "visual": "tiny cartoon men sneaking through dark green woods toward a camp of unaware cartoon men", "ground": "flat green grass", "hook": "HE SPLIT HIS ARMY"},
+     "army": {"names": ["Confederate", "Confederates", "Southern", "Southerners", "Rebel", "Rebels"], "look": "grey coats and grey caps"},
+     "enemies": [
+        {"names": ["Union", "Federal", "Federals", "Northern", "Northerners", "Yankee", "Yankees"], "look": "dark blue coats and blue caps"},
+        {"names": ["Union", "Federal", "Federals", "Northern", "Northerners", "Yankee", "Yankees"], "look": "dark blue coats and blue caps"},
+        {"names": ["Union", "Federal", "Federals", "Northern", "Northerners", "Yankee", "Yankees"], "look": "dark blue coats and blue caps"},
+     ],
      "battles": [
         ("Second Battle of Bull Run (1862)", "sending Jackson on a wide flank march to wreck the enemy's supply base"),
         ("Battle of Fredericksburg (1862)", "a strong defensive position on high ground behind a stone wall"),
@@ -177,6 +283,12 @@ GENERALS = [
     {"name": "Erwin Rommel", "era": "modern",
      "look": "a peaked officer cap with goggles on it and a tan desert uniform",
      "thumb": {"battle": 2, "visual": "small cartoon tanks driving around the far end of a long line of sandbags in the desert", "ground": "flat yellow desert sand", "hook": "THE DESERT HOOK"},
+     "army": {"names": ["German", "Germans", "Axis", "Afrika Korps", "Württemberg"], "look": "grey uniforms and grey caps"},
+     "enemies": [
+        {"names": ["Italian", "Italians"], "look": "grey-green uniforms and round helmets"},
+        {"names": ["French", "British", "Allied", "Allies", "Frenchmen"], "look": "brown uniforms and round helmets"},
+        {"names": ["British", "Allied", "Allies", "Commonwealth", "Eighth Army", "Free French"], "look": "sandy brown uniforms and flat round helmets"},
+     ],
      "battles": [
         ("Battle of Caporetto (1917)", "infiltration tactics with a small mountain unit that captured thousands of prisoners"),
         ("Fall of France (1940)", "speed and leading from the front with the 7th Panzer Division"),
@@ -185,6 +297,12 @@ GENERALS = [
     {"name": "George S. Patton", "era": "modern",
      "look": "a shiny steel helmet with stars on it and a tan army jacket",
      "thumb": {"battle": 2, "visual": "a long line of small cartoon tanks making a sharp turn on a snowy road", "ground": "flat white snow", "hook": "90 DEGREES IN DAYS"},
+     "army": {"names": ["American", "Americans", "US", "U.S.", "Allied", "Allies", "Third Army", "Seventh Army"], "look": "olive green uniforms and round helmets"},
+     "enemies": [
+        {"names": ["German", "Germans", "Italian", "Italians", "Axis"], "look": "grey uniforms and grey helmets"},
+        {"names": ["German", "Germans", "Axis", "Wehrmacht"], "look": "grey uniforms and grey helmets"},
+        {"names": ["German", "Germans", "Axis", "Wehrmacht"], "look": "grey uniforms and grey helmets"},
+     ],
      "battles": [
         ("Sicily campaign (1943)", "a fast advance across the island to Palermo and the race to Messina"),
         ("Breakout from Normandy (1944)", "exploiting a breakthrough with fast-moving armored columns"),
@@ -193,6 +311,12 @@ GENERALS = [
     {"name": "Georgy Zhukov", "era": "modern",
      "look": "a peaked officer cap with a red star and an olive green uniform covered in medals",
      "thumb": {"battle": 1, "visual": "two lines of small cartoon tanks closing around a snowy town from both sides", "ground": "flat white snow", "hook": "CLOSE THE CIRCLE"},
+     "army": {"names": ["Soviet", "Soviets", "Red Army", "Russian", "Russians", "Mongolian"], "look": "brown uniforms and caps with red stars"},
+     "enemies": [
+        {"names": ["Japanese", "Kwantung"], "look": "yellow-brown uniforms and soft caps"},
+        {"names": ["German", "Germans", "Romanian", "Romanians", "Axis"], "look": "grey uniforms and grey helmets"},
+        {"names": ["German", "Germans", "Axis", "Wehrmacht"], "look": "grey uniforms and grey helmets"},
+     ],
      "battles": [
         ("Battle of Khalkhin Gol (1939)", "building up forces in secret, then a surprise double envelopment"),
         ("Operation Uranus (1942)", "striking the weaker flanks to encircle the German army at Stalingrad"),
@@ -361,7 +485,8 @@ def generate_longform_script(ollama_model: str = "llama3.2", target_minutes: int
     title = random.choice(TITLE_TEMPLATES).format(name=general["name"])
     title = title[0].upper() + title[1:]  # "the Duke of Wellington" leading a title
     return {"title": title, "general": general["name"], "era": general["era"], "chapters": chapters,
-            "look": general["look"], "thumb": general["thumb"], "battles": general["battles"]}
+            "look": general["look"], "thumb": general["thumb"], "battles": general["battles"],
+            "army": general["army"], "enemies": general["enemies"]}
 
 
 if __name__ == "__main__":

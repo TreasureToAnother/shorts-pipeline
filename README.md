@@ -184,12 +184,20 @@ How it works:
   shorts' 3B `llama3.2` got too many facts wrong). Generals already
   covered are tracked in `data/longform_used_topics.json` so none repeats
   until the whole list has been done.
-- **Video** (`agents/longform_video_agent.py`) — 1920x1080, a deep
-  documentary narrator voice (edge-tts), b-roll from Pexels matched to
-  the general's era (ruins, cannons, tall ships, tanks...), a title card
-  per chapter, and the background music track underneath.
+- **Video** (`agents/longform_video_agent.py`) — 1920x1080, narrated
+  over ~35 AI illustrations in the same crude cartoon style as the
+  thumbnail, no music. The narration is split into beats (a few
+  sentences, ~15-20s each); Ollama describes one simple scene per beat,
+  using only the placeholders THE GENERAL / OUR MEN / ENEMY MEN, which
+  are swapped for the hand-written costumes in `GENERALS` (so the
+  general and both sides look the same in every picture). Every scene is
+  checked — no names, no gore, no out-of-era objects — and re-asked or
+  replaced with a safe fallback if it fails. Each picture slowly zooms
+  while its beat is read (edge-tts, deep documentary voice), and each
+  chapter opens with a title card in the thumbnail font. ~35 images use
+  ~5,500 of Cloudflare's 10,000 free daily neurons.
 - **Upload** — a regular (non-Shorts) public video in the Education
-  category, with music and footage credits in the description.
+  category.
 - **Thumbnail** (`agents/thumbnail_agent.py`) — a crude, childish
   cartoon (round bald heads, dot eyes, nub noses, soft flat colors): the
   general drawn big in an accurate costume, a small background hint at
@@ -225,14 +233,17 @@ python longform_orchestrator.py 2   # optional: target length in minutes
 
 - `GENERALS` in `agents/longform_script_agent.py` is the topic pool —
   add a general with their era, three `(battle, tactic)` pairs, a `look`
-  (costume) and a `thumb` (featured battle, background visual, ground,
-  hook). Never put a real person's name in `look`/`visual`: the image
-  API's safety filter refuses prompts that name real people.
+  (costume), a `thumb` (featured battle, background visual, ground,
+  hook), an `army` and one `enemies` entry per battle (the names the
+  narration uses for each side, and how each side is drawn). Never put a
+  real person's name in `look`/`visual`: the image API's safety filter
+  refuses prompts that name real people.
 - `TARGET_MINUTES` in the same file sets the video length (the model
   tends to run ~10% long).
 - `STYLE`, `SCENE`, `POSES` and the `TEXT_*` settings in
   `agents/thumbnail_agent.py` control the thumbnail's art style,
   composition and hook-text look.
-- `ERA_QUERIES` in `agents/longform_video_agent.py` controls which
-  Pexels searches supply the footage; `LONGFORM_VOICE_NAME` overrides
-  the narrator voice.
+- `TARGET_IMAGES`, `ZOOM_AMOUNT` and `ERA_OBJECTS` in
+  `agents/longform_video_agent.py` set the number of illustrations, how
+  far each one zooms, and what each era's pictures may contain;
+  `LONGFORM_VOICE_NAME` overrides the narrator voice.
