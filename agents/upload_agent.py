@@ -45,7 +45,8 @@ def _get_credentials():
 
 def upload_video(video_path: str, title: str, description: str, tags=None,
                   publish_at: str = None, privacy_status: str = None,
-                  is_short: bool = True, category_id: str = "24") -> str:
+                  is_short: bool = True, category_id: str = "24",
+                  thumbnail_path: str = None) -> str:
     set_status("upload_agent", "running", f"uploading {os.path.basename(video_path)}")
     try:
         creds = _get_credentials()
@@ -76,6 +77,20 @@ def upload_video(video_path: str, title: str, description: str, tags=None,
         while response is None:
             status_resp, response = request.next_chunk()
         video_id = response["id"]
+        thumb_note = ""
+        if thumbnail_path:
+            # Kept separate from the upload itself: custom thumbnails need
+            # a phone-verified channel, and a refused thumbnail shouldn't
+            # turn an already-uploaded video into a failed run.
+            try:
+                youtube.thumbnails().set(
+                    videoId=video_id,
+                    media_body=MediaFileUpload(thumbnail_path, mimetype="image/jpeg"),
+                ).execute()
+                thumb_note = " (custom thumbnail set)"
+            except Exception as e:
+                thumb_note = f" (thumbnail NOT set: {e})"
+                print(f"Thumbnail upload failed: {e}")
         url = f"https://youtube.com/shorts/{video_id}" if is_short else f"https://youtube.com/watch?v={video_id}"
         if publish_at:
             msg = f"scheduled for {publish_at}: {url}"
@@ -83,7 +98,7 @@ def upload_video(video_path: str, title: str, description: str, tags=None,
             msg = f"uploaded PRIVATE (manual publish needed): {url}"
         else:
             msg = url
-        set_status("upload_agent", "done", msg)
+        set_status("upload_agent", "done", msg + thumb_note)
         return url
     except Exception as e:
         set_status("upload_agent", "error", str(e))

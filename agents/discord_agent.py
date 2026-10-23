@@ -15,6 +15,7 @@ Two pieces, both free:
    require a long-lived websocket connection - GitHub Actions'
    scheduled runs can't host this part.
 """
+import json
 import os
 import sys
 
@@ -25,9 +26,14 @@ sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
 from status_store import set_status
 
 
-def notify_upload(webhook_url: str, title: str, url: str, thumbnail_url: str = ""):
+def notify_upload(webhook_url: str, title: str, url: str, thumbnail_url: str = "",
+                  thumbnail_path: str = ""):
+    """thumbnail_path attaches a local image file to the embed; thumbnail_url
+    points the embed at an already-hosted one."""
     set_status("discord_agent", "running", "posting upload notification")
     try:
+        if thumbnail_path:
+            thumbnail_url = "attachment://thumbnail.jpg"
         payload = {
             "embeds": [{
                 "title": f"New video uploaded: {title}",
@@ -37,7 +43,16 @@ def notify_upload(webhook_url: str, title: str, url: str, thumbnail_url: str = "
                 "image": {"url": thumbnail_url} if thumbnail_url else None,
             }]
         }
-        r = requests.post(webhook_url, json=payload, timeout=15)
+        if thumbnail_path:
+            with open(thumbnail_path, "rb") as f:
+                r = requests.post(
+                    webhook_url,
+                    data={"payload_json": json.dumps(payload)},
+                    files={"files[0]": ("thumbnail.jpg", f, "image/jpeg")},
+                    timeout=30,
+                )
+        else:
+            r = requests.post(webhook_url, json=payload, timeout=15)
         r.raise_for_status()
         set_status("discord_agent", "done", f"notified: {title}")
     except Exception as e:

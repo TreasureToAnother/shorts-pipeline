@@ -190,6 +190,25 @@ How it works:
   per chapter, and the background music track underneath.
 - **Upload** — a regular (non-Shorts) public video in the Education
   category, with music and footage credits in the description.
+- **Thumbnail** (`agents/thumbnail_agent.py`) — Ollama picks one scene
+  and a 2-4 word hook; Cloudflare Workers AI (Flux, free daily
+  allowance) draws the scene as a stickman cartoon with no text; Pillow
+  adds the hook text. It's set on the video after upload and attached
+  to the Discord post. Skipped (YouTube auto-picks a frame) if the
+  Cloudflare secrets aren't set or anything fails. Shorts don't get one —
+  API-set thumbnails don't reliably show in the Shorts feed.
+
+Thumbnail setup (one time):
+
+1. Custom thumbnails need a phone-verified channel: YouTube Studio >
+   Settings > Channel > Feature eligibility.
+2. Free Cloudflare account at https://dash.cloudflare.com, then **AI >
+   Workers AI > Use REST API**: copy the Account ID and click **Create a
+   Workers AI API Token**.
+3. Add both as repo secrets `CLOUDFLARE_ACCOUNT_ID` and
+   `CLOUDFLARE_API_TOKEN` (and in `config/.env` for local tests).
+4. Preview one locally: `python agents/thumbnail_agent.py` writes
+   `data/output/thumbnail_preview.jpg`.
 
 Test it locally (renders to `data/output/`, never uploads):
 
@@ -204,6 +223,8 @@ python longform_orchestrator.py 2   # optional: target length in minutes
   add a general with their era and three `(battle, tactic)` pairs.
 - `TARGET_MINUTES` in the same file sets the video length (the model
   tends to run ~10% long).
+- `STYLE_PREFIX` and the `TEXT_*` settings in `agents/thumbnail_agent.py`
+  control the thumbnail's art style and hook-text look.
 - `ERA_QUERIES` in `agents/longform_video_agent.py` controls which
   Pexels searches supply the footage; `LONGFORM_VOICE_NAME` overrides
   the narrator voice.
