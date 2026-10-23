@@ -190,13 +190,17 @@ How it works:
   per chapter, and the background music track underneath.
 - **Upload** — a regular (non-Shorts) public video in the Education
   category, with music and footage credits in the description.
-- **Thumbnail** (`agents/thumbnail_agent.py`) — Ollama picks one scene
-  and a 2-4 word hook; Cloudflare Workers AI (Flux, free daily
-  allowance) draws the scene as a stickman cartoon with no text; Pillow
-  adds the hook text. It's set on the video after upload and attached
-  to the Discord post. Skipped (YouTube auto-picks a frame) if the
-  Cloudflare secrets aren't set or anything fails. Shorts don't get one —
-  API-set thumbnails don't reliably show in the Shorts feed.
+- **Thumbnail** (`agents/thumbnail_agent.py`) — a crude, childish
+  cartoon (round bald heads, dot eyes, nub noses, soft flat colors): the
+  general drawn big in an accurate costume, a small background hint at
+  their most famous battle, and a 2-4 word hook in a chunky cartoon font
+  (`assets/fonts/`, Luckiest Guy, Apache 2.0). Costume, background and
+  hook are written by hand per general in `GENERALS`; Cloudflare Workers
+  AI (Flux 2 Klein 4B, free daily allowance) draws two candidates and
+  the one with the emptiest text area wins. It's set on the video after
+  upload and attached to the Discord post. Skipped (YouTube auto-picks a
+  frame) if the Cloudflare secrets aren't set or anything fails. Shorts
+  don't get one — API-set thumbnails don't reliably show in the Shorts feed.
 
 Thumbnail setup (one time):
 
@@ -207,8 +211,8 @@ Thumbnail setup (one time):
    Workers AI API Token**.
 3. Add both as repo secrets `CLOUDFLARE_ACCOUNT_ID` and
    `CLOUDFLARE_API_TOKEN` (and in `config/.env` for local tests).
-4. Preview one locally: `python agents/thumbnail_agent.py` writes
-   `data/output/thumbnail_preview.jpg`.
+4. Preview one locally: `python agents/thumbnail_agent.py "Julius Caesar"`
+   writes `data/output/thumbnail_preview.jpg`.
 
 Test it locally (renders to `data/output/`, never uploads):
 
@@ -220,11 +224,15 @@ python longform_orchestrator.py 2   # optional: target length in minutes
 ### Tuning
 
 - `GENERALS` in `agents/longform_script_agent.py` is the topic pool —
-  add a general with their era and three `(battle, tactic)` pairs.
+  add a general with their era, three `(battle, tactic)` pairs, a `look`
+  (costume) and a `thumb` (featured battle, background visual, ground,
+  hook). Never put a real person's name in `look`/`visual`: the image
+  API's safety filter refuses prompts that name real people.
 - `TARGET_MINUTES` in the same file sets the video length (the model
   tends to run ~10% long).
-- `STYLE_PREFIX` and the `TEXT_*` settings in `agents/thumbnail_agent.py`
-  control the thumbnail's art style and hook-text look.
+- `STYLE`, `SCENE`, `POSES` and the `TEXT_*` settings in
+  `agents/thumbnail_agent.py` control the thumbnail's art style,
+  composition and hook-text look.
 - `ERA_QUERIES` in `agents/longform_video_agent.py` controls which
   Pexels searches supply the footage; `LONGFORM_VOICE_NAME` overrides
   the narrator voice.

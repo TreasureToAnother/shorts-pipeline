@@ -1,14 +1,23 @@
 """
 Thumbnail Agent
 ----------------
-Builds a 1280x720 YouTube thumbnail for a long-form video:
-  1. Ollama reads the script and writes one visual scene description
-     plus a short hook (2-4 words) for the thumbnail text
-  2. Cloudflare Workers AI (Flux schnell, free daily allowance) draws
-     the scene in a fixed stickman/cartoon style — with NO text, since
-     image models misspell words
-  3. Pillow crops it to 16:9 and draws the hook text on top, so the
-     lettering is always clean and on-brand
+Builds a 1280x720 YouTube thumbnail for a long-form video, in a crude,
+childish cartoon style (round bald heads, dot eyes, nub noses, flat
+colors, wobbly black outlines):
+  1. The scene is assembled from fixed parts, not invented by a model:
+     the general's costume, the featured battle's background visual,
+     and the hook text all come from GENERALS in longform_script_agent.py
+     (so they're always historically right), and the pose is picked
+     from POSES. The general is drawn big on one side, with open sky
+     on the other for the text.
+  2. Cloudflare Workers AI (Flux 2 Klein 4B, ~150 of the 10,000 free
+     daily neurons per image) draws IMAGE_CANDIDATES versions at
+     1280x720 — with NO text, since image models misspell words.
+  3. The candidate and side (left/right) with the emptiest text area
+     win — the model doesn't always put the general where it's asked.
+  4. Pillow draws the hook there in a chunky cartoon font (white, last
+     line yellow, slight tilt, thick outline, drop shadow). A general
+     with no hand-written hook gets one from Ollama instead.
 
 Shorts don't get one: custom thumbnails set through the API don't
 reliably show in the Shorts feed.
@@ -22,133 +31,222 @@ import base64
 import io
 import json
 import os
+import random
+import re
 import sys
 
 import requests
 
-sys.path.append("..")
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
 from status_store import set_status
 
-from PIL import Image, ImageDraw, ImageFont
+from PIL import Image, ImageDraw, ImageFilter, ImageFont
 
 THUMB_W, THUMB_H = 1280, 720
-FLUX_MODEL = "@cf/black-forest-labs/flux-1-schnell"
-FLUX_STEPS = 8  # the model's max; still only ~a few dozen of the 10,000 free daily neurons
+IMAGE_MODEL = "@cf/black-forest-labs/flux-2-klein-4b"
+IMAGE_ATTEMPTS = 3      # per candidate, for when the API flags a prompt
+IMAGE_CANDIDATES = 2    # drawn per video; the one with the emptiest text area wins
+FONT_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "assets", "fonts", "LuckiestGuy-Regular.ttf")
 
-# Prepended to every scene so all thumbnails share one look. This is
-# the main knob for the thumbnail's visual style.
-STYLE_PREFIX = (
-    "Simple cartoon illustration, stick figure characters with round heads, "
-    "thick bold black outlines, flat bright colors, clean uncluttered background, "
-    "high contrast, expressive and dramatic, YouTube thumbnail style, no text, "
-    "no letters, no words. Scene: "
+# The art style. Kept short on purpose: longer style prompts drift
+# toward polished, detailed comic art, and naming anything (even to
+# forbid it, e.g. "no beards") tends to make it appear.
+STYLE = (
+    "Very simple childish cartoon drawing, like a kid drew it on a computer. Wobbly uneven "
+    "thick black outlines, flat solid soft muted colors, no shading. Round bald heads with "
+    "tiny dot eyes, nub noses and simple curved mouths, plain colored shirts. "
 )
-TEXT_COLOR = "white"
-TEXT_STROKE_COLOR = "black"
-TEXT_MAX_WIDTH_FRAC = 0.55   # hook text sits in the left part of the frame
-TEXT_MAX_HEIGHT_FRAC = 0.45
+# The general is always big on the right, facing the viewer; "open
+# ground under a wide sky" on the left is what keeps room for the text
+# (asking for "empty space" directly makes the model paste a blank panel).
+SCENE = (
+    "Wide view. On the right side, big in the foreground and facing the viewer, a "
+    "round-headed cartoon man wearing {look}, {pose}. Behind him on the right, small in the background: "
+    "{visual}. The left side is open {ground} under a wide flat sky."
+)
+POSES = [
+    "smirking with his arms crossed",
+    "grinning slyly and rubbing his hands together",
+    "smiling proudly with one finger raised",
+    "pointing forward with a big confident grin",
+    "laughing with his hands on his hips",
+    "raising one eyebrow with a sly little smile",
+]
+
+HOOK_PROMPT = """Write the big text for a YouTube thumbnail. The video is about how {general} won the {battle} by {tactic}.
+
+Rules:
+- 2 to 4 words, all capital letters
+- It must make a curious viewer want to know HOW it happened, without explaining it
+- Base it on what is surprising or bold about this specific tactic (the odds, the trick, the risk, the speed, the result)
+- Do not use the general's name, the battle's name, or the words "battle", "war", "tactic" or "genius"
+- Plain everyday words a 12 year old knows
+
+Return ONLY JSON: {{"options": ["...", "...", "...", "...", "..."], "best": "..."}} with five different options and the strongest one as best."""
+HOOK_BANNED = {"BATTLE", "WAR", "TACTIC", "TACTICS", "GENIUS"}
+
+# Where the hook can go: left, top, right, bottom as fractions of the frame.
+TEXT_BOXES = {"left": (0.04, 0.10, 0.50, 0.86), "right": (0.50, 0.10, 0.96, 0.86)}
+TEXT_COLORS = ("white", "#FFD400")    # every line but the last, then the last (payoff) line
+TEXT_TILT_DEGREES = 4
+TEXT_STROKE_FRAC = 0.10
 
 
-def _scene_and_hook(script: dict, model: str) -> dict:
-    """Asks Ollama for {"scene": ..., "hook": ...}. Falls back to a
-    generic scene and the general's name if the model's JSON is unusable."""
-    fallback = {
-        "scene": f"a stick figure general in a cape on a hilltop, pointing at two armies clashing below",
-        "hook": script.get("general", script["title"]).upper()[:24],
-    }
+def _clean_hook(text: str, general: dict, battle: str):
+    if not isinstance(text, str):
+        return None
+    hook = re.sub(r"[^A-Z0-9' ]", " ", text.upper())
+    hook = " ".join(hook.split())
+    words = hook.split()
+    if not 2 <= len(words) <= 4 or len(hook) > 24:
+        return None
+    name_words = {w for w in re.sub(r"[^A-Z ]", " ", general["name"].upper()).split() if len(w) > 3}
+    battle_words = {w for w in re.sub(r"[^A-Z ]", " ", battle.upper()).split() if len(w) > 3} - {"BATTLE"}
+    forms = set(words) | {re.sub(r"'?S$", "", w) for w in words}  # "CAESAR'S" -> "CAESAR"
+    if forms & (HOOK_BANNED | name_words | battle_words):
+        return None
+    return hook
+
+
+def _hook(script: dict, battle: str, tactic: str, model: str) -> str:
+    general = {"name": script["general"]}
     try:
         import ollama
-        battles = "; ".join(c["topic"] for c in script["chapters"][1:-1])
-        prompt = (
-            f"You're designing a YouTube thumbnail for a video titled "
-            f"\"{script['title']}\", about {script.get('general', '')} and "
-            f"these battles: {battles}.\n\n"
-            f"Return JSON with two fields:\n"
-            f"- \"scene\": ONE simple, dramatic visual moment to illustrate, "
-            f"in one sentence — characters, action, setting. Something "
-            f"readable at a glance on a phone screen. No text or signs in the scene.\n"
-            f"- \"hook\": 2 to 4 punchy words for big thumbnail text that "
-            f"creates curiosity (e.g. \"THE PERFECT TRAP\", \"OUTNUMBERED 10 TO 1\"). "
-            f"Don't repeat the title."
+        result = ollama.generate(
+            model=model, format="json", options={"temperature": 0.8},
+            prompt=HOOK_PROMPT.format(general=script["general"], battle=battle, tactic=tactic),
         )
-        result = ollama.generate(model=model, prompt=prompt, format="json")
         data = json.loads(result.get("response", "{}"))
-        scene = str(data.get("scene", "")).strip()
-        hook = str(data.get("hook", "")).strip().strip('"').upper()
-        if scene and hook and len(hook.split()) <= 5:
-            return {"scene": scene, "hook": hook}
+        options = data.get("options", [])
+        # Some models return [{"text": ...}] instead of plain strings.
+        options = [o.get("text") if isinstance(o, dict) else o for o in options]
+        for candidate in [data.get("best")] + options:
+            hook = _clean_hook(candidate, general, battle)
+            if hook:
+                return hook
     except Exception:
         pass
-    return fallback
+    return "HOW HE WON"
 
 
-def _generate_image(scene: str) -> Image.Image:
+def _generate_image(prompt: str) -> Image.Image:
     account_id = os.environ["CLOUDFLARE_ACCOUNT_ID"]
     token = os.environ["CLOUDFLARE_API_TOKEN"]
     r = requests.post(
-        f"https://api.cloudflare.com/client/v4/accounts/{account_id}/ai/run/{FLUX_MODEL}",
+        f"https://api.cloudflare.com/client/v4/accounts/{account_id}/ai/run/{IMAGE_MODEL}",
         headers={"Authorization": f"Bearer {token}"},
-        json={"prompt": (STYLE_PREFIX + scene)[:2048], "steps": FLUX_STEPS},
-        timeout=120,
+        # Flux 2 takes multipart form fields, not a JSON body.
+        files={"prompt": (None, prompt), "width": (None, str(THUMB_W)), "height": (None, str(THUMB_H))},
+        timeout=180,
     )
-    r.raise_for_status()
-    if r.headers.get("content-type", "").startswith("image/"):
-        raw = r.content
-    else:
-        raw = base64.b64decode(r.json()["result"]["image"])
-    return Image.open(io.BytesIO(raw)).convert("RGB")
+    data = r.json()
+    image = data.get("result", {}).get("image") if isinstance(data.get("result"), dict) else None
+    if not image:
+        raise RuntimeError(f"Image generation failed: {str(data.get('errors') or data)[:300]}")
+    img = Image.open(io.BytesIO(base64.b64decode(image))).convert("RGB")
+    if img.size != (THUMB_W, THUMB_H):
+        img = img.resize((THUMB_W, THUMB_H), Image.LANCZOS)
+    return img
 
 
-def _crop_to_thumb(img: Image.Image) -> Image.Image:
-    """Flux has no size option (it returns a square-ish image), so this
-    center-crops to 16:9 and resizes to 1280x720."""
-    target_ratio = THUMB_W / THUMB_H
-    w, h = img.size
-    if w / h > target_ratio:
-        new_w = int(h * target_ratio)
-        img = img.crop(((w - new_w) // 2, 0, (w - new_w) // 2 + new_w, h))
-    else:
-        new_h = int(w / target_ratio)
-        img = img.crop((0, (h - new_h) // 2, w, (h - new_h) // 2 + new_h))
-    return img.resize((THUMB_W, THUMB_H), Image.LANCZOS)
+def _scene_image(script: dict, pose: str) -> Image.Image:
+    """Tries the scene a few times. The image API sometimes refuses a
+    prompt as flagged; the last attempt drops the background scene,
+    which is the usual trigger."""
+    thumb = script["thumb"]
+    last_error = None
+    for attempt in range(IMAGE_ATTEMPTS):
+        visual = thumb["visual"] if attempt < IMAGE_ATTEMPTS - 1 else "a few tiny round-headed cartoon men cheering"
+        prompt = STYLE + SCENE.format(look=script["look"], pose=pose, visual=visual, ground=thumb["ground"])
+        try:
+            return _generate_image(prompt)
+        except Exception as e:
+            last_error = e
+    raise last_error
 
 
-def _wrap_lines(hook: str):
+def _busyness(img: Image.Image, box) -> float:
+    """Share of pixels in box that sit on an outline — low means open
+    sky/ground, where text reads cleanly."""
+    x0, y0, x1, y1 = (int(box[0] * THUMB_W), int(box[1] * THUMB_H), int(box[2] * THUMB_W), int(box[3] * THUMB_H))
+    edges = img.crop((x0, y0, x1, y1)).convert("L").filter(ImageFilter.FIND_EDGES)
+    return sum(1 for v in edges.getdata() if v > 40) / ((x1 - x0) * (y1 - y0))
+
+
+def _best_scene(script: dict):
+    """Draws IMAGE_CANDIDATES images (different poses) and returns the
+    (image, text side) with the emptiest text area."""
+    poses = random.sample(POSES, IMAGE_CANDIDATES)
+    images, last_error = [], None
+    for pose in poses:
+        try:
+            images.append(_scene_image(script, pose))
+        except Exception as e:
+            last_error = e
+    if not images:
+        raise last_error
+    scored = [(_busyness(img, box), side, img) for img in images for side, box in TEXT_BOXES.items()]
+    _, side, img = min(scored, key=lambda t: t[0])
+    return img, side
+
+
+def _split_lines(hook: str):
     words = hook.split()
     if len(words) <= 2:
-        return words  # one word per line: bigger text than one long line
-    mid = (len(words) + 1) // 2
-    return [" ".join(words[:mid]), " ".join(words[mid:])]
+        return words
+    # Two lines, as even as possible by character count.
+    best = min(range(1, len(words)),
+               key=lambda i: abs(len(" ".join(words[:i])) - len(" ".join(words[i:]))))
+    return [" ".join(words[:best]), " ".join(words[best:])]
 
 
-def _draw_hook(img: Image.Image, hook: str) -> Image.Image:
-    from video_agent import CAPTION_FONT
-    draw = ImageDraw.Draw(img)
-    lines = _wrap_lines(hook)
-    max_w, max_h = THUMB_W * TEXT_MAX_WIDTH_FRAC, THUMB_H * TEXT_MAX_HEIGHT_FRAC
+def _draw_hook(img: Image.Image, hook: str, side: str = "left") -> Image.Image:
+    box = TEXT_BOXES[side]
+    lines = _split_lines(hook)
+    box_w = (box[2] - box[0]) * THUMB_W
+    box_h = (box[3] - box[1]) * THUMB_H
+    measure = ImageDraw.Draw(img)
 
     # Largest font size where the text block still fits its box.
-    size = 160
-    while size > 30:
-        font = ImageFont.truetype(CAPTION_FONT, size) if CAPTION_FONT else ImageFont.load_default(size)
-        stroke = max(4, size // 12)
-        boxes = [draw.textbbox((0, 0), line, font=font, stroke_width=stroke) for line in lines]
-        block_w = max(b[2] - b[0] for b in boxes)
-        line_h = max(b[3] - b[1] for b in boxes)
-        block_h = line_h * len(lines) + int(line_h * 0.15) * (len(lines) - 1)
-        if block_w <= max_w and block_h <= max_h:
+    size = 260
+    while True:
+        font = ImageFont.truetype(FONT_PATH, size)
+        stroke = max(4, int(size * TEXT_STROKE_FRAC))
+        gap = int(size * 0.05)
+        boxes = [measure.textbbox((0, 0), line, font=font, stroke_width=stroke) for line in lines]
+        heights = [b[3] - b[1] for b in boxes]
+        block_h = sum(heights) + gap * (len(lines) - 1)
+        if (max(b[2] - b[0] for b in boxes) <= box_w and block_h <= box_h) or size <= 40:
             break
         size -= 6
 
-    x = int(THUMB_W * 0.05)
-    y = THUMB_H - int(THUMB_H * 0.07) - block_h
-    for line in lines:
-        draw.text((x, y), line, font=font, fill=TEXT_COLOR,
-                  stroke_width=stroke, stroke_fill=TEXT_STROKE_COLOR)
-        y += line_h + int(line_h * 0.15)
-    return img
+    shadow = max(4, size // 18)
+    layer = Image.new("RGBA", (int(box_w) + 60, block_h + 60), (0, 0, 0, 0))
+    draw = ImageDraw.Draw(layer)
+    y = 20
+    for i, (line, b, h) in enumerate(zip(lines, boxes, heights)):
+        color = TEXT_COLORS[1] if i == len(lines) - 1 and len(lines) > 1 else TEXT_COLORS[0]
+        x = 20 - b[0]
+        draw.text((x + shadow, y - b[1] + shadow), line, font=font, fill="black",
+                  stroke_width=stroke, stroke_fill="black")
+        draw.text((x, y - b[1]), line, font=font, fill=color, stroke_width=stroke, stroke_fill="black")
+        y += h + gap
+    layer = layer.rotate(TEXT_TILT_DEGREES, expand=True, resample=Image.BICUBIC)
+
+    out = img.convert("RGBA")
+    top = int(box[1] * THUMB_H + (box_h - layer.height) / 2)
+    left = int(box[0] * THUMB_W) - 20 if side == "left" else int(box[2] * THUMB_W) - layer.width + 20
+    out.alpha_composite(layer, (max(0, left), max(0, top)))
+    return out.convert("RGB")
+
+
+def build_thumbnail(script: dict, ollama_model: str):
+    """Returns (image, hook) — no file written, no status updates."""
+    battle, tactic = script["battles"][script["thumb"]["battle"]]
+    img, side = _best_scene(script)
+    hook = script["thumb"].get("hook") or _hook(script, battle, tactic, ollama_model)
+    return _draw_hook(img, hook, side), hook
 
 
 def generate_thumbnail(script: dict, video_path: str, ollama_model: str = "llama3.2"):
@@ -157,12 +255,10 @@ def generate_thumbnail(script: dict, video_path: str, ollama_model: str = "llama
         return None
     set_status("thumbnail_agent", "running", "generating thumbnail")
     try:
-        idea = _scene_and_hook(script, ollama_model)
-        img = _crop_to_thumb(_generate_image(idea["scene"]))
-        img = _draw_hook(img, idea["hook"])
+        img, hook = build_thumbnail(script, ollama_model)
         out_path = os.path.splitext(video_path)[0] + "_thumb.jpg"
         img.save(out_path, "JPEG", quality=90)  # YouTube's limit is 2MB; this lands well under
-        set_status("thumbnail_agent", "done", f"{idea['hook']} — {idea['scene'][:120]}")
+        set_status("thumbnail_agent", "done", hook)
         return out_path
     except Exception as e:
         set_status("thumbnail_agent", "error", str(e))
@@ -171,22 +267,16 @@ def generate_thumbnail(script: dict, video_path: str, ollama_model: str = "llama
 
 
 if __name__ == "__main__":
-    # Local preview: runs steps 1 and 3 against a plain placeholder
-    # background if no Cloudflare credentials are set.
+    # Local preview for one general (no video needed):
+    #   python agents/thumbnail_agent.py "Julius Caesar"
     from dotenv import load_dotenv
     load_dotenv(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "config", ".env"))
-    demo = {"title": "The 3 Battles That Made Hannibal Barca a Legend", "general": "Hannibal Barca",
-            "chapters": [{"topic": "intro"}, {"topic": "Battle of the Trebia (218 BC)"},
-                         {"topic": "Battle of Lake Trasimene (217 BC)"},
-                         {"topic": "Battle of Cannae (216 BC)"}, {"topic": "outro"}]}
-    model = os.getenv("LONGFORM_OLLAMA_MODEL", "qwen2.5:7b")
-    out = os.path.join(os.path.dirname(__file__), "..", "data", "output", "thumbnail_preview.jpg")
+    from longform_script_agent import GENERALS
+    name = sys.argv[1] if len(sys.argv) > 1 else random.choice(GENERALS)["name"]
+    g = next(g for g in GENERALS if g["name"] == name)
+    script = {"general": g["name"], "look": g["look"], "thumb": g["thumb"], "battles": g["battles"]}
+    img, hook = build_thumbnail(script, os.getenv("LONGFORM_OLLAMA_MODEL", "qwen2.5:7b"))
+    out = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "data", "output", "thumbnail_preview.jpg")
     os.makedirs(os.path.dirname(out), exist_ok=True)
-    idea = _scene_and_hook(demo, model)
-    print(json.dumps(idea, indent=2))
-    if os.getenv("CLOUDFLARE_ACCOUNT_ID") and os.getenv("CLOUDFLARE_API_TOKEN"):
-        img = _crop_to_thumb(_generate_image(idea["scene"]))
-    else:
-        img = Image.new("RGB", (THUMB_W, THUMB_H), (70, 110, 160))
-    _draw_hook(img, idea["hook"]).save(out, "JPEG", quality=90)
-    print("Preview written to:", out)
+    img.save(out, "JPEG", quality=90)
+    print(f"{name}: {hook}\nPreview written to: {out}")
