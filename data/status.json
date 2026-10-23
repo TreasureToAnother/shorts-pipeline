@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-10-23T14:46:50Z"
+    "status": "done",
+    "message": "generated: I poured the champagne, my eyes scanning the sea of expectant faces.",
+    "updated_at": "2026-10-23T14:47:35Z"
   },
   "video_agent": {
     "status": "idle",
