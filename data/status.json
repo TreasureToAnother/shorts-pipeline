@@ -15,8 +15,8 @@
     "updated_at": "2026-10-23T14:49:14Z"
   },
   "discord_agent": {
-    "status": "running",
-    "message": "posting upload notification",
-    "updated_at": "2026-10-23T14:49:15Z"
+    "status": "done",
+    "message": "notified: I poured the champagne, my eyes scanning the sea of expectant faces. (scheduled 2026-10-23T19:49:11Z UTC)",
+    "updated_at": "2026-10-23T14:49:17Z"
   }
 }
