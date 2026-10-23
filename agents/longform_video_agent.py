@@ -437,6 +437,9 @@ def build_longform_video(script: dict, ollama_model: str = "qwen2.5:7b") -> str:
             scenes = _scene_descriptions(script, ci, texts, ollama_model, fallback_start=len(beats))
             for text, scene in zip(texts, scenes):
                 beats.append({"text": text, "scene": scene, "chapter": ci})
+        # Kept next to the pictures, to trace any odd illustration back to its prompt.
+        with open(os.path.join(run_dir, "beats.json"), "w") as f:
+            json.dump([{k: b[k] for k in ("chapter", "text", "scene")} for b in beats], f, indent=1)
 
         set_status("longform_video_agent", "running", f"narrating {len(beats)} beats")
         cursor = 0.0
