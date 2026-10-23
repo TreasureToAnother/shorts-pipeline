@@ -1,0 +1,78 @@
+name: Run Weekly Long-Form Video
+
+on:
+  schedule:
+    - cron: "0 13 * * 0"  # Sundays, 9:00 AM ET — takes the slot of Sunday's skipped 6th Short
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  run-longform:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Configure git identity (needed early, since status_store.py
+          pushes live status updates DURING the run, not just at the end)
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install ffmpeg
+        run: sudo apt-get update && sudo apt-get install -y ffmpeg imagemagick
+
+      - name: Allow ImageMagick to render text (moviepy TextClip needs this)
+        run: sudo sed -i 's/rights="none" pattern="@\*"/rights="read|write" pattern="@*"/' /etc/ImageMagick-6/policy.xml || true
+
+      - name: Install Python dependencies
+        run: pip install -r requirements.txt
+
+      - name: Install Ollama
+        run: curl -fsSL https://ollama.com/install.sh | sh
+
+      - name: Start Ollama and pull the model
+        run: |
+          ollama serve &
+          sleep 5
+          ollama pull qwen2.5:7b
+
+      - name: Restore YouTube OAuth token
+        run: |
+          mkdir -p config
+          echo '${{ secrets.YOUTUBE_TOKEN_JSON }}' > config/token.json
+          echo '${{ secrets.YOUTUBE_CLIENT_SECRET_JSON }}' > config/client_secret.json
+
+      - name: Run long-form pipeline
+        env:
+          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+          YOUTUBE_CHANNEL_ID: ${{ secrets.YOUTUBE_CHANNEL_ID }}
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+        run: python longform_orchestrator.py
+
+      - name: Persist the used-generals list so future runs don't repeat one
+        if: always()
+        run: |
+          git add data/longform_used_topics.json
+          if git diff --cached --quiet; then
+            echo "No used-generals changes to commit"
+            exit 0
+          fi
+          git commit -m "Update used long-form generals list"
+          for i in 1 2 3 4 5; do
+            if git push; then
+              exit 0
+            fi
+            echo "Push rejected (likely raced another workflow run) — pulling and retrying ($i)..."
+            git pull --rebase origin main
+            sleep 3
+          done
+          echo "Failed to push used-generals update after retries"
+          exit 1

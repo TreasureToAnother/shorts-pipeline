@@ -45,7 +45,7 @@ def _get_credentials():
 
 def upload_video(video_path: str, title: str, description: str, tags=None,
                   publish_at: str = None, privacy_status: str = None,
-                  is_short: bool = True) -> str:
+                  is_short: bool = True, category_id: str = "24") -> str:
     set_status("upload_agent", "running", f"uploading {os.path.basename(video_path)}")
     try:
         creds = _get_credentials()
@@ -65,7 +65,7 @@ def upload_video(video_path: str, title: str, description: str, tags=None,
                 "title": title[:100],
                 "description": description,
                 "tags": tags or ["storytime", "shorts", "reddit"],
-                "categoryId": "24",
+                "categoryId": category_id,
             },
             "status": status,
         }

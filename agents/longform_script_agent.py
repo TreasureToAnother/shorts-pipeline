@@ -1,53 +1,143 @@
 """
 Long-Form Script Agent
 -----------------------
-Generates a 60-110 minute self-improvement/motivation script, written
-entirely by a local Ollama model — the "motivational speech over
-Minecraft parkour" genre. Unlike the short-form script_agent.py (one
-tight story, one Ollama call), this builds the script as an outline
-of chapters under a single theme, then generates each chapter with
-its own Ollama call — small local models lose coherence over very
-long single completions, and per-chapter calls also make this
-resumable/inspectable.
+Generates a ~10 minute military-history script: one famous general or
+tactician per video, three of their battles, and the specific tactic
+that won each one — the battle's situation, the tactic itself, how it
+unfolded, the result, and the lesson.
 
-No external API dependency. Variety comes from randomly picking a
-theme; the theme is tracked in data/longform_used_topics.json (local
-only, gitignored — this pipeline never runs in CI) so the same theme
-doesn't repeat until the pool is exhausted.
+The general and their three battles come from the curated GENERALS
+list below rather than from the model — a small local model asked to
+"pick three battles" will happily invent one. Ollama only writes the
+narration around those fixed facts: an intro, one chapter per battle
+(~3-4 minutes each), and an outro, each with its own call.
+
+No external API dependency. The general is tracked in
+data/longform_used_topics.json (committed by the long-form workflow)
+so nobody repeats until the whole list has been covered.
 """
 import json
 import os
 import random
-import re
+
+import requests
 
 USED_TOPICS_PATH = os.path.join(os.path.dirname(__file__), "..", "data", "longform_used_topics.json")
 
 WORDS_PER_MINUTE = 150   # normal (non-sped-up) narration pace for this genre
-WORDS_PER_CHAPTER = 650  # target length per chapter, before the intro/outro
-MIN_TARGET_MINUTES = 60
-MAX_TARGET_MINUTES = 100
+TARGET_MINUTES = 10
+INTRO_WORDS = 120
+OUTRO_WORDS = 100
 
-THEMES = [
-    "building unbreakable discipline",
-    "why motivation always fades and what actually works instead",
-    "overcoming procrastination for good",
-    "developing genuine, unshakeable self-confidence",
-    "the power of extreme consistency",
-    "letting go of your past mistakes and regrets",
-    "handling failure and rejection without breaking",
-    "building real mental toughness",
-    "escaping comparison and jealousy",
-    "finding your purpose when you feel lost",
-    "mastering your mindset instead of being ruled by it",
-    "the art of patience and long-term thinking",
-    "becoming disciplined with how you spend your time",
-    "silencing self-doubt for good",
-    "embracing hard work when no one is watching",
-    "breaking bad habits that are holding you back",
-    "getting back up after you fall",
-    "why comfort is quietly destroying your potential",
-    "training yourself to follow through on what you start",
-    "becoming the person your future depends on",
+# era picks the Pexels stock-footage queries in longform_video_agent.py.
+GENERALS = [
+    {"name": "Hannibal Barca", "era": "ancient", "battles": [
+        ("Battle of the Trebia (218 BC)", "luring the Romans across a freezing river into a hidden ambush"),
+        ("Battle of Lake Trasimene (217 BC)", "ambushing an entire Roman army marching along a fog-covered lakeshore"),
+        ("Battle of Cannae (216 BC)", "the double envelopment, letting his center bend back so his flanks could close around the Romans"),
+    ]},
+    {"name": "Alexander the Great", "era": "ancient", "battles": [
+        ("Battle of the Granicus (334 BC)", "seizing the initiative with a cavalry charge across a defended river"),
+        ("Battle of Issus (333 BC)", "fighting on a narrow coastal plain that cancelled out Persia's numbers, then striking straight at Darius"),
+        ("Battle of Gaugamela (331 BC)", "drifting right to stretch the Persian line, then driving a wedge through the gap that opened"),
+    ]},
+    {"name": "Julius Caesar", "era": "ancient", "battles": [
+        ("Ilerda campaign (49 BC)", "winning by maneuver, cutting the enemy off from water and supplies until they surrendered"),
+        ("Battle of Pharsalus (48 BC)", "hiding a fourth line of infantry to ambush Pompey's cavalry"),
+        ("Siege of Alesia (52 BC)", "building two rings of siege walls, one to trap Vercingetorix and one to hold off the relief army"),
+    ]},
+    {"name": "Scipio Africanus", "era": "ancient", "battles": [
+        ("Capture of New Carthage (209 BC)", "storming the city across a lagoon at low tide"),
+        ("Battle of Ilipa (206 BC)", "reversing his usual deployment to put his best troops on the wings"),
+        ("Battle of Zama (202 BC)", "opening lanes in his lines so Hannibal's war elephants charged straight through"),
+    ]},
+    {"name": "Han Xin", "era": "eastern", "battles": [
+        ("Battle of Jingxing (204 BC)", "fighting with his back to a river while a hidden force swapped the enemy camp's flags"),
+        ("Battle of Wei River (203 BC)", "damming a river, then releasing it to split the enemy army in half"),
+        ("Battle of Gaixia (202 BC)", "surrounding Xiang Yu and breaking his army's morale with the songs of Chu"),
+    ]},
+    {"name": "Belisarius", "era": "ancient", "battles": [
+        ("Battle of Dara (530)", "digging ditches to channel the Persian attack and hiding cavalry to strike its flank"),
+        ("Battle of Ad Decimum (533)", "keeping control of his army while a poorly coordinated Vandal ambush fell apart"),
+        ("Siege of Rome (537-538)", "holding Rome with a small garrison against a much larger Gothic army"),
+    ]},
+    {"name": "Khalid ibn al-Walid", "era": "ancient", "battles": [
+        ("Battle of Walaja (633)", "a double envelopment using cavalry hidden behind the enemy's flanks"),
+        ("March across the Syrian desert (634)", "a surprise desert crossing that put his army behind enemy lines"),
+        ("Battle of Yarmouk (636)", "using a mobile cavalry reserve and cutting off the Byzantine line of retreat"),
+    ]},
+    {"name": "Subutai", "era": "eastern", "battles": [
+        ("Battle of the Kalka River (1223)", "a long feigned retreat that strung out the pursuing armies"),
+        ("Invasion of Europe (1241)", "several armies advancing on separate fronts in close coordination"),
+        ("Battle of Mohi (1241)", "a night river crossing to hit the flank, then leaving a gap in the encirclement to cut down the fleeing army"),
+    ]},
+    {"name": "Oda Nobunaga", "era": "eastern", "battles": [
+        ("Battle of Okehazama (1560)", "a surprise attack under cover of a rainstorm against a far larger army"),
+        ("Battle of Nagashino (1575)", "massed gunfire from behind wooden palisades to break cavalry charges"),
+        ("Second Battle of Kizugawaguchi (1578)", "iron-plated warships to break a naval blockade"),
+    ]},
+    {"name": "Admiral Yi Sun-sin", "era": "naval", "battles": [
+        ("Battle of Hansan Island (1592)", "luring the Japanese fleet into open water and closing a crane-wing formation around it"),
+        ("Battle of Myeongnyang (1597)", "holding a narrow strait with just 13 ships against more than 130"),
+        ("Battle of Noryang (1598)", "a night attack on a retreating enemy fleet"),
+    ]},
+    {"name": "Gustavus Adolphus", "era": "gunpowder", "battles": [
+        ("Battle of Breitenfeld (1631)", "small, flexible brigades and mobile field artillery against massive tercio formations"),
+        ("Battle of Rain (1632)", "crossing the Lech River under a smoke screen and artillery cover"),
+        ("Battle of Lutzen (1632)", "combined arms, coordinating infantry, cavalry, and artillery together"),
+    ]},
+    {"name": "Frederick the Great", "era": "gunpowder", "battles": [
+        ("Battle of Hohenfriedberg (1745)", "a night march to catch the enemy unprepared at dawn"),
+        ("Battle of Rossbach (1757)", "a hidden march behind hills to strike an enemy column on the move"),
+        ("Battle of Leuthen (1757)", "the oblique order, massing against one end of the enemy line while hiding the approach behind low ridges"),
+    ]},
+    {"name": "Napoleon Bonaparte", "era": "gunpowder", "battles": [
+        ("Battle of Rivoli (1797)", "the central position, using interior lines to beat separated enemy columns one at a time"),
+        ("Ulm campaign (1805)", "a huge wheeling march that surrounded an entire Austrian army before it understood what was happening"),
+        ("Battle of Austerlitz (1805)", "faking weakness on his right to lure the enemy off the Pratzen Heights, then seizing the center"),
+    ]},
+    {"name": "the Duke of Wellington", "era": "gunpowder", "battles": [
+        ("Lines of Torres Vedras (1810)", "secretly built defensive lines and a scorched-earth retreat that starved the French"),
+        ("Battle of Salamanca (1812)", "spotting a gap in an overextended French march and striking at once"),
+        ("Battle of Waterloo (1815)", "the reverse slope defense, holding on until the Prussians arrived"),
+    ]},
+    {"name": "Admiral Horatio Nelson", "era": "naval", "battles": [
+        ("Battle of the Nile (1798)", "sailing between an anchored French fleet and the shore to attack it from both sides"),
+        ("Battle of Copenhagen (1801)", "pressing the attack in shallow, dangerous waters despite orders to break off"),
+        ("Battle of Trafalgar (1805)", "breaking the enemy line with two columns sailing straight at it"),
+    ]},
+    {"name": "Ulysses S. Grant", "era": "gunpowder", "battles": [
+        ("Battle of Fort Donelson (1862)", "combined river and land operations, ending in a demand for unconditional surrender"),
+        ("Vicksburg campaign (1863)", "running gunboats past the river batteries, landing south of the city, and cutting loose from his supply lines"),
+        ("Overland Campaign (1864)", "relentless pressure and repeated flanking moves to pin down Lee's army"),
+    ]},
+    {"name": "Robert E. Lee", "era": "gunpowder", "battles": [
+        ("Second Battle of Bull Run (1862)", "sending Jackson on a wide flank march to wreck the enemy's supply base"),
+        ("Battle of Fredericksburg (1862)", "a strong defensive position on high ground behind a stone wall"),
+        ("Battle of Chancellorsville (1863)", "splitting his army in the face of a larger enemy to hit its exposed flank"),
+    ]},
+    {"name": "Erwin Rommel", "era": "modern", "battles": [
+        ("Battle of Caporetto (1917)", "infiltration tactics with a small mountain unit that captured thousands of prisoners"),
+        ("Fall of France (1940)", "speed and leading from the front with the 7th Panzer Division"),
+        ("Battle of Gazala (1942)", "a sweeping armored hook around the southern end of the Allied line"),
+    ]},
+    {"name": "George S. Patton", "era": "modern", "battles": [
+        ("Sicily campaign (1943)", "a fast advance across the island to Palermo and the race to Messina"),
+        ("Breakout from Normandy (1944)", "exploiting a breakthrough with fast-moving armored columns"),
+        ("Relief of Bastogne (1944)", "turning an entire army ninety degrees in a matter of days"),
+    ]},
+    {"name": "Georgy Zhukov", "era": "modern", "battles": [
+        ("Battle of Khalkhin Gol (1939)", "building up forces in secret, then a surprise double envelopment"),
+        ("Operation Uranus (1942)", "striking the weaker flanks to encircle the German army at Stalingrad"),
+        ("Battle of Berlin (1945)", "massed artillery and a two-front race to the city"),
+    ]},
+]
+
+TITLE_TEMPLATES = [
+    "{name}: 3 Battles, 3 Tactics That Changed War",
+    "How {name} Won: The 3 Greatest Tactics Explained",
+    "The 3 Battles That Made {name} a Legend",
+    "{name}'s Most Brilliant Tactics, Explained",
 ]
 
 
@@ -67,115 +157,147 @@ def _save_used(used):
         json.dump(used, f, indent=2)
 
 
-def _pick_theme():
+def _pick_general():
     used = _load_used()
-    remaining = [t for t in THEMES if t not in used]
+    remaining = [g for g in GENERALS if g["name"] not in used]
     if not remaining:
         used = []
-        remaining = THEMES
-    theme = random.choice(remaining)
-    used.append(theme)
+        remaining = GENERALS
+    general = random.choice(remaining)
+    used.append(general["name"])
     _save_used(used)
-    return theme
+    return general
 
 
-def _generate_outline(theme: str, chapter_count: int, model: str) -> list:
+_ACCURACY_RULES = (
+    "- Stick to well-established historical facts. If you're unsure of an "
+    "exact number, date, or name, describe it in general terms instead of "
+    "inventing one\n"
+    "- Spoken documentary narration, meant to be read aloud: no headers, "
+    "no bullet points, no markdown, no stage directions\n"
+    "- No preamble, no title, no quotes — return ONLY the spoken text itself"
+)
+
+
+WIKI_API = "https://en.wikipedia.org/w/api.php"
+WIKI_CONTEXT_WORDS = 1500
+
+
+def _wikipedia_context(battle: str) -> str:
+    """The battle's Wikipedia article text (first ~1500 words), used to
+    ground the narration — without it, the small model gets the broad
+    strokes right but invents units, names, and maneuvers. Returns ""
+    if Wikipedia can't be reached, so the chapter still gets written."""
+    headers = {"User-Agent": "faceless-yt-pipeline (personal YouTube automation)"}
+    try:
+        search = requests.get(WIKI_API, headers=headers, timeout=20, params={
+            "action": "query", "list": "search", "srsearch": battle,
+            "srlimit": 1, "format": "json",
+        }).json()
+        hits = search.get("query", {}).get("search", [])
+        if not hits:
+            return ""
+        page = requests.get(WIKI_API, headers=headers, timeout=20, params={
+            "action": "query", "prop": "extracts", "explaintext": 1,
+            "titles": hits[0]["title"], "format": "json", "redirects": 1,
+        }).json()
+        extract = next(iter(page["query"]["pages"].values())).get("extract", "")
+        return " ".join(extract.split()[:WIKI_CONTEXT_WORDS])
+    except Exception:
+        return ""
+
+
+def _ollama_text(prompt: str, model: str, what: str) -> str:
     import ollama
-    prompt = (
-        f"You're outlining a long-form motivational YouTube video on the "
-        f"theme: \"{theme}\".\n\n"
-        f"List exactly {chapter_count} distinct chapter topics that build "
-        f"on each other and together fully explore this theme — each one a "
-        f"specific angle, lesson, or turning point, not a vague restatement "
-        f"of the theme. Order them so the video builds naturally from start "
-        f"to finish.\n\n"
-        f"Return ONLY a numbered list, one line per chapter, no other text:\n"
-        f"1. ...\n2. ...\n"
-    )
-    result = ollama.generate(model=model, prompt=prompt)
-    lines = result.get("response", "").strip().splitlines()
-    chapters = []
-    for line in lines:
-        cleaned = re.sub(r"^\s*\d+[\.\):]\s*", "", line).strip()
-        cleaned = cleaned.strip('"\'')
-        if cleaned:
-            chapters.append(cleaned)
-    return chapters[:chapter_count] if chapters else [theme] * chapter_count
-
-
-def _generate_chapter(theme: str, chapter_topic: str, chapter_num: int,
-                       total_chapters: int, target_words: int, model: str) -> str:
-    import ollama
-    position = (
-        "This is the OPENING chapter — hook the listener immediately and "
-        "set up why this theme matters." if chapter_num == 1 else
-        "This is the CLOSING chapter — bring things to a resolute, "
-        "motivating close, tying back to the overall theme." if chapter_num == total_chapters else
-        f"This is chapter {chapter_num} of {total_chapters} — it should flow "
-        f"naturally from the chapter before it."
-    )
-    prompt = (
-        f"Write one chapter of a long-form motivational speech video. "
-        f"Overall theme: \"{theme}\". This chapter's specific focus: "
-        f"\"{chapter_topic}\".\n\n"
-        f"{position}\n\n"
-        f"Requirements:\n"
-        f"- Second person direct address (\"you\"), spoken monologue style, "
-        f"meant to be read aloud — no headers, no bullet points, no markdown\n"
-        f"- Roughly {target_words} words\n"
-        f"- Direct, punchy, emotionally resonant sentences; short sentences "
-        f"and repetition for emphasis are welcome, this is a speech not an essay\n"
-        f"- No preamble, no chapter title, no quotes — return ONLY the "
-        f"spoken text itself"
-    )
-    result = ollama.generate(model=model, prompt=prompt)
+    # Ollama's default context window can be as small as 2048 tokens,
+    # which a Wikipedia reference + a ~500 word answer would overflow.
+    result = ollama.generate(model=model, prompt=prompt, options={"num_ctx": 8192})
     text = result.get("response", "").strip().strip('"')
     if not text:
-        raise RuntimeError(f"Ollama returned an empty chapter for '{chapter_topic}'")
+        raise RuntimeError(f"Ollama returned an empty {what}")
     return text
 
 
-def _generate_title_with_ollama(theme: str, model: str) -> str:
-    try:
-        import ollama
-        prompt = (
-            f"Write ONE YouTube title for a 60-90 minute motivational "
-            f"speech video on the theme: \"{theme}\".\n\n"
-            f"Style: direct, second-person, the kind of title that works "
-            f"for long-form motivational content over Minecraft parkour "
-            f"background footage (e.g. \"Discipline Will Change Your Life "
-            f"— Motivational Speech\", \"Stop Waiting For Motivation\").\n"
-            f"Under 90 characters, no quotes, no emoji, return ONLY the title."
-        )
-        result = ollama.generate(model=model, prompt=prompt)
-        title = result.get("response", "").strip().strip('"').strip("'")
-        if title and len(title) <= 100:
-            return title
-    except Exception:
-        pass
-    return theme[:1].upper() + theme[1:]
+def _generate_intro(general: dict, target_words: int, model: str) -> str:
+    battles = "; ".join(b for b, _ in general["battles"])
+    prompt = (
+        f"Write the opening of a military history YouTube video about "
+        f"{general['name']}. The video covers three battles: {battles}.\n\n"
+        f"Hook the viewer in the first sentence, say briefly who "
+        f"{general['name']} was and why their tactics still matter, then "
+        f"preview the three battles without giving away how they were won.\n\n"
+        f"Requirements:\n"
+        f"- Roughly {target_words} words\n"
+        f"{_ACCURACY_RULES}"
+    )
+    return _ollama_text(prompt, model, "intro")
+
+
+def _generate_battle_chapter(general: dict, battle: str, tactic: str, num: int,
+                             target_words: int, model: str) -> str:
+    reference = _wikipedia_context(battle)
+    grounding = (
+        f"Reference material (from Wikipedia) — take every name, number, "
+        f"unit, and maneuver from this, and don't add facts that aren't in it:\n"
+        f"\"\"\"\n{reference}\n\"\"\"\n\n" if reference else ""
+    )
+    prompt = grounding + (
+        f"Write part {num} of 3 of a military history YouTube video about "
+        f"{general['name']}. This part covers the {battle}, and the tactic "
+        f"at its heart: {tactic}.\n\n"
+        f"Cover, in this order:\n"
+        f"1. The situation: who was fighting, why, and what the odds looked like\n"
+        f"2. The tactic itself, explained clearly enough that someone with no "
+        f"military background understands why it works\n"
+        f"3. How the battle actually unfolded, step by step\n"
+        f"4. The result, and the lesson a strategist can take from it\n\n"
+        f"Requirements:\n"
+        f"- Roughly {target_words} words\n"
+        f"- Vivid and dramatic, but clear — like a good history documentary\n"
+        f"{_ACCURACY_RULES}"
+    )
+    return _ollama_text(prompt, model, f"chapter for the {battle}")
+
+
+def _generate_outro(general: dict, target_words: int, model: str) -> str:
+    tactics = "; ".join(t for _, t in general["battles"])
+    prompt = (
+        f"Write the closing of a military history YouTube video about "
+        f"{general['name']}, which covered these three tactics: {tactics}.\n\n"
+        f"Tie the three together: what they reveal about how "
+        f"{general['name']} thought about war. End by asking viewers which "
+        f"general they want covered next, and to subscribe for a new one "
+        f"every week.\n\n"
+        f"Requirements:\n"
+        f"- Roughly {target_words} words\n"
+        f"{_ACCURACY_RULES}"
+    )
+    return _ollama_text(prompt, model, "outro")
 
 
 def generate_longform_script(ollama_model: str = "llama3.2", target_minutes: int = None) -> dict:
-    target_minutes = target_minutes or random.randint(MIN_TARGET_MINUTES, MAX_TARGET_MINUTES)
+    target_minutes = target_minutes or TARGET_MINUTES
     target_words = target_minutes * WORDS_PER_MINUTE
-    chapter_count = max(4, round(target_words / WORDS_PER_CHAPTER))
+    scale = target_minutes / TARGET_MINUTES  # shrinks intro/outro too on short test runs
+    intro_words = max(40, int(INTRO_WORDS * scale))
+    outro_words = max(40, int(OUTRO_WORDS * scale))
+    battle_words = max(100, (target_words - intro_words - outro_words) // 3)
 
-    theme = _pick_theme()
-    outline = _generate_outline(theme, chapter_count, ollama_model)
-    words_per_chapter = max(150, target_words // len(outline))
+    general = _pick_general()
+    chapters = [{"topic": general["name"], "text": _generate_intro(general, intro_words, ollama_model)}]
+    for i, (battle, tactic) in enumerate(general["battles"], start=1):
+        text = _generate_battle_chapter(general, battle, tactic, i, battle_words, ollama_model)
+        chapters.append({"topic": battle, "text": text})
+    chapters.append({"topic": f"What {general['name']} Teaches Us",
+                     "text": _generate_outro(general, outro_words, ollama_model)})
 
-    chapters = []
-    for i, topic in enumerate(outline, start=1):
-        text = _generate_chapter(theme, topic, i, len(outline), words_per_chapter, ollama_model)
-        chapters.append({"topic": topic, "text": text})
-
-    title = _generate_title_with_ollama(theme, ollama_model)
-    return {"title": title, "theme": theme, "chapters": chapters}
+    title = random.choice(TITLE_TEMPLATES).format(name=general["name"])
+    title = title[0].upper() + title[1:]  # "the Duke of Wellington" leading a title
+    return {"title": title, "general": general["name"], "era": general["era"], "chapters": chapters}
 
 
 if __name__ == "__main__":
-    script = generate_longform_script(target_minutes=8)  # short run for a quick local test
+    script = generate_longform_script(target_minutes=2)  # short run for a quick local test
     print(json.dumps(script, indent=2))
     total_words = sum(len(c["text"].split()) for c in script["chapters"])
     print(f"\n{len(script['chapters'])} chapters, ~{total_words} words, "

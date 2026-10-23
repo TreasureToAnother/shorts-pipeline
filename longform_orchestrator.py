@@ -4,16 +4,13 @@ Long-Form Orchestrator
 Runs the long-form pipeline once: longform_script_agent -> longform_
 video_agent -> upload_agent -> discord_agent.
 
-Unlike orchestrator.py (shorts), this is meant to run locally only —
-generating and encoding 60-100 minutes of video isn't practical on
-GitHub Actions' free shared runners (see README section 6). Run it
-manually, or wire it into your own local cron/launchd schedule for
-"1 long-form video/day."
+A ~10 minute military-history video — one general, three battles, the
+tactic behind each. Runs weekly on GitHub Actions (see
+.github/workflows/longform.yml), and uploads to YouTube as a regular
+(non-Shorts) video, published immediately.
 
-Uploads straight to YouTube as a regular (non-Shorts) video and
-publishes immediately — there's no CI "test vs real" distinction here
-the way there is for orchestrator.py, since local IS the only place
-this ever runs.
+Like orchestrator.py, local runs stop after rendering — no upload, no
+Discord ping — so you can review the file in data/output/ first.
 """
 import os
 import sys
@@ -30,32 +27,46 @@ from agents.upload_agent import upload_video
 from agents.discord_agent import notify_upload, notify_pipeline_failure
 from status_store import reset, set_status
 
-LONGFORM_HASHTAGS = "#selfimprovement #motivation #minecraft"
+IS_CI = os.getenv("GITHUB_ACTIONS") == "true"
+LONGFORM_HASHTAGS = "#history #militaryhistory #artofwar"
+CREDITS = (
+    "Music: \"Investigations\" by Kevin MacLeod (incompetech.com), "
+    "licensed under Creative Commons: By Attribution 4.0.\n"
+    "Footage: Pexels."
+)
 
 
 def run_longform_pipeline(target_minutes: int = None, privacy_status: str = "public"):
     reset()
     try:
         script = generate_longform_script(
-            ollama_model=os.getenv("OLLAMA_MODEL", "llama3.2"),
+            # A 7B model, not the shorts' llama3.2 — the 3B model swaps army
+            # sizes and invents events even with the Wikipedia reference.
+            ollama_model=os.getenv("LONGFORM_OLLAMA_MODEL", "qwen2.5:7b"),
             target_minutes=target_minutes,
         )
 
-        video_path = build_longform_video(script)
+        video_path = build_longform_video(script, pexels_key=os.getenv("PEXELS_API_KEY", ""))
 
-        max_title_len = 100 - len(LONGFORM_HASHTAGS) - 1
-        youtube_title = f"{script['title'][:max_title_len]} {LONGFORM_HASHTAGS}"[:100]
+        if not IS_CI:
+            print(f"Long-form pipeline complete (LOCAL TEST — not uploaded): {video_path}")
+            return video_path
 
+        battles = "\n".join(f"- {c['topic']}" for c in script["chapters"][1:-1])
         url = upload_video(
             video_path,
-            title=youtube_title,
+            title=script["title"],
             description=(
-                f"A motivational speech on {script['theme']}, for anyone who "
-                f"needs it today.\n\n{LONGFORM_HASHTAGS}"
+                f"Three battles, three tactics: how {script['general']} won.\n\n"
+                f"{battles}\n\n"
+                f"A new general every week — subscribe so you don't miss one.\n\n"
+                f"{CREDITS}\n\n{LONGFORM_HASHTAGS}"
             ),
-            tags=["motivation", "self improvement", "minecraft parkour", "discipline"],
+            tags=["military history", "art of war", "military tactics", "history",
+                  "battles", script["general"]],
             privacy_status=privacy_status,
             is_short=False,
+            category_id="27",  # Education
         )
 
         webhook = os.getenv("DISCORD_WEBHOOK_URL", "")
@@ -70,9 +81,11 @@ def run_longform_pipeline(target_minutes: int = None, privacy_status: str = "pub
         error_text = traceback.format_exc()
         traceback.print_exc()
         set_status("longform_orchestrator", "error", error_text[-500:])
-        notify_pipeline_failure(os.getenv("DISCORD_WEBHOOK_URL", ""), error_text)
+        if IS_CI:
+            notify_pipeline_failure(os.getenv("DISCORD_WEBHOOK_URL", ""), error_text)
         raise
 
 
 if __name__ == "__main__":
-    run_longform_pipeline()
+    minutes = int(sys.argv[1]) if len(sys.argv) > 1 else None  # e.g. `python longform_orchestrator.py 2` for a quick test
+    run_longform_pipeline(target_minutes=minutes)

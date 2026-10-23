@@ -107,11 +107,9 @@ python agents/discord_agent.py bot
 
 This is the "set it and forget it" free-hosting option — 6 scheduled
 shorts/day, right at YouTube's 6-upload/day quota, at zero dollar cost.
-A separate long-form pipeline (1-2hr self-improvement videos, Minecraft
-parkour background) runs locally — see section 6. Note: running a
-long-form upload on the same day as all 6 shorts means 7 uploads that
-day, one over the quota — the 7th will fail until the daily quota
-resets.
+A separate weekly long-form pipeline (~10 minute military-history
+videos) also runs on Actions every Sunday — see section 6. Sunday's 6th
+Short is skipped to make room for it under the 6-upload/day quota.
 
 1. Push this repo to GitHub (make sure `.gitignore` is respected —
    never commit `.env`, `client_secret.json`, or `token.json` directly).
@@ -155,8 +153,8 @@ Railway's or Fly.io's free tier.
 
 - YouTube: 6 uploads/day quota (a hard API limit, independent of the
   Testing/Production publishing status) — the 6 shorts alone use all
-  of it, so a long-form upload on the same day pushes to 7 and the
-  extra one will fail until the quota resets.
+  of it, which is why Sunday's 6th Short is skipped for the weekly
+  long-form video.
 - Pexels/Freesound free tiers: generous rate limits, fine for a few videos/day.
 - Whisper `tiny.en` model runs on CPU in GitHub Actions' free runner
   (2 cores/7GB RAM) without issue for ~60s clips.
@@ -164,49 +162,48 @@ Railway's or Fly.io's free tier.
 
 ---
 
-## 6. Long-form videos (local only)
+## 6. Weekly long-form videos (military history)
 
-A second, separate pipeline for 60-100 minute self-improvement/
-motivation videos — the "motivational speech over Minecraft parkour"
-genre. This never runs on GitHub Actions: rendering that much video,
-TTS, and (if it used them) Whisper transcription isn't a good fit for
-free shared CI runners, so it's designed to run on your own machine.
+A second, separate pipeline: one ~10 minute video a week on a famous
+general or tactician — three of their battles, and the specific tactic
+that won each one (the situation, the tactic, how the battle unfolded,
+the result, and the lesson).
 
-### Setup
+It runs on GitHub Actions every Sunday at 13:00 UTC
+(`.github/workflows/longform.yml`), using the same repo secrets as the
+shorts. Sunday's 6th Short is skipped so that day stays at 6 uploads
+(YouTube's daily limit). You can also trigger it from the **Actions**
+tab -> "Run Weekly Long-Form Video" -> **Run workflow**.
 
-1. Drop your own Minecraft parkour (or similar) `.mp4`/`.mov`/`.m4v`
-   clips into `data/longform_backgrounds/`. That folder is gitignored
-   — nothing in it ever needs to be committed, since this pipeline
-   only runs locally. 20-60 minutes of varied source clips is plenty;
-   they get randomly sampled/looped to fill however long the final
-   video needs to be, the same trick the shorts pipeline uses.
-2. (Optional) Background music reuses the same `data/background_music/`
-   folder the shorts pipeline uses, looped quietly underneath.
+How it works:
 
-### Run it
+- **Script** (`agents/longform_script_agent.py`) — the general and their
+  three battles come from the curated `GENERALS` list, not the model, so
+  no battle is ever invented. Each battle chapter is grounded in that
+  battle's Wikipedia article, and written by `qwen2.5:7b` via Ollama (the
+  shorts' 3B `llama3.2` got too many facts wrong). Generals already
+  covered are tracked in `data/longform_used_topics.json` so none repeats
+  until the whole list has been done.
+- **Video** (`agents/longform_video_agent.py`) — 1920x1080, a deep
+  documentary narrator voice (edge-tts), b-roll from Pexels matched to
+  the general's era (ruins, cannons, tall ships, tanks...), a title card
+  per chapter, and the background music track underneath.
+- **Upload** — a regular (non-Shorts) public video in the Education
+  category, with music and footage credits in the description.
+
+Test it locally (renders to `data/output/`, never uploads):
 
 ```bash
-python longform_orchestrator.py
+ollama pull qwen2.5:7b
+python longform_orchestrator.py 2   # optional: target length in minutes
 ```
-
-This generates a chaptered script (an outline + one Ollama call per
-chapter — more reliable than asking a small local model for 10,000+
-words in one shot), renders the video (1920x1080, chapter-title cards
-instead of per-word captions, no SFX), and uploads it straight to
-YouTube as a regular (non-Shorts) video, published immediately — there's
-no private/test mode here the way there is for the shorts orchestrator,
-since local is the only place this ever runs.
-
-To automate "1 long-form video/day" without GitHub Actions, wire this
-into your own local scheduler (macOS: `launchd`; cron works too) —
-your machine just needs to be on and awake at whatever time you pick.
 
 ### Tuning
 
-- `MIN_TARGET_MINUTES` / `MAX_TARGET_MINUTES` in `agents/longform_script_agent.py`
-  control the random video length range.
-- `THEMES` in the same file is the topic pool — edit freely, tracked
-  in `data/longform_used_topics.json` (also gitignored) so themes
-  don't repeat until the pool's exhausted.
-- `CLIP_SEGMENT_SECONDS` in `agents/longform_video_agent.py` controls
-  how long each background chunk plays before switching.
+- `GENERALS` in `agents/longform_script_agent.py` is the topic pool —
+  add a general with their era and three `(battle, tactic)` pairs.
+- `TARGET_MINUTES` in the same file sets the video length (the model
+  tends to run ~10% long).
+- `ERA_QUERIES` in `agents/longform_video_agent.py` controls which
+  Pexels searches supply the footage; `LONGFORM_VOICE_NAME` overrides
+  the narrator voice.

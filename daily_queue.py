@@ -31,6 +31,9 @@ def _today_str():
 
 
 def _fresh_queue():
+    # Sundays have one fewer Short — the weekly long-form video
+    # (.github/workflows/longform.yml) takes the last upload slot.
+    hours = SLOT_HOURS_ET[:-1] if _now_et().weekday() == 6 else SLOT_HOURS_ET
     return {
         "date": _today_str(),
         "slots": [
@@ -42,7 +45,7 @@ def _fresh_queue():
                 "video_url": None,
                 "publish_at": None,
             }
-            for i, h in enumerate(SLOT_HOURS_ET)
+            for i, h in enumerate(hours)
         ],
     }
 
