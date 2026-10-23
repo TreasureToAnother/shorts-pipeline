@@ -1,53 +1,53 @@
 {
-  "date": "2026-10-22",
+  "date": "2026-10-23",
   "slots": [
     {
       "slot": 0,
       "hour_et": 4,
-      "stage": "uploaded",
-      "title": "I'm still trying to process the text that changed everything.",
-      "video_url": "https://youtube.com/shorts/bfSo041kpUk",
-      "publish_at": "2026-10-22T19:31:20Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 1,
       "hour_et": 5,
-      "stage": "uploaded",
-      "title": "Caught in the Lie\"\n\n#BetrayalAlert",
-      "video_url": "https://youtube.com/shorts/CpFrvPdrI3U",
-      "publish_at": "2026-10-22T19:59:54Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 2,
       "hour_et": 6,
-      "stage": "uploaded",
-      "title": "I still remember the night I texted my \"best friend\" Rachel, asking her to meet ",
-      "video_url": "https://youtube.com/shorts/2a0zX3HXWkk",
-      "publish_at": "2026-10-22T20:55:43Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 3,
       "hour_et": 7,
-      "stage": "uploaded",
-      "title": "I'll never forget the night I stumbled upon the secret.",
-      "video_url": "https://youtube.com/shorts/zlBmXlTPo6U",
-      "publish_at": "2026-10-22T21:13:37Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 4,
       "hour_et": 8,
-      "stage": "uploaded",
-      "title": "I stood frozen in the crowd, watching the bride's white dress shimmer in the sun",
-      "video_url": "https://youtube.com/shorts/_8Y5WA0huYA",
-      "publish_at": "2026-10-22T22:57:56Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 5,
       "hour_et": 9,
-      "stage": "uploaded",
-      "title": "He was right across from me the whole time",
-      "video_url": "https://youtube.com/shorts/3z60q99aqgI",
-      "publish_at": "2026-10-22T18:45:22Z"
+      "stage": "generating",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     }
   ]
 }
