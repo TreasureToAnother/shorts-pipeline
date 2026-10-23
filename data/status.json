@@ -10,9 +10,9 @@
     "updated_at": "2026-10-23T14:12:34Z"
   },
   "upload_agent": {
-    "status": "running",
-    "message": "uploading fd4dedb6.mp4",
-    "updated_at": "2026-10-23T14:12:35Z"
+    "status": "done",
+    "message": "scheduled for 2026-10-23T19:12:35Z: https://youtube.com/shorts/96jqbJSUR4g",
+    "updated_at": "2026-10-23T14:12:39Z"
   },
   "discord_agent": {
     "status": "idle",
