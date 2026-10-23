@@ -1,0 +1,54 @@
+name: Write Weekly Long-Form Script
+
+on:
+  schedule:
+    - cron: "0 13 * * 6"  # Saturdays — the day before the Sunday video, on its own Workers AI allowance
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  write-script:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Configure git identity
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install Python dependencies
+        run: pip install -r requirements.txt
+
+      - name: Write and fact-check the script
+        env:
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        run: python longform_orchestrator.py --script-only
+
+      - name: Save the script for Sunday's render
+        run: |
+          git add data/longform_next.json data/longform_used_topics.json
+          if git diff --cached --quiet; then
+            echo "Nothing to commit"
+            exit 0
+          fi
+          git commit -m "Long-form script for Sunday [skip ci]"
+          for i in 1 2 3 4 5; do
+            if git push; then
+              exit 0
+            fi
+            echo "Push rejected (likely raced another workflow run) — pulling and retrying ($i)..."
+            git pull --rebase origin main
+            sleep 3
+          done
+          echo "Failed to push the script after retries"
+          exit 1
