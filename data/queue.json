@@ -20,10 +20,10 @@
     {
       "slot": 2,
       "hour_et": 6,
-      "stage": "generating",
-      "title": null,
-      "video_url": null,
-      "publish_at": null
+      "stage": "uploaded",
+      "title": "I still remember the day our group project fell apart.",
+      "video_url": "https://youtube.com/shorts/Yn5kN0c3c68",
+      "publish_at": "2026-10-23T21:02:44Z"
     },
     {
       "slot": 3,
