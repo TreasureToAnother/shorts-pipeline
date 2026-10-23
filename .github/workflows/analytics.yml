@@ -34,14 +34,9 @@ jobs:
           YOUTUBE_CHANNEL_ID: ${{ secrets.YOUTUBE_CHANNEL_ID }}
         run: python agents/analytics_agent.py
 
-      - name: Warn if the YouTube token is about to expire
-        env:
-          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
-        run: python agents/token_watchdog.py
-
       - name: Commit analytics data
         run: |
-          git add data/analytics_latest.json data/analytics_history.json data/token_issued_at.json
+          git add data/analytics_latest.json data/analytics_history.json
           if git diff --cached --quiet; then
             echo "No analytics changes to commit"
             exit 0
