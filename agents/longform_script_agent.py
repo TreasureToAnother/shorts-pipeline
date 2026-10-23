@@ -353,12 +353,8 @@ GENERALS = [
     ]},
 ]
 
-TITLE_TEMPLATES = [
-    "{name}: 3 Battles, 3 Tactics That Changed War",
-    "How {name} Won: The 3 Greatest Tactics Explained",
-    "The 3 Battles That Made {name} a Legend",
-    "{name}'s Most Brilliant Tactics, Explained",
-]
+# One fixed format, so every video reads as part of the same series.
+TITLE_FORMAT = "Into the Mind of a Master Tactician: {name}"
 
 
 def _load_used():
@@ -444,8 +440,7 @@ def generate_longform_script(ollama_model: str = "llama3.2", target_minutes: int
         f"viewers which military leader they want covered next, and to subscribe for a new one every week.",
         outro_words, allowed, ollama_model, llm, _sentences)))
 
-    title = random.choice(TITLE_TEMPLATES).format(name=name)
-    title = title[0].upper() + title[1:]  # "the Duke of Wellington" leading a title
+    title = TITLE_FORMAT.format(name=name[0].upper() + name[1:])  # "...: The Duke of Wellington"
     return {"title": title, "general": name, "era": general["era"],
             "chapters": [{"topic": topic, "text": text} for topic, text, _ in parts],
             "look": general["look"], "thumb": general["thumb"], "battles": general["battles"],
