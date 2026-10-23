@@ -21,6 +21,7 @@ import sys
 import requests
 
 sys.path.append("..")
+sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
 from status_store import set_status
 
 
@@ -74,18 +75,16 @@ def run_bot():
     import discord
     from discord.ext import commands
     from googleapiclient.discovery import build
-    from google.oauth2.credentials import Credentials
 
     intents = discord.Intents.default()
     intents.message_content = True
     bot = commands.Bot(command_prefix="!", intents=intents)
 
     def _youtube_client():
-        token_path = os.path.join(os.path.dirname(__file__), "..", "config", "token.json")
-        creds = Credentials.from_authorized_user_file(
-            token_path, ["https://www.googleapis.com/auth/youtube.readonly"]
-        )
-        return build("youtube", "v3", credentials=creds)
+        # Plain API key, same as analytics_agent.py — video titles/view
+        # counts are public data, and the upload OAuth token's
+        # "youtube.upload" scope can't read them anyway.
+        return build("youtube", "v3", developerKey=os.environ["YOUTUBE_API_KEY"])
 
     @bot.command()
     async def latest(ctx):
@@ -127,6 +126,8 @@ def run_bot():
 
 
 if __name__ == "__main__":
+    from dotenv import load_dotenv
+    load_dotenv(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "config", ".env"))
     if len(sys.argv) > 1 and sys.argv[1] == "bot":
         run_bot()
     else:
