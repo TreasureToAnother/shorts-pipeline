@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-10-24T12:37:45Z"
+    "status": "done",
+    "message": "generated: I'll never forget the summer I spent at Camp Willow, where the sun dipped into t",
+    "updated_at": "2026-10-24T12:38:02Z"
   },
   "video_agent": {
     "status": "idle",
