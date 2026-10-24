@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-10-24T14:59:07Z"
+    "status": "done",
+    "message": "generated: I'll never forget the night we drove down that desolate highway, the GPS leading",
+    "updated_at": "2026-10-24T14:59:53Z"
   },
   "video_agent": {
     "status": "idle",
