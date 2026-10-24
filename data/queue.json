@@ -36,10 +36,10 @@
     {
       "slot": 4,
       "hour_et": 8,
-      "stage": "generating",
-      "title": null,
-      "video_url": null,
-      "publish_at": null
+      "stage": "uploaded",
+      "title": "I'll never forget the summer I spent at Camp Willow, where the sun dipped into t",
+      "video_url": "https://youtube.com/shorts/9dTez_cnQ78",
+      "publish_at": "2026-10-24T17:38:45Z"
     },
     {
       "slot": 5,
