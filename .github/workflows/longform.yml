@@ -30,8 +30,15 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Install ffmpeg
-        run: sudo apt-get update && sudo apt-get install -y ffmpeg imagemagick
+      - name: Restore cached system packages
+        uses: actions/cache@v4
+        with:
+          path: ~/apt-cache
+          key: apt-ffmpeg-imagemagick-${{ runner.os }}-v1
+
+      - name: Install ffmpeg and ImageMagick
+        timeout-minutes: 20
+        run: bash scripts/install_system_deps.sh
 
       - name: Allow ImageMagick to render text (moviepy TextClip needs this)
         run: sudo sed -i 's/rights="none" pattern="@\*"/rights="read|write" pattern="@*"/' /etc/ImageMagick-6/policy.xml || true
