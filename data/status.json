@@ -10,9 +10,9 @@
     "updated_at": "2026-10-24T13:15:36Z"
   },
   "upload_agent": {
-    "status": "running",
-    "message": "uploading c74141e1.mp4",
-    "updated_at": "2026-10-24T13:15:37Z"
+    "status": "done",
+    "message": "scheduled for 2026-10-24T18:15:37Z: https://youtube.com/shorts/F4GmPozyWN0",
+    "updated_at": "2026-10-24T13:15:40Z"
   },
   "discord_agent": {
     "status": "idle",
