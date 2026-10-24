@@ -1,22 +1,22 @@
 {
   "script_agent": {
-    "status": "done",
-    "message": "generated: I'll never forget the night we drove down that desolate highway, the GPS leading",
-    "updated_at": "2026-10-24T14:59:53Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "video_agent": {
-    "status": "done",
-    "message": "/home/runner/work/shorts-pipeline/shorts-pipeline/agents/../data/output/ce770914.mp4",
-    "updated_at": "2026-10-24T15:01:16Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "upload_agent": {
-    "status": "done",
-    "message": "scheduled for 2026-10-24T20:01:17Z: https://youtube.com/shorts/5OqYluJCYRQ",
-    "updated_at": "2026-10-24T15:01:20Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "discord_agent": {
-    "status": "done",
-    "message": "notified: I'll never forget the night we drove down that desolate highway, the GPS leading (scheduled 2026-10-24T20:01:17Z UTC)",
-    "updated_at": "2026-10-24T15:01:23Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   }
 }
