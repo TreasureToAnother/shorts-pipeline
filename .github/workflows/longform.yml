@@ -1,8 +1,12 @@
 name: Run Weekly Long-Form Video
 
 on:
-  schedule:
-    - cron: "0 13 * * 0"  # Sundays, 9:00 AM ET — takes the slot of Sunday's skipped 6th Short
+  # Schedule paused until the illustrated version passes a full test run;
+  # meanwhile Sunday's 6th Short runs again (see pipeline.yml). To resume:
+  # restore the schedule below, switch pipeline.yml's last cron back to "1-6",
+  # and set LONGFORM_ON_SUNDAYS = True in daily_queue.py.
+  # schedule:
+  #   - cron: "0 13 * * 0"  # Sundays, 9:00 AM ET — takes the slot of Sunday's skipped 6th Short
   workflow_dispatch: {}
 
 permissions:

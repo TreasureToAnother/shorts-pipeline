@@ -1,8 +1,9 @@
 name: Write Weekly Long-Form Script
 
 on:
-  schedule:
-    - cron: "0 13 * * 6"  # Saturdays — the day before the Sunday video, on its own Workers AI allowance
+  # Paused along with longform.yml until the illustrated version passes a full test run.
+  # schedule:
+  #   - cron: "0 13 * * 6"  # Saturdays — the day before the Sunday video, on its own Workers AI allowance
   workflow_dispatch: {}
 
 permissions:

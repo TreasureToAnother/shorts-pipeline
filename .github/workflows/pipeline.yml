@@ -7,7 +7,7 @@ on:
     - cron: "0 10 * * *"  # 6:00 AM ET generation -> 11:00 AM ET publish
     - cron: "0 11 * * *"  # 7:00 AM ET generation -> 12:00 PM ET publish
     - cron: "0 12 * * *"  # 8:00 AM ET generation -> 1:00 PM ET publish
-    - cron: "0 13 * * 1-6"  # 9:00 AM ET generation -> 2:00 PM ET publish (skipped Sundays: the weekly long-form video takes this upload slot)
+    - cron: "0 13 * * *"  # 9:00 AM ET generation -> 2:00 PM ET publish (switch to "1-6" when the weekly long-form schedule is on — it takes Sunday's slot)
   workflow_dispatch: {}
 
 permissions:

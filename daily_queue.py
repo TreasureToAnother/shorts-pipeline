@@ -18,6 +18,9 @@ except Exception:
 
 QUEUE_PATH = os.path.join(os.path.dirname(__file__), "data", "queue.json")
 SLOT_HOURS_ET = [4, 5, 6, 7, 8, 9]
+# Matches .github/workflows/longform.yml's schedule: when it's on, the
+# long-form video takes Sunday's last Short slot.
+LONGFORM_ON_SUNDAYS = False
 
 
 def _now_et():
@@ -33,7 +36,7 @@ def _today_str():
 def _fresh_queue():
     # Sundays have one fewer Short — the weekly long-form video
     # (.github/workflows/longform.yml) takes the last upload slot.
-    hours = SLOT_HOURS_ET[:-1] if _now_et().weekday() == 6 else SLOT_HOURS_ET
+    hours = SLOT_HOURS_ET[:-1] if LONGFORM_ON_SUNDAYS and _now_et().weekday() == 6 else SLOT_HOURS_ET
     return {
         "date": _today_str(),
         "slots": [
