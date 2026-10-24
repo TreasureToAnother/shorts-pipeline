@@ -1,29 +1,29 @@
 {
-  "date": "2026-10-23",
+  "date": "2026-10-24",
   "slots": [
     {
       "slot": 0,
       "hour_et": 4,
-      "stage": "uploaded",
-      "title": "Caught in the lie\" \ud83d\udc94 #POV",
-      "video_url": "https://youtube.com/shorts/96jqbJSUR4g",
-      "publish_at": "2026-10-23T19:12:35Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 1,
       "hour_et": 5,
-      "stage": "uploaded",
-      "title": "I poured the champagne, my eyes scanning the sea of expectant faces.",
-      "video_url": "https://youtube.com/shorts/heJbFH_13UA",
-      "publish_at": "2026-10-23T19:49:11Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 2,
       "hour_et": 6,
-      "stage": "uploaded",
-      "title": "I still remember the day our group project fell apart.",
-      "video_url": "https://youtube.com/shorts/Yn5kN0c3c68",
-      "publish_at": "2026-10-23T21:02:44Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 3,
@@ -36,7 +36,7 @@
     {
       "slot": 4,
       "hour_et": 8,
-      "stage": "pending",
+      "stage": "generating",
       "title": null,
       "video_url": null,
       "publish_at": null
@@ -44,10 +44,10 @@
     {
       "slot": 5,
       "hour_et": 9,
-      "stage": "uploaded",
-      "title": "I stood behind the counter of our coffee shop, trying to focus on the order of d",
-      "video_url": "https://youtube.com/shorts/HcFNuF50Pw0",
-      "publish_at": "2026-10-23T18:54:47Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     }
   ]
 }
