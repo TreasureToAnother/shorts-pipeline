@@ -44,10 +44,10 @@
     {
       "slot": 5,
       "hour_et": 9,
-      "stage": "generating",
-      "title": null,
-      "video_url": null,
-      "publish_at": null
+      "stage": "uploaded",
+      "title": "I've had a crush on Jake since we met at summer camp.",
+      "video_url": "https://youtube.com/shorts/F4GmPozyWN0",
+      "publish_at": "2026-10-24T18:15:37Z"
     }
   ]
 }
