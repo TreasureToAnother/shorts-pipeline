@@ -35,7 +35,7 @@ sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
 from status_store import set_status
 from script_agent import _sentences
 from video_agent import _trim_silence, _tts
-from thumbnail_agent import FONT_PATH, STYLE, _generate_image
+from thumbnail_agent import FONT_PATH, STYLE, _generate_image, _text_in_image
 
 from PIL import Image as _PILImage, ImageDraw, ImageFont
 if not hasattr(_PILImage, "ANTIALIAS"):
@@ -72,6 +72,7 @@ Write one picture description for each numbered narration beat below. Every desc
 - never contain any other name of a person, people, nation, city, river or place; describe the landscape instead
 - only use these things: {objects}
 - show danger with worried faces, charging crowds, arrows flying in the sky, or smoke, never anyone getting hurt
+- describe only things a camera could see — never ideas, lessons, words, maps, signs or labels (for a lesson, show THE GENERAL doing something)
 - be different from the picture before it
 
 Beats:
@@ -88,6 +89,7 @@ The description must:
 - never contain any name of a person, people, nation, city, river or place
 - only use these things: {objects}
 - never show anyone getting hurt
+- describe only things a camera could see — never ideas, lessons, words, maps, signs or labels
 
 Return ONLY JSON: {{"scene": "..."}}"""
 
@@ -236,14 +238,21 @@ def _normalize_scene(scene: str, general_pattern, side_names: dict) -> str:
 
 
 def _script_proper_nouns(script: dict) -> set:
-    """Words the narration capitalizes mid-sentence — i.e. names."""
-    nouns = set()
+    """Names in the narration: words it capitalizes mid-sentence, plus
+    words it only ever writes capitalized ("Capua" opening a sentence,
+    never "capua")."""
+    nouns, capitalized, lowercase = set(), set(), set()
     for chapter in script["chapters"]:
         for sentence in _sentences(chapter["text"]):
-            for word in re.findall(r"[A-Za-z][A-Za-z'-]*", sentence)[1:]:
+            for i, word in enumerate(re.findall(r"[A-Za-z][A-Za-z'-]*", sentence)):
+                key = word.lower().removesuffix("'s")
                 if word[0].isupper():
-                    nouns.add(word.lower().removesuffix("'s"))
-    return nouns
+                    capitalized.add(key)
+                    if i:
+                        nouns.add(key)
+                else:
+                    lowercase.add(key)
+    return nouns | {w for w in capitalized - lowercase if w not in STARTERS and len(w) > 2}
 
 
 def _looks_like_name(word: str, proper_nouns: set) -> bool:
@@ -255,6 +264,7 @@ def _looks_like_name(word: str, proper_nouns: set) -> bool:
 
 def _valid_scene(scene, general_pattern, side_names: dict, allow_elephants: bool, proper_nouns: set = frozenset(),
                  era: str = ""):
+    """allow_elephants: whether this beat's narration mentions elephants."""
     """Returns the cleaned scene (still with placeholders) or None.
     Rejects anything that could get the image refused or wrong: non-ASCII
     text, gore, and any capitalized word other than the placeholders —
@@ -270,6 +280,10 @@ def _valid_scene(scene, general_pattern, side_names: dict, allow_elephants: bool
         return None
     words = scene.split()
     if not 4 <= len(words) <= 40:
+        return None
+    # "map, flexibility, terrain, victory" — a list of ideas, which the
+    # image model draws as written words.
+    if scene.count(",") >= 4 and scene.count(",") / len(words) > 0.15:
         return None
     rest = scene
     for p in PLACEHOLDERS:
@@ -297,9 +311,9 @@ def _scene_descriptions(script: dict, chapter_index: int, beats: list, model: st
     chapter = script["chapters"][chapter_index]
     era = script.get("era", "ancient")
     objects = ERA_OBJECTS.get(era, ERA_OBJECTS["ancient"]) + ", " + LANDSCAPES
-    allow_elephants = script["general"] in ELEPHANT_GENERALS
-    if allow_elephants:
-        objects = "elephants, " + objects
+    # Elephants only in beats whose narration mentions them: allowed
+    # everywhere, the model put them in every other Hannibal picture.
+    elephants_era = script["general"] in ELEPHANT_GENERALS
     pattern = _name_pattern(script["general"])
     cast = _side_cast(script, chapter_index)
     proper_nouns = _script_proper_nouns(script)
@@ -324,7 +338,7 @@ def _scene_descriptions(script: dict, chapter_index: int, beats: list, model: st
     fallbacks = FALLBACK_SCENES["naval" if era == "naval" else "land"]
     scenes, used_fallbacks = [], fallback_start
     for i, beat in enumerate(beats):
-        scene = _valid_scene(raw[i], pattern, cast["names"], allow_elephants, proper_nouns, era) if i < len(raw) else None
+        scene = _valid_scene(raw[i], pattern, cast["names"], elephants_era and "elephant" in beats[i].lower(), proper_nouns, era) if i < len(raw) else None
         for _ in range(2):
             if scene:
                 break
@@ -332,7 +346,8 @@ def _scene_descriptions(script: dict, chapter_index: int, beats: list, model: st
                 data = _ollama_json(SINGLE_SCENE_PROMPT.format(general=script["general"], objects=objects,
                                                                beat=_normalize_scene(beat, pattern, cast["names"]),
                                                                ours=sides, theirs=enemies), model, 0.9)
-                scene = _valid_scene(data.get("scene"), pattern, cast["names"], allow_elephants, proper_nouns, era)
+                scene = _valid_scene(data.get("scene"), pattern, cast["names"], elephants_era and "elephant" in beat.lower(),
+                                         proper_nouns, era)
             except Exception:
                 pass
         if not scene:
@@ -350,14 +365,24 @@ def _fallback_scene(script: dict) -> str:
 def _draw_scene(scene: str, script: dict):
     """Returns a PIL image, or None if every attempt was refused/failed.
     A refused scene (the API's safety filter) falls back to a calm shot
-    of the general."""
+    of the general. A picture with writing in it is redrawn once, keeping
+    whichever version has less."""
     for prompt_scene in (scene, scene, _fallback_scene(script)):
         if not prompt_scene:
             continue
+        prompt = STYLE + "Wide view. " + prompt_scene + " Flat simple background."
         try:
-            return _generate_image(STYLE + "Wide view. " + prompt_scene + " Flat simple background.")
+            img = _generate_image(prompt)
         except Exception:
             continue
+        if _text_in_image(img) >= 2:
+            try:
+                retry = _generate_image(prompt)
+                if _text_in_image(retry) < _text_in_image(img):
+                    img = retry
+            except Exception:
+                pass
+        return img
     return None
 
 

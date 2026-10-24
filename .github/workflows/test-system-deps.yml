@@ -1,0 +1,16 @@
+name: Test system package install (temporary)
+on:
+  workflow_dispatch: {}
+jobs:
+  install:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/cache@v4
+        with:
+          path: ~/apt-cache
+          key: apt-ffmpeg-imagemagick-tesseract-${{ runner.os }}-v1
+      - name: Install
+        timeout-minutes: 20
+        run: bash scripts/install_system_deps.sh

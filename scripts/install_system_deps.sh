@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
-# Installs ffmpeg + ImageMagick on the GitHub runner.
+# Installs ffmpeg, ImageMagick and Tesseract (OCR, to catch stray writing in
+# AI illustrations) on the GitHub runner.
 #
 # Ubuntu's package mirror is sometimes so slow that this step alone has
 # outlasted the whole job's time limit (2 Shorts lost on 2026-10-23), so
@@ -15,7 +16,7 @@ APT_OPTS=(-o Acquire::Retries=5 -o Acquire::http::Timeout=60 -o DPkg::Lock::Time
 
 for attempt in 1 2 3; do
   if sudo apt-get "${APT_OPTS[@]}" update -qq && \
-     sudo DEBIAN_FRONTEND=noninteractive apt-get "${APT_OPTS[@]}" install -y -qq ffmpeg imagemagick; then
+     sudo DEBIAN_FRONTEND=noninteractive apt-get "${APT_OPTS[@]}" install -y -qq ffmpeg imagemagick tesseract-ocr; then
     break
   fi
   echo "apt attempt $attempt failed; retrying in 15s"
@@ -28,3 +29,4 @@ rm -f "$CACHE/lock"
 
 ffmpeg -version | head -1
 convert -version | head -1
+tesseract --version | head -1

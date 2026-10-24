@@ -33,7 +33,10 @@ import json
 import os
 import random
 import re
+import shutil
+import subprocess
 import sys
+import tempfile
 
 import requests
 
@@ -150,6 +153,30 @@ def _generate_image(prompt: str) -> Image.Image:
     return img
 
 
+def _text_in_image(img) -> int:
+    """How many word-like strings OCR finds in a picture. The image model
+    sometimes writes gibberish captions or labels into a scene; 2 or more
+    confident words means it did. 0 if Tesseract isn't installed."""
+    if not shutil.which("tesseract"):
+        return 0
+    with tempfile.NamedTemporaryFile(suffix=".png") as f:
+        img.save(f.name)
+        out = subprocess.run(["tesseract", f.name, "stdout", "--psm", "11", "tsv"],
+                             capture_output=True, text=True, timeout=60).stdout
+    words = 0
+    for row in out.splitlines()[1:]:
+        cols = row.split("\t")
+        if len(cols) < 12:
+            continue
+        try:
+            confident = float(cols[10]) >= 60
+        except ValueError:
+            continue
+        if confident and len(re.sub(r"[^A-Za-z]", "", cols[11])) >= 3:
+            words += 1
+    return words
+
+
 def _scene_image(script: dict, pose: str) -> Image.Image:
     """Tries the scene a few times. The image API sometimes refuses a
     prompt as flagged; the last attempt drops the background scene,
@@ -186,7 +213,9 @@ def _best_scene(script: dict):
             last_error = e
     if not images:
         raise last_error
-    scored = [(_busyness(img, box), side, img) for img in images for side, box in TEXT_BOXES.items()]
+    # Stray writing in a picture outweighs any busyness difference.
+    scored = [(_busyness(img, box) + (1.0 if _text_in_image(img) >= 2 else 0.0), side, img)
+              for img in images for side, box in TEXT_BOXES.items()]
     _, side, img = min(scored, key=lambda t: t[0])
     return img, side
 

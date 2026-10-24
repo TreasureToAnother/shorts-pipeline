@@ -35,9 +35,9 @@ jobs:
         uses: actions/cache@v4
         with:
           path: ~/apt-cache
-          key: apt-ffmpeg-imagemagick-${{ runner.os }}-v1
+          key: apt-ffmpeg-imagemagick-tesseract-${{ runner.os }}-v1
 
-      - name: Install ffmpeg and ImageMagick
+      - name: Install ffmpeg, ImageMagick and Tesseract
         timeout-minutes: 20
         run: bash scripts/install_system_deps.sh
 
