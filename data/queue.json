@@ -44,7 +44,7 @@
     {
       "slot": 5,
       "hour_et": 9,
-      "stage": "pending",
+      "stage": "generating",
       "title": null,
       "video_url": null,
       "publish_at": null
