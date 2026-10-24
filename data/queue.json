@@ -20,10 +20,10 @@
     {
       "slot": 2,
       "hour_et": 6,
-      "stage": "generating",
-      "title": null,
-      "video_url": null,
-      "publish_at": null
+      "stage": "uploaded",
+      "title": "I'll never forget the night we drove down that desolate highway, the GPS leading",
+      "video_url": "https://youtube.com/shorts/5OqYluJCYRQ",
+      "publish_at": "2026-10-24T20:01:17Z"
     },
     {
       "slot": 3,
