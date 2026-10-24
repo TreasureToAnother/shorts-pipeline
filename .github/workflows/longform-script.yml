@@ -3,7 +3,9 @@ name: Write Weekly Long-Form Script
 on:
   # Paused along with longform.yml until the illustrated version passes a full test run.
   # schedule:
-  #   - cron: "0 13 * * 6"  # Saturdays — the day before the Sunday video, on its own Workers AI allowance
+  #   - cron: "0 1 * * 6"  # Saturdays 01:00 UTC. Workers AI's allowance is a rolling 24 hours, so this
+  #                         # must run more than a day before Sunday's 13:00 render — GitHub often
+  #                         # starts scheduled runs hours late, hence the early slot.
   workflow_dispatch: {}
 
 permissions:

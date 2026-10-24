@@ -4,10 +4,11 @@ Text generation on Cloudflare Workers AI, for the long-form scripts.
 The local 7B model (Ollama) can't reliably keep a history script to its
 sources — it invents commanders, numbers and events, and can't judge its
 own sentences either. Workers AI runs much larger open models on the same
-free daily allowance the illustrations use (10,000 neurons, reset at
-00:00 UTC), so the script is written the day before the video is
-rendered (see .github/workflows/longform-script.yml) and the two never
-compete for one day's allowance.
+free allowance the illustrations use: 10,000 neurons per rolling 24 hours
+(measured 2026-10-24 — usage stops counting a day after it happens, not
+at midnight UTC as the docs say). So the script is written early on
+Saturday (see .github/workflows/longform-script.yml), more than a day
+before Sunday's render, and the two never compete for one allowance.
 """
 import json
 import os
@@ -65,6 +66,9 @@ def llm_json(prompt: str, model: str = None, temperature: float = 0.2) -> dict:
         "messages": [{"role": "user", "content": prompt}],
         "temperature": temperature,
         "max_tokens": 8000,  # gpt-oss reasons before answering; leave room for both
+        # Its reasoning is most of the cost; "low" roughly halves a script's
+        # neurons, and the checks are simple enough not to need more.
+        "reasoning_effort": os.getenv("LONGFORM_SCRIPT_REASONING", "low"),
     })
     u = data.get("usage") or {}
     usage["prompt_tokens"] += u.get("prompt_tokens", 0)

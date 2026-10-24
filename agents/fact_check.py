@@ -184,7 +184,8 @@ Write {count} sentences. Each is ONE sentence of at most 30 words, and is one of
 - a COMMENTARY sentence ("facts": []): states no historical fact at all; it explains in general terms why the tactic works, builds tension, or draws a lesson
 
 Rules:
-- Start every sentence with a clear subject ("the Romans", "Hannibal's cavalry"), never "they", "them" or "he" pointing back to an earlier sentence
+- The facts are numbered in the order things happened: tell events in that order
+- Start every sentence with a clear subject ("The Romans", "Hannibal's cavalry"), never "they", "them", "he", "also" or "this" pointing back to an earlier sentence — any sentence may be cut, so each must make sense on its own
 - Don't repeat what the story so far already said
 - Plain spoken English, like a good history documentary. Never read out labels, brackets or lists — say numbers naturally, e.g. "an army of about 40,000 men"
 
@@ -257,13 +258,37 @@ def _related_facts(sentence: str, facts: list, cited: list, k: int = 4) -> list:
     return [facts[i] for i in sorted(chosen)]
 
 
-def _check_sentences(sentences: list, facts: list, allowed_names: set, model: str, ollama_json, report: list) -> list:
+def _too_similar(sentence: str, earlier: list) -> bool:
+    """Near-repeats of a sentence already kept ("The Romans suffered
+    20,000 killed" twice in a row)."""
+    words = {w for w in _words(sentence) if len(w) > 3}
+    for other in earlier:
+        theirs = {w for w in _words(other) if len(w) > 3}
+        # Share of the shorter sentence's words found in the other; short
+        # sentences are exempt ("The Romans crossed the river" twice can be
+        # two different crossings).
+        if min(len(words), len(theirs)) >= 5 and len(words & theirs) / min(len(words), len(theirs)) >= 0.75:
+            return True
+    return False
+
+
+def _tidy(sentence: str) -> str:
+    sentence = re.sub(r"^(also|and|but|so),?\s+", "", sentence.strip(), flags=re.I)
+    return sentence[:1].upper() + sentence[1:]
+
+
+def _check_sentences(sentences: list, facts: list, allowed_names: set, model: str, ollama_json, report: list,
+                     earlier: list = ()) -> list:
     """Keeps a sentence if it's pure commentary (no claims), or if its
     related facts support it — else rewrites it once from those facts
     and re-checks, else drops it. allowed_names: names commentary may
     use freely (general, sides, battles)."""
     kept = []
     for text, refs in sentences:
+        text = _tidy(text)
+        if _too_similar(text, list(earlier) + kept):
+            report.append({"sentence": text, "action": "removed (repeats an earlier sentence)"})
+            continue
         if _looks_like_data(text):
             report.append({"sentence": text, "action": "removed (reads like data)"})
             continue
@@ -283,7 +308,9 @@ def _check_sentences(sentences: list, facts: list, allowed_names: set, model: st
             new = str(ollama_json(REWRITE_PROMPT.format(source=source, sentence=text), model).get("sentence", "")).strip()
         except Exception:
             new = ""
-        if new and not _looks_like_data(new) and faithful(new, source, model, ollama_json):
+        new = _tidy(new) if new else new
+        if new and not _looks_like_data(new) and not _too_similar(new, list(earlier) + kept) \
+                and faithful(new, source, model, ollama_json):
             kept.append(new)
             report.append({"sentence": text, "action": "rewritten", "new": new})
         else:
@@ -301,7 +328,7 @@ def write_battle_chapter(general: str, battle: str, num: int, words: int, sheet:
         data = ollama_json(WRITE_PROMPT.format(num=num, general=general, battle=battle, facts=sheet["text"],
                                                story_so_far=story, section=section, count=count), model, 0.6)
         kept += _check_sentences(_sentences_from(data, split_sentences), sheet["facts"], allowed_names,
-                                 model, ollama_json, report)
+                                 model, ollama_json, report, earlier=kept)
     return " ".join(kept), report
 
 
