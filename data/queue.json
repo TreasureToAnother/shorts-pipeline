@@ -12,10 +12,10 @@
     {
       "slot": 1,
       "hour_et": 5,
-      "stage": "generating",
-      "title": null,
-      "video_url": null,
-      "publish_at": null
+      "stage": "uploaded",
+      "title": "I stood frozen behind the lens, my camera's shutter click echoing through the cr",
+      "video_url": "https://youtube.com/shorts/eZIYnPYiH2g",
+      "publish_at": "2026-10-25T19:12:42Z"
     },
     {
       "slot": 2,
