@@ -44,10 +44,10 @@
     {
       "slot": 5,
       "hour_et": 9,
-      "stage": "generating",
-      "title": null,
-      "video_url": null,
-      "publish_at": null
+      "stage": "uploaded",
+      "title": "I've been a hostess at that old diner for years, watching regulars come and go.",
+      "video_url": "https://youtube.com/shorts/LX7OiCdSrFE",
+      "publish_at": "2026-10-25T18:13:48Z"
     }
   ]
 }
