@@ -1,53 +1,53 @@
 {
-  "date": "2026-10-24",
+  "date": "2026-10-25",
   "slots": [
     {
       "slot": 0,
       "hour_et": 4,
-      "stage": "uploaded",
-      "title": "I've been crushing on Alex for months, pouring my heart out to him over drinks a",
-      "video_url": "https://youtube.com/shorts/nDVtXZ5aZ3w",
-      "publish_at": "2026-10-24T18:56:16Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 1,
       "hour_et": 5,
-      "stage": "uploaded",
-      "title": "I watch him smile at the bride, his eyes crinkling at the corners, and my heart ",
-      "video_url": "https://youtube.com/shorts/RrxewAE4t14",
-      "publish_at": "2026-10-24T19:28:39Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 2,
       "hour_et": 6,
-      "stage": "uploaded",
-      "title": "I'll never forget the night we drove down that desolate highway, the GPS leading",
-      "video_url": "https://youtube.com/shorts/5OqYluJCYRQ",
-      "publish_at": "2026-10-24T20:01:17Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 3,
       "hour_et": 7,
-      "stage": "uploaded",
-      "title": "Caught in the middle: when the guy who hurt me still needs fixing \ud83d\udc94",
-      "video_url": "https://youtube.com/shorts/XkiCd2xeXRw",
-      "publish_at": "2026-10-24T21:31:34Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 4,
       "hour_et": 8,
-      "stage": "uploaded",
-      "title": "I'll never forget the summer I spent at Camp Willow, where the sun dipped into t",
-      "video_url": "https://youtube.com/shorts/9dTez_cnQ78",
-      "publish_at": "2026-10-24T17:38:45Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 5,
       "hour_et": 9,
-      "stage": "uploaded",
-      "title": "I've had a crush on Jake since we met at summer camp.",
-      "video_url": "https://youtube.com/shorts/F4GmPozyWN0",
-      "publish_at": "2026-10-24T18:15:37Z"
+      "stage": "generating",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     }
   ]
 }
