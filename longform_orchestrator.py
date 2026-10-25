@@ -13,8 +13,9 @@ tactic behind each. Runs weekly on GitHub Actions in two steps:
     illustrations, narration, thumbnail — and uploads it as a regular
     (non-Shorts) video, published immediately
 Each day gets its own free Workers AI allowance this way. If Sunday finds
-no saved script, it writes one with the local Ollama model instead, so
-the illustrations keep Sunday's allowance.
+no saved script it stops and alerts Discord rather than writing one with
+the local model, whose scripts proved too inaccurate to publish. (Local
+test runs still fall back to it, so they work without Cloudflare.)
 
 Like orchestrator.py, local runs stop after rendering — no upload, no
 Discord ping — so you can review the file in data/output/ first.
@@ -78,9 +79,12 @@ def run_longform_pipeline(target_minutes: int = None, privacy_status: str = "pub
         script = _load_next_script()
         if script:
             print(f"Using the script saved {script['created_at']} for {script['general']}")
+        elif IS_CI:
+            raise RuntimeError("No script from Saturday's run (data/longform_next.json missing or older than "
+                               f"{NEXT_SCRIPT_MAX_AGE.days} days) — skipping this week's video rather than "
+                               "publishing one written by the local model. Re-run 'Write Weekly Long-Form Script', "
+                               "then this workflow, from the Actions tab.")
         else:
-            # No Saturday script: write one locally, so the Workers AI
-            # allowance stays free for today's illustrations.
             script = generate_longform_script(ollama_model=ollama_model, target_minutes=target_minutes,
                                               use_cloudflare=False)
 
