@@ -360,7 +360,7 @@ def _scene_descriptions(script: dict, chapter_index: int, beats: list, model: st
     return scenes
 
 
-OBJECT_PROMPT = """These are the narration beats of part of a history video about {general}. For each beat, pick ONE physical object the beat mentions that would make a good small picture popping up on screen: an animal, a weapon, a piece of armour, a ship or boat, a war machine, a gate, wall or tower, a tent, a banner, a horse. Never a person, a group of people, a place, a landscape, a battle or an idea.
+OBJECT_PROMPT = """These are the narration beats of part of a history video about {general}. For each beat, pick ONE physical object the beat mentions that would make a good small picture popping up on screen: an animal, a specific weapon (a spear, a sword, a bow, a catapult, a cannon, a musket, a tank — only what the beat's era had), a piece of armour, a ship or boat, a gate, wall or tower, a tent, a banner, a horse. Name it specifically: "a war elephant", not "an animal"; "a catapult", not "a war machine". Never a person, a group of people, a place, a landscape, a battle or an idea.
 
 Beats:
 {beats}
@@ -380,7 +380,7 @@ Return ONLY JSON: {{"objects": [{{"n": 1, "word": "...", "object": "..."}}]}}"""
 NOT_OBJECTS = re.compile(
     r"\b(battle\w*|field|plain|lake|river|sea|ocean|fog|mist|snow|valley|hill|mountain|pass|terrain|land\w*|"
     r"map|plan|strateg\w*|tactic\w*|envelopment|victory|defeat|army|armies|legion\w*|soldier\w*|men|man|"
-    r"people|crowd|troops|camp|city|town|weather|winter|night|day)\b", re.IGNORECASE)
+    r"people|crowd|troops|camp|city|town|weather|winter|night|day|machine\w*|equipment|weapon\w*|vehicle\w*)\b", re.IGNORECASE)
 
 
 def _object_popups(script: dict, chapter_index: int, beats: list, model: str) -> list:
