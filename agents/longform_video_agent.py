@@ -408,6 +408,12 @@ def _object_popups(script: dict, chapter_index: int, beats: list, model: str) ->
             continue
         if not re.search(rf"\b{re.escape(word)}\b", beats[n], re.IGNORECASE):
             continue
+        # The object must be the thing the word names ("war elephants" ->
+        # "a war elephant"); the model also tied "a wooden sailing ship"
+        # to "Cannae" in a beat with no ship in it.
+        stems = lambda text: {w[:5] for w in re.findall(r"[a-z]+", text.lower()) if len(w) > 2} - {"the", "and"}
+        if not stems(word) & stems(re.sub(r"^(a|an|the)\s+", "", obj, flags=re.I)):
+            continue
         # Same rules as scenes: no names, no gore, nothing out of its era.
         clean = _valid_scene(obj + " standing alone", pattern, cast["names"], elephants_era and "elephant" in beats[n].lower(),
                              proper_nouns, era)
