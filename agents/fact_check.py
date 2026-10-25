@@ -197,6 +197,12 @@ SECTIONS = [
     ("how the battle unfolded, step by step", 10),
     ("how it ended, what it cost each side, and the lesson a strategist can take from it", 8),
 ]
+# Appended to the last section's instructions for battles 1 and 2: a
+# reason to keep watching across the chapter break.
+TEASE = (" Finish with one COMMENTARY sentence that makes the viewer want to see the next battle, the {next}, "
+         "without saying anything about how it went.")
+BANNED_OPENERS = re.compile(r"\b(in this video|welcome|we'll (explore|delve|look|dive)|join (us|me)|let's (dive|explore|delve)|"
+                            r"today we|stay tuned|before we begin)\b", re.IGNORECASE)
 
 FRAME_PROMPT = """You are writing the {part} of a military history YouTube video about {general}, which covers three battles.
 
@@ -286,6 +292,9 @@ def _check_sentences(sentences: list, facts: list, allowed_names: set, model: st
     kept = []
     for text, refs in sentences:
         text = _tidy(text)
+        if BANNED_OPENERS.search(text):
+            report.append({"sentence": text, "action": "removed (stock YouTube phrasing)"})
+            continue
         if _too_similar(text, list(earlier) + kept):
             report.append({"sentence": text, "action": "removed (repeats an earlier sentence)"})
             continue
@@ -319,11 +328,13 @@ def _check_sentences(sentences: list, facts: list, allowed_names: set, model: st
 
 
 def write_battle_chapter(general: str, battle: str, num: int, words: int, sheet: dict,
-                         allowed_names: set, model: str, ollama_json, split_sentences) -> tuple:
+                         allowed_names: set, model: str, ollama_json, split_sentences, next_battle: str = None) -> tuple:
     """Written in four sections, each checked before the next is written
     (so the story so far is only ever checked text). Returns (text, report)."""
     kept, report = [], []
-    for section, count in SECTIONS:
+    for k, (section, count) in enumerate(SECTIONS):
+        if next_battle and k == len(SECTIONS) - 1:
+            section += TEASE.format(next=next_battle)
         story = (f"\nThe story so far:\n{' '.join(kept)}\n") if kept else ""
         data = ollama_json(WRITE_PROMPT.format(num=num, general=general, battle=battle, facts=sheet["text"],
                                                story_so_far=story, section=section, count=count), model, 0.6)

@@ -133,14 +133,14 @@ def _hook(script: dict, battle: str, tactic: str, model: str) -> str:
     return "HOW HE WON"
 
 
-def _generate_image(prompt: str) -> Image.Image:
+def _generate_image(prompt: str, width: int = THUMB_W, height: int = THUMB_H) -> Image.Image:
     account_id = os.environ["CLOUDFLARE_ACCOUNT_ID"]
     token = os.environ["CLOUDFLARE_API_TOKEN"]
     r = requests.post(
         f"https://api.cloudflare.com/client/v4/accounts/{account_id}/ai/run/{IMAGE_MODEL}",
         headers={"Authorization": f"Bearer {token}"},
         # Flux 2 takes multipart form fields, not a JSON body.
-        files={"prompt": (None, prompt), "width": (None, str(THUMB_W)), "height": (None, str(THUMB_H))},
+        files={"prompt": (None, prompt), "width": (None, str(width)), "height": (None, str(height))},
         timeout=180,
     )
     data = r.json()
@@ -148,8 +148,8 @@ def _generate_image(prompt: str) -> Image.Image:
     if not image:
         raise RuntimeError(f"Image generation failed: {str(data.get('errors') or data)[:300]}")
     img = Image.open(io.BytesIO(base64.b64decode(image))).convert("RGB")
-    if img.size != (THUMB_W, THUMB_H):
-        img = img.resize((THUMB_W, THUMB_H), Image.LANCZOS)
+    if img.size != (width, height):
+        img = img.resize((width, height), Image.LANCZOS)
     return img
 
 

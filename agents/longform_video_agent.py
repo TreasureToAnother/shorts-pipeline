@@ -1,24 +1,24 @@
 """
 Long-Form Video Agent
 ----------------------
-Takes the chaptered script from longform_script_agent.py and produces
-a 1920x1080 narrated, illustrated video:
-  - the narration is split into ~TARGET_IMAGES beats (a few sentences,
-    ~15-20s each), and each beat gets its own picture
-  - Ollama describes one simple scene per beat; the pictures are drawn
-    by Cloudflare Workers AI in the same crude, childish cartoon style
-    as the thumbnails (thumbnail_agent.STYLE), with the general always
-    in his hand-written costume so he looks the same throughout
-  - each picture slowly zooms in or out while its beat is read (ffmpeg's
-    zoompan), so the screen never sits completely still
-  - free Microsoft TTS narration per beat (edge-tts) in a deep
-    documentary voice, so every picture changes exactly when the
-    narration moves on
-  - a title card at the start of each chapter, in the thumbnail font
-  - no music, no SFX
+Takes the chaptered script from longform_script_agent.py and produces a
+1920x1080 narrated, illustrated video built for retention:
+  - narration (edge-tts, deep documentary voice) at ~180 words a minute,
+    with the timing of every word, which drives everything below
+  - the narration is split into ~TARGET_IMAGES beats; Ollama describes
+    one scene per beat, drawn by Cloudflare Workers AI in the crude
+    cartoon style of the thumbnails (thumbnail_agent.STYLE), the general
+    always in his hand-written costume
+  - each picture is shown as 2-3 hard-cut shots (full frame, then closer
+    crops), cutting at sentence breaks — a new view every ~4-5 seconds
+  - popups at the exact word they're about: text callouts for numbers,
+    dates and names; sticker images of the general, each side's soldiers
+    and objects the narration mentions
+  - word-by-word subtitles, and a banner as each chapter starts
+  - rendered frame by frame (longform_renderer.py); no music, no SFX
 
-~35 pictures at ~150 neurons each stays well inside Cloudflare's
-10,000 free daily neurons, with room for the thumbnail and retries.
+Budget: ~35 pictures (~156 neurons each) plus small 512x512 stickers
+(~26 each) stays inside Cloudflare's 10,000 free neurons per 24 hours.
 """
 import asyncio
 import json
@@ -28,35 +28,38 @@ import re
 import subprocess
 import sys
 import uuid
+import wave
 import concurrent.futures as cf
+
+import numpy as np
 
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
 from status_store import set_status
 from script_agent import _sentences
-from video_agent import _trim_silence, _tts
 from thumbnail_agent import FONT_PATH, STYLE, _generate_image, _text_in_image
+import longform_renderer as R
 
-from PIL import Image as _PILImage, ImageDraw, ImageFont
-if not hasattr(_PILImage, "ANTIALIAS"):
-    _PILImage.ANTIALIAS = _PILImage.LANCZOS
+from PIL import Image as _PILImage
 
-from moviepy.editor import (
-    AudioFileClip, CompositeAudioClip, CompositeVideoClip, ImageClip,
-    VideoFileClip, concatenate_videoclips,
-)
-from moviepy.audio.fx.all import audio_normalize
-
-W, H = 1920, 1080
-FPS = 30
+W, H = R.W, R.H
 WORKDIR = os.path.join(os.path.dirname(__file__), "..", "data", "work")
 
 TARGET_IMAGES = 35          # pictures per video — the free-tier budget
-BEAT_GAP_SECONDS = 0.35     # breath between beats, after silence trimming
-ZOOM_AMOUNT = 0.08          # each picture zooms 8% in (or out) over its beat
+BEAT_GAP_SECONDS = 0.15     # breath between beats, after silence trimming
 IMAGE_WORKERS = 4
-CHAPTER_CARD_SECONDS = 4.0
 NARRATOR_VOICE = os.getenv("LONGFORM_VOICE_NAME", "en-US-ChristopherNeural")
+NARRATOR_RATE = os.getenv("LONGFORM_VOICE_RATE", "+20%")  # ~180 wpm; +0% measured 149
+SAMPLE_RATE = 24000
+
+MIN_SHOT_SECONDS = 2.5      # never cut faster than this
+TARGET_SHOT_SECONDS = 4.5   # aim for a new view about this often
+SHOT_CROPS = [(0.32, 0.5, 1.5), (0.68, 0.5, 1.5), (0.5, 0.42, 1.35), (0.35, 0.38, 1.7), (0.65, 0.38, 1.7)]
+TEXT_POPUP_SECONDS = 2.4
+STICKER_SECONDS = 2.8
+BANNER_SECONDS = 3.0
+MAX_TEXT_POPUPS_PER_BEAT = 2
+PORTRAIT_MIN_GAP = 25.0     # seconds between general-portrait popups
 
 # Ollama writes scenes with placeholders instead of people: THE GENERAL,
 # OUR MEN and ENEMY MEN, swapped afterwards for fixed costumes. That
@@ -357,6 +360,63 @@ def _scene_descriptions(script: dict, chapter_index: int, beats: list, model: st
     return scenes
 
 
+OBJECT_PROMPT = """These are the narration beats of part of a history video about {general}. For each beat, pick ONE physical object the beat mentions that would make a good small picture popping up on screen: an animal, a weapon, a piece of armour, a ship or boat, a war machine, a gate, wall or tower, a tent, a banner, a horse. Never a person, a group of people, a place, a landscape, a battle or an idea.
+
+Beats:
+{beats}
+
+For each beat give:
+- "n": the beat number
+- "word": the exact word in that beat where the thing is mentioned (copied from the beat)
+- "object": the thing as a short phrase, 2 to 6 words, e.g. "a war elephant", "a wooden sailing ship", "a bronze shield"
+Skip beats that mention nothing concrete.
+
+Return ONLY JSON: {{"objects": [{{"n": 1, "word": "...", "object": "..."}}]}}"""
+
+
+# What the object planner still picks despite being told not to: places,
+# landscapes, ideas, people. Landscapes make poor stickers ("a lake" is a
+# blue oval) and maps attract the image model's gibberish writing.
+NOT_OBJECTS = re.compile(
+    r"\b(battle\w*|field|plain|lake|river|sea|ocean|fog|mist|snow|valley|hill|mountain|pass|terrain|land\w*|"
+    r"map|plan|strateg\w*|tactic\w*|envelopment|victory|defeat|army|armies|legion\w*|soldier\w*|men|man|"
+    r"people|crowd|troops|camp|city|town|weather|winter|night|day)\b", re.IGNORECASE)
+
+
+def _object_popups(script: dict, chapter_index: int, beats: list, model: str) -> list:
+    """Per beat, (trigger word, object phrase) for a sticker popup, or None."""
+    era = script.get("era", "ancient")
+    pattern = _name_pattern(script["general"])
+    cast = _side_cast(script, chapter_index)
+    proper_nouns = _script_proper_nouns(script)
+    elephants_era = script["general"] in ELEPHANT_GENERALS
+    out = [None] * len(beats)
+    try:
+        numbered = "\n".join(f"{i}. {b}" for i, b in enumerate(beats, start=1))
+        data = _ollama_json(OBJECT_PROMPT.format(general=script["general"], beats=numbered), model, 0.3)
+    except Exception:
+        return out
+    for item in data.get("objects", []) if isinstance(data, dict) else []:
+        if not isinstance(item, dict):
+            continue
+        try:
+            n = int(item.get("n")) - 1
+        except (TypeError, ValueError):
+            continue
+        word, obj = str(item.get("word", "")).strip().strip(".,"), str(item.get("object", "")).strip().rstrip(".")
+        if not (0 <= n < len(beats)) or not word or not obj or not 2 <= len(obj.split()) <= 6:
+            continue
+        if not re.search(rf"\b{re.escape(word)}\b", beats[n], re.IGNORECASE):
+            continue
+        # Same rules as scenes: no names, no gore, nothing out of its era.
+        clean = _valid_scene(obj + " standing alone", pattern, cast["names"], elephants_era and "elephant" in beats[n].lower(),
+                             proper_nouns, era)
+        if not clean or any(p in clean for p in PLACEHOLDERS) or NOT_OBJECTS.search(obj):
+            continue
+        out[n] = (word, obj)
+    return out
+
+
 def _fallback_scene(script: dict) -> str:
     return (f"a round-headed cartoon man wearing {script['look']} standing on a hill, "
             f"looking thoughtfully into the distance, open landscape behind him")
@@ -386,62 +446,231 @@ def _draw_scene(scene: str, script: dict):
     return None
 
 
-def _zoom_segment(image_path: str, duration: float, out_path: str, zoom_in: bool):
-    """Renders a still image as a slowly zooming 1920x1080 clip. Each
-    frame is an affine warp with sub-pixel precision (OpenCV), piped
-    into ffmpeg — ffmpeg's own zoompan crops on whole pixels, which makes
-    a slow zoom visibly stutter on alternate frames."""
-    import cv2
-    import numpy as np
-    frames = max(1, int(round(duration * FPS)))
-    src = np.asarray(_PILImage.open(image_path).convert("RGB"))
-    sh, sw = src.shape[:2]
-    proc = subprocess.Popen(
-        ["ffmpeg", "-y", "-v", "error", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{W}x{H}",
-         "-r", str(FPS), "-i", "-", "-c:v", "libx264", "-preset", "veryfast", "-crf", "18",
-         "-pix_fmt", "yuv420p", out_path],
-        stdin=subprocess.PIPE,
-    )
-    try:
-        for n in range(frames):
-            t = n / max(1, frames - 1)
-            # Ease in-out, so the motion starts and ends gently instead of lurching.
-            t = t * t * (3 - 2 * t)
-            zoom = 1 + ZOOM_AMOUNT * (t if zoom_in else 1 - t)
-            sx, sy = W * zoom / sw, H * zoom / sh  # output pixels per source pixel
-            m = np.float32([[sx, 0, W / 2 - sx * sw / 2], [0, sy, H / 2 - sy * sh / 2]])
-            frame = cv2.warpAffine(src, m, (W, H), flags=cv2.INTER_CUBIC, borderMode=cv2.BORDER_REFLECT)
-            proc.stdin.write(frame.tobytes())
-    finally:
-        proc.stdin.close()
-        if proc.wait() != 0:
-            raise RuntimeError(f"ffmpeg failed rendering {out_path}")
+# ---------------------------------------------------------------- stickers
+
+STICKER_PROMPT = "{style}{subject}, alone in the middle of a plain pure white background, nothing else in the picture."
+# The main STYLE describes round-headed people, so with it every object
+# sticker came out as a person ("a battlefield" was a bald man).
+OBJECT_STYLE = ("Very simple childish cartoon drawing, like a kid drew it on a computer. Wobbly uneven thick black "
+                "outlines, flat solid soft muted colors, no shading. ")
 
 
-def _chapter_card(text: str) -> _PILImage.Image:
-    """Chapter title in the thumbnail font: white, thick black outline."""
-    text = text.upper()  # the font's lowercase reads as mismatched small caps
-    size = int(H * 0.095)
-    font = ImageFont.truetype(FONT_PATH, size)
-    stroke = max(4, size // 10)
-    probe = ImageDraw.Draw(_PILImage.new("RGBA", (1, 1)))
-    while size > 30:
-        font = ImageFont.truetype(FONT_PATH, size)
-        stroke = max(4, size // 10)
-        b = probe.textbbox((0, 0), text, font=font, stroke_width=stroke)
-        if b[2] - b[0] <= W * 0.85:
+def _draw_sticker(subject: str, is_object: bool = False):
+    """A cut-out sticker (RGBA) of one subject, or None."""
+    prompt = STICKER_PROMPT.format(style=OBJECT_STYLE if is_object else STYLE, subject=subject)
+    for _ in range(2):
+        try:
+            img = _generate_image(prompt, 512, 512)
+        except Exception:
+            continue
+        if _text_in_image(img) >= 2:
+            continue
+        cut = R.cut_out(img)
+        # A failed cut-out leaves (nearly) the whole square: not a sticker.
+        if cut.width * cut.height < 0.92 * 512 * 512:
+            return cut
+    return None
+
+
+# --------------------------------------------------------------- narration
+
+async def _speak(text: str, path: str) -> list:
+    """Saves the narration mp3 and returns [(word, start, end)] in seconds."""
+    import edge_tts
+    words = []
+    communicate = edge_tts.Communicate(text, NARRATOR_VOICE, rate=NARRATOR_RATE, pitch="-5Hz",
+                                       boundary="WordBoundary")
+    with open(path, "wb") as f:
+        async for chunk in communicate.stream():
+            if chunk["type"] == "audio":
+                f.write(chunk["data"])
+            elif chunk["type"] == "WordBoundary":
+                start = chunk["offset"] / 1e7
+                words.append((chunk["text"], start, start + chunk["duration"] / 1e7))
+    return words
+
+
+def _decode(path: str) -> np.ndarray:
+    raw = subprocess.run(["ffmpeg", "-v", "error", "-i", path, "-ac", "1", "-ar", str(SAMPLE_RATE),
+                          "-f", "s16le", "-"], capture_output=True, check=True).stdout
+    return np.frombuffer(raw, np.int16)
+
+
+def _attach_punctuation(words: list, text: str) -> list:
+    """edge-tts reports bare words; put the script's punctuation back on
+    them (subtitle chunks break after it)."""
+    out, pos = [], 0
+    for word, start, end in words:
+        m = re.search(re.escape(word), text[pos:])
+        if not m:
+            out.append((word, start, end))
+            continue
+        stop = pos + m.end()
+        tail = re.match(r"[.,;:!?'’\"”—)]*", text[stop:]).group(0)
+        out.append((word + tail.rstrip("'’\"”)"), start, end))
+        pos = stop + len(tail)
+    return out
+
+
+def _narrate(beats: list, run_dir: str) -> tuple:
+    """Speaks every beat, trims the silence around it, and joins them.
+    Sets each beat's offset/duration/words (absolute times). Returns
+    (wav path, total seconds)."""
+    pieces, cursor = [], 0.0
+    gap = np.zeros(int(BEAT_GAP_SECONDS * SAMPLE_RATE), np.int16)
+    for i, beat in enumerate(beats):
+        mp3 = os.path.join(run_dir, f"beat{i:03d}.mp3")
+        words = asyncio.run(_speak(beat["text"], mp3))
+        audio = _decode(mp3)
+        if words:
+            lead = max(0.0, words[0][1] - 0.04)
+            tail = min(len(audio) / SAMPLE_RATE, words[-1][2] + 0.12)
+        else:
+            lead, tail = 0.0, len(audio) / SAMPLE_RATE
+        clip = audio[int(lead * SAMPLE_RATE):int(tail * SAMPLE_RATE)]
+        beat["offset"] = cursor
+        beat["duration"] = len(clip) / SAMPLE_RATE + BEAT_GAP_SECONDS
+        beat["words"] = [(w, cursor + s - lead, cursor + e - lead) for w, s, e in _attach_punctuation(words, beat["text"])]
+        pieces += [clip, gap]
+        cursor += beat["duration"]
+    path = os.path.join(run_dir, "narration.wav")
+    with wave.open(path, "wb") as f:
+        f.setnchannels(1)
+        f.setsampwidth(2)
+        f.setframerate(SAMPLE_RATE)
+        f.writeframes(np.concatenate(pieces).tobytes())
+    return path, cursor
+
+
+# ---------------------------------------------------------------- timeline
+
+def _shot_starts(beat: dict) -> list:
+    """Cut points inside a beat: at sentence starts closest to every
+    TARGET_SHOT_SECONDS, never closer than MIN_SHOT_SECONDS."""
+    start, end = beat["offset"], beat["offset"] + beat["duration"]
+    n_shots = max(1, round(beat["duration"] / TARGET_SHOT_SECONDS))
+    # Candidate cuts: the start of each word that follows a sentence or clause end.
+    candidates = [w[1] for prev, w in zip(beat["words"], beat["words"][1:]) if prev[0][-1:] in ".!?;:,—"]
+    cuts = [start]
+    for k in range(1, n_shots):
+        ideal = start + k * beat["duration"] / n_shots
+        pool = [c for c in candidates if c - cuts[-1] >= MIN_SHOT_SECONDS and end - c >= MIN_SHOT_SECONDS]
+        cut = min(pool, key=lambda c: abs(c - ideal)) if pool else None
+        if cut is None or abs(cut - ideal) > 2.0:
+            cut = ideal if ideal - cuts[-1] >= MIN_SHOT_SECONDS and end - ideal >= MIN_SHOT_SECONDS else None
+        if cut:
+            cuts.append(cut)
+    return cuts
+
+
+_NUMBER = re.compile(r"^\d[\d,]*$")
+_MONTHS = set("January February March April May June July August September October November December".split())
+
+
+_ORDINAL_WORDS = set("First Second Third Fourth Fifth Sixth Seventh Eighth Ninth Tenth".split())
+
+
+def _text_popups(beat: dict, skip_names: set) -> list:
+    """(time, TEXT) callouts for the numbers, dates and names spoken in a
+    beat — copied from the (fact-checked) narration, never invented.
+    Names are whole capitalized phrases ("SECOND PUNIC WAR", "LAKE
+    TRASIMENE"), never a lone word like "Second"."""
+    words, found = beat["words"], []
+    bare = [w.strip(".,;:!?'’\"”—") for w, _, _ in words]
+    i = 0
+    while i < len(words):
+        w, s = bare[i], words[i][1]
+        nxt = bare[i + 1] if i + 1 < len(words) else ""
+        prev = bare[i - 1] if i else ""
+        # Dates: "22 December 218 BC", "December 218 BC", "June 21, 217 BC".
+        date = re.match(r"(?:(\d{1,2}) )?(%s)(?: (\d{1,2}))?,? (\d{2,4})(?: (BC|AD|BCE|CE))?" % "|".join(_MONTHS),
+                        " ".join(bare[i:i + 6]))
+        if date and (w in _MONTHS or (_NUMBER.match(w) and nxt in _MONTHS)):
+            day_first, month, day_after, year, era = date.groups()
+            label = f"{day_first} {month} {year}" if day_first else (f"{month} {day_after}, {year}" if day_after else f"{month} {year}")
+            found.append((s, (label + (f" {era}" if era else "")).upper()))
+            i += len(date.group(0).split())
+            continue
+        if _NUMBER.match(w) and len(w.replace(",", "")) >= 2:
+            if nxt in ("BC", "AD", "BCE", "CE"):
+                label = f"{prev} {w} {nxt}" if prev in _MONTHS else f"{w} {nxt}"
+            elif nxt.isalpha() and nxt.islower() and len(nxt) > 2:
+                label = f"{w} {nxt}"
+            else:
+                label = w
+            found.append((s, label.upper()))
+            i += 1
+            continue
+        sentence_start = i == 0 or words[i - 1][0][-1:] in ".!?"
+        if w[:1].isupper() and w.isalpha():
+            # Take the whole run of capitalized words (plus "of"/"the" inside it).
+            j = i
+            while j + 1 < len(words) and words[j][0][-1:] not in ".,;:!?" and bare[j + 1] not in _MONTHS:
+                if bare[j + 1][:1].isupper():
+                    j += 1
+                    continue
+                # Linking words inside a name: "Battle of the Trebia".
+                k = j + 1
+                while k < len(words) and bare[k] in ("of", "the") and k - j <= 2:
+                    k += 1
+                if k > j + 1 and k < len(words) and bare[k][:1].isupper():
+                    j = k
+                    continue
+                break
+            phrase = bare[i:j + 1]
+            if sentence_start and len(phrase) == 1:
+                i += 1
+                continue  # a lone capitalized sentence opener is just an ordinary word
+            if sentence_start and phrase[0] in ("The", "In", "At", "On", "By", "As", "After", "Before"):
+                phrase = phrase[1:]
+            text = " ".join(phrase)
+            if phrase and not (len(phrase) == 1 and (phrase[0] in skip_names or phrase[0] in _ORDINAL_WORDS
+                                                    or phrase[0] in _MONTHS or len(phrase[0]) <= 3)) \
+                    and not all(p in skip_names for p in phrase):
+                found.append((s, text.upper()))
+            i = j + 1
+            continue
+        i += 1
+    # One callout per distinct label, spread out; numbers first.
+    picked, seen = [], set()
+    for s, label in sorted(found, key=lambda x: (not x[1][:1].isdigit(), x[0])):
+        if label in seen or len(label) > 26 or any(abs(s - p[0]) < TEXT_POPUP_SECONDS for p in picked):
+            continue
+        picked.append((s, label))
+        seen.add(label)
+        if len(picked) >= MAX_TEXT_POPUPS_PER_BEAT:
             break
-        size -= 4
-    card = _PILImage.new("RGBA", (b[2] - b[0] + 40, b[3] - b[1] + 40), (0, 0, 0, 0))
-    ImageDraw.Draw(card).text((20 - b[0], 20 - b[1]), text, font=font, fill="white",
-                              stroke_width=stroke, stroke_fill="black")
-    return card
+    return sorted(picked)
 
 
-def _build_beat_audio(text: str, path: str):
-    asyncio.run(_tts(text, path, voice=NARRATOR_VOICE, pitch="-5Hz", rate="+0%"))
-    clip = AudioFileClip(path).fx(audio_normalize)
-    return _trim_silence(clip)
+def _first_word_time(beat: dict, pattern) -> float:
+    for w, s, _ in beat["words"]:
+        if re.fullmatch(pattern, w.strip(".,;:!?'’\"”—").lower().removesuffix("'s")):
+            return s
+    return None
+
+
+class _Slots:
+    """The two popup corners, each holding one popup at a time."""
+
+    def __init__(self):
+        self.busy = {"left": 0.0, "right": 0.0}
+        self.last = "left"
+
+    def take(self, start: float, end: float, prefer: str = None):
+        order = [prefer] if prefer else []
+        order += [s for s in ("right", "left") if s != self.last and s not in order]
+        order += [s for s in ("left", "right") if s not in order]
+        for side in order:
+            if self.busy[side] <= start:
+                self.busy[side] = end + 0.3
+                self.last = side
+                return side
+        return None
+
+    def block(self, start: float, end: float):
+        for side in self.busy:
+            self.busy[side] = max(self.busy[side], end)
 
 
 def build_longform_video(script: dict, ollama_model: str = "qwen2.5:7b") -> str:
@@ -455,76 +684,115 @@ def build_longform_video(script: dict, ollama_model: str = "qwen2.5:7b") -> str:
         # long on average; aiming a little short lands near TARGET_IMAGES.
         words_per_beat = max(25, int(total_words / (TARGET_IMAGES * 1.15)))
 
-        # 1. Beats, their narration, and a scene for each.
-        beats = []  # dicts: text, scene, chapter index
+        # 1. Beats, a scene for each, and an object popup where there's one.
+        beats = []
         for ci, chapter in enumerate(script["chapters"]):
             texts = _split_beats(chapter["text"], words_per_beat)
             scenes = _scene_descriptions(script, ci, texts, ollama_model, fallback_start=len(beats))
-            for text, scene in zip(texts, scenes):
-                beats.append({"text": text, "scene": scene, "chapter": ci})
-        # Kept next to the pictures, to trace any odd illustration back to its prompt.
+            objects = _object_popups(script, ci, texts, ollama_model)
+            for text, scene, obj in zip(texts, scenes, objects):
+                beats.append({"text": text, "scene": scene, "object": obj, "chapter": ci})
         with open(os.path.join(run_dir, "beats.json"), "w") as f:
-            json.dump([{k: b[k] for k in ("chapter", "text", "scene")} for b in beats], f, indent=1)
+            json.dump([{k: b[k] for k in ("chapter", "text", "scene", "object")} for b in beats], f, indent=1)
 
+        # 2. Narration, with the time of every word.
         set_status("longform_video_agent", "running", f"narrating {len(beats)} beats")
-        cursor = 0.0
-        for i, beat in enumerate(beats):
-            beat["audio"] = _build_beat_audio(beat["text"], os.path.join(run_dir, f"beat{i:03d}.mp3"))
-            beat["offset"] = cursor
-            # Snapped to whole frames: each picture's clip is a whole number
-            # of frames, so unsnapped durations would let the pictures drift
-            # behind the narration a little more with every beat.
-            beat["duration"] = round((beat["audio"].duration + BEAT_GAP_SECONDS) * FPS) / FPS
-            cursor += beat["duration"]
-        total_duration = cursor
+        audio_path, total_duration = _narrate(beats, run_dir)
 
-        # 2. Pictures, drawn in parallel. A beat whose picture failed
-        # reuses the previous one, so one refusal never sinks the video.
+        # 3. Pictures and stickers, drawn in parallel. A beat whose picture
+        # failed reuses the previous one; a missing sticker just doesn't pop up.
         set_status("longform_video_agent", "running", f"drawing {len(beats)} illustrations")
+        name = script["general"]
+        sticker_subjects = {
+            "general": f"A round-headed cartoon man wearing {script['look']}, seen from the waist up, smiling confidently",
+            "ours": f"A single tiny round-headed cartoon man in {script['army']['look']}, standing with a spear, full body",
+        }
+        for enemy in script["enemies"]:
+            sticker_subjects.setdefault(f"enemy:{enemy['look']}",
+                                        f"A single tiny round-headed cartoon man in {enemy['look']}, standing with a spear, full body")
+        for b in beats:
+            if b["object"]:
+                sticker_subjects.setdefault(f"obj:{b['object'][1].lower()}", b["object"][1][:1].upper() + b["object"][1][1:])
         with cf.ThreadPoolExecutor(IMAGE_WORKERS) as pool:
-            images = list(pool.map(lambda b: _draw_scene(b["scene"], script), beats))
+            image_jobs = [pool.submit(_draw_scene, b["scene"], script) for b in beats]
+            sticker_jobs = {k: pool.submit(_draw_sticker, v, k.startswith("obj:")) for k, v in sticker_subjects.items()}
+            images = [j.result() for j in image_jobs]
+            stickers = {k: j.result() for k, j in sticker_jobs.items()}
         if not any(images):
             raise RuntimeError("Every illustration failed — check Cloudflare credentials and the daily neuron allowance")
         last = next(img for img in images if img)
         for i, img in enumerate(images):
             last = img or last
-            beats[i]["image_path"] = os.path.join(run_dir, f"beat{i:03d}.png")
-            last.save(beats[i]["image_path"])
+            beats[i]["image"] = last
+            last.save(os.path.join(run_dir, f"beat{i:03d}.png"))
         failed = sum(1 for img in images if img is None)
+        for key, st in stickers.items():
+            if st is not None:
+                st.save(os.path.join(run_dir, "sticker_" + re.sub(r"[^a-z0-9]+", "_", key.lower())[:40] + ".png"))
 
-        # 3. Zooming clips, alternating in and out.
+        # 4. Timeline: shots, popups, subtitles, chapter banners.
         set_status("longform_video_agent", "running", "rendering")
-        segment_paths = []
+        shots, overlays, slots = [], [], _Slots()
+        sticker_imgs = {k: R.sticker(v) for k, v in stickers.items() if v is not None}
+        name_words = {w for w in re.findall(r"[A-Za-z][\w-]+", name) if len(w) > 3} - {"Admiral", "Great", "Duke"}
+        general_re = "|".join(re.escape(w.lower()) for w in name_words) or "$^"
+        last_portrait = -PORTRAIT_MIN_GAP
+        chapter_seen = set()
         for i, beat in enumerate(beats):
-            seg = os.path.join(run_dir, f"beat{i:03d}.mp4")
-            _zoom_segment(beat["image_path"], beat["duration"], seg, zoom_in=(i % 2 == 0))
-            segment_paths.append(seg)
-        video = concatenate_videoclips([VideoFileClip(p) for p in segment_paths], method="chain")
-        video = video.set_duration(total_duration)
+            ci = beat["chapter"]
+            if ci not in chapter_seen:
+                chapter_seen.add(ci)
+                overlays.append(R.Overlay(R.banner(script["chapters"][ci]["topic"].upper(), FONT_PATH),
+                                          beat["offset"], beat["offset"] + BANNER_SECONDS, (W // 2, int(H * 0.04)), "center_top"))
+                slots.block(beat["offset"], beat["offset"] + BANNER_SECONDS)
+            # Shots: full frame first, then crops on different parts.
+            crops = random.sample(SHOT_CROPS, len(SHOT_CROPS))
+            for k, cut in enumerate(_shot_starts(beat)):
+                shots.append((cut, beat["image"], (0.5, 0.5, 1.0) if k == 0 else crops[(k - 1) % len(crops)]))
 
-        # 4. Chapter title cards over the first beat of each chapter.
-        cards = []
-        for ci, chapter in enumerate(script["chapters"]):
-            first = next(b for b in beats if b["chapter"] == ci)
-            card_path = os.path.join(run_dir, f"card{ci}.png")
-            _chapter_card(chapter["topic"]).save(card_path)
-            card = (ImageClip(card_path).set_start(first["offset"])
-                    .set_duration(min(CHAPTER_CARD_SECONDS, first["duration"]))
-                    .crossfadein(0.5).crossfadeout(0.5))
-            cards.append(card.set_position(("center", H * 0.80)))
+            enemy_key = f"enemy:{script['enemies'][min(max(ci - 1, 0), len(script['enemies']) - 1)]['look']}" \
+                if 0 < ci < len(script["chapters"]) - 1 else f"enemy:{script['enemies'][script['thumb']['battle']]['look']}"
+            enemy_names = script["enemies"][min(max(ci - 1, 0), len(script["enemies"]) - 1)]["names"] \
+                if 0 < ci < len(script["chapters"]) - 1 else script["enemies"][script["thumb"]["battle"]]["names"]
+            wanted = []  # (time, kind, payload)
+            t = _first_word_time(beat, general_re)
+            if t is not None and t - last_portrait >= PORTRAIT_MIN_GAP and "general" in sticker_imgs:
+                wanted.append((t, "sticker", "general"))
+                last_portrait = t
+            for key, names in (("ours", script["army"]["names"]), (enemy_key, enemy_names)):
+                t = _first_word_time(beat, "|".join(re.escape(n.lower()) for n in names))
+                if t is not None and key in sticker_imgs:
+                    wanted.append((t, "sticker", key))
+            if beat["object"]:
+                t = _first_word_time(beat, re.escape(beat["object"][0].lower()))
+                key = f"obj:{beat['object'][1].lower()}"
+                if t is not None and key in sticker_imgs:
+                    wanted.append((t, "sticker", key))
+            for t, label in _text_popups(beat, name_words | set(script["army"]["names"]) | set(enemy_names)):
+                wanted.append((t, "text", label))
+            for t, kind, payload in sorted(wanted):
+                length = STICKER_SECONDS if kind == "sticker" else TEXT_POPUP_SECONDS
+                end = min(t + length, beat["offset"] + beat["duration"] + 0.5)
+                side = slots.take(t, end)
+                if not side:
+                    continue
+                img = sticker_imgs[payload] if kind == "sticker" else R.text_popup(payload, FONT_PATH)
+                overlays.append(R.Overlay(img, t, end, R.SLOTS[side], side))
 
-        audio = CompositeAudioClip([b["audio"].set_start(b["offset"]) for b in beats]).set_duration(total_duration)
-        final = CompositeVideoClip([video, *cards], size=(W, H)).set_duration(total_duration).set_audio(audio)
+            # Subtitles: short chunks, the spoken word highlighted.
+            for chunk in R.subtitle_chunks(beat["words"]):
+                for j, (w, s, e) in enumerate(chunk):
+                    until = chunk[j + 1][1] if j + 1 < len(chunk) else e + 0.12
+                    overlays.append(R.Overlay(R.subtitle_image(chunk, j, FONT_PATH), s, until,
+                                              (W // 2, R.SUB_Y), "center", pop=False))
 
         out_dir = os.path.join(os.path.dirname(__file__), "..", "data", "output")
         os.makedirs(out_dir, exist_ok=True)
         out_path = os.path.join(out_dir, f"longform_{uuid.uuid4().hex[:8]}.mp4")
-        final.write_videofile(
-            out_path, fps=FPS, codec="libx264", audio_codec="aac", threads=os.cpu_count() or 4,
-            preset="veryfast", logger=None, ffmpeg_params=["-movflags", "+faststart"],
-        )
-        note = f" ({failed} of {len(beats)} illustrations reused the previous picture)" if failed else ""
-        set_status("longform_video_agent", "done", out_path + note)
+        R.render(shots, overlays, audio_path, total_duration, out_path)
+        popups = sum(1 for o in overlays if o.pop)
+        note = f"; {failed} of {len(beats)} illustrations reused the previous picture" if failed else ""
+        set_status("longform_video_agent", "done", f"{out_path} ({len(shots)} shots, {popups} popups{note})")
         return out_path
     except Exception as e:
         set_status("longform_video_agent", "error", str(e))

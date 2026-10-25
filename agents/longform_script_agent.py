@@ -30,7 +30,7 @@ from script_agent import _sentences
 
 USED_TOPICS_PATH = os.path.join(os.path.dirname(__file__), "..", "data", "longform_used_topics.json")
 
-WORDS_PER_MINUTE = 150   # normal (non-sped-up) narration pace for this genre
+WORDS_PER_MINUTE = 175   # the narration runs at ~180 wpm (longform_video_agent.NARRATOR_RATE)
 TARGET_MINUTES = 10
 INTRO_WORDS = 120
 OUTRO_WORDS = 100
@@ -428,12 +428,15 @@ def generate_longform_script(ollama_model: str = "llama3.2", target_minutes: int
     tactic_facts = [{"fact": f"At the {b}, {name}'s tactic was {t}.", "quote": t} for b, t in general["battles"]]
     parts = [(name, *fact_check.write_frame(
         "opening", name, tactic_facts,
-        f"Hook the viewer in the first sentence, say why {name}'s way of fighting is still worth studying, "
-        f"and preview the three battles by name without saying how they were won.",
+        f"The first sentence is the hook: a dramatic claim or question about {name}'s three battles that makes "
+        f"the viewer need to know how he did it — no greeting, no 'in this video', no 'welcome', no 'join us'. "
+        f"Then say why his way of fighting is still worth studying, and name the three battles without saying "
+        f"how they were won. Keep it short and punchy.",
         intro_words, allowed, ollama_model, llm, _sentences))]
     for i, ((battle, tactic), sheet) in enumerate(zip(general["battles"], sheets), start=1):
+        next_battle = general["battles"][i][0] if i < len(general["battles"]) else None
         parts.append((battle, *fact_check.write_battle_chapter(
-            name, battle, i, battle_words, sheet, allowed, ollama_model, llm, _sentences)))
+            name, battle, i, battle_words, sheet, allowed, ollama_model, llm, _sentences, next_battle=next_battle)))
     parts.append((f"What {name} Teaches Us", *fact_check.write_frame(
         "closing", name, tactic_facts,
         f"Tie the three battles together: what they reveal about how {name} thought about war. End by asking "
