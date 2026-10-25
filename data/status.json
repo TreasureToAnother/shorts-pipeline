@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-10-25T13:11:05Z"
+    "status": "done",
+    "message": "generated: I've been a hostess at that old diner for years, watching regulars come and go.",
+    "updated_at": "2026-10-25T13:11:53Z"
   },
   "video_agent": {
     "status": "idle",
