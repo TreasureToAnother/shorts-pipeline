@@ -39,6 +39,11 @@ from agents.discord_agent import notify_upload, notify_pipeline_failure
 from status_store import reset, set_status
 
 IS_CI = os.getenv("GITHUB_ACTIONS") == "true"
+# Long-form uploads stay off until the format is signed off: until then a
+# run (scheduled or manual) renders the video and the workflow keeps it as
+# a downloadable artifact instead of putting it on YouTube. Turn on by
+# setting the repo variable LONGFORM_UPLOADS to "on".
+UPLOADS_ON = os.getenv("LONGFORM_UPLOADS", "").strip().lower() == "on"
 LONGFORM_HASHTAGS = "#history #militaryhistory #artofwar"
 CREDITS = "Narration and illustrations generated with AI."
 NEXT_SCRIPT_PATH = os.path.join(os.path.dirname(__file__), "data", "longform_next.json")
@@ -91,8 +96,9 @@ def run_longform_pipeline(target_minutes: int = None, privacy_status: str = "pub
         video_path = build_longform_video(script, ollama_model=ollama_model)
         thumbnail_path = generate_thumbnail(script, video_path, ollama_model=ollama_model)
 
-        if not IS_CI:
-            print(f"Long-form pipeline complete (LOCAL TEST — not uploaded): {video_path}")
+        if not IS_CI or not UPLOADS_ON:
+            where = "LOCAL TEST" if not IS_CI else "uploads are off (LONGFORM_UPLOADS) — kept as a workflow artifact"
+            print(f"Long-form pipeline complete ({where}, not uploaded): {video_path}")
             if thumbnail_path:
                 print(f"Thumbnail: {thumbnail_path}")
             return video_path
