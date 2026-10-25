@@ -15,8 +15,8 @@
     "updated_at": "2026-10-25T15:10:04Z"
   },
   "discord_agent": {
-    "status": "running",
-    "message": "posting upload notification",
-    "updated_at": "2026-10-25T15:10:05Z"
+    "status": "done",
+    "message": "notified: He snapped the string that held us together \ud83d\udc94 #postromp (scheduled 2026-10-25T20:10:00Z UTC)",
+    "updated_at": "2026-10-25T15:10:07Z"
   }
 }
