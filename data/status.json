@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-10-25T17:01:35Z"
+    "status": "done",
+    "message": "generated: I've been working as a hostess at Camp Whispering Woods for three summers, and I",
+    "updated_at": "2026-10-25T17:02:13Z"
   },
   "video_agent": {
     "status": "idle",
