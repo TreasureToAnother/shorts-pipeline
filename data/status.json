@@ -1,22 +1,22 @@
 {
   "script_agent": {
-    "status": "done",
-    "message": "generated: He snapped the string that held us together \ud83d\udc94 #postromp",
-    "updated_at": "2026-10-25T15:08:50Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "video_agent": {
-    "status": "done",
-    "message": "/home/runner/work/shorts-pipeline/shorts-pipeline/agents/../data/output/a67b1085.mp4",
-    "updated_at": "2026-10-25T15:09:59Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "upload_agent": {
-    "status": "done",
-    "message": "scheduled for 2026-10-25T20:10:00Z: https://youtube.com/shorts/0mXWgvV5erE",
-    "updated_at": "2026-10-25T15:10:04Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "discord_agent": {
-    "status": "done",
-    "message": "notified: He snapped the string that held us together \ud83d\udc94 #postromp (scheduled 2026-10-25T20:10:00Z UTC)",
-    "updated_at": "2026-10-25T15:10:07Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   }
 }
