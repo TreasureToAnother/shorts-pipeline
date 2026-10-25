@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-10-25T14:11:24Z"
+    "status": "done",
+    "message": "generated: I stood frozen behind the lens, my camera's shutter click echoing through the cr",
+    "updated_at": "2026-10-25T14:11:45Z"
   },
   "video_agent": {
     "status": "idle",
