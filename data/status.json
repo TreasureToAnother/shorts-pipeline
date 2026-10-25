@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-10-25T13:40:23Z"
+    "status": "done",
+    "message": "generated: I locked eyes with him across the crowded birthday party, our mutual friend's lo",
+    "updated_at": "2026-10-25T13:40:44Z"
   },
   "video_agent": {
     "status": "idle",
