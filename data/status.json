@@ -1,22 +1,22 @@
 {
   "script_agent": {
-    "status": "done",
-    "message": "generated: I stood frozen behind the lens, my camera's shutter click echoing through the cr",
-    "updated_at": "2026-10-25T14:11:45Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "video_agent": {
-    "status": "done",
-    "message": "/home/runner/work/shorts-pipeline/shorts-pipeline/agents/../data/output/f001ffd8.mp4",
-    "updated_at": "2026-10-25T14:12:41Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "upload_agent": {
-    "status": "done",
-    "message": "scheduled for 2026-10-25T19:12:42Z: https://youtube.com/shorts/eZIYnPYiH2g",
-    "updated_at": "2026-10-25T14:12:46Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "discord_agent": {
-    "status": "done",
-    "message": "notified: I stood frozen behind the lens, my camera's shutter click echoing through the cr (scheduled 2026-10-25T19:12:42Z UTC)",
-    "updated_at": "2026-10-25T14:12:49Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   }
 }
