@@ -1,22 +1,22 @@
 {
   "script_agent": {
-    "status": "done",
-    "message": "generated: I've been a hostess at that old diner for years, watching regulars come and go.",
-    "updated_at": "2026-10-25T13:11:53Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "video_agent": {
-    "status": "done",
-    "message": "/home/runner/work/shorts-pipeline/shorts-pipeline/agents/../data/output/a9a50684.mp4",
-    "updated_at": "2026-10-25T13:13:47Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "upload_agent": {
-    "status": "done",
-    "message": "scheduled for 2026-10-25T18:13:48Z: https://youtube.com/shorts/LX7OiCdSrFE",
-    "updated_at": "2026-10-25T13:13:52Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "discord_agent": {
-    "status": "done",
-    "message": "notified: I've been a hostess at that old diner for years, watching regulars come and go. (scheduled 2026-10-25T18:13:48Z UTC)",
-    "updated_at": "2026-10-25T13:13:55Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   }
 }
