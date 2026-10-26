@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-10-26T19:06:45Z"
+    "status": "done",
+    "message": "generated: I'll never forget the day my best friend, Rachel, revealed her secret.",
+    "updated_at": "2026-10-26T19:07:21Z"
   },
   "video_agent": {
     "status": "idle",
