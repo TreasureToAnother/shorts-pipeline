@@ -20,10 +20,10 @@
     {
       "slot": 2,
       "hour_et": 6,
-      "stage": "generating",
-      "title": null,
-      "video_url": null,
-      "publish_at": null
+      "stage": "uploaded",
+      "title": "I've been on this road trip with my friends for days, laughing and singing along",
+      "video_url": "https://youtube.com/shorts/Vnz41GdMbM4",
+      "publish_at": "2026-10-26T21:42:19Z"
     },
     {
       "slot": 3,
