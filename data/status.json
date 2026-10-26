@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-10-26T16:00:31Z"
+    "status": "done",
+    "message": "generated: My Crush Betrayed Me in the Most Public Way",
+    "updated_at": "2026-10-26T16:01:08Z"
   },
   "video_agent": {
     "status": "idle",
