@@ -1,22 +1,22 @@
 {
   "script_agent": {
-    "status": "done",
-    "message": "generated: His message changed everything \ud83d\udc8e\" #POV",
-    "updated_at": "2026-10-26T15:09:17Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "video_agent": {
-    "status": "done",
-    "message": "/home/runner/work/shorts-pipeline/shorts-pipeline/agents/../data/output/dc4dd405.mp4",
-    "updated_at": "2026-10-26T15:10:34Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "upload_agent": {
-    "status": "done",
-    "message": "scheduled for 2026-10-26T20:10:36Z: https://youtube.com/shorts/WKvuxwgG1Xw",
-    "updated_at": "2026-10-26T15:10:39Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "discord_agent": {
-    "status": "done",
-    "message": "notified: His message changed everything \ud83d\udc8e\" #POV (scheduled 2026-10-26T20:10:36Z UTC)",
-    "updated_at": "2026-10-26T15:10:42Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   }
 }
