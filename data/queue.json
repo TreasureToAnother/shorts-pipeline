@@ -44,10 +44,10 @@
     {
       "slot": 5,
       "hour_et": 9,
-      "stage": "generating",
-      "title": null,
-      "video_url": null,
-      "publish_at": null
+      "stage": "uploaded",
+      "title": "I'll never forget the day my best friend, Rachel, revealed her secret.",
+      "video_url": "https://youtube.com/shorts/Nf3OYgCngZc",
+      "publish_at": "2026-10-27T00:08:41Z"
     }
   ]
 }
