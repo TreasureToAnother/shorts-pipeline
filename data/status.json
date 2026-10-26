@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-10-26T17:16:57Z"
+    "status": "done",
+    "message": "generated: I fumbled with the camera strap on my shoulder, trying to play it cool, as we sa",
+    "updated_at": "2026-10-26T17:17:36Z"
   },
   "video_agent": {
     "status": "idle",
