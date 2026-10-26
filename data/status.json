@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-10-26T17:45:28Z"
+    "status": "done",
+    "message": "generated: I'll never forget the day I walked in on him.",
+    "updated_at": "2026-10-26T17:46:26Z"
   },
   "video_agent": {
     "status": "idle",
