@@ -36,10 +36,10 @@
     {
       "slot": 4,
       "hour_et": 8,
-      "stage": "generating",
-      "title": null,
-      "video_url": null,
-      "publish_at": null
+      "stage": "uploaded",
+      "title": "I'll never forget the day I walked in on him.",
+      "video_url": "https://youtube.com/shorts/4DZSFEb5lR0",
+      "publish_at": "2026-10-26T22:48:00Z"
     },
     {
       "slot": 5,
