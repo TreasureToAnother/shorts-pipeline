@@ -1,22 +1,22 @@
 {
   "script_agent": {
-    "status": "done",
-    "message": "generated: I danced to the beat, my scrubs shed like a skin, as I let loose at the nursing ",
-    "updated_at": "2026-10-27T16:26:32Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "video_agent": {
-    "status": "done",
-    "message": "/home/runner/work/shorts-pipeline/shorts-pipeline/agents/../data/output/8aa217d7.mp4",
-    "updated_at": "2026-10-27T16:28:02Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "upload_agent": {
-    "status": "done",
-    "message": "scheduled for 2026-10-27T21:28:03Z: https://youtube.com/shorts/htAXK4bSuXI",
-    "updated_at": "2026-10-27T16:28:06Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "discord_agent": {
-    "status": "done",
-    "message": "notified: I danced to the beat, my scrubs shed like a skin, as I let loose at the nursing  (scheduled 2026-10-27T21:28:03Z UTC)",
-    "updated_at": "2026-10-27T16:28:10Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   }
 }
