@@ -1,22 +1,22 @@
 {
   "script_agent": {
-    "status": "done",
-    "message": "generated: He caught me staring at his secret",
-    "updated_at": "2026-10-27T15:15:50Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "video_agent": {
-    "status": "done",
-    "message": "/home/runner/work/shorts-pipeline/shorts-pipeline/agents/../data/output/c67f74e6.mp4",
-    "updated_at": "2026-10-27T15:16:55Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "upload_agent": {
-    "status": "done",
-    "message": "scheduled for 2026-10-27T20:16:56Z: https://youtube.com/shorts/YJuItlU69IE",
-    "updated_at": "2026-10-27T15:16:59Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "discord_agent": {
-    "status": "done",
-    "message": "notified: He caught me staring at his secret (scheduled 2026-10-27T20:16:56Z UTC)",
-    "updated_at": "2026-10-27T15:17:02Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   }
 }
