@@ -1,53 +1,53 @@
 {
-  "date": "2026-10-26",
+  "date": "2026-10-27",
   "slots": [
     {
       "slot": 0,
       "hour_et": 4,
-      "stage": "uploaded",
-      "title": "His message changed everything \ud83d\udc8e\" #POV",
-      "video_url": "https://youtube.com/shorts/WKvuxwgG1Xw",
-      "publish_at": "2026-10-26T20:10:36Z"
+      "stage": "generating",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 1,
       "hour_et": 5,
-      "stage": "uploaded",
-      "title": "My Crush Betrayed Me in the Most Public Way",
-      "video_url": "https://youtube.com/shorts/S2ctzd853Oc",
-      "publish_at": "2026-10-26T21:02:25Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 2,
       "hour_et": 6,
-      "stage": "uploaded",
-      "title": "I've been on this road trip with my friends for days, laughing and singing along",
-      "video_url": "https://youtube.com/shorts/Vnz41GdMbM4",
-      "publish_at": "2026-10-26T21:42:19Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 3,
       "hour_et": 7,
-      "stage": "uploaded",
-      "title": "I fumbled with the camera strap on my shoulder, trying to play it cool, as we sa",
-      "video_url": "https://youtube.com/shorts/LIxyqhSLKCI",
-      "publish_at": "2026-10-26T22:18:41Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 4,
       "hour_et": 8,
-      "stage": "uploaded",
-      "title": "I'll never forget the day I walked in on him.",
-      "video_url": "https://youtube.com/shorts/4DZSFEb5lR0",
-      "publish_at": "2026-10-26T22:48:00Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 5,
       "hour_et": 9,
-      "stage": "uploaded",
-      "title": "I'll never forget the day my best friend, Rachel, revealed her secret.",
-      "video_url": "https://youtube.com/shorts/Nf3OYgCngZc",
-      "publish_at": "2026-10-27T00:08:41Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     }
   ]
 }
