@@ -4,10 +4,10 @@
     {
       "slot": 0,
       "hour_et": 4,
-      "stage": "generating",
-      "title": null,
-      "video_url": null,
-      "publish_at": null
+      "stage": "uploaded",
+      "title": "I met him at the coffee shop, laughing like we'd known each other for years.",
+      "video_url": "https://youtube.com/shorts/lPdF0_js1KE",
+      "publish_at": "2026-10-27T19:24:17Z"
     },
     {
       "slot": 1,
