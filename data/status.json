@@ -1,22 +1,22 @@
 {
   "script_agent": {
-    "status": "done",
-    "message": "generated: Late night laptop sessions turned out to be a red flag \ud83d\udc94 #betrayal",
-    "updated_at": "2026-10-27T16:57:04Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "video_agent": {
-    "status": "done",
-    "message": "/home/runner/work/shorts-pipeline/shorts-pipeline/agents/../data/output/83482579.mp4",
-    "updated_at": "2026-10-27T16:58:20Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "upload_agent": {
-    "status": "done",
-    "message": "scheduled for 2026-10-27T21:58:21Z: https://youtube.com/shorts/4hFqI0Hy-2U",
-    "updated_at": "2026-10-27T16:58:24Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "discord_agent": {
-    "status": "done",
-    "message": "notified: Late night laptop sessions turned out to be a red flag \ud83d\udc94 #betrayal (scheduled 2026-10-27T21:58:21Z UTC)",
-    "updated_at": "2026-10-27T16:58:27Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   }
 }
