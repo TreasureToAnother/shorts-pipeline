@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-10-27T14:22:32Z"
+    "status": "done",
+    "message": "generated: I met him at the coffee shop, laughing like we'd known each other for years.",
+    "updated_at": "2026-10-27T14:23:14Z"
   },
   "video_agent": {
     "status": "idle",
