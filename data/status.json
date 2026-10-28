@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-10-28T17:08:04Z"
+    "status": "done",
+    "message": "generated: She followed me to the woods\"\n\n#CampCedarwoodMystery",
+    "updated_at": "2026-10-28T17:08:52Z"
   },
   "video_agent": {
     "status": "idle",
