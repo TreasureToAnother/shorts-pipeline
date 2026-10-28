@@ -44,10 +44,10 @@
     {
       "slot": 5,
       "hour_et": 9,
-      "stage": "generating",
-      "title": null,
-      "video_url": null,
-      "publish_at": null
+      "stage": "uploaded",
+      "title": "I remember the day the text changed everything like it was yesterday.",
+      "video_url": "https://youtube.com/shorts/KgUPJ6cg8Zo",
+      "publish_at": "2026-10-28T23:47:06Z"
     }
   ]
 }
