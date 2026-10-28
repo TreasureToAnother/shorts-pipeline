@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-10-28T15:04:14Z"
+    "status": "done",
+    "message": "generated: Red Flag Alert: When a Crush's Past Comes Back to Haunt Him\"\n\n\ud83d\udcf1",
+    "updated_at": "2026-10-28T15:04:50Z"
   },
   "video_agent": {
     "status": "idle",
