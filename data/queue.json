@@ -20,10 +20,10 @@
     {
       "slot": 2,
       "hour_et": 6,
-      "stage": "generating",
-      "title": null,
-      "video_url": null,
-      "publish_at": null
+      "stage": "uploaded",
+      "title": "I'm still reeling from the fairytale wedding I just witnessed.",
+      "video_url": "https://youtube.com/shorts/q9nKSctoQv8",
+      "publish_at": "2026-10-28T21:35:01Z"
     },
     {
       "slot": 3,
