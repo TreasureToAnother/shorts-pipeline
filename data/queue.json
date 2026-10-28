@@ -1,53 +1,53 @@
 {
-  "date": "2026-10-27",
+  "date": "2026-10-28",
   "slots": [
     {
       "slot": 0,
       "hour_et": 4,
-      "stage": "uploaded",
-      "title": "I met him at the coffee shop, laughing like we'd known each other for years.",
-      "video_url": "https://youtube.com/shorts/lPdF0_js1KE",
-      "publish_at": "2026-10-27T19:24:17Z"
+      "stage": "generating",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 1,
       "hour_et": 5,
-      "stage": "uploaded",
-      "title": "He caught me staring at his secret",
-      "video_url": "https://youtube.com/shorts/YJuItlU69IE",
-      "publish_at": "2026-10-27T20:16:56Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 2,
       "hour_et": 6,
-      "stage": "uploaded",
-      "title": "His eyes locked on mine, I knew I was in trouble",
-      "video_url": "https://youtube.com/shorts/pHblXYgOHis",
-      "publish_at": "2026-10-27T20:50:23Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 3,
       "hour_et": 7,
-      "stage": "uploaded",
-      "title": "I danced to the beat, my scrubs shed like a skin, as I let loose at the nursing ",
-      "video_url": "https://youtube.com/shorts/htAXK4bSuXI",
-      "publish_at": "2026-10-27T21:28:03Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 4,
       "hour_et": 8,
-      "stage": "uploaded",
-      "title": "Late night laptop sessions turned out to be a red flag \ud83d\udc94 #betrayal",
-      "video_url": "https://youtube.com/shorts/4hFqI0Hy-2U",
-      "publish_at": "2026-10-27T21:58:21Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 5,
       "hour_et": 9,
-      "stage": "uploaded",
-      "title": "I poured the last of the road trip's leftover coffee, my hands shaking as I hand",
-      "video_url": "https://youtube.com/shorts/2ymujBeB2_8",
-      "publish_at": "2026-10-27T23:39:07Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     }
   ]
 }
