@@ -1,53 +1,53 @@
 {
-  "date": "2026-10-28",
+  "date": "2026-10-29",
   "slots": [
     {
       "slot": 0,
       "hour_et": 4,
-      "stage": "uploaded",
-      "title": "Red Flag Alert: When a Crush's Past Comes Back to Haunt Him\"\n\n\ud83d\udcf1",
-      "video_url": "https://youtube.com/shorts/gHzbxFZ_9AY",
-      "publish_at": "2026-10-28T20:05:50Z"
+      "stage": "generating",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 1,
       "hour_et": 5,
-      "stage": "uploaded",
-      "title": "Rachel's hand slipped into mine, but was it too late?\" \ud83d\udc94 #BetrayalUnmasked",
-      "video_url": "https://youtube.com/shorts/7w_zCSEz73Y",
-      "publish_at": "2026-10-28T20:53:03Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 2,
       "hour_et": 6,
-      "stage": "uploaded",
-      "title": "I'm still reeling from the fairytale wedding I just witnessed.",
-      "video_url": "https://youtube.com/shorts/q9nKSctoQv8",
-      "publish_at": "2026-10-28T21:35:01Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 3,
       "hour_et": 7,
-      "stage": "uploaded",
-      "title": "She followed me to the woods\"\n\n#CampCedarwoodMystery",
-      "video_url": "https://youtube.com/shorts/MZDatQVLJcw",
-      "publish_at": "2026-10-28T22:10:24Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 4,
       "hour_et": 8,
-      "stage": "uploaded",
-      "title": "I wipe down the counter, my mind preoccupied with the stack of bills due that we",
-      "video_url": "https://youtube.com/shorts/gf-MZ0EZ09A",
-      "publish_at": "2026-10-28T22:50:18Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 5,
       "hour_et": 9,
-      "stage": "uploaded",
-      "title": "I remember the day the text changed everything like it was yesterday.",
-      "video_url": "https://youtube.com/shorts/KgUPJ6cg8Zo",
-      "publish_at": "2026-10-28T23:47:06Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     }
   ]
 }
