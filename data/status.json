@@ -1,22 +1,22 @@
 {
   "script_agent": {
-    "status": "done",
-    "message": "generated: I'm fidgeting with the hostess badge on my apron, waiting for the lunch rush to ",
-    "updated_at": "2026-10-29T15:11:43Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "video_agent": {
-    "status": "done",
-    "message": "/home/runner/work/shorts-pipeline/shorts-pipeline/agents/../data/output/ebc51952.mp4",
-    "updated_at": "2026-10-29T15:13:27Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "upload_agent": {
-    "status": "done",
-    "message": "scheduled for 2026-10-29T20:13:28Z: https://youtube.com/shorts/6zE9P4-ZUjw",
-    "updated_at": "2026-10-29T15:13:31Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "discord_agent": {
-    "status": "done",
-    "message": "notified: I'm fidgeting with the hostess badge on my apron, waiting for the lunch rush to  (scheduled 2026-10-29T20:13:28Z UTC)",
-    "updated_at": "2026-10-29T15:13:34Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   }
 }
