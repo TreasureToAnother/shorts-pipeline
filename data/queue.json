@@ -28,10 +28,10 @@
     {
       "slot": 3,
       "hour_et": 7,
-      "stage": "generating",
-      "title": null,
-      "video_url": null,
-      "publish_at": null
+      "stage": "uploaded",
+      "title": "I thought it was going to be a normal Friday night, pouring drinks and laughing ",
+      "video_url": "https://youtube.com/shorts/oH8FpYRT0Kw",
+      "publish_at": "2026-10-29T22:26:13Z"
     },
     {
       "slot": 4,
