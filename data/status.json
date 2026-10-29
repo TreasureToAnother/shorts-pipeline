@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-10-29T17:24:39Z"
+    "status": "done",
+    "message": "generated: I thought it was going to be a normal Friday night, pouring drinks and laughing ",
+    "updated_at": "2026-10-29T17:25:08Z"
   },
   "video_agent": {
     "status": "idle",
