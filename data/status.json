@@ -10,9 +10,9 @@
     "updated_at": "2026-10-29T15:13:27Z"
   },
   "upload_agent": {
-    "status": "running",
-    "message": "uploading ebc51952.mp4",
-    "updated_at": "2026-10-29T15:13:28Z"
+    "status": "done",
+    "message": "scheduled for 2026-10-29T20:13:28Z: https://youtube.com/shorts/6zE9P4-ZUjw",
+    "updated_at": "2026-10-29T15:13:31Z"
   },
   "discord_agent": {
     "status": "idle",
