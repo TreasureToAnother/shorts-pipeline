@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-10-29T15:10:45Z"
+    "status": "done",
+    "message": "generated: I'm fidgeting with the hostess badge on my apron, waiting for the lunch rush to ",
+    "updated_at": "2026-10-29T15:11:43Z"
   },
   "video_agent": {
     "status": "idle",
