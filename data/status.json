@@ -10,9 +10,9 @@
     "updated_at": "2026-10-29T17:26:12Z"
   },
   "upload_agent": {
-    "status": "running",
-    "message": "uploading ceee5374.mp4",
-    "updated_at": "2026-10-29T17:26:13Z"
+    "status": "done",
+    "message": "scheduled for 2026-10-29T22:26:13Z: https://youtube.com/shorts/oH8FpYRT0Kw",
+    "updated_at": "2026-10-29T17:26:17Z"
   },
   "discord_agent": {
     "status": "idle",
