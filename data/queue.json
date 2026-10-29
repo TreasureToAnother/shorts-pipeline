@@ -44,10 +44,10 @@
     {
       "slot": 5,
       "hour_et": 9,
-      "stage": "generating",
-      "title": null,
-      "video_url": null,
-      "publish_at": null
+      "stage": "uploaded",
+      "title": "I thought I was marrying my soulmate, but then he got a text from his EX",
+      "video_url": "https://youtube.com/shorts/6GtRC_5KPk4",
+      "publish_at": "2026-10-29T23:54:05Z"
     }
   ]
 }
