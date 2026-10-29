@@ -12,10 +12,10 @@
     {
       "slot": 1,
       "hour_et": 5,
-      "stage": "generating",
-      "title": null,
-      "video_url": null,
-      "publish_at": null
+      "stage": "uploaded",
+      "title": "I thought we were just friends, that nothing could ever come between us.",
+      "video_url": "https://youtube.com/shorts/6UAdGIyc4pk",
+      "publish_at": "2026-10-29T21:01:32Z"
     },
     {
       "slot": 2,
