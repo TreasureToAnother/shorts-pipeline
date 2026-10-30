@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-10-30T15:00:46Z"
+    "status": "done",
+    "message": "generated: I thought I'd found the perfect summer fling at camp, a charming guy who'd been ",
+    "updated_at": "2026-10-30T15:01:05Z"
   },
   "video_agent": {
     "status": "idle",
