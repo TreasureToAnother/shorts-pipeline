@@ -1,22 +1,22 @@
 {
   "script_agent": {
-    "status": "done",
-    "message": "generated: I thought I was marrying my soulmate, but then he got a text from his EX",
-    "updated_at": "2026-10-29T18:52:57Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "video_agent": {
-    "status": "done",
-    "message": "/home/runner/work/shorts-pipeline/shorts-pipeline/agents/../data/output/10c87aa1.mp4",
-    "updated_at": "2026-10-29T18:54:04Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "upload_agent": {
-    "status": "done",
-    "message": "scheduled for 2026-10-29T23:54:05Z: https://youtube.com/shorts/6GtRC_5KPk4",
-    "updated_at": "2026-10-29T18:54:08Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "discord_agent": {
-    "status": "done",
-    "message": "notified: I thought I was marrying my soulmate, but then he got a text from his EX (scheduled 2026-10-29T23:54:05Z UTC)",
-    "updated_at": "2026-10-29T18:54:11Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   }
 }
