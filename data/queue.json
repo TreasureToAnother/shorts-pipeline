@@ -28,10 +28,10 @@
     {
       "slot": 3,
       "hour_et": 7,
-      "stage": "generating",
-      "title": null,
-      "video_url": null,
-      "publish_at": null
+      "stage": "uploaded",
+      "title": "I'm still shaking as I write this.",
+      "video_url": "https://youtube.com/shorts/rl7SOkE4SNk",
+      "publish_at": "2026-10-30T22:02:52Z"
     },
     {
       "slot": 4,
