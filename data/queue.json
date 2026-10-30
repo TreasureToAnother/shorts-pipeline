@@ -44,10 +44,10 @@
     {
       "slot": 5,
       "hour_et": 9,
-      "stage": "generating",
-      "title": null,
-      "video_url": null,
-      "publish_at": null
+      "stage": "uploaded",
+      "title": "I'm still shaking as I recall that night.",
+      "video_url": "https://youtube.com/shorts/RMQpCNR6v0Q",
+      "publish_at": "2026-10-30T23:32:21Z"
     }
   ]
 }
