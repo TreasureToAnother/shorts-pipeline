@@ -15,8 +15,8 @@
     "updated_at": "2026-10-30T17:02:56Z"
   },
   "discord_agent": {
-    "status": "running",
-    "message": "posting upload notification",
-    "updated_at": "2026-10-30T17:02:57Z"
+    "status": "done",
+    "message": "notified: I'm still shaking as I write this. (scheduled 2026-10-30T22:02:52Z UTC)",
+    "updated_at": "2026-10-30T17:02:59Z"
   }
 }
