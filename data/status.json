@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-10-30T15:45:34Z"
+    "status": "done",
+    "message": "generated: My morning coffee turned into a deadly secret\"\n\n#TruthHurts",
+    "updated_at": "2026-10-30T15:46:01Z"
   },
   "video_agent": {
     "status": "idle",
