@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-10-30T16:36:55Z"
+    "status": "done",
+    "message": "generated: I'm still trying to process the day I found out my boyfriend was cheating.",
+    "updated_at": "2026-10-30T16:37:34Z"
   },
   "video_agent": {
     "status": "idle",
