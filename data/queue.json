@@ -1,53 +1,53 @@
 {
-  "date": "2026-10-29",
+  "date": "2026-10-30",
   "slots": [
     {
       "slot": 0,
       "hour_et": 4,
-      "stage": "uploaded",
-      "title": "I'm fidgeting with the hostess badge on my apron, waiting for the lunch rush to ",
-      "video_url": "https://youtube.com/shorts/6zE9P4-ZUjw",
-      "publish_at": "2026-10-29T20:13:28Z"
+      "stage": "generating",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 1,
       "hour_et": 5,
-      "stage": "uploaded",
-      "title": "I thought we were just friends, that nothing could ever come between us.",
-      "video_url": "https://youtube.com/shorts/6UAdGIyc4pk",
-      "publish_at": "2026-10-29T21:01:32Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 2,
       "hour_et": 6,
-      "stage": "uploaded",
-      "title": "I'll never forget the day our group project turned into a nightmare.",
-      "video_url": "https://youtube.com/shorts/kW3faMtv8L8",
-      "publish_at": "2026-10-29T21:49:16Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 3,
       "hour_et": 7,
-      "stage": "uploaded",
-      "title": "I thought it was going to be a normal Friday night, pouring drinks and laughing ",
-      "video_url": "https://youtube.com/shorts/oH8FpYRT0Kw",
-      "publish_at": "2026-10-29T22:26:13Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 4,
       "hour_et": 8,
-      "stage": "uploaded",
-      "title": "I've had a crush on him for weeks, watching from the sidelines as he effortlessl",
-      "video_url": "https://youtube.com/shorts/0av7Eys2ByQ",
-      "publish_at": "2026-10-29T22:43:45Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 5,
       "hour_et": 9,
-      "stage": "uploaded",
-      "title": "I thought I was marrying my soulmate, but then he got a text from his EX",
-      "video_url": "https://youtube.com/shorts/6GtRC_5KPk4",
-      "publish_at": "2026-10-29T23:54:05Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     }
   ]
 }
