@@ -1,22 +1,22 @@
 {
   "script_agent": {
-    "status": "done",
-    "message": "generated: I thought I'd found the perfect summer fling at camp, a charming guy who'd been ",
-    "updated_at": "2026-10-30T15:01:05Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "video_agent": {
-    "status": "done",
-    "message": "/home/runner/work/shorts-pipeline/shorts-pipeline/agents/../data/output/7143b63a.mp4",
-    "updated_at": "2026-10-30T15:01:49Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "upload_agent": {
-    "status": "done",
-    "message": "scheduled for 2026-10-30T20:01:51Z: https://youtube.com/shorts/FFgdNlxCFOo",
-    "updated_at": "2026-10-30T15:01:54Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "discord_agent": {
-    "status": "done",
-    "message": "notified: I thought I'd found the perfect summer fling at camp, a charming guy who'd been  (scheduled 2026-10-30T20:01:51Z UTC)",
-    "updated_at": "2026-10-30T15:01:57Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   }
 }
