@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-10-31T15:39:51Z"
+    "status": "done",
+    "message": "generated: I stand at the altar, my heart racing like a nurse's stethoscope, as I watch my ",
+    "updated_at": "2026-10-31T15:40:53Z"
   },
   "video_agent": {
     "status": "idle",
