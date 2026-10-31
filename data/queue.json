@@ -1,53 +1,53 @@
 {
-  "date": "2026-10-30",
+  "date": "2026-10-31",
   "slots": [
     {
       "slot": 0,
       "hour_et": 4,
-      "stage": "uploaded",
-      "title": "I thought I'd found the perfect summer fling at camp, a charming guy who'd been ",
-      "video_url": "https://youtube.com/shorts/FFgdNlxCFOo",
-      "publish_at": "2026-10-30T20:01:51Z"
+      "stage": "generating",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 1,
       "hour_et": 5,
-      "stage": "uploaded",
-      "title": "My morning coffee turned into a deadly secret\"\n\n#TruthHurts",
-      "video_url": "https://youtube.com/shorts/t-gA5SuUFw0",
-      "publish_at": "2026-10-30T20:46:52Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 2,
       "hour_et": 6,
-      "stage": "uploaded",
-      "title": "I'm still trying to process the day I found out my boyfriend was cheating.",
-      "video_url": "https://youtube.com/shorts/02x4NUW1Uu8",
-      "publish_at": "2026-10-30T21:38:44Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 3,
       "hour_et": 7,
-      "stage": "uploaded",
-      "title": "I'm still shaking as I write this.",
-      "video_url": "https://youtube.com/shorts/rl7SOkE4SNk",
-      "publish_at": "2026-10-30T22:02:52Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 4,
       "hour_et": 8,
-      "stage": "uploaded",
-      "title": "He's not the only one I'm crushing on... \ud83d\udea8",
-      "video_url": "https://youtube.com/shorts/gCOEOq2h_8E",
-      "publish_at": "2026-10-30T22:20:55Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 5,
       "hour_et": 9,
-      "stage": "uploaded",
-      "title": "I'm still shaking as I recall that night.",
-      "video_url": "https://youtube.com/shorts/RMQpCNR6v0Q",
-      "publish_at": "2026-10-30T23:32:21Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     }
   ]
 }
