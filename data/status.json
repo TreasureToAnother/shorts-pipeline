@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-10-31T14:30:00Z"
+    "status": "done",
+    "message": "generated: My crush confessed everything in the most random way possible \ud83d\udc94 #POVstorytime",
+    "updated_at": "2026-10-31T14:30:43Z"
   },
   "video_agent": {
     "status": "idle",
