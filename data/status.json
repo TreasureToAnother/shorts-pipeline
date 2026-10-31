@@ -1,22 +1,22 @@
 {
   "script_agent": {
-    "status": "done",
-    "message": "generated: My crush confessed everything in the most random way possible \ud83d\udc94 #POVstorytime",
-    "updated_at": "2026-10-31T14:30:43Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "video_agent": {
-    "status": "done",
-    "message": "/home/runner/work/shorts-pipeline/shorts-pipeline/agents/../data/output/6e0319e5.mp4",
-    "updated_at": "2026-10-31T14:32:14Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "upload_agent": {
-    "status": "done",
-    "message": "scheduled for 2026-10-31T19:32:15Z: https://youtube.com/shorts/CFra3bXlSsQ",
-    "updated_at": "2026-10-31T14:32:18Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "discord_agent": {
-    "status": "done",
-    "message": "notified: My crush confessed everything in the most random way possible \ud83d\udc94 #POVstorytime (scheduled 2026-10-31T19:32:15Z UTC)",
-    "updated_at": "2026-10-31T14:32:21Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   }
 }
