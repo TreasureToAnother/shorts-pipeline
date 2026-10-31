@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-10-31T16:25:12Z"
+    "status": "done",
+    "message": "generated: His sister's birthday post dropped, and I was a mess \ud83d\udc94 #storytime",
+    "updated_at": "2026-10-31T16:25:42Z"
   },
   "video_agent": {
     "status": "idle",
