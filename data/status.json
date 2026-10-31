@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-10-31T16:01:53Z"
+    "status": "done",
+    "message": "generated: I still can't believe it's been three years since I crushed on Alex at summer ca",
+    "updated_at": "2026-10-31T16:02:46Z"
   },
   "video_agent": {
     "status": "idle",
