@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-10-31T15:13:34Z"
+    "status": "done",
+    "message": "generated: I poured my heart into every table assignment, every smile, and every \"welcome h",
+    "updated_at": "2026-10-31T15:14:10Z"
   },
   "video_agent": {
     "status": "idle",
