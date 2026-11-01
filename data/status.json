@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-11-01T14:58:01Z"
+    "status": "done",
+    "message": "generated: Your smile in the congratulatory email still haunts me\"\n\n#POV",
+    "updated_at": "2026-11-01T14:58:19Z"
   },
   "video_agent": {
     "status": "idle",
