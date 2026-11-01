@@ -1,22 +1,22 @@
 {
   "script_agent": {
-    "status": "done",
-    "message": "generated: Texts that shattered my world \ud83d\udc94 #heartbreak",
-    "updated_at": "2026-11-01T16:41:41Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "video_agent": {
-    "status": "done",
-    "message": "/home/runner/work/shorts-pipeline/shorts-pipeline/agents/../data/output/1a50fd29.mp4",
-    "updated_at": "2026-11-01T16:43:01Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "upload_agent": {
-    "status": "done",
-    "message": "scheduled for 2026-11-01T21:43:02Z: https://youtube.com/shorts/_jXQa7rZv8Y",
-    "updated_at": "2026-11-01T16:43:05Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "discord_agent": {
-    "status": "done",
-    "message": "notified: Texts that shattered my world \ud83d\udc94 #heartbreak (scheduled 2026-11-01T21:43:02Z UTC)",
-    "updated_at": "2026-11-01T16:43:07Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   }
 }
