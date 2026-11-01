@@ -1,22 +1,22 @@
 {
   "script_agent": {
-    "status": "done",
-    "message": "generated: Your smile in the congratulatory email still haunts me\"\n\n#POV",
-    "updated_at": "2026-11-01T14:58:19Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "video_agent": {
-    "status": "done",
-    "message": "/home/runner/work/shorts-pipeline/shorts-pipeline/agents/../data/output/416d9a9d.mp4",
-    "updated_at": "2026-11-01T14:59:13Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "upload_agent": {
-    "status": "done",
-    "message": "scheduled for 2026-11-01T19:59:15Z: https://youtube.com/shorts/56xaFry5GVI",
-    "updated_at": "2026-11-01T14:59:19Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "discord_agent": {
-    "status": "done",
-    "message": "notified: Your smile in the congratulatory email still haunts me\"\n\n#POV (scheduled 2026-11-01T19:59:15Z UTC)",
-    "updated_at": "2026-11-01T14:59:21Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   }
 }
