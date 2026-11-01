@@ -36,10 +36,10 @@
     {
       "slot": 4,
       "hour_et": 8,
-      "stage": "generating",
-      "title": null,
-      "video_url": null,
-      "publish_at": null
+      "stage": "uploaded",
+      "title": "I wiped down the bar, my eyes scanning the crowded wedding reception.",
+      "video_url": "https://youtube.com/shorts/NVX67z9QiBc",
+      "publish_at": "2026-11-01T23:22:31Z"
     },
     {
       "slot": 5,
