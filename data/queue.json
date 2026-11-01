@@ -1,50 +1,50 @@
 {
-  "date": "2026-10-31",
+  "date": "2026-11-01",
   "slots": [
     {
       "slot": 0,
       "hour_et": 4,
-      "stage": "uploaded",
-      "title": "My crush confessed everything in the most random way possible \ud83d\udc94 #POVstorytime",
-      "video_url": "https://youtube.com/shorts/CFra3bXlSsQ",
-      "publish_at": "2026-10-31T19:32:15Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 1,
       "hour_et": 5,
-      "stage": "uploaded",
-      "title": "I poured my heart into every table assignment, every smile, and every \"welcome h",
-      "video_url": "https://youtube.com/shorts/B1BYAK0B0qQ",
-      "publish_at": "2026-10-31T20:15:34Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 2,
       "hour_et": 6,
-      "stage": "uploaded",
-      "title": "I stand at the altar, my heart racing like a nurse's stethoscope, as I watch my ",
-      "video_url": "https://youtube.com/shorts/HgKNlgND6PM",
-      "publish_at": "2026-10-31T20:42:41Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 3,
       "hour_et": 7,
-      "stage": "uploaded",
-      "title": "I still can't believe it's been three years since I crushed on Alex at summer ca",
-      "video_url": "https://youtube.com/shorts/yr_Gem6IHc0",
-      "publish_at": "2026-10-31T21:04:16Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 4,
       "hour_et": 8,
-      "stage": "uploaded",
-      "title": "His sister's birthday post dropped, and I was a mess \ud83d\udc94 #storytime",
-      "video_url": "https://youtube.com/shorts/rsHha5vvqok",
-      "publish_at": "2026-10-31T21:26:54Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 5,
       "hour_et": 9,
-      "stage": "pending",
+      "stage": "generating",
       "title": null,
       "video_url": null,
       "publish_at": null
