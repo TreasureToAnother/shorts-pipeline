@@ -15,8 +15,8 @@
     "updated_at": "2026-11-01T18:22:34Z"
   },
   "discord_agent": {
-    "status": "running",
-    "message": "posting upload notification",
-    "updated_at": "2026-11-01T18:22:35Z"
+    "status": "done",
+    "message": "notified: I wiped down the bar, my eyes scanning the crowded wedding reception. (scheduled 2026-11-01T23:22:31Z UTC)",
+    "updated_at": "2026-11-01T18:22:37Z"
   }
 }
