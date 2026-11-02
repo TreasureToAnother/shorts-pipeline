@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-11-02T20:44:32Z"
+    "status": "done",
+    "message": "generated: He walked into my apartment and shattered everything",
+    "updated_at": "2026-11-02T20:45:23Z"
   },
   "video_agent": {
     "status": "idle",
