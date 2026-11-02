@@ -1,22 +1,22 @@
 {
   "script_agent": {
-    "status": "done",
-    "message": "generated: He walked into my apartment and shattered everything",
-    "updated_at": "2026-11-02T20:45:23Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "video_agent": {
-    "status": "done",
-    "message": "/home/runner/work/shorts-pipeline/shorts-pipeline/agents/../data/output/f4bae884.mp4",
-    "updated_at": "2026-11-02T20:47:01Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "upload_agent": {
-    "status": "done",
-    "message": "scheduled for 2026-11-03T01:47:02Z: https://youtube.com/shorts/4kCuSkNEfmc",
-    "updated_at": "2026-11-02T20:47:05Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "discord_agent": {
-    "status": "done",
-    "message": "notified: He walked into my apartment and shattered everything (scheduled 2026-11-03T01:47:02Z UTC)",
-    "updated_at": "2026-11-02T20:47:07Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   }
 }
