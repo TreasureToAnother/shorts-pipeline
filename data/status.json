@@ -1,22 +1,22 @@
 {
   "script_agent": {
-    "status": "done",
-    "message": "generated: My secret's out: he's already been married\"\n\n#POV",
-    "updated_at": "2026-11-02T19:21:31Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "video_agent": {
-    "status": "done",
-    "message": "/home/runner/work/shorts-pipeline/shorts-pipeline/agents/../data/output/9556e77e.mp4",
-    "updated_at": "2026-11-02T19:22:31Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "upload_agent": {
-    "status": "done",
-    "message": "scheduled for 2026-11-03T00:22:32Z: https://youtube.com/shorts/7qe1TY2QkPc",
-    "updated_at": "2026-11-02T19:22:35Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "discord_agent": {
-    "status": "done",
-    "message": "notified: My secret's out: he's already been married\"\n\n#POV (scheduled 2026-11-03T00:22:32Z UTC)",
-    "updated_at": "2026-11-02T19:22:38Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   }
 }
