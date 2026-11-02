@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-11-02T19:20:56Z"
+    "status": "done",
+    "message": "generated: My secret's out: he's already been married\"\n\n#POV",
+    "updated_at": "2026-11-02T19:21:31Z"
   },
   "video_agent": {
     "status": "idle",
