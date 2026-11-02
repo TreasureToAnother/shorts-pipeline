@@ -1,53 +1,53 @@
 {
-  "date": "2026-11-01",
+  "date": "2026-11-02",
   "slots": [
     {
       "slot": 0,
       "hour_et": 4,
-      "stage": "uploaded",
-      "title": "I'll never forget the day I received that text message, it was like my whole wor",
-      "video_url": "https://youtube.com/shorts/LP_509HkP2Y",
-      "publish_at": "2026-11-01T20:56:12Z"
+      "stage": "generating",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 1,
       "hour_et": 5,
-      "stage": "uploaded",
-      "title": "Texts that shattered my world \ud83d\udc94 #heartbreak",
-      "video_url": "https://youtube.com/shorts/_jXQa7rZv8Y",
-      "publish_at": "2026-11-01T21:43:02Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 2,
       "hour_et": 6,
-      "stage": "uploaded",
-      "title": "I was juggling multiple coffee orders, my mind numb from the party's constant ch",
-      "video_url": "https://youtube.com/shorts/E5nxCzSeAUM",
-      "publish_at": "2026-11-01T22:07:33Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 3,
       "hour_et": 7,
-      "stage": "uploaded",
-      "title": "Behind the bar, I kept a secret from Alex\"\n\n( Betrayed \ud83d\udc94 #storytime )",
-      "video_url": "https://youtube.com/shorts/Ngzqmyfw7-4",
-      "publish_at": "2026-11-01T22:20:14Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 4,
       "hour_et": 8,
-      "stage": "uploaded",
-      "title": "I wiped down the bar, my eyes scanning the crowded wedding reception.",
-      "video_url": "https://youtube.com/shorts/NVX67z9QiBc",
-      "publish_at": "2026-11-01T23:22:31Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 5,
       "hour_et": 9,
-      "stage": "uploaded",
-      "title": "Your smile in the congratulatory email still haunts me\"\n\n#POV",
-      "video_url": "https://youtube.com/shorts/56xaFry5GVI",
-      "publish_at": "2026-11-01T19:59:15Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     }
   ]
 }
