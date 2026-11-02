@@ -15,8 +15,8 @@
     "updated_at": "2026-11-02T20:47:05Z"
   },
   "discord_agent": {
-    "status": "running",
-    "message": "posting upload notification",
-    "updated_at": "2026-11-02T20:47:06Z"
+    "status": "done",
+    "message": "notified: He walked into my apartment and shattered everything (scheduled 2026-11-03T01:47:02Z UTC)",
+    "updated_at": "2026-11-02T20:47:07Z"
   }
 }
