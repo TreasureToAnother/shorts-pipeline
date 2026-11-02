@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-11-02T20:06:45Z"
+    "status": "done",
+    "message": "generated: Blind Date Betrayal \ud83d\udd70\ufe0f\" #POV",
+    "updated_at": "2026-11-02T20:07:30Z"
   },
   "video_agent": {
     "status": "idle",
