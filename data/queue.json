@@ -28,10 +28,10 @@
     {
       "slot": 3,
       "hour_et": 7,
-      "stage": "generating",
-      "title": null,
-      "video_url": null,
-      "publish_at": null
+      "stage": "uploaded",
+      "title": "He walked into my apartment and shattered everything",
+      "video_url": "https://youtube.com/shorts/4kCuSkNEfmc",
+      "publish_at": "2026-11-03T01:47:02Z"
     },
     {
       "slot": 4,
