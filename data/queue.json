@@ -44,10 +44,10 @@
     {
       "slot": 5,
       "hour_et": 9,
-      "stage": "generating",
-      "title": null,
-      "video_url": null,
-      "publish_at": null
+      "stage": "uploaded",
+      "title": "I've had a crush on Alex for what feels like forever, but I never thought I'd se",
+      "video_url": "https://youtube.com/shorts/eJctHJRipnk",
+      "publish_at": "2026-11-04T01:04:49Z"
     }
   ]
 }
