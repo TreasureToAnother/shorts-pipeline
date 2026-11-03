@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-11-03T20:02:45Z"
+    "status": "done",
+    "message": "generated: I've had a crush on Alex for what feels like forever, but I never thought I'd se",
+    "updated_at": "2026-11-03T20:03:30Z"
   },
   "video_agent": {
     "status": "idle",
