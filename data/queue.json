@@ -28,10 +28,10 @@
     {
       "slot": 3,
       "hour_et": 7,
-      "stage": "generating",
-      "title": null,
-      "video_url": null,
-      "publish_at": null
+      "stage": "uploaded",
+      "title": "I thought I'd found my perfect match in Alex, my charming apartment mate.",
+      "video_url": "https://youtube.com/shorts/LL6iXBZwx6k",
+      "publish_at": "2026-11-03T23:24:22Z"
     },
     {
       "slot": 4,
