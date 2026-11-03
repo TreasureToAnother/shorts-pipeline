@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-11-03T18:22:27Z"
+    "status": "done",
+    "message": "generated: I thought I'd found my perfect match in Alex, my charming apartment mate.",
+    "updated_at": "2026-11-03T18:22:57Z"
   },
   "video_agent": {
     "status": "idle",
