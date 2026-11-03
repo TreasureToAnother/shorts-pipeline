@@ -1,22 +1,22 @@
 {
   "script_agent": {
-    "status": "done",
-    "message": "generated: His eyes locked on mine and I knew I was in trouble \ud83d\ude33\" #SuspenseStory",
-    "updated_at": "2026-11-03T16:56:06Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "video_agent": {
-    "status": "done",
-    "message": "/home/runner/work/shorts-pipeline/shorts-pipeline/agents/../data/output/cc3a2d2f.mp4",
-    "updated_at": "2026-11-03T16:57:13Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "upload_agent": {
-    "status": "done",
-    "message": "scheduled for 2026-11-03T21:57:14Z: https://youtube.com/shorts/zJMi9YOVUmw",
-    "updated_at": "2026-11-03T16:57:17Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "discord_agent": {
-    "status": "done",
-    "message": "notified: His eyes locked on mine and I knew I was in trouble \ud83d\ude33\" #SuspenseStory (scheduled 2026-11-03T21:57:14Z UTC)",
-    "updated_at": "2026-11-03T16:57:20Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   }
 }
