@@ -1,53 +1,53 @@
 {
-  "date": "2026-11-02",
+  "date": "2026-11-03",
   "slots": [
     {
       "slot": 0,
       "hour_et": 4,
-      "stage": "uploaded",
-      "title": "I've been crushing on Alex from group project since the first day.",
-      "video_url": "https://youtube.com/shorts/lWvxTNk5olM",
-      "publish_at": "2026-11-02T23:14:52Z"
+      "stage": "generating",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 1,
       "hour_et": 5,
-      "stage": "uploaded",
-      "title": "My secret's out: he's already been married\"\n\n#POV",
-      "video_url": "https://youtube.com/shorts/7qe1TY2QkPc",
-      "publish_at": "2026-11-03T00:22:32Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 2,
       "hour_et": 6,
-      "stage": "uploaded",
-      "title": "Blind Date Betrayal \ud83d\udd70\ufe0f\" #POV",
-      "video_url": "https://youtube.com/shorts/59sqHK7Mvhc",
-      "publish_at": "2026-11-03T01:08:57Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 3,
       "hour_et": 7,
-      "stage": "uploaded",
-      "title": "He walked into my apartment and shattered everything",
-      "video_url": "https://youtube.com/shorts/4kCuSkNEfmc",
-      "publish_at": "2026-11-03T01:47:02Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 4,
       "hour_et": 8,
-      "stage": "uploaded",
-      "title": "He said I wasn't over him yet \ud83d\udc94",
-      "video_url": "https://youtube.com/shorts/a73Dt0rceDs",
-      "publish_at": "2026-11-03T01:59:02Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 5,
       "hour_et": 9,
-      "stage": "uploaded",
-      "title": "He whispered it just before he revealed his true face \ud83d\ude33",
-      "video_url": "https://youtube.com/shorts/YjOrbdeqLpo",
-      "publish_at": "2026-11-03T03:16:58Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     }
   ]
 }
