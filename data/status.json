@@ -1,22 +1,22 @@
 {
   "script_agent": {
-    "status": "done",
-    "message": "generated: I was sipping on a latte at the campus coffee shop, lost in thought, when I saw ",
-    "updated_at": "2026-11-03T18:47:36Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "video_agent": {
-    "status": "done",
-    "message": "/home/runner/work/shorts-pipeline/shorts-pipeline/agents/../data/output/96883387.mp4",
-    "updated_at": "2026-11-03T18:49:11Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "upload_agent": {
-    "status": "done",
-    "message": "scheduled for 2026-11-03T23:49:21Z: https://youtube.com/shorts/hSvef-66s8Y",
-    "updated_at": "2026-11-03T18:49:35Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "discord_agent": {
-    "status": "done",
-    "message": "notified: I was sipping on a latte at the campus coffee shop, lost in thought, when I saw  (scheduled 2026-11-03T23:49:21Z UTC)",
-    "updated_at": "2026-11-03T18:49:57Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   }
 }
