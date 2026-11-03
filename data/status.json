@@ -1,22 +1,22 @@
 {
   "script_agent": {
-    "status": "done",
-    "message": "generated: Watching me back\"\n\n#GuiltySecrets",
-    "updated_at": "2026-11-03T17:41:47Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "video_agent": {
-    "status": "done",
-    "message": "/home/runner/work/shorts-pipeline/shorts-pipeline/agents/../data/output/c6e17f8e.mp4",
-    "updated_at": "2026-11-03T17:43:00Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "upload_agent": {
-    "status": "done",
-    "message": "scheduled for 2026-11-03T22:43:04Z: https://youtube.com/shorts/N9nGfH6d6Gk",
-    "updated_at": "2026-11-03T17:43:09Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "discord_agent": {
-    "status": "done",
-    "message": "notified: Watching me back\"\n\n#GuiltySecrets (scheduled 2026-11-03T22:43:04Z UTC)",
-    "updated_at": "2026-11-03T17:43:18Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   }
 }
