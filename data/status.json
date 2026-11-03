@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-11-03T17:41:04Z"
+    "status": "done",
+    "message": "generated: Watching me back\"\n\n#GuiltySecrets",
+    "updated_at": "2026-11-03T17:41:47Z"
   },
   "video_agent": {
     "status": "idle",
