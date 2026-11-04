@@ -1,22 +1,22 @@
 {
   "script_agent": {
-    "status": "done",
-    "message": "generated: I'll never forget the day I realized my secret crush on Alex was more than just ",
-    "updated_at": "2026-11-04T16:12:03Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "video_agent": {
-    "status": "done",
-    "message": "/home/runner/work/shorts-pipeline/shorts-pipeline/agents/../data/output/60945ddb.mp4",
-    "updated_at": "2026-11-04T16:13:23Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "upload_agent": {
-    "status": "done",
-    "message": "scheduled for 2026-11-04T21:13:24Z: https://youtube.com/shorts/avXew1GQEMg",
-    "updated_at": "2026-11-04T16:13:31Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "discord_agent": {
-    "status": "done",
-    "message": "notified: I'll never forget the day I realized my secret crush on Alex was more than just  (scheduled 2026-11-04T21:13:24Z UTC)",
-    "updated_at": "2026-11-04T16:13:33Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   }
 }
