@@ -1,53 +1,53 @@
 {
-  "date": "2026-11-03",
+  "date": "2026-11-04",
   "slots": [
     {
       "slot": 0,
       "hour_et": 4,
-      "stage": "uploaded",
-      "title": "He asked for my number, but I think I gave him my heart \ud83e\udd14",
-      "video_url": "https://youtube.com/shorts/nsGQ6exUMDY",
-      "publish_at": "2026-11-03T21:09:03Z"
+      "stage": "generating",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 1,
       "hour_et": 5,
-      "stage": "uploaded",
-      "title": "His eyes locked on mine and I knew I was in trouble \ud83d\ude33\" #SuspenseStory",
-      "video_url": "https://youtube.com/shorts/zJMi9YOVUmw",
-      "publish_at": "2026-11-03T21:57:14Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 2,
       "hour_et": 6,
-      "stage": "uploaded",
-      "title": "Watching me back\"\n\n#GuiltySecrets",
-      "video_url": "https://youtube.com/shorts/N9nGfH6d6Gk",
-      "publish_at": "2026-11-03T22:43:04Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 3,
       "hour_et": 7,
-      "stage": "uploaded",
-      "title": "I thought I'd found my perfect match in Alex, my charming apartment mate.",
-      "video_url": "https://youtube.com/shorts/LL6iXBZwx6k",
-      "publish_at": "2026-11-03T23:24:22Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 4,
       "hour_et": 8,
-      "stage": "uploaded",
-      "title": "I was sipping on a latte at the campus coffee shop, lost in thought, when I saw ",
-      "video_url": "https://youtube.com/shorts/hSvef-66s8Y",
-      "publish_at": "2026-11-03T23:49:21Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 5,
       "hour_et": 9,
-      "stage": "uploaded",
-      "title": "I've had a crush on Alex for what feels like forever, but I never thought I'd se",
-      "video_url": "https://youtube.com/shorts/eJctHJRipnk",
-      "publish_at": "2026-11-04T01:04:49Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     }
   ]
 }
