@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-11-04T20:21:47Z"
+    "status": "done",
+    "message": "generated: I still remember the day I stumbled upon the hidden folder on my roommate Emma's",
+    "updated_at": "2026-11-04T20:22:34Z"
   },
   "video_agent": {
     "status": "idle",
