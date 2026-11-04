@@ -28,10 +28,10 @@
     {
       "slot": 3,
       "hour_et": 7,
-      "stage": "generating",
-      "title": null,
-      "video_url": null,
-      "publish_at": null
+      "stage": "uploaded",
+      "title": "I poured the perfect shot of espresso, feeling like I was on top of the world.",
+      "video_url": "https://youtube.com/shorts/3xYMzcJvyFI",
+      "publish_at": "2026-11-04T23:37:10Z"
     },
     {
       "slot": 4,
