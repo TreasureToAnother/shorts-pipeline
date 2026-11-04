@@ -36,10 +36,10 @@
     {
       "slot": 4,
       "hour_et": 8,
-      "stage": "generating",
-      "title": null,
-      "video_url": null,
-      "publish_at": null
+      "stage": "uploaded",
+      "title": "I've been waiting for this night for weeks, the dim lighting of the restaurant a",
+      "video_url": "https://youtube.com/shorts/AGLuN4H-CgU",
+      "publish_at": "2026-11-05T00:00:22Z"
     },
     {
       "slot": 5,
