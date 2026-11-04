@@ -1,22 +1,22 @@
 {
   "script_agent": {
-    "status": "done",
-    "message": "generated: I've had a crush on Alex for what feels like forever, but I never thought I'd se",
-    "updated_at": "2026-11-03T20:03:30Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "video_agent": {
-    "status": "done",
-    "message": "/home/runner/work/shorts-pipeline/shorts-pipeline/agents/../data/output/691b4313.mp4",
-    "updated_at": "2026-11-03T20:04:48Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "upload_agent": {
-    "status": "done",
-    "message": "scheduled for 2026-11-04T01:04:49Z: https://youtube.com/shorts/eJctHJRipnk",
-    "updated_at": "2026-11-03T20:04:53Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "discord_agent": {
-    "status": "done",
-    "message": "notified: I've had a crush on Alex for what feels like forever, but I never thought I'd se (scheduled 2026-11-04T01:04:49Z UTC)",
-    "updated_at": "2026-11-03T20:04:56Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   }
 }
