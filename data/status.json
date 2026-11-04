@@ -15,8 +15,8 @@
     "updated_at": "2026-11-04T18:37:14Z"
   },
   "discord_agent": {
-    "status": "running",
-    "message": "posting upload notification",
-    "updated_at": "2026-11-04T18:37:15Z"
+    "status": "done",
+    "message": "notified: I poured the perfect shot of espresso, feeling like I was on top of the world. (scheduled 2026-11-04T23:37:10Z UTC)",
+    "updated_at": "2026-11-04T18:37:16Z"
   }
 }
