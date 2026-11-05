@@ -1,53 +1,53 @@
 {
-  "date": "2026-11-04",
+  "date": "2026-11-05",
   "slots": [
     {
       "slot": 0,
       "hour_et": 4,
-      "stage": "uploaded",
-      "title": "I'll never forget the day I realized my secret crush on Alex was more than just ",
-      "video_url": "https://youtube.com/shorts/avXew1GQEMg",
-      "publish_at": "2026-11-04T21:13:24Z"
+      "stage": "generating",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 1,
       "hour_et": 5,
-      "stage": "uploaded",
-      "title": "I'll never forget the way Max smiled at me, his eyes crinkling at the corners as",
-      "video_url": "https://youtube.com/shorts/vvyv-c5lXfE",
-      "publish_at": "2026-11-04T22:01:11Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 2,
       "hour_et": 6,
-      "stage": "uploaded",
-      "title": "I stared blankly at my screen as my phone buzzed with an incoming text from him.",
-      "video_url": "https://youtube.com/shorts/TToqeZGx_eU",
-      "publish_at": "2026-11-04T22:54:46Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 3,
       "hour_et": 7,
-      "stage": "uploaded",
-      "title": "I poured the perfect shot of espresso, feeling like I was on top of the world.",
-      "video_url": "https://youtube.com/shorts/3xYMzcJvyFI",
-      "publish_at": "2026-11-04T23:37:10Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 4,
       "hour_et": 8,
-      "stage": "uploaded",
-      "title": "I've been waiting for this night for weeks, the dim lighting of the restaurant a",
-      "video_url": "https://youtube.com/shorts/AGLuN4H-CgU",
-      "publish_at": "2026-11-05T00:00:22Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 5,
       "hour_et": 9,
-      "stage": "uploaded",
-      "title": "I still remember the day I stumbled upon the hidden folder on my roommate Emma's",
-      "video_url": "https://youtube.com/shorts/PEADAxwHz0E",
-      "publish_at": "2026-11-05T01:23:51Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     }
   ]
 }
