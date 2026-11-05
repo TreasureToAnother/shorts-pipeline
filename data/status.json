@@ -1,22 +1,22 @@
 {
   "script_agent": {
-    "status": "done",
-    "message": "generated: I still remember the way he smiled at me, like he was the only one in the diner.",
-    "updated_at": "2026-11-05T19:10:22Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "video_agent": {
-    "status": "done",
-    "message": "/home/runner/work/shorts-pipeline/shorts-pipeline/agents/../data/output/a38714a2.mp4",
-    "updated_at": "2026-11-05T19:11:46Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "upload_agent": {
-    "status": "done",
-    "message": "scheduled for 2026-11-06T00:11:48Z: https://youtube.com/shorts/X_VurJYzPkc",
-    "updated_at": "2026-11-05T19:11:51Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "discord_agent": {
-    "status": "done",
-    "message": "notified: I still remember the way he smiled at me, like he was the only one in the diner. (scheduled 2026-11-06T00:11:48Z UTC)",
-    "updated_at": "2026-11-05T19:11:55Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   }
 }
