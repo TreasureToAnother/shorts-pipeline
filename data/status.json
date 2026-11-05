@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-11-05T18:40:10Z"
+    "status": "done",
+    "message": "generated: Emma turned on me and now my ex is the worst thing that ever happened to me \ud83e\udd2f",
+    "updated_at": "2026-11-05T18:40:27Z"
   },
   "video_agent": {
     "status": "idle",
