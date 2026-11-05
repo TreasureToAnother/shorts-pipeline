@@ -36,10 +36,10 @@
     {
       "slot": 4,
       "hour_et": 8,
-      "stage": "generating",
-      "title": null,
-      "video_url": null,
-      "publish_at": null
+      "stage": "uploaded",
+      "title": "I still remember the way he smiled at me, like he was the only one in the diner.",
+      "video_url": "https://youtube.com/shorts/X_VurJYzPkc",
+      "publish_at": "2026-11-06T00:11:48Z"
     },
     {
       "slot": 5,
