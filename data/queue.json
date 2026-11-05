@@ -44,10 +44,10 @@
     {
       "slot": 5,
       "hour_et": 9,
-      "stage": "generating",
-      "title": null,
-      "video_url": null,
-      "publish_at": null
+      "stage": "uploaded",
+      "title": "He caught me drawing his name on his favorite mug \ud83d\ude0a",
+      "video_url": "https://youtube.com/shorts/tjjQowxKqM4",
+      "publish_at": "2026-11-06T01:33:27Z"
     }
   ]
 }
