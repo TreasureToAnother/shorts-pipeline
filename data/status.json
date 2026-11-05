@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-11-05T17:15:59Z"
+    "status": "done",
+    "message": "generated: Caught in the frame, and now I'm the subject of betrayal \ud83d\udcf8\" #POVbetrayed",
+    "updated_at": "2026-11-05T17:17:00Z"
   },
   "video_agent": {
     "status": "idle",
