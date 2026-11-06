@@ -1,22 +1,22 @@
 {
   "script_agent": {
-    "status": "done",
-    "message": "generated: I stood at the bar, nursing a glass of wine as our mutual friend celebrated her ",
-    "updated_at": "2026-11-06T17:56:08Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "video_agent": {
-    "status": "done",
-    "message": "/home/runner/work/shorts-pipeline/shorts-pipeline/agents/../data/output/fe9e667b.mp4",
-    "updated_at": "2026-11-06T17:57:20Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "upload_agent": {
-    "status": "done",
-    "message": "scheduled for 2026-11-06T22:57:21Z: https://youtube.com/shorts/bShJxw4Jfb8",
-    "updated_at": "2026-11-06T17:57:25Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "discord_agent": {
-    "status": "done",
-    "message": "notified: I stood at the bar, nursing a glass of wine as our mutual friend celebrated her  (scheduled 2026-11-06T22:57:21Z UTC)",
-    "updated_at": "2026-11-06T17:57:27Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   }
 }
