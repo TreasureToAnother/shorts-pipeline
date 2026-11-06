@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-11-06T17:17:09Z"
+    "status": "done",
+    "message": "generated: I still remember the night my best friend, Alex, convinced us to ditch our study",
+    "updated_at": "2026-11-06T17:17:38Z"
   },
   "video_agent": {
     "status": "idle",
