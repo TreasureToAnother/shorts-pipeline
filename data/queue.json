@@ -36,10 +36,10 @@
     {
       "slot": 4,
       "hour_et": 8,
-      "stage": "generating",
-      "title": null,
-      "video_url": null,
-      "publish_at": null
+      "stage": "uploaded",
+      "title": "The tech whiz who fixed my coffee machine, but stole my heart \ud83d\udc94",
+      "video_url": "https://youtube.com/shorts/1htE1FQB92M",
+      "publish_at": "2026-11-06T23:37:54Z"
     },
     {
       "slot": 5,
