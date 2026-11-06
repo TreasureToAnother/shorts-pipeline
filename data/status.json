@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-11-06T17:55:29Z"
+    "status": "done",
+    "message": "generated: I stood at the bar, nursing a glass of wine as our mutual friend celebrated her ",
+    "updated_at": "2026-11-06T17:56:08Z"
   },
   "video_agent": {
     "status": "idle",
