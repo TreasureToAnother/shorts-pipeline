@@ -28,10 +28,10 @@
     {
       "slot": 3,
       "hour_et": 7,
-      "stage": "generating",
-      "title": null,
-      "video_url": null,
-      "publish_at": null
+      "stage": "uploaded",
+      "title": "I stood at the bar, nursing a glass of wine as our mutual friend celebrated her ",
+      "video_url": "https://youtube.com/shorts/bShJxw4Jfb8",
+      "publish_at": "2026-11-06T22:57:21Z"
     },
     {
       "slot": 4,
