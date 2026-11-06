@@ -1,53 +1,53 @@
 {
-  "date": "2026-11-05",
+  "date": "2026-11-06",
   "slots": [
     {
       "slot": 0,
       "hour_et": 4,
-      "stage": "uploaded",
-      "title": "I've been crushing on him since freshman year, the guy who always orders the las",
-      "video_url": "https://youtube.com/shorts/458axeDJp7Y",
-      "publish_at": "2026-11-05T21:27:26Z"
+      "stage": "generating",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 1,
       "hour_et": 5,
-      "stage": "uploaded",
-      "title": "Caught in the frame, and now I'm the subject of betrayal \ud83d\udcf8\" #POVbetrayed",
-      "video_url": "https://youtube.com/shorts/DYIRmQ3YLsk",
-      "publish_at": "2026-11-05T22:19:13Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 2,
       "hour_et": 6,
-      "stage": "uploaded",
-      "title": "I sipped my coffee, trying to play it cool, as he ordered his drink.",
-      "video_url": "https://youtube.com/shorts/-MqEWQwJNIQ",
-      "publish_at": "2026-11-05T22:58:01Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 3,
       "hour_et": 7,
-      "stage": "uploaded",
-      "title": "Emma turned on me and now my ex is the worst thing that ever happened to me \ud83e\udd2f",
-      "video_url": "https://youtube.com/shorts/MaGd2qy5RUo",
-      "publish_at": "2026-11-05T23:41:22Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 4,
       "hour_et": 8,
-      "stage": "uploaded",
-      "title": "I still remember the way he smiled at me, like he was the only one in the diner.",
-      "video_url": "https://youtube.com/shorts/X_VurJYzPkc",
-      "publish_at": "2026-11-06T00:11:48Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 5,
       "hour_et": 9,
-      "stage": "uploaded",
-      "title": "He caught me drawing his name on his favorite mug \ud83d\ude0a",
-      "video_url": "https://youtube.com/shorts/tjjQowxKqM4",
-      "publish_at": "2026-11-06T01:33:27Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     }
   ]
 }
