@@ -4,10 +4,10 @@
     {
       "slot": 0,
       "hour_et": 4,
-      "stage": "generating",
-      "title": null,
-      "video_url": null,
-      "publish_at": null
+      "stage": "uploaded",
+      "title": "I'm standing across the room, camera in hand, trying to capture the perfect shot",
+      "video_url": "https://youtube.com/shorts/ldeL7fpnwJc",
+      "publish_at": "2026-11-06T20:55:29Z"
     },
     {
       "slot": 1,
