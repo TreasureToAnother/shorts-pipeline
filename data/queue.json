@@ -44,10 +44,10 @@
     {
       "slot": 5,
       "hour_et": 9,
-      "stage": "generating",
-      "title": null,
-      "video_url": null,
-      "publish_at": null
+      "stage": "uploaded",
+      "title": "I've been waiting for this night for weeks, the dim lighting and soft music maki",
+      "video_url": "https://youtube.com/shorts/z3ldqsRed-M",
+      "publish_at": "2026-11-07T19:54:00Z"
     }
   ]
 }
