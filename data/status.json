@@ -10,9 +10,9 @@
     "updated_at": "2026-11-07T16:51:04Z"
   },
   "upload_agent": {
-    "status": "idle",
-    "message": "",
-    "updated_at": null
+    "status": "running",
+    "message": "uploading acadf7df.mp4",
+    "updated_at": "2026-11-07T16:51:05Z"
   },
   "discord_agent": {
     "status": "idle",
