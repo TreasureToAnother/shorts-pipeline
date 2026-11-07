@@ -1,22 +1,22 @@
 {
   "script_agent": {
-    "status": "done",
-    "message": "generated: Who was she? \ud83d\udd25\" #BetrayalAlert",
-    "updated_at": "2026-11-07T16:14:29Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "video_agent": {
-    "status": "done",
-    "message": "/home/runner/work/shorts-pipeline/shorts-pipeline/agents/../data/output/d5a25461.mp4",
-    "updated_at": "2026-11-07T16:15:55Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "upload_agent": {
-    "status": "done",
-    "message": "scheduled for 2026-11-07T21:15:56Z: https://youtube.com/shorts/R-ams-yruEU",
-    "updated_at": "2026-11-07T16:15:59Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "discord_agent": {
-    "status": "done",
-    "message": "notified: Who was she? \ud83d\udd25\" #BetrayalAlert (scheduled 2026-11-07T21:15:56Z UTC)",
-    "updated_at": "2026-11-07T16:16:02Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   }
 }
