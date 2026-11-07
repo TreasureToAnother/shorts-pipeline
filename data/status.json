@@ -1,22 +1,22 @@
 {
   "script_agent": {
-    "status": "done",
-    "message": "generated: Behind the bar, a familiar face\"\n\n#BetrayalAtTheBar",
-    "updated_at": "2026-11-06T19:55:19Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "video_agent": {
-    "status": "done",
-    "message": "/home/runner/work/shorts-pipeline/shorts-pipeline/agents/../data/output/4756a4ca.mp4",
-    "updated_at": "2026-11-06T19:56:14Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "upload_agent": {
-    "status": "done",
-    "message": "scheduled for 2026-11-07T00:56:15Z: https://youtube.com/shorts/9yblhxzR-2M",
-    "updated_at": "2026-11-06T19:56:19Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "discord_agent": {
-    "status": "done",
-    "message": "notified: Behind the bar, a familiar face\"\n\n#BetrayalAtTheBar (scheduled 2026-11-07T00:56:15Z UTC)",
-    "updated_at": "2026-11-06T19:56:21Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   }
 }
