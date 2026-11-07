@@ -10,9 +10,9 @@
     "updated_at": "2026-11-07T16:15:55Z"
   },
   "upload_agent": {
-    "status": "running",
-    "message": "uploading d5a25461.mp4",
-    "updated_at": "2026-11-07T16:15:56Z"
+    "status": "done",
+    "message": "scheduled for 2026-11-07T21:15:56Z: https://youtube.com/shorts/R-ams-yruEU",
+    "updated_at": "2026-11-07T16:15:59Z"
   },
   "discord_agent": {
     "status": "idle",
