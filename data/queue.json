@@ -1,53 +1,53 @@
 {
-  "date": "2026-11-06",
+  "date": "2026-11-07",
   "slots": [
     {
       "slot": 0,
       "hour_et": 4,
-      "stage": "uploaded",
-      "title": "I'm standing across the room, camera in hand, trying to capture the perfect shot",
-      "video_url": "https://youtube.com/shorts/ldeL7fpnwJc",
-      "publish_at": "2026-11-06T20:55:29Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 1,
       "hour_et": 5,
-      "stage": "uploaded",
-      "title": "I'd been crushing on Alex for months, and tonight was the perfect opportunity to",
-      "video_url": "https://youtube.com/shorts/6lFoIemS8s4",
-      "publish_at": "2026-11-06T21:43:40Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 2,
       "hour_et": 6,
-      "stage": "uploaded",
-      "title": "I still remember the night my best friend, Alex, convinced us to ditch our study",
-      "video_url": "https://youtube.com/shorts/ZMr3RQ0vnTY",
-      "publish_at": "2026-11-06T22:18:44Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 3,
       "hour_et": 7,
-      "stage": "uploaded",
-      "title": "I stood at the bar, nursing a glass of wine as our mutual friend celebrated her ",
-      "video_url": "https://youtube.com/shorts/bShJxw4Jfb8",
-      "publish_at": "2026-11-06T22:57:21Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 4,
       "hour_et": 8,
-      "stage": "uploaded",
-      "title": "The tech whiz who fixed my coffee machine, but stole my heart \ud83d\udc94",
-      "video_url": "https://youtube.com/shorts/1htE1FQB92M",
-      "publish_at": "2026-11-06T23:37:54Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 5,
       "hour_et": 9,
-      "stage": "uploaded",
-      "title": "Behind the bar, a familiar face\"\n\n#BetrayalAtTheBar",
-      "video_url": "https://youtube.com/shorts/9yblhxzR-2M",
-      "publish_at": "2026-11-07T00:56:15Z"
+      "stage": "generating",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     }
   ]
 }
