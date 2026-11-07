@@ -1,22 +1,22 @@
 {
   "script_agent": {
-    "status": "done",
-    "message": "generated: His number: Best Friend 4Ever \ud83d\udc94 #StoryTime",
-    "updated_at": "2026-11-07T15:34:42Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "video_agent": {
-    "status": "done",
-    "message": "/home/runner/work/shorts-pipeline/shorts-pipeline/agents/../data/output/9f719edd.mp4",
-    "updated_at": "2026-11-07T15:35:38Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "upload_agent": {
-    "status": "done",
-    "message": "scheduled for 2026-11-07T20:35:39Z: https://youtube.com/shorts/AoOUAoKM4xo",
-    "updated_at": "2026-11-07T15:35:42Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "discord_agent": {
-    "status": "done",
-    "message": "notified: His number: Best Friend 4Ever \ud83d\udc94 #StoryTime (scheduled 2026-11-07T20:35:39Z UTC)",
-    "updated_at": "2026-11-07T15:35:44Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   }
 }
