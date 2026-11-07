@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-11-07T14:52:30Z"
+    "status": "done",
+    "message": "generated: I've been waiting for this night for weeks, the dim lighting and soft music maki",
+    "updated_at": "2026-11-07T14:52:56Z"
   },
   "video_agent": {
     "status": "idle",
