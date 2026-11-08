@@ -1,22 +1,22 @@
 {
   "script_agent": {
-    "status": "done",
-    "message": "generated: I met him at summer camp, where we both escaped reality for a few weeks.",
-    "updated_at": "2026-11-08T15:01:00Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "video_agent": {
-    "status": "done",
-    "message": "/home/runner/work/shorts-pipeline/shorts-pipeline/agents/../data/output/f2db61ff.mp4",
-    "updated_at": "2026-11-08T15:02:13Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "upload_agent": {
-    "status": "done",
-    "message": "scheduled for 2026-11-08T20:02:14Z: https://youtube.com/shorts/7rQFHC4Qd2w",
-    "updated_at": "2026-11-08T15:02:17Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "discord_agent": {
-    "status": "done",
-    "message": "notified: I met him at summer camp, where we both escaped reality for a few weeks. (scheduled 2026-11-08T20:02:14Z UTC)",
-    "updated_at": "2026-11-08T15:02:19Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   }
 }
