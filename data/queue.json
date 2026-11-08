@@ -28,10 +28,10 @@
     {
       "slot": 3,
       "hour_et": 7,
-      "stage": "generating",
-      "title": null,
-      "video_url": null,
-      "publish_at": null
+      "stage": "uploaded",
+      "title": "He walked into my life with a secret",
+      "video_url": "https://youtube.com/shorts/jT2ZfPWtqT4",
+      "publish_at": "2026-11-08T22:01:35Z"
     },
     {
       "slot": 4,
