@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-11-08T15:00:29Z"
+    "status": "done",
+    "message": "generated: I met him at summer camp, where we both escaped reality for a few weeks.",
+    "updated_at": "2026-11-08T15:01:00Z"
   },
   "video_agent": {
     "status": "idle",
