@@ -4,10 +4,10 @@
     {
       "slot": 0,
       "hour_et": 4,
-      "stage": "generating",
-      "title": null,
-      "video_url": null,
-      "publish_at": null
+      "stage": "uploaded",
+      "title": "I met him at summer camp, where we both escaped reality for a few weeks.",
+      "video_url": "https://youtube.com/shorts/7rQFHC4Qd2w",
+      "publish_at": "2026-11-08T20:02:14Z"
     },
     {
       "slot": 1,
