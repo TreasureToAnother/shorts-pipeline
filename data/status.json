@@ -1,22 +1,22 @@
 {
   "script_agent": {
-    "status": "done",
-    "message": "generated: I poured my heart into that last shift, pouring drinks and pretending to be fine",
-    "updated_at": "2026-11-08T17:19:22Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "video_agent": {
-    "status": "done",
-    "message": "/home/runner/work/shorts-pipeline/shorts-pipeline/agents/../data/output/a2b97421.mp4",
-    "updated_at": "2026-11-08T17:20:24Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "upload_agent": {
-    "status": "done",
-    "message": "scheduled for 2026-11-08T22:20:26Z: https://youtube.com/shorts/L2toNus8JyY",
-    "updated_at": "2026-11-08T17:20:30Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "discord_agent": {
-    "status": "done",
-    "message": "notified: I poured my heart into that last shift, pouring drinks and pretending to be fine (scheduled 2026-11-08T22:20:26Z UTC)",
-    "updated_at": "2026-11-08T17:20:32Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   }
 }
