@@ -1,22 +1,22 @@
 {
   "script_agent": {
-    "status": "done",
-    "message": "generated: I was pouring drinks for the couple on their first date when I saw him walk in \u2013",
-    "updated_at": "2026-11-08T15:54:38Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "video_agent": {
-    "status": "done",
-    "message": "/home/runner/work/shorts-pipeline/shorts-pipeline/agents/../data/output/4f51c4a4.mp4",
-    "updated_at": "2026-11-08T15:56:08Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "upload_agent": {
-    "status": "done",
-    "message": "scheduled for 2026-11-08T20:56:09Z: https://youtube.com/shorts/Ku-NTLYvSgU",
-    "updated_at": "2026-11-08T15:56:13Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "discord_agent": {
-    "status": "done",
-    "message": "notified: I was pouring drinks for the couple on their first date when I saw him walk in \u2013 (scheduled 2026-11-08T20:56:09Z UTC)",
-    "updated_at": "2026-11-08T15:56:15Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   }
 }
