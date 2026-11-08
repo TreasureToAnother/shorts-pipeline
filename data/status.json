@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-11-08T15:53:50Z"
+    "status": "done",
+    "message": "generated: I was pouring drinks for the couple on their first date when I saw him walk in \u2013",
+    "updated_at": "2026-11-08T15:54:38Z"
   },
   "video_agent": {
     "status": "idle",
