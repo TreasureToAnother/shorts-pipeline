@@ -1,22 +1,22 @@
 {
   "script_agent": {
-    "status": "done",
-    "message": "generated: I pour steaming hot coffee into the cup in front of me, trying to shake off the ",
-    "updated_at": "2026-11-07T18:01:08Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "video_agent": {
-    "status": "done",
-    "message": "/home/runner/work/shorts-pipeline/shorts-pipeline/agents/../data/output/7de53d78.mp4",
-    "updated_at": "2026-11-07T18:02:37Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "upload_agent": {
-    "status": "done",
-    "message": "scheduled for 2026-11-07T23:02:38Z: https://youtube.com/shorts/Isg4v9vdnJc",
-    "updated_at": "2026-11-07T18:02:41Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "discord_agent": {
-    "status": "done",
-    "message": "notified: I pour steaming hot coffee into the cup in front of me, trying to shake off the  (scheduled 2026-11-07T23:02:38Z UTC)",
-    "updated_at": "2026-11-07T18:02:44Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   }
 }
