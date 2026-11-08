@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-11-08T18:17:09Z"
+    "status": "done",
+    "message": "generated: I was driving down the highway, windows down, friends laughing in the backseat, ",
+    "updated_at": "2026-11-08T18:17:32Z"
   },
   "video_agent": {
     "status": "idle",
