@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-11-08T17:00:06Z"
+    "status": "done",
+    "message": "generated: He walked into my life with a secret",
+    "updated_at": "2026-11-08T17:00:28Z"
   },
   "video_agent": {
     "status": "idle",
