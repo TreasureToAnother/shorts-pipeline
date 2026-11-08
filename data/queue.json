@@ -36,10 +36,10 @@
     {
       "slot": 4,
       "hour_et": 8,
-      "stage": "generating",
-      "title": null,
-      "video_url": null,
-      "publish_at": null
+      "stage": "uploaded",
+      "title": "I poured my heart into that last shift, pouring drinks and pretending to be fine",
+      "video_url": "https://youtube.com/shorts/L2toNus8JyY",
+      "publish_at": "2026-11-08T22:20:26Z"
     },
     {
       "slot": 5,
