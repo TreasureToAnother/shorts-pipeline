@@ -15,8 +15,8 @@
     "updated_at": "2026-11-08T18:18:38Z"
   },
   "discord_agent": {
-    "status": "running",
-    "message": "posting upload notification",
-    "updated_at": "2026-11-08T18:18:39Z"
+    "status": "done",
+    "message": "notified: I was driving down the highway, windows down, friends laughing in the backseat,  (scheduled 2026-11-08T23:18:35Z UTC)",
+    "updated_at": "2026-11-08T18:18:40Z"
   }
 }
