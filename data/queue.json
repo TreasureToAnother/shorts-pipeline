@@ -44,10 +44,10 @@
     {
       "slot": 5,
       "hour_et": 9,
-      "stage": "generating",
-      "title": null,
-      "video_url": null,
-      "publish_at": null
+      "stage": "uploaded",
+      "title": "I was driving down the highway, windows down, friends laughing in the backseat, ",
+      "video_url": "https://youtube.com/shorts/Py-c5czkBlY",
+      "publish_at": "2026-11-08T23:18:35Z"
     }
   ]
 }
