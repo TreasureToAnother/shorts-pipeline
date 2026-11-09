@@ -1,22 +1,22 @@
 {
   "script_agent": {
-    "status": "done",
-    "message": "generated: My photo didn't capture the secret he kept",
-    "updated_at": "2026-11-09T20:33:38Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "video_agent": {
-    "status": "done",
-    "message": "/home/runner/work/shorts-pipeline/shorts-pipeline/agents/../data/output/327fb5ba.mp4",
-    "updated_at": "2026-11-09T20:34:48Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "upload_agent": {
-    "status": "done",
-    "message": "scheduled for 2026-11-10T01:34:49Z: https://youtube.com/shorts/MnDHqNeirms",
-    "updated_at": "2026-11-09T20:34:54Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "discord_agent": {
-    "status": "done",
-    "message": "notified: My photo didn't capture the secret he kept (scheduled 2026-11-10T01:34:49Z UTC)",
-    "updated_at": "2026-11-09T20:34:56Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   }
 }
