@@ -36,10 +36,10 @@
     {
       "slot": 4,
       "hour_et": 8,
-      "stage": "generating",
-      "title": null,
-      "video_url": null,
-      "publish_at": null
+      "stage": "uploaded",
+      "title": "I'm sitting in the conference room with my coworkers, trying to focus on the int",
+      "video_url": "https://youtube.com/shorts/7EhqfqETmcM",
+      "publish_at": "2026-11-10T02:43:30Z"
     },
     {
       "slot": 5,
