@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-11-09T18:41:16Z"
+    "status": "done",
+    "message": "generated: I'm sitting in my dorm room, surrounded by textbooks and notes, trying to cram i",
+    "updated_at": "2026-11-09T18:42:01Z"
   },
   "video_agent": {
     "status": "idle",
