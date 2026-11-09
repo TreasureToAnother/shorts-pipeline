@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-11-09T22:57:08Z"
+    "status": "done",
+    "message": "generated: His secret crush exposed \ud83d\udc94 #betrayedbylove",
+    "updated_at": "2026-11-09T22:57:49Z"
   },
   "video_agent": {
     "status": "idle",
