@@ -15,8 +15,8 @@
     "updated_at": "2026-11-09T20:34:54Z"
   },
   "discord_agent": {
-    "status": "running",
-    "message": "posting upload notification",
-    "updated_at": "2026-11-09T20:34:55Z"
+    "status": "done",
+    "message": "notified: My photo didn't capture the secret he kept (scheduled 2026-11-10T01:34:49Z UTC)",
+    "updated_at": "2026-11-09T20:34:56Z"
   }
 }
