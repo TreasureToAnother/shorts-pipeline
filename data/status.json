@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-11-09T19:41:44Z"
+    "status": "done",
+    "message": "generated: I saw it in his pocket, the text on his phone",
+    "updated_at": "2026-11-09T19:42:22Z"
   },
   "video_agent": {
     "status": "idle",
