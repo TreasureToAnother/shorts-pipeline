@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-11-09T21:23:57Z"
+    "status": "done",
+    "message": "generated: The Boy Who's Been Watching Me\"\n\n#SuspensefulSecrets",
+    "updated_at": "2026-11-09T21:24:14Z"
   },
   "video_agent": {
     "status": "idle",
