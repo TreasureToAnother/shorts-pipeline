@@ -12,10 +12,10 @@
     {
       "slot": 1,
       "hour_et": 5,
-      "stage": "generating",
-      "title": null,
-      "video_url": null,
-      "publish_at": null
+      "stage": "uploaded",
+      "title": "I saw it in his pocket, the text on his phone",
+      "video_url": "https://youtube.com/shorts/yNcrRP4X6os",
+      "publish_at": "2026-11-10T00:43:34Z"
     },
     {
       "slot": 2,
