@@ -1,53 +1,53 @@
 {
-  "date": "2026-11-08",
+  "date": "2026-11-09",
   "slots": [
     {
       "slot": 0,
       "hour_et": 4,
-      "stage": "uploaded",
-      "title": "I met him at summer camp, where we both escaped reality for a few weeks.",
-      "video_url": "https://youtube.com/shorts/7rQFHC4Qd2w",
-      "publish_at": "2026-11-08T20:02:14Z"
+      "stage": "generating",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 1,
       "hour_et": 5,
-      "stage": "uploaded",
-      "title": "I was pouring drinks for the couple on their first date when I saw him walk in \u2013",
-      "video_url": "https://youtube.com/shorts/Ku-NTLYvSgU",
-      "publish_at": "2026-11-08T20:56:09Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 2,
       "hour_et": 6,
-      "stage": "uploaded",
-      "title": "I stood behind the wedding cake, watching as the bride and groom shared their fi",
-      "video_url": "https://youtube.com/shorts/ciLmCuNQIzY",
-      "publish_at": "2026-11-08T21:35:20Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 3,
       "hour_et": 7,
-      "stage": "uploaded",
-      "title": "He walked into my life with a secret",
-      "video_url": "https://youtube.com/shorts/jT2ZfPWtqT4",
-      "publish_at": "2026-11-08T22:01:35Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 4,
       "hour_et": 8,
-      "stage": "uploaded",
-      "title": "I poured my heart into that last shift, pouring drinks and pretending to be fine",
-      "video_url": "https://youtube.com/shorts/L2toNus8JyY",
-      "publish_at": "2026-11-08T22:20:26Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 5,
       "hour_et": 9,
-      "stage": "uploaded",
-      "title": "I was driving down the highway, windows down, friends laughing in the backseat, ",
-      "video_url": "https://youtube.com/shorts/Py-c5czkBlY",
-      "publish_at": "2026-11-08T23:18:35Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     }
   ]
 }
