@@ -1,22 +1,22 @@
 {
   "script_agent": {
-    "status": "done",
-    "message": "generated: I'm sitting in the conference room with my coworkers, trying to focus on the int",
-    "updated_at": "2026-11-09T21:42:00Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "video_agent": {
-    "status": "done",
-    "message": "/home/runner/work/shorts-pipeline/shorts-pipeline/agents/../data/output/09cb5be5.mp4",
-    "updated_at": "2026-11-09T21:43:29Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "upload_agent": {
-    "status": "done",
-    "message": "scheduled for 2026-11-10T02:43:30Z: https://youtube.com/shorts/7EhqfqETmcM",
-    "updated_at": "2026-11-09T21:43:34Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "discord_agent": {
-    "status": "done",
-    "message": "notified: I'm sitting in the conference room with my coworkers, trying to focus on the int (scheduled 2026-11-10T02:43:30Z UTC)",
-    "updated_at": "2026-11-09T21:43:36Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   }
 }
