@@ -4,10 +4,10 @@
     {
       "slot": 0,
       "hour_et": 4,
-      "stage": "generating",
-      "title": null,
-      "video_url": null,
-      "publish_at": null
+      "stage": "uploaded",
+      "title": "I'm sitting in my dorm room, surrounded by textbooks and notes, trying to cram i",
+      "video_url": "https://youtube.com/shorts/xiSdJ_Ht4no",
+      "publish_at": "2026-11-09T23:43:15Z"
     },
     {
       "slot": 1,
