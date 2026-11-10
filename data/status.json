@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-11-10T19:01:09Z"
+    "status": "done",
+    "message": "generated: He found the one thing I was hiding from him",
+    "updated_at": "2026-11-10T19:01:33Z"
   },
   "video_agent": {
     "status": "idle",
