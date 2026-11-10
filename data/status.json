@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-11-10T16:22:44Z"
+    "status": "done",
+    "message": "generated: I thought I had it all figured out - coffee-fueled mornings, Netflix binges with",
+    "updated_at": "2026-11-10T16:23:09Z"
   },
   "video_agent": {
     "status": "idle",
