@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-11-10T18:37:52Z"
+    "status": "done",
+    "message": "generated: I'll never forget the day my best friend, Rachel, betrayed me in our college dor",
+    "updated_at": "2026-11-10T18:38:24Z"
   },
   "video_agent": {
     "status": "idle",
