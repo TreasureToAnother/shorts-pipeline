@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-11-10T20:22:50Z"
+    "status": "done",
+    "message": "generated: The moment Rachel broke our unspoken trust\" \ud83d\udc94 #BetrayalStory",
+    "updated_at": "2026-11-10T20:23:07Z"
   },
   "video_agent": {
     "status": "idle",
