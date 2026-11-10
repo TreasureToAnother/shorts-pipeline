@@ -1,53 +1,53 @@
 {
-  "date": "2026-11-09",
+  "date": "2026-11-10",
   "slots": [
     {
       "slot": 0,
       "hour_et": 4,
-      "stage": "uploaded",
-      "title": "I'm sitting in my dorm room, surrounded by textbooks and notes, trying to cram i",
-      "video_url": "https://youtube.com/shorts/xiSdJ_Ht4no",
-      "publish_at": "2026-11-09T23:43:15Z"
+      "stage": "generating",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 1,
       "hour_et": 5,
-      "stage": "uploaded",
-      "title": "I saw it in his pocket, the text on his phone",
-      "video_url": "https://youtube.com/shorts/yNcrRP4X6os",
-      "publish_at": "2026-11-10T00:43:34Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 2,
       "hour_et": 6,
-      "stage": "uploaded",
-      "title": "My photo didn't capture the secret he kept",
-      "video_url": "https://youtube.com/shorts/MnDHqNeirms",
-      "publish_at": "2026-11-10T01:34:49Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 3,
       "hour_et": 7,
-      "stage": "uploaded",
-      "title": "The Boy Who's Been Watching Me\"\n\n#SuspensefulSecrets",
-      "video_url": "https://youtube.com/shorts/OLuGo2j3-lg",
-      "publish_at": "2026-11-10T02:26:15Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 4,
       "hour_et": 8,
-      "stage": "uploaded",
-      "title": "I'm sitting in the conference room with my coworkers, trying to focus on the int",
-      "video_url": "https://youtube.com/shorts/7EhqfqETmcM",
-      "publish_at": "2026-11-10T02:43:30Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     },
     {
       "slot": 5,
       "hour_et": 9,
-      "stage": "uploaded",
-      "title": "His secret crush exposed \ud83d\udc94 #betrayedbylove",
-      "video_url": "https://youtube.com/shorts/mINMfBmG3R4",
-      "publish_at": "2026-11-10T03:59:18Z"
+      "stage": "pending",
+      "title": null,
+      "video_url": null,
+      "publish_at": null
     }
   ]
 }
