@@ -18,5 +18,10 @@
     "status": "idle",
     "message": "",
     "updated_at": null
+  },
+  "orchestrator": {
+    "status": "error",
+    "message": "\", line 1146, in __init__\n    raise IOError(error)\nOSError: MoviePy Error: creation of None failed because of the following error:\n\nconvert: attempt to perform an operation not allowed by the security policy `@/tmp/tmpvrsu1bvz.txt' @ error/string.c/FileToString/989.\n.\n\n.This error can be due to the fact that ImageMagick is not installed on your computer, or (for Windows users) that you didn't specify the path to the ImageMagick binary in file conf.py, or that the path you specified is incorrect\n",
+    "updated_at": "2026-11-11T18:35:45Z"
   }
 }
