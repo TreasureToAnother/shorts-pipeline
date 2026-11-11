@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-11-11T18:56:54Z"
+    "status": "done",
+    "message": "generated: I couldn't stop staring at him behind the lens, our cameras clicking in sync as ",
+    "updated_at": "2026-11-11T18:57:25Z"
   },
   "video_agent": {
     "status": "idle",
