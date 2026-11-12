@@ -4,7 +4,7 @@
     {
       "slot": 0,
       "hour_et": 4,
-      "stage": "generating",
+      "stage": "error",
       "title": null,
       "video_url": null,
       "publish_at": null
