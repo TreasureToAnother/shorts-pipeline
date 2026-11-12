@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-11-12T17:29:43Z"
+    "status": "done",
+    "message": "generated: I've known Alex for months, working side by side at the wedding venue where we b",
+    "updated_at": "2026-11-12T17:30:12Z"
   },
   "video_agent": {
     "status": "idle",
