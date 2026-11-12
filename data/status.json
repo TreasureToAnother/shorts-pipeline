@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-11-12T20:45:53Z"
+    "status": "done",
+    "message": "generated: I thought our road trip was going to be the adventure of a lifetime.",
+    "updated_at": "2026-11-12T20:46:25Z"
   },
   "video_agent": {
     "status": "idle",
