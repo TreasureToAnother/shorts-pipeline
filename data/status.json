@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-11-12T19:16:33Z"
+    "status": "done",
+    "message": "generated: Red flag alert: 3 months after the breakup\"\n\n#StoryTime",
+    "updated_at": "2026-11-12T19:17:03Z"
   },
   "video_agent": {
     "status": "idle",
