@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-11-12T18:01:03Z"
+    "status": "done",
+    "message": "generated: I couldn't help but notice the way his eyes crinkled at the corners when he smil",
+    "updated_at": "2026-11-12T18:01:50Z"
   },
   "video_agent": {
     "status": "idle",
