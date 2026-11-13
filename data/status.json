@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-11-13T20:26:38Z"
+    "status": "done",
+    "message": "generated: I poured the perfect latte art on the bride's special day, a distraction from my",
+    "updated_at": "2026-11-13T20:27:15Z"
   },
   "video_agent": {
     "status": "idle",
