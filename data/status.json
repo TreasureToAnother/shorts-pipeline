@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-11-13T17:04:47Z"
+    "status": "done",
+    "message": "generated: I'm still shaking as I recall that fateful night, sitting across from Alex in th",
+    "updated_at": "2026-11-13T17:05:44Z"
   },
   "video_agent": {
     "status": "idle",
