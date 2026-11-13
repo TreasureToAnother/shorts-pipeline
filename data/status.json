@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-11-13T17:35:51Z"
+    "status": "done",
+    "message": "generated: I was supposed to be studying for my nursing exams, but I convinced my friends t",
+    "updated_at": "2026-11-13T17:36:17Z"
   },
   "video_agent": {
     "status": "idle",
