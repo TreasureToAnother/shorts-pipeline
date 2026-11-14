@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-11-14T14:58:25Z"
+    "status": "done",
+    "message": "generated: I'm standing at the hostess stand, fidgeting with the napkins, as my friend Emma",
+    "updated_at": "2026-11-14T14:59:07Z"
   },
   "video_agent": {
     "status": "idle",
