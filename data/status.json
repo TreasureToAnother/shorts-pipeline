@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-11-14T16:58:53Z"
+    "status": "done",
+    "message": "generated: My summer crush turned into a shattering secret\"\n\n\ud83d\udcf1",
+    "updated_at": "2026-11-14T16:59:16Z"
   },
   "video_agent": {
     "status": "idle",
