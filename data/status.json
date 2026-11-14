@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-11-14T16:29:13Z"
+    "status": "done",
+    "message": "generated: I spilled coffee all over my shirt the moment I met him, and I'm pretty sure I d",
+    "updated_at": "2026-11-14T16:29:31Z"
   },
   "video_agent": {
     "status": "idle",
