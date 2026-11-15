@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-11-15T16:53:46Z"
+    "status": "done",
+    "message": "generated: I've been brewing coffee for my dorm mates for months, but it's the two guys I r",
+    "updated_at": "2026-11-15T16:54:36Z"
   },
   "video_agent": {
     "status": "idle",
