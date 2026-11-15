@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-11-15T16:12:23Z"
+    "status": "done",
+    "message": "generated: I'm still fuming as I steamed the milk for the birthday girl's latte.",
+    "updated_at": "2026-11-15T16:12:57Z"
   },
   "video_agent": {
     "status": "idle",
