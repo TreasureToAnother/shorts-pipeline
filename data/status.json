@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-11-15T17:40:17Z"
+    "status": "done",
+    "message": "generated: Red Flag Alert: I Thought I Found Love at Camp\"\n\n( #SummerOfDeceit )",
+    "updated_at": "2026-11-15T17:40:57Z"
   },
   "video_agent": {
     "status": "idle",
