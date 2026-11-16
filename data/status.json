@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-11-16T20:07:44Z"
+    "status": "done",
+    "message": "generated: I've been hiding my secret crush for months, even from my partner, Alex, who's t",
+    "updated_at": "2026-11-16T20:08:28Z"
   },
   "video_agent": {
     "status": "idle",
