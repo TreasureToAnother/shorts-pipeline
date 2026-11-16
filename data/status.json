@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-11-16T22:48:26Z"
+    "status": "done",
+    "message": "generated: Text from my crush that shattered everything",
+    "updated_at": "2026-11-16T22:49:03Z"
   },
   "video_agent": {
     "status": "idle",
