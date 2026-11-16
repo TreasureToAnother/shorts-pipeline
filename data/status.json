@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-11-16T21:20:37Z"
+    "status": "done",
+    "message": "generated: I can still feel the tears pricking at the corners of my eyes as I scroll throug",
+    "updated_at": "2026-11-16T21:21:12Z"
   },
   "video_agent": {
     "status": "idle",
