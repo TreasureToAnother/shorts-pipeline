@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-11-17T18:21:10Z"
+    "status": "done",
+    "message": "generated: Friday Crush \ud83d\udc94: He Wasn't Available\" #POVStory",
+    "updated_at": "2026-11-17T18:21:35Z"
   },
   "video_agent": {
     "status": "idle",
