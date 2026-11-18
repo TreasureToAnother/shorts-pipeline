@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-11-18T21:12:52Z"
+    "status": "done",
+    "message": "generated: He saw me, but she was his secret \ud83d\udeab",
+    "updated_at": "2026-11-18T21:13:35Z"
   },
   "video_agent": {
     "status": "idle",
