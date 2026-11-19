@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-11-19T19:04:06Z"
+    "status": "done",
+    "message": "generated: I'll never forget the night I caught eyes with him in the kitchen.",
+    "updated_at": "2026-11-19T19:04:42Z"
   },
   "video_agent": {
     "status": "idle",
