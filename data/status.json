@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-11-19T19:42:02Z"
+    "status": "done",
+    "message": "generated: Caught him when his mask slipped\"\n\n#POVstory",
+    "updated_at": "2026-11-19T19:42:41Z"
   },
   "video_agent": {
     "status": "idle",
