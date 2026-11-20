@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-11-20T16:58:40Z"
+    "status": "done",
+    "message": "generated: He's standing right in front of me, and I'm not alone \ud83d\udc94 #betrayal",
+    "updated_at": "2026-11-20T16:59:03Z"
   },
   "video_agent": {
     "status": "idle",
