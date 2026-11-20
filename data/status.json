@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-11-20T19:20:34Z"
+    "status": "done",
+    "message": "generated: I pour coffee for the fourth time, my mind still on him.",
+    "updated_at": "2026-11-20T19:21:12Z"
   },
   "video_agent": {
     "status": "idle",
