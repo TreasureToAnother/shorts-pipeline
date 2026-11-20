@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-11-20T19:03:31Z"
+    "status": "done",
+    "message": "generated: I was selling wedding dresses on my day off, trying to make the most of it.",
+    "updated_at": "2026-11-20T19:04:15Z"
   },
   "video_agent": {
     "status": "idle",
