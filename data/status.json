@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-11-21T18:22:46Z"
+    "status": "done",
+    "message": "generated: I poured coffee for the 10th table of the day, my mind a million miles away.",
+    "updated_at": "2026-11-21T18:23:35Z"
   },
   "video_agent": {
     "status": "idle",
