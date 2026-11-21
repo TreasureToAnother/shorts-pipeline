@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-11-21T16:42:53Z"
+    "status": "done",
+    "message": "generated: I still remember the day I received that text - a simple \"I'm coming home\" from ",
+    "updated_at": "2026-11-21T16:43:30Z"
   },
   "video_agent": {
     "status": "idle",
