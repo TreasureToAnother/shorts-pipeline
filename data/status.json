@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-11-21T20:01:05Z"
+    "status": "done",
+    "message": "generated: Caught in a lie: what happened at my wedding",
+    "updated_at": "2026-11-21T20:01:30Z"
   },
   "video_agent": {
     "status": "idle",
