@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-11-22T17:00:56Z"
+    "status": "done",
+    "message": "generated: I was sipping lemonade with my crush, Alex, by the summer camp lake, the sun bea",
+    "updated_at": "2026-11-22T17:01:31Z"
   },
   "video_agent": {
     "status": "idle",
