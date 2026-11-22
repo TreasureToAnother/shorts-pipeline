@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-11-22T18:24:53Z"
+    "status": "done",
+    "message": "generated: I was lost in the music, my nursing exams finally behind me, as I danced with my",
+    "updated_at": "2026-11-22T18:25:47Z"
   },
   "video_agent": {
     "status": "idle",
