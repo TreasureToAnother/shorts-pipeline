@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-11-22T16:11:48Z"
+    "status": "done",
+    "message": "generated: Pouring my heart out to strangers, but hiding the truth from myself\"\n\n#HeartOnSleeve",
+    "updated_at": "2026-11-22T16:12:18Z"
   },
   "video_agent": {
     "status": "idle",
