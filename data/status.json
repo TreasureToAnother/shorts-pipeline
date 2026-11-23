@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-11-23T22:59:34Z"
+    "status": "done",
+    "message": "generated: I'd been crushing on him since day one of freshman year.",
+    "updated_at": "2026-11-23T23:00:11Z"
   },
   "video_agent": {
     "status": "idle",
