@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-11-24T20:33:54Z"
+    "status": "done",
+    "message": "generated: I've been waiting tables for three years, but nothing's as nervous-inducing as l",
+    "updated_at": "2026-11-24T20:34:36Z"
   },
   "video_agent": {
     "status": "idle",
