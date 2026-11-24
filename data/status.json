@@ -1,13 +1,13 @@
 {
   "script_agent": {
-    "status": "done",
-    "message": "generated: I met him at Sarah's birthday party, a mutual friend who thought we'd hit it off",
-    "updated_at": "2026-11-24T21:06:55Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "video_agent": {
-    "status": "error",
-    "message": "MoviePy Error: creation of None failed because of the following error:\n\nconvert: attempt to perform an operation not allowed by the security policy `@/tmp/tmpype_vf0o.txt' @ error/string.c/FileToString/989.\n.\n\n.This error can be due to the fact that ImageMagick is not installed on your computer, or (for Windows users) that you didn't specify the path to the ImageMagick binary in file conf.py, or that the path you specified is incorrect",
-    "updated_at": "2026-11-24T21:07:31Z"
+    "status": "idle",
+    "message": "",
+    "updated_at": null
   },
   "upload_agent": {
     "status": "idle",
@@ -18,10 +18,5 @@
     "status": "idle",
     "message": "",
     "updated_at": null
-  },
-  "orchestrator": {
-    "status": "error",
-    "message": "\", line 1146, in __init__\n    raise IOError(error)\nOSError: MoviePy Error: creation of None failed because of the following error:\n\nconvert: attempt to perform an operation not allowed by the security policy `@/tmp/tmpype_vf0o.txt' @ error/string.c/FileToString/989.\n.\n\n.This error can be due to the fact that ImageMagick is not installed on your computer, or (for Windows users) that you didn't specify the path to the ImageMagick binary in file conf.py, or that the path you specified is incorrect\n",
-    "updated_at": "2026-11-24T21:07:33Z"
   }
 }
