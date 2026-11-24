@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-11-24T00:40:31Z"
+    "status": "done",
+    "message": "generated: I thought I knew every move, every gesture, every whisper in our late-night text",
+    "updated_at": "2026-11-24T00:40:58Z"
   },
   "video_agent": {
     "status": "idle",
