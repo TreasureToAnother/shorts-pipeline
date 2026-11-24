@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-11-24T21:39:07Z"
+    "status": "done",
+    "message": "generated: I was pouring drinks, pretending to be a pro, when he walked in.",
+    "updated_at": "2026-11-24T21:39:34Z"
   },
   "video_agent": {
     "status": "idle",
