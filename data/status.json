@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-11-24T21:06:03Z"
+    "status": "done",
+    "message": "generated: I met him at Sarah's birthday party, a mutual friend who thought we'd hit it off",
+    "updated_at": "2026-11-24T21:06:55Z"
   },
   "video_agent": {
     "status": "idle",
