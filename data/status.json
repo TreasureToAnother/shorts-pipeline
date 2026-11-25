@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-11-25T20:27:26Z"
+    "status": "done",
+    "message": "generated: I stood behind the counter, pouring drinks for the partygoers, my eyes locked on",
+    "updated_at": "2026-11-25T20:28:10Z"
   },
   "video_agent": {
     "status": "idle",
