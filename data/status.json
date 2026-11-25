@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-11-25T19:51:20Z"
+    "status": "done",
+    "message": "generated: Red flag: when the guy you're crushing on lies about his past\"\n\n\ud83d\udd25",
+    "updated_at": "2026-11-25T19:51:43Z"
   },
   "video_agent": {
     "status": "idle",
