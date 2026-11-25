@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-11-25T22:13:55Z"
+    "status": "done",
+    "message": "generated: Caught on camera, he smiled at me but was hiding his secret \ud83d\udc94",
+    "updated_at": "2026-11-25T22:14:12Z"
   },
   "video_agent": {
     "status": "idle",
