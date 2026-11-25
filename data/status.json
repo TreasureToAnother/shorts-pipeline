@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-11-25T19:03:24Z"
+    "status": "done",
+    "message": "generated: I'm sitting across from him, trying to play it cool, but my heart is racing like",
+    "updated_at": "2026-11-25T19:03:48Z"
   },
   "video_agent": {
     "status": "idle",
