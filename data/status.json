@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-11-26T19:31:58Z"
+    "status": "done",
+    "message": "generated: He caught me staring, and my world fell apart\"\n\n#POV",
+    "updated_at": "2026-11-26T19:32:29Z"
   },
   "video_agent": {
     "status": "idle",
