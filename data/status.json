@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-11-26T18:55:49Z"
+    "status": "done",
+    "message": "generated: I was swept up in the music and laughter, my feet tapping to the beat as I resto",
+    "updated_at": "2026-11-26T18:56:16Z"
   },
   "video_agent": {
     "status": "idle",
