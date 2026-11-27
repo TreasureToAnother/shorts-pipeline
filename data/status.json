@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-11-27T21:53:43Z"
+    "status": "done",
+    "message": "generated: He sent me the last photo of us together \ud83d\udcf8",
+    "updated_at": "2026-11-27T21:54:29Z"
   },
   "video_agent": {
     "status": "idle",
