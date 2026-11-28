@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-11-28T16:49:24Z"
+    "status": "done",
+    "message": "generated: \ud83d\udcde The text that shattered everything",
+    "updated_at": "2026-11-28T16:49:52Z"
   },
   "video_agent": {
     "status": "idle",
