@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-11-28T18:03:06Z"
+    "status": "done",
+    "message": "generated: His smile walked back in, like a ghost from my past\"\n\n#POV",
+    "updated_at": "2026-11-28T18:03:32Z"
   },
   "video_agent": {
     "status": "idle",
