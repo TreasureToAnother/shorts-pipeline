@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-11-28T18:48:35Z"
+    "status": "done",
+    "message": "generated: I was busy folding t-shirts in the staff room when I saw him walk in, like he ow",
+    "updated_at": "2026-11-28T18:49:16Z"
   },
   "video_agent": {
     "status": "idle",
