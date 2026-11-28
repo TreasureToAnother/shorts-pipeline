@@ -1,8 +1,8 @@
 {
   "script_agent": {
-    "status": "running",
-    "message": "generating story time script",
-    "updated_at": "2026-11-28T20:49:51Z"
+    "status": "done",
+    "message": "generated: My crush just walked in, and he's already late \ud83d\udd70\ufe0f",
+    "updated_at": "2026-11-28T20:50:21Z"
   },
   "video_agent": {
     "status": "idle",
